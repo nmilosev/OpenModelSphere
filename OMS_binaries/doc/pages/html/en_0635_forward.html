@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Forward engineering</title>
+</head>
+<body bgcolor="#ffffff">
+<font color="#000000" face="sans serif,arial,helvetica" size="2">
+<hr><font color="#000000" face="sans serif,arial,helvetica" size="5"><b>Forward
+engineering</b></font><br>
+<br>
+<br>
+Forward engineering is the process of generating Data Definition
+Language
+(DDL) to create database schema objects. <b>Open ModelSphere</b>
+offers two ways to generate DDL:
+<ol>
+  <li>Per object feature: SQL preview and generate DDL.</li>
+  <li>Global feature: forward engineering.</li>
+</ol>
+<hr><font color="#000000" face="sans serif,arial,helvetica" size="4"><b>Per
+object feature</b></font><br>
+<br>
+Every model&#8217;s object that can have an SQL equivalent will display, in
+its properties
+window, an SQL tab containing a preview of the DDL clause. It is also
+possible to
+create, from the same object, the DDL script file. This is available in
+the <b>object's pop-up
+menu</b> under <b>Generate &gt; DDL Statements</b>. <br>
+<br>
+<img src="../images/FWD_ONGLET_en.jpg">
+<br>
+<br>
+<b>Note that one file is generated per selected
+object and that the file name is like <i>[object&#8217;s name]</i>.sql.</b> <br>
+<br>
+<b>Before you perform a forward engineering, do not forget to validate
+your model. See <a href="en_0633_valid.html">Validation</a>.</b><br>
+<br>
+<b>Consider setting the DDL generation directory option. See <a
+ href="en_0290_options.html#rep">Modifying the options</a>.</b>
+<br>
+<br>
+<hr><font color="#000000" face="sans serif,arial,helvetica" size="4"><b>Global
+feature</b></font><br>
+<br>
+A global forward engineering function is also available. It will
+generate a DDL for all models linked to the same database. Select a
+model, and from the <b>main menu</b>, choose <b>Tools &gt; Database
+&gt; Forward
+engineering...</b><br>
+<br>
+The forward engineering uses objects from:
+<ul>
+  <li><img src="../images/dbordatabase.gif"><b>Database</b>: the
+database itself and its physical concepts.<br>
+    <br>
+  </li>
+  <li><img src="../images/dboradatamodel.gif"> <b>Data model</b>: the
+deployed data model.<br>
+    <br>
+  </li>
+  <li><img src="../images/dboraprogramunitlibrary.gif"> <b>Operation
+library</b>: the deployed operation library.<br>
+    <br>
+  </li>
+  <li><img src="../images/dbordomainmodel.gif"> <b>Domain model</b>:
+the deployed domain model&#8217;s objects are not forwarded explicitly.
+However, any objects from the deployed data model and the operation
+library that refer to a domain will be used in the process no matter
+where
+the domain is located. (i.e. every table column has a type which is
+generated
+in the DDL).</li>
+</ul>
+<font color="#000000" face="sans serif,arial,helvetica" size="4"><b>Statements
+to generate</b></font><br>
+<br>
+<img src="../images/FWD_1_en.jpg">
+<br>
+<br>
+You will find , on the right side of this window, the list of concepts
+that you can forward
+engineer. The list of concepts is specific to the interface.
+<ul>
+  <li><b>Create</b>: generates SQL statements to create the selected
+concepts (create
+table employee...)<br>
+    <br>
+  </li>
+  <li><b>Drop</b>: generates SQL statements to drop the selected
+concepts (drop table
+employee...)<br>
+    <br>
+  </li>
+  <li><b>Drop/create</b>: generates first the drop statements and then
+the creation statements
+(drop table employee... create table employee...)<br>
+    <br>
+  </li>
+</ul>
+<b>Note: Consider setting the DDL generation directory option.</b>
+<br>
+<br>
+<br>
+<font color="#000000" face="sans serif,arial,helvetica" size="4"><b>General
+Scope</b></font><br>
+<br>
+Each concept is available for a chosen user. It's possible to choose
+their objects to be generated.
+<br>
+<br>
+<img src="../images/FWD_2_en.jpg">
+<br>
+<br>
+<br>
+<br>
+<font color="#000000" face="sans serif,arial,helvetica" size="4"><b>Set
+Generation Variables</b></font><br>
+<br>
+The variables of generation will allow you to adjust options, which
+are, for the majority, specific to the DBMS interface.
+</font><font color="#000000" face="sans serif,arial,helvetica" size="2">For
+an element to be generated, it must be selected in the Forward
+Engineering
+window.</font><br>
+<font color="#000000" face="sans serif,arial,helvetica" size="2"><br>
+<span style="font-weight: bold;">MySQL uses a special syntax for
+foreign keys. In order to activate this syntax, the option <span
+ style="font-style: italic;">Enable MySQL foreign key constraints</span>
+must be checked.<br>
+<br>
+</span><br>
+The DDL statements are produced by a template file (.tpl). This is a
+text file that can be modified by any user
+who is familiar with the template language. See <b><a
+ href="en_1120_template.html">Templates</a>.</b>
+<br>
+<br>
+<br>
+<b>See also: <a href="en_0655_sql_shell.html">Running SQL Statements</a>.</b>
+</font>
+</body>
+</html>

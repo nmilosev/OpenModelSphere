@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>La synchronisation</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>La synchronisation</b></font><br><br><br>
+
+
+<b>La fonction de synchronisation de Open ModelSphere vous permet
+de comparer l'information des modèles représentant le schéma
+DBMS au schéma DBMS même (modèle physique). Les résultats de la
+comparaison sont présentés dans une interface complète; la fonction
+synchronise les deux modèles pour produire un rapport de comparaison.</b>
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le processus</b></font><br><br>
+La synchronisation est basée sur l'information du modèle de données. Évidemment,
+cette fonction est disponible sur sélection de modèle de données. La synchronisation
+compare des objets provenant de :<ul>
+<li><img src="../images/dboradatamodel.gif"> <b>Modèle de données</b> : le modèle de données qui est relié à la base
+de données.<br><br></li>
+<li><img src="../images/dbordatabase.gif"> <b>Base de données</b> : la base de données associée avec le modèle.<br><br></li>
+<li><img src="../images/dboraprogramunitlibrary.gif"> <b>Bibliothèque d’opérations</b> : la bibliothèque d'opérations qui est reliée à la base
+de données. <br><br></li>
+<li><img src="../images/dbordomainmodel.gif"> <b>Type utilisateur et domaine</b> : type prédéfini et domaine visé dans le modèle de
+données et la bibliothèque d'opérations.</li>
+</ul>
+Pour utiliser la fonction de synchronisation :<ol>
+<li>Mettez la <b>base de données</b> en évidence dans la fenêtre <b>Explorateur</b>.</li>
+<li>Dans le <b>menu principal</b>, sélectionnez <b>Outils > Base de données > Synchronisation</b>.</li>
+</ol>
+<b>
+NB : Avant la synchronisation,
+n’oubliez pas de valider vos
+modèles.</b>
+
+
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>La sélection du modèle</b></font><br><br>
+On vous invitera à choisir un modèle de base de données. Vous devrez choisir entre
+un modèle de données existant ou un modèle créé à partir d'une connexion SGBD
+(pendant le processus de synchronisation).
+<br><br>
+<img src="../images/SYNC_1_fr.jpg">
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les options</b></font><br><br>
+La comparaison des deux modèles s’effectue à partir d’une série de concepts et
+de descripteurs. Ainsi, il est possible de choisir ces concepts et ces descripteurs.
+<br><br>
+<img src="../images/SYNC_2_fr.jpg">
+<br><br>
+
+<b>Synchronisation des concepts (la portée)</b> : vous devez fournir les paramètres
+d'intégration (les mêmes paramètres peuvent être employés pour l'intégration
+et la synchronisation) pour contrôler les concepts et descripteurs sur lesquels
+les actions de la synchronisation seront appliquées. Chargez et sauvegardez
+la portée de synchronisation existante dans un fichier. Les paramètres
+de synchronisation sont spécifiques au système de cible.<br><br>
+<b>Sortie de script SQL</b> : activez <b>Générer l’objet avec l’utilisateur</b>; il est possible
+de définir des utilisateurs. Ils peuvent être utilisés comme objet de base de
+données des propriétaires. Si vous l'avez fait et que la synchronisation doit
+produire un DDL pour un objet de base de données, le nom physique aura
+comme préfixe le nom physique de l'utilisateur correspondant (ex : table
+jeff.employee).<br><br>
+<b>Options de la base de données (synchronisation en utilisant l'utilisateur) </b>: la
+rétro-ingénierie extraira l'information du propriétaire de l'objet à partir de la base
+de données et l'emploiera dans le processus de comparaison.<br><br>
+
+<b>Options SGBD</b>: Cette section est pour les options propre à un SGBD, relative au processus de rétro-ingénierie. Disponible seulement avec une connexion. (Voir <a href="fr_0660_reverse.html"><b>Rétro-ingénierie</b></a>).<br><br>
+<br><br>
+<br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>L’interface de synchronisation</b></font><br><br>
+La partie supérieure de l'interface affiche l’information du modèle physique et du modèle
+ModelSphere, côte à côte, en arborescence ressemblant à l'explorateur de l'application. Un
+code de couleur est utilisé pour faciliter l'identification des similitudes et des différences
+du modèle.
+<br><br>
+<img src="../images/SYNC_3_fr.jpg">
+<br><br>
+
+
+<b><font color="0000ff">BLEU</font></b> : l’objet n’est que dans le modèle 1<br>
+<b><font color="00aa00">VERT</font></b> : l’objet n’est que dans le modèle 2<br>
+<b><font color="ff0000">ROUGE</font></b> : objets différents<br>
+<b>NOIR</b> : objets identiques<br>
+<br><br>
+La partie inférieure montre les différences de propriété d'objet, s'il y en a.
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Actions d’objet et de propriété</b></font><br><br>
+Après avoir comparé et affiché les différences entre les modèles, l'utilisateur peut modifier
+ces modèles de façon sélective, et dans toutes directions. Cependant, on doit préciser
+que toutes les actions d'objet sont appliquées hiérarchiquement sur la sélection
+d'objet. Par exemple, si une action est modifiée sur la table Employés, cela affectera
+toutes les actions des colonnes qui s’y rattachent. Par conséquent, il est important de
+commencer à assigner les actions du niveau supérieur vers le niveau inférieur du modèle.
+Voici les actions disponibles :<ul>
+<li><b>Fusionner</b>: les objets du modèle source sont ajoutés au modèle cible pour former
+un super-ensemble de toutes les composantes de modèle. (Ajouter/modifier)<br><br></li>
+<li><b>Remplacer</b> : l'information du modèle cible est remplacée par l'information
+du modèle source. Toute information additionnelle à la cible est supprimée.<br><br></li>
+<li><b>Aucune</b> : aucune action ne sera appliquée sur l'objet et ses descendants.<br><br></li>
+
+<li><b>Associer</b> : deux objets seront liés pour qu'ils soient considérés comme des
+équivalents et soient comparés.<br><br></li>
+<li><b>Rompre l’association</b> : déliage de deux objets pour qu'ils ne soient plus considérés
+comme des équivalents et ne soient pas comparés.</li>
+
+</ul>
+Il est possible de décider du sort des objets qui n'ont pas d'équivalence dans l'autre modèle :<ul>
+<li><b>Ajouter</b> : Ajoute l'objet dans le modèle où il n'est pas.<br><br></li>
+<li><b>Supprimer</b> : Supprime l'objet du modèle où il se trouve.<br><br></li>
+
+
+</ul>
+Il y a aussi des actions disponibles sur les différences de propriété d'objet :<ul>
+<li><b>Modifier dans ModelSphere</b> : modifier le modèle d'application.<br><br></li>
+<li><b>Modifier physiquement</b> : modifier le modèle physique en générant
+un script DDL avec les énoncés SQL.<br><br></li>
+<li><b>Afficher les valeurs</b> : offre un affichage à grande échelle des valeurs sources
+et cibles.</li>
+
+</ul><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le rapport</b></font><br><br>
+Un rapport est toujours produit après le processus de synchronisation. Il contient l’information
+sur les deux modèles utilisés, la date, la liste de différences et les modifications
+appliquées au modèle ou au modèle physique.<br><br>
+<b>Dans le but d’analyser l’impact d’éventuelles modifications, ce même
+rapport peut aussi être produit avant que la synchronisation soit accomplie.</b>
+<br><br>
+<img src="../images/SYNC_REP_fr.jpg">
+<br><br>
+</font>
+</body>
+</html>
+

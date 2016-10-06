@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Association, aggregation and composition concepts</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Association, aggregation and composition concepts</b></font><br><br><br>
+
+
+<img src="../images/angularline.gif"> An <b>association</b> is the semantic relationship between two or more classifiers
+that involves connections among their instances.<br><br>
+<img src="../images/angulardiamondlineend.gif"> An <b>aggregation</b> is a special form of association that specifies a whole-part
+relationship between the aggregate (whole) and a component part.<br><br>
+<img src="../images/angulardiamondfilllineend.gif" width="16" height="16" alt="" border="0"> A <b>composition</b> is a form of aggregation with strong ownership and coincident
+lifetime as part of the whole. Parts with non-fixed multiplicity may be created after
+the composite itself, but once created, they live and die with it (i.e. they share life-times).
+Such parts can also be explicitly removed before the death of the composite.
+Composition may be recursive.
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Common properties</b></font><br><br><ul>
+<li><b>Name</b>: write the Java class name.<br><br></li>
+<li><b>Alias</b>: identify the concept other than by its name (optional).<br><br></li>
+<li><b>UML Stereotype</b>: you can assign a UML Stereotype to those concepts.<br><br></li>
+<li><b>Description</b>: enter a textual description.<br><br></li>
+</ul>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Association End Properties</b></font><br><br>
+When right-clicking an association end, you will find the following properties under
+the design tab of the properties window.<ul>
+<li><b>Field</b>: corresponding association field.<br><br></li>
+<li><b>Multiplicity</b>: sets the association end’s multiplicity.<br><br></li>
+<li><b>Navigable</b>: sets the association end as navigable. Will remove, though not delete, the corresponding association field.<br><br></li>
+<li><b>Aggregation</b>: sets the category to association, aggregation or composition.<br><br></li>
+<li><b>Ordered</b>: sets the association end’s multiplicity “many/one or more” as an ordered collection. Provided only for documentation purposes.<br><br></li>
+</ul>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Association Concepts</b></font><br><br>
+When an association is created, it will automatically create two association ends
+(roles) and their corresponding fields in each classes.
+<br><br>
+<img src="../images/ASSOCIATION_en.jpg">
+<br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Actions</b></font><br><br><ul>
+<li><b>Delete</b>: delete the association, including dependent association ends and
+association fields.<br><br></li>
+<li><b>Delete (preserve fields)</b>: delete the association, including dependent association
+ends only. The association fields will be kept preserved.<br><br></li>
+<li><b>Delete graphic representation</b>: delete the association’s graphical
+represention only. Use the Create Association action on the remaining association
+fields to recreate the association’s graphical representation.<br><br></li>
+<li><b>Collection data type</b>: set the type of the many association field to the collection
+type and the element type to the corresponding class.<br><br></li>
+<li><b>Create association</b> : create the association in the diagram.<br><br></li>
+</ul>
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Edition codes</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Edition codes</b></font><br><br><br>
+
+
+
+
+
+
+Edition codes are used to format the output of the rule processed. They allow users to
+specify left margin values, carriage returns and various positioning movements in the
+template file.<br><br><br>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$d</b></font><br><br>
+
+<u>Format</u>: $d;<br><br>
+<u>Action</u>: Generates a dollar sign.<br><br>
+<u>Example</u>:<br>
+<blockquote><tt><font size="+1">"Price: $d;$price;"</font></tt><br>
+if $price; gives 50, generates "Price: $50"<br><br>
+Note: dollar signs are already used to define sub-rules, there-fore
+to print out an actual dollar sign, you must use the $d;
+edition code.</blockquote>
+
+
+<br><br><br>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$m</b></font><br><br>
+
+<u>Format</u>: $m(+ or -) number;<br><br>
+<u>Action</u>: Increments/decrements the left margin according to the sign. Does not make a return;
+the new setting takes effect at the next return code $n;.<br><br>
+<u>Example</u>:<br>
+<blockquote><tt><font size="+1">$m+2;</font></tt> <br>
+Increments the left margin by 2 spaces.
+<br><br><br></blockquote>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$n</b></font><br><br>
+
+<u>Format</u>: $n<br><br>
+<u>Actio</u>n: Makes a return, and advances to the left margin. Does not change the left margin. Be careful, the margin must have a positive value. If it is negative, it will generate errors.
+<br><br>
+
+<u>Example</u>:<br>
+<blockquote><tt><font size="+1">$n; </font></tt><br>
+Makes a return, and advances to the left margin.</blockquote>
+<br><br><br>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$q</b></font><br><br>
+
+<u>Format</u>: $q;<br><br>
+<u>Action</u>: Generates a double quote character.<br><br>
+<u>Example</u>:<br>
+<blockquote><tt><font size="+1">"$q;TEMPL$q; is a keyword."</font></tt><br><br>
+When processed, the template string generates<br><br>
+<tt><font size="+1">"TEMPL" is a keyword.</font></tt></blockquote>
+<br><br>
+<b>Note: Since double quotes are used to indicate the beginning
+and the end of a template string, the only way to print out
+actual double quotes is to use the $q; edition code.</b>
+<br><br><br>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$t</b></font><br><br>
+
+<u>Format</u>: $t;<br><br>
+<u>Action</u>: Generates a TAB character.<br><br>
+<u>Example</u>:<br>
+<blockquote><tt><font size="+1">"$word1;$t;$word2;"</font></tt><br><br>
+Prints the two words separated with a TAB character.</blockquote>
+<br><br><br>
+</font>
+</body>
+</html>
+

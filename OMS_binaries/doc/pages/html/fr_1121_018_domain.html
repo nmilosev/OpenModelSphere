@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Les domaines</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Les domaines</b></font><br><br><br>
+
+
+
+
+Un domaine associe la valeur d'attribut, ou la chaîne résultante d’une sous-règle exécutée,
+à une sous-règle résultante qui sera traitée et rendue en tant que résultat. Un domaine est
+désigné par le modificateur DOM dans les sous-règles de toutes les classes, à l’exception de
+la classe GROUP. La définition d'un domaine est composée du nom de domaine, de sa classe
+CDOM et d’une liste d'associations permettant de spécifier une règle différente pour chaque
+valeur d'entrée. Chaque élément de la liste d'associations est une paire (liste des valeurs,
+sous-règle) et est inclus entre parenthèses. À l’intérieur de chaque paire, la liste de valeurs
+est aussi incluse entre parenthèses, à moins qu'il n'y ait qu’une seule valeur.<br><br>
+Le nom d’un domaine est assujetti aux mêmes règles que le nom d’une variable. Un domaine
+peut avoir le même nom qu'une variable.<br><br>
+Pour un domaine de type caractère (CDOM), la virgule est utilisée comme séparateur de
+valeurs dans la liste de valeurs. Si une seule valeur est définie sans parenthèse, une virgule
+doit séparer la valeur de sa chaîne de gabarit. Les virgules sont nécessaires afin d'empêcher
+la fusion de chaînes adjacentes en une seule et unique chaîne.<br><br>
+Le modificateur DEFAULT peut être employé en tant que valeur; il représente toutes les
+valeurs qui ne sont pas explicitement spécifiées dans le domaine. Si DEFAULT n'est pas
+spécifié, une valeur, indéterminée dans le domaine, est retournée comme chaîne résultante.
+Pour les sous-règles de la classe ATTR, la valeur d'entrée au domaine est la valeur retournée
+par la fonction du référentiel, et est faite de caractères. Pour les sous-règles des autres
+classes, la valeur d'entrée au domaine est la chaîne résultante d'une règle exécutée et est
+toujours de type caractère. Donc, le domaine doit appartenir à la classe CDOM. De plus, la
+chaîne d'entrée ne doit pas contenir de codes d'édition.<br><br>
+<u>Exemple 1</u><br>
+<blockquote>
+<tt><font size="+1">tableTriggerTimeAttr ATTR TriggerTime<br>
+DOM = tableTriggerTimeDomain;<br><br>
+tableTriggerTimeDomain CDOM ("1", "BEFORE ")<br>
+("2", "AFTER ")<br>
+(DEFAULT, "");</font></tt><br><br>
+La fonction du référentiel <b>TriggerTime</b> retourne "1" pour un déclencheur before, "2" pour
+un déclencheur after et "3" pour un déclencheur instead of. Le résultat sera BEFORE ou
+AFTER si la fonction du référentiel retourne "1" ou "2". S'il retourne "3” (ou toute autre valeur),
+le résultat sera vide.</blockquote>
+<br><br><br>
+<u>Exemple 2</u><br><blockquote>
+<tt><font size="+1">CombinationCategory ATTR CombinationCategory<br>
+DOM = comb_cat;<br><br>
+comb_cat CDOM (0, pk_uk)<br>
+(1, "FOREIGN KEY")<br>
+I (DEFAULT, "");<br><br>
+pk_uk ATTR CombinationNumber<br>
+DOM = pk_uk;<br>
+pk_uk CDOM (0, "PRIMARY KEY")<br>
+(DEFAULT, "ALTERNATIVE KEY$=;");</font></tt><br><br>
+Les fonctions du référentiel <b>comb_cat</b> et <b>CombinationNumber</b> retournent les chiffres correspondant
+à la catégorie et à la combinaison. Si la catégorie est 0, le résultat sera PRIMARY
+KEY pour le nombre 0, ALTERNATIVE KEY 1 pour le nombre 1, etc. Par contre, si la
+catégorie est 1, le résultat sera FOREIGN KEY. Pour toute autre catégorie, le résultat sera
+vide.
+<br><br></blockquote>
+</font>
+</body>
+</html>
+

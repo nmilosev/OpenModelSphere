@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>La réutilisation de l'information : copier et déplacer des objets</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>La réutilisation de l'information : copier et déplacer des objets</b></font><br><br><br>
+
+
+
+Un des avantages primordial de la gestion de modèles est que vous
+pouvez partager de précieuses informations déjà existantes. <b>Open ModelSphere</b> possède la fonction <b>Déplacement</b>, <b>Copier</b> et <b>Coller</b> qui
+favorise la réutilisation de l'information.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le déplacement</b></font><br><br>
+Dans la gestion de modèles, il est important d'organiser l'information de métadonnées. La
+fonction de <b>déplacement</b> fournit une manière flexible et puissante de structurer des
+modèles. Vous pouvez ainsi déplacer une colonne, d'une table à l'autre, avec toute l'information
+qu'elle contient. Le déplacement fonctionne sur une sélection d'un ou de plusieurs
+objets.<br><br>
+D'abord, cette fonction vous laisse restructurer des modèles tel que le modèle de données,
+le modèle de domaines, le modèle d'items communs, le modèle de liens, le paquetage
+utilisateur, modèle de processus, processus,  le modèle de classes, le paquetage, la classe, la bibliothèque d'opérations
+et la base de données. <br><br>
+Le déplacement est une fonctionnalité facile à utiliser. Vous devez sélectionner le ou les objets qui seront déplacés. 
+Puis, dans le
+<b>menu principal</b>, choisissez <b>Édition > Déplacement</b>. <br><br>
+Cependant, le choix de l'objet cible doit suivre certaines règles :<ul>
+<li>L’objet cible doit être dans le même projet.</li>
+<li>Le lien de composition doit être valide.</li>
+<li>L’objet cible ne peut pas être un descendant de l'objet source.</li>
+</ul><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>L’opération : copier et coller</b></font><br><br>
+Avant d’utiliser la fonction <b>Copier</b> et <b>Coller</b> vous devez tenir compte de deux concepts
+fondamentaux : l'objet source et l'objet cible. L'objet source peut être toute sélection d'un ou de plusieurs objets; 
+cependant, ils doivent tous provenir du même projet. L'objet cible peut aussi être une sélection d'un ou de
+plusieurs objets, soit dans le même projet ou dans un projet différent. Si cela implique
+plusieurs composantes, elles doivent être compatibles.<br><br>
+<b>Références internes</b><br>
+Ce sont tous les objets à l'intérieur de la portée de la sélection. Ainsi, des références
+internes sont toujours copiées.<br><br>
+<b>Références externes</b><br>
+Ce sont les objets à l'extérieur de la portée de la sélection. La sélection détermine la
+frontière et la façon dont les références externes seront traitées. Le système cible (que
+ce soit le même système cible ou un système cible différent n’est pas pertinent dans
+l’opération) et les objets (d’un même projet ou d’un différent) auront un impact sur la
+copie des références externes. Vous comprendrez en suivant les trois scénarios suivants.<br><br>
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Scénario 1</b></font><br><br>
+Lorsque l'objet cible est dans le même projet que l’objet source, qu’ils aient le
+même système cible ou non n’est pas pertinent : les références externes sont
+copiées.
+<br><br>
+<img src="../images/SCEN_1_fr.jpg">
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Scénario 2</b></font><br><br>
+Lorsque l'objet cible est dans le même projet que l’objet source, mais qu’ils ont un
+système cible différent : les références externes ne peuvent pas être copiées, elles
+doivent être recréées. L’application fera une recherche par nom, dans le projet, pour
+trouver un objet du même type et du même système cible. S'il en trouve un, il recréera
+une référence, sinon, le lien externe sera perdu.
+<br><br>
+<img src="../images/SCEN_2_fr.jpg">
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Scénario 3</b></font><br><br>
+Quand l'objet cible et l’objet source sont dans des projets différents et que le système
+cible n'est pas un facteur d'influence : les références externes doivent toujours être
+recréées. L'application fera une recherche de nom exact (utilisation du nom hiérarchique
+complet de l'objet) dans le projet cible pour un objet du même type et même système
+cible. S'il peut en trouver un, il recréera une référence, sinon, le lien externe sera
+perdu.
+<br><br>
+<img src="../images/SCEN_3_fr.jpg" >
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <title>Ajouter
+des niveaux de processus</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>Ajouter
+des niveaux de processus</font></font></font></b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1></font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Durant
+la mod&eacute;lisation de processus d'affaires, <b>Open ModelSphere</b>
+permet de faire de la conception par d&eacute;composition (top-down design),
+de la conception pour construction incr&eacute;mentale (bottom-up design),
+ou un m&eacute;lange des deux!</font></font></font><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1></font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Conception
+par d&eacute;composition :</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>C'est
+la fa&ccedil;on naturelle et la plus utilis&eacute;e de concevoir les processus
+d'affaires: les processus de haut-niveaux sont d'abord cr&eacute;&eacute;s,
+puis chaque processus de haut-niveau est d&eacute;composer en sous-processus,
+qui &agrave; leur tour sont d&eacute;compos&eacute;s en processus de plus
+bas-niveau.&nbsp; A la fin, les processus-feuilles sont si simples qui
+n'ont plus besoin d'&ecirc;tre d&eacute;composer &agrave; nouveau.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>La
+fa&ccedil;on la plus simple de faire de la conception par d&eacute;composition
+est de cr&eacute;er des processus de haut-niveau (num&eacute;rot&eacute;s
+1, 2 et 3), puis d'utiliser l'outil de cible pour d&eacute;composer un
+processus de haut-niveau en sous-processus.&nbsp; Le processus d&eacute;compos&eacute;
+est not&eacute; par une &eacute;toile (*).</font></font></font>
+<br>&nbsp;
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=2>Juste
+avant la d&eacute;composition :</font></font>
+<br><img SRC="../images/processLevels1_fr.jpg" NOSAVE height=125 width=377>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=2>
+Juste apr&egrave;s la d&eacute;composition :</font></font>
+<br><img SRC="../images/processLevels2_fr.jpg" NOSAVE height=121 width=368></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Les
+sous-processus cr&eacute;&eacute;s sont plac&eacute;s sont le processus
+d&eacute;compos&eacute; et sont num&eacute;rot&eacute;s 1.1, 1.2, 1.3 et
+ainsi de suite.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Une
+autre fa&ccedil;on de cr&eacute;er des sous-processus est de s&eacute;lectionner
+un processus de haut-niveau dans l'explorateur, de clique &agrave; droite
+pour obtenir le menu d&eacute;roulant, et de choisir l'op&eacute;ration
+<b>Ajouter->Processus</b>.&nbsp; Ceci va cr&eacute;er un processus num&eacute;rot&eacute;
+1.1 sous le processus 1.</font></font></font>
+<p><img SRC="../images/processLevels3_fr.jpg" NOSAVE height=359 width=492>
+
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Conception
+pour construction incr&eacute;mentale :</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=2>La
+conception pour construction incr&eacute;mentale est quelques fois la bonne
+approche &agrave; utiliser si on conna&icirc;t bien un sous-syst&egrave;me
+donn&eacute;. On commence par concevoir le sous-syst&egrave;me, puis en
+construit les niveaux d'abstraction sup&eacute;rieure ensuite.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>S&eacute;lectionner
+le noeud correspondant au Processus 1 dans l'explorateur, cliquer &agrave;
+droite pour obtenir le menu d&eacute;roulant, et de choisir l'op&eacute;ration
+<b>Ajouter->Super-Processus</b>.&nbsp; Le Process 1 sera renum&eacute;rot&eacute;s
+1.1, et un nouveau super-processus 1 va prendre la place de l'ancien processus.</font></font></font>
+<br>&nbsp;
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>M&eacute;langer
+les deux types de conception :</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=2>
+Le tableau suivant d&eacute;crit le mod&egrave;le de processus r&eacute;sultant
+apr&egrave;s avoir ajout&eacute; un processus au processus Engineering,
+avoir avoir ajout&eacute; une super-processus au processus Engineering,
+et apr&egrave;s avoir ajout&eacute; un super-processus au processus de
+haut-niveau Development.
+<br>&nbsp;
+<center><table BORDER COLS=2 WIDTH="10%" >
+<tr>
+<td>Mod&egrave;le de processus original..
+<br>&nbsp;
+<br>&nbsp;
+<p><img SRC="../images/processLevels5_en.jpg" NOSAVE height=328 width=345></td>
+
+<td>Mod&egrave;le de processus original apr&egrave;s l'ajout d'un processus
+au processus Engineering.&nbsp; Un process 1.1 est cr&eacute;&eacute; et
+plac&eacute; sous Engineering.
+<br><img SRC="../images/processLevels6_en.jpg" NOSAVE height=343 width=334></td>
+</tr>
+
+<tr>
+<td>Mod&egrave;le de processus original apr&egrave;s l'ajout d'un super-processus
+au processus Engineering.&nbsp; Un nouveau processus appell&eacute; SuperEngineering
+est cr&eacute;&eacute; et prend l'ancienne position de Engineering. Engineering
+est pouss&eacute; &agrave; un niveau inf&eacute;rieur.
+<br><img SRC="../images/processLevels7_en.jpg" NOSAVE height=352 width=348></td>
+
+<td>Mod&egrave;le de processus original apr&egrave;s l'ajout d'un super-processus
+au processus Development. Un nouveau processus appell&eacute; SuperDevelopment
+est cr&eacute;&eacute; et plac&eacute; au-dessus de Development.&nbsp;
+Tous les autres processus sont pouss&eacute;s &agrave; un niveau inf&eacute;rieur.
+<br><img SRC="../images/processLevels8_en.jpg" NOSAVE height=346 width=350></td>
+</tr>
+</table></center>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+
+</body>
+</html>

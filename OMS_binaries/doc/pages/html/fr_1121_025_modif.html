@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Les modificateurs</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Les modificateurs</b></font><br><br><br>
+
+
+
+
+
+
+
+
+<a name = "child"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>CHILD</b></font></a><br><br>
+
+Classes <b>CONN</b> et <b>PLUGIN FUNCTION </b>seulement : modificateur exécuté pour chaque occurrence
+enfant.<br><br>
+
+<u>Exemple</u><br>
+<blockquote>
+<tt><font size="+1">columns CONN TableColumns,<br>
+CHILD = name;</font></tt><br><br>
+
+La fonction du référentiel <b>TableColumns</b> retourne chaque colonne d'une table. Pour chaque
+occurrence CHILD, la règle de nom est exécutée.</blockquote>
+<br><br><br>
+
+<hr><a name = "dom"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>DOM</b></font></a><br><br>
+
+Classes <b>ATTR</b> et <b>TEMPL</b> seulement : nom du domaine.<br><br>
+
+<u>Exemple</u><br>
+<blockquote>
+<tt><font size="+1">tableTriggerTimeAttr ATTR TriggerTime<br>
+DOM = tableTriggerTimeDomain;<br><br>
+
+tableTriggerTimeDomain CDOM ("1", "BEFORE ")<br>
+("2", "AFTER ")<br>
+(DEFAULT, "");</font></tt><br><br>
+
+La fonction du référentiel <b>TriggerTime</b> retourne "1" pour un déclencheur before, "2" pour
+un déclencheur after et "3" pour un déclencheur instead of. Le résultat sera "BEFORE" ou
+"AFTER" si la fonction du référentiel retourne "1" ou "2"; s'il retourne "3 ' (ou une autre valeur),
+le résultat sera vide.</blockquote>
+<br><br><br>
+
+<hr><a name = "extern"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>EXTERN</b></font></a><br><br>
+
+Classes <b>TEMPL</b> et <b>GROUP</b> seulement : le drapeau indique d’inclure cette règle dans la liste
+de règles apparaissant dans le menu Générer à partir de gabarits.<br><br>
+
+<u>Exemple</u><br>
+<blockquote>
+<tt><font size="+1">projectEntryPoint TEMPL "$project;"<br>
+EXTERN<br>
+FILE = "z.sql.txt";</font></tt><br><br>
+
+Dans cet exemple, la règle <b>projectEntryPoint</b> sera visible dans l'interface, de sorte que
+l'utilisateur puisse la choisir en tant que règle en voie d’exécution.</blockquote>
+<br><br><br>
+
+<hr><a name = "false"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>FALSE</b></font></a><br><br>
+
+Classe <b>COND</b> seulement : le modificateur exécuté lorsque la condition retourne FALSE.
+Si la condition est vraie (si la variable booléenne HTML est vraie), la sous-règle de
+htmlDisplay sera exécutée et le résultat sera &lt;code&gt;name&lt;/code&gt;. Cependant, si la
+condition est fausse, c’est le plainDisplay qui sera exécuté.<br>
+<br>
+<u>Exemple</u><br>
+<blockquote>
+<tt><font size="+1">display COND BOOLEAN (html)<br>
+TRUE=htmlDisplay<br>
+FALSE=plainDisplay;<br><br>
+
+htmlDisplay TEMPL "&lt;code&gt;$name;&lt;/code&gt;";<br>
+plainDisplay TEMPL "$name;";</font></tt><br><br></blockquote>
+
+<br>
+<hr><a name = "file"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>FILE</b></font></a><br><br>
+
+Classes <b>TEMPL</b> et <b>GROUP</b> seulement : le modificateur est exécuté, puis utilisé pour
+créer un nouveau fichier qui contient le résultat de l’exécution de la sous-règle; la chaîne
+de gabarit ne doit pas contenir de codes d'édition. Le résultat doit être un nom de fichier
+contenant ou non le répertoire, lequel peut être relatif ou absolu. La création d'un répertoire
+est limitée à un niveau (c:\sub1\sub2\output.txt n'est pas une chaîne d'entrée
+valide au modificateur FILE).<br><br>
+La chaîne résultante du modificateur FILE est ajoutée dans le fichier parent résultant
+comme référence (comme un hyperlien de HTML). Pour sauter cette chaîne, vous pouvez
+utiliser un domaine.<br><br><br>
+
+
+<hr><a name = "lower"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>LOWER</b></font></a><br><br>
+
+Classes <b>TEMPL</b> et <b>ATTR</b> seulement : le résultat de la règle TEMPL est converti en lettres
+minuscules. Les caractères qui ne sont pas des lettres ne sont pas affectés par ce
+changement.<br><br>
+
+<u>Exemple</u> :<br>
+<blockquote>
+<tt><font size="+1">lowercase TEMPL "$hello;"<br>
+LOWER;<br><br>
+
+hello TEMPL "Hello World!";</font></tt><br><br>
+
+La règle 'lowercase' (minuscule) devient "hello world!"</blockquote>
+<br><br><br>
+
+<hr><a name = "null"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>NULL</b></font></a><br><br>
+
+Classes <b>ATTR, CONN, TEMPL, COND et GROUP</b> : le modificateur est exécuté lorsque le
+résultat est vide ou, comme pour CONN, lorsqu’il n'y a pas d’occurrence enfant. Exemple ci-dessous.
+<br><br><br>
+
+<hr><a name = "pref"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>PREF</b></font></a><br><br>
+
+Classes <b>ATTR, CONN, TEMPL, COND et GROUP </b>: le modificateur est exécuté et ajouté en
+tant que préfixe au résultat, lorsque le résultat n'est pas vide ou, comme pour CONN, lorsqu’il
+y a au moins un enfant. Exemple ci-dessous.
+<br><br><br>
+
+<hr><a name = "sep"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>SEP</b></font></a><br><br>
+
+Classes <b>CONN</b> et <b>GROUP</b> : le modificateur est exécuté une fois, lorsqu’il y a au moins deux
+occurrences (CONN) ou deux variables donnant un résultat (GROUP) et inséré entre chaque
+paire de chaînes résultantes. Exemple ci-dessous.
+<br><br><br>
+
+<hr><a name = "suf"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>SUF</b></font></a><br><br>
+
+Classes <b>ATTR, CONN, TEMPL, COND et GROUP</b> : le modificateur est exécuté et ajouté en
+tant que suffixe au résultat, lorsque le résultat n'est pas vide ou, pour CONN, lorsqu’il y a au
+moins une occurrence enfant.<br><br>
+
+Voici l’exemple pour ces quatre derniers modificateurs :
+<br><br><blockquote>
+<tt><font size="+1">col_min_max GROUP (col_len, col_dec)<br>
+PREF = "Note: "<br>
+SEP = " AND "<br>
+SUF = "."<br>
+NULL = "Note: length and number of decimals are undetermined.";<br><br>
+
+col_len ATTR ColumnLength<br>
+PREF = "$name;'s length is : ";<br><br>
+
+col_dec ATTR ColumnDecimal<br>
+PREF = "$name;'s nb of decimals is : ";</font></tt><br>
+<br>
+
+Les fonctions du référentiel <b>ColumnLength</b> et <b>ColumnDecimal</b> retournent la longueur du
+nombre des décimales d'une colonne. Si la colonne est price, la longueur est 10 et le
+nombre de décimales est 5, le résultat sera Note : la longueur du prix est : 10 ET
+nb de prix de décimales est : 5. Si la longueur est indéterminée, le résultat sera Note
+: nb de prix de décimales est : 5. Si tous les deux sont indéterminés, le résultat sera
+Note : la longueur et le nombre de décimales sont indéterminés.<br><br></blockquote>
+
+<b>L’utilisation des codes
+d’édition n’est pas permise
+dans une chaîne
+NULL, PREF, SEP ou
+SUF.</b><br><br><br>
+
+<hr><a name = "true"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>TRUE</b></font></a><br><br>
+
+Classe <b>COND</b> seulement : règle exécutée lorsque la condition retourne TRUE.<br><br>
+
+<u>Exemple</u><br>
+<blockquote>
+<tt><font size="+1">print_expression TEMPL "$french_english;",<br>
+EXTERN;<br><br>
+
+french_english COND print_in_english,<br>
+TRUE="The table name is ",<br>
+FALSE="Le nom de la table est ";</font></tt><br><br>
+
+Si la condition de <b>print_in_english</b> est TRUE, le résultat sera The table name is.
+D'autre part, si la condition est FALSE, l'expression française Le nom de la table est sera
+employée.</blockquote>
+<br><br><br>
+
+<hr><a name = "upper"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>UPPER</b></font></a><br><br>
+
+Classes <b>TEMPL</b> et <b>ATTR</b> seulement : le résultat de la règle TEMPL est converti en lettres
+majuscules. Les caractères qui ne sont pas des lettres ne sont pas affectés par ce changement.<br><br>
+
+<u>Exemple</u>:<br>
+<blockquote>
+<tt><font size="+1">uppercase TEMPL "$hello;"<br>
+UPPER;<br><br>
+
+hello TEMPL "Hello World!";</font></tt><br><br>
+
+La règle 'uppercase' (majuscule) devient "HELLO WORLD!"</blockquote>
+<br><br><br>
+
+</font>
+</body>
+</html>
+

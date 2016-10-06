@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Generating physical names</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Generate physical names</b></font><br><br><br>
+
+
+
+When interfacing with a DBMS, <b>Open ModelSphere</b> uses the object’s physical
+name. It is possible to enter manually every object’s physical name. Otherwise,
+use the <b>Generate physical name</b> feature.<br><br>
+<b>Open ModelSphere</b> provides a feature that automatically generates the objects'
+physical name. It is available in the <b>main menu</b> via <b>Tools > Generate > Physical
+names</b>, for <b>data models</b>, <b>domain models</b>, <b>operation libraries</b>, <b>databases</b>, <b>common
+item models</b> or <b>user node</b>. Multiple selection is also allowed.
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Options</b></font><br><br>
+
+
+
+
+<img src="../images/GEN_PHYS_1_en.jpg">
+<br><br>
+
+
+<b>Status</b><br>
+<u>Disable</u>: No generation for this concept.<br>
+<u>Partial</u>: generates only for objects without a physical
+name.<br>
+<u>Complete</u>: regenerates all objects' physical names.<br><br>
+
+<b>Replacement string</b><br>
+String that will take the place of the word delimiter's
+characters.<br><br>
+
+<b>Length</b><br>
+Maximum length of the generated physical name.<br><br>
+
+<b>Unique</b><br>
+Makes the generated physical name unique.<br><br>
+
+<b>Nbr. characters per word</b><br>
+Maximum length of each physical name word.<br><br>
+
+<b>Case</b><br>
+<u>No change</u>: no case modification.<br>
+<u>UPPER</u>: changes the characters to upper case letters.<br>
+<u>lower</u>: changes the characters to lower case letters.<br><br>
+
+<br>
+
+In the <b>Preference</b> section, you can enter characters that will function as <b>word
+delimiters</b>. <br><br>
+
+
+<img src="../images/GEN_PHYS_2_en.jpg">
+
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Abbreviation dictionary</b></font><br><br>
+The abbreviation dictionary contains abbreviations that can be used in the generation
+process (.srd).<br><br>
+It is a text file and its content should be formatted this way:<br><br>
+<b>DIC=<br>
+customer=cust<br>
+customer order=custorder</b><br>
+<br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Process</b></font><br><br>
+Here is how the physical names are generated:<ol>
+<li>Using the object's name for a reference, ModelSphere identifies the words
+based on the word delimiters.<br><br></li>
+<li>Then, using the complete string (one or more words), the application
+searches this association of words in the abbreviation dictionary and makes
+the replacements/changes. If the string is not found as a whole, the application
+looks for each word one-by-one.<br><br></li>
+<li>Next, it applies the constraints (number of characters per word, replacement
+characters, length and case).<br><br></li>
+<li>Finally, if the unique option is selected, the application verifies the uniqueness
+per concept. Conflicts are resolved by adding a numeric suffix to the
+physical name<br></li>
+</ol>
+A report is also generated.<br><br>
+
+<img src="../images/GEN_PHYS_REP_en.jpg">
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Name source for the different concept.</b></font><br><br>
+<table cellspacing="0" cellpadding="5" border = "1">
+
+
+
+<tr><td><b>CONCEPT</b>
+</td><td><b>SOURCE</b>
+<tr><td>Association
+</td><td>Association name</td></tr>
+<tr><td>Check constraint
+</td><td>Check constraint name</td></tr>
+<tr><td>Column
+</td><td>Column name</td></tr>
+<tr><td>Common item
+</td><td>Common item name</td></tr>
+<tr><td>Common item model
+</td><td>Common item model name</td></tr>
+<tr><td>Database
+</td><td>Database name</td></tr>
+<tr><td>Data model
+</td><td>Data model name</td></tr>
+<tr><td>Domain
+</td><td>Domain name</td></tr>
+<tr><td>Domain model
+</td><td>Domain model name</td></tr>
+<tr><td>Field
+</td><td>Field name</td></tr>
+<tr><td>Foreign key
+</td><td>FK + Foreign constraint name</td></tr>
+<tr><td>Index
+</td><td>Index name</td></tr>
+<tr><td>Informix Dbspace
+</td><td>Dbspace name</td></tr>
+<tr><td>Informix Sbspace
+</td><td>Sbspace name</td></tr>
+<tr><td>Operation library
+</td><td>Operation library name</td></tr>
+<tr><td>Oracle data file
+</td><td>Data file name</td></tr>
+<tr><td>Oracle LOB storage
+</td><td>LOB storage name</td></tr>
+<tr><td>Oracle nested table storage
+</td><td>Nested table storage name</td></tr>
+<tr><td>Oracle package
+</td><td>Package name</td></tr>
+<tr><td>Oracle partition
+</td><td>Table name + &lt;space&gt; + Index name + &lt;space&gt; + Tablespace name + &lt;space&gt; + Partition name</td></tr>
+<tr><td>Oracle redo log file
+</td><td>Redo log file name</td></tr>
+<tr><td>Oracle rollback segment
+</td><td>Rollback segment name</td></tr>
+<tr><td>Oracle sequence
+</td><td>Sequence name</td></tr>
+<tr><td>Oracle tablespace
+</td><td>Tablespace name</td></tr>
+<tr><td>Parameter
+</td><td>Parameter name</td></tr>
+<tr><td>Primary/unique key
+</td><td>PK or UK + &lt;space&gt; + Table name + &lt;space&gt; + Key name</td></tr>
+<tr><td>Procedure
+</td><td>Procedure name</td></tr>
+<tr><td>Project
+</td><td>Project name</td></tr>
+<tr><td>Role
+</td><td>Association name + &lt;space&gt; + role name</td></tr>
+<tr><td>Table
+</td><td>Table name</td></tr>
+<tr><td>Trigger
+</td><td>Trigger name</td></tr>
+<tr><td>User
+</td><td>User name</td></tr>
+<tr><td>View
+</td><td>View name</td></tr>
+<tr><td>Process Model
+</td><td>Process Model name</td></tr>
+<tr><td>Process
+</td><td>Process name</td></tr>
+<tr><td>Store
+</td><td>Store name</td></tr>
+<tr><td>External Entity
+</td><td>External Entity name</td></tr>
+<tr><td>Flow
+</td><td>Flow name</td></tr>
+<tr><td>Qualifier
+</td><td>Qualifier name</td></tr>
+<tr><td>Resource
+</td><td>Resource name</td></tr>
+</table>
+
+</font>
+</body>
+</html>
+

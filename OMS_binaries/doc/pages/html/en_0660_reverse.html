@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Reverse engineering</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Reverse engineering</b></font><br><br><br>
+
+
+The reverse engineering function generates models from specifications contained in
+a database model. The DBMS interface obtains database specifications by querying
+the system catalog’s tables directly, either by using SQL statements, or by using the
+JDBC metadata API functions.
+
+<br><br>
+<b>NOTE: Before doing the reverse engineering of a database, of course, you must establish a connection. 
+(See <a href="en_0640_odbc_conn.html">ODBC Connection</a> or <a href="en_0645_jdbc_connect.html">JDBC Connection</a>)</b>
+<br><br>
+
+To start the reverse engineering, in the main menu, choose:<b> Tools > Database > Reverse Engineering</b>.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Model options</b></font><br><br>
+<img src="../images/REV_1_en.jpg" >
+<br><br>
+Select where you want to create the reversed model.
+<br><br>
+<b>Use root</b><ul>
+
+<li><b>New Project</b>: All model information will be created in a new project.</li>
+<li><b>Existing project or user-defined package</b>: All model information will be created in the selected project or user-defined package.</li>
+</ul>
+<b>Use domain model</b><ul>
+<li><b>New Domain Model</b>: Reverse will create all necessary domains in a new domain model.</li>
+
+<li><b>Existing domain model</b>: Reverse will look for an existing domain in this existing domain model; if an existing domain can't be found, a new one will be created into the existing domain model.</li>
+</ul>
+
+
+
+
+
+<br>
+
+
+
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>DBMS options and concepts to reverse</b></font><br><br>
+Select the concept you want to extract from the database. The concepts are specific
+to each DBMS interface.<br><br>
+<img src="../images/REV_2_en.jpg">
+<br><i>Generic DBMS interface</i>
+<br><br>
+
+Select the reverse engineering options. These options are specific to each target
+system. You must therefore specify which target system you are using.
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Object scope</b></font><br><br>
+You can restrict the scope of the reverse engineering process by dismissing some occurrences.
+<br><br>
+<img src="../images/REV_3_en.jpg">
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Report</b></font><br><br>
+
+A report containing information on the database and the created objects is generated.
+A log file is also generated (reverse.log), in the user’s home directory. The
+latter contains the information displayed in the Details section of the reverse engineering
+window.
+<br><br>
+<img src="../images/REV_REP_en.jpg">
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Created models</b></font><br><br>
+
+<img src="../images/REV_MOD_en.jpg">
+<br><br>
+A deployment around a database is created in a user-defined package. Now you have to <a href = "en_0385_diagram.html"><b>create the diagrams</b></a>, 
+<a href = "en_0388_semgraphinfo.html"><b>adding the graphicals representations</b></a> and do the <a href="en_0414_layout.html"><b>layout</b></a>.
+<br><br><br>
+
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>La classe GROUP</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>La classe GROUP</b></font><br><br><br>
+
+
+
+
+<u>Paramètre</u> : une liste de sous-règles incluses entre parenthèse. La virgule peut être employée
+en tant que séparateur dans la liste.<br><br>
+<u>Modificateurs facultatifs </u>: <b>PREF, SUF, SEP, NUlL.</b><br><br>
+<u>Algorithme </u>:<br>
+Il exécute chaque sous-règle contenue dans la liste. Si au moins une variable produit un
+résultat, il exécute la sous-règle indiquée par PREF et SUF. Si au moins deux variables
+produisent un résultat, il exécute la sous-règle indiquée par SEP. Ensuite, il construit la
+chaîne résultante en concaténant le résultat de PREF, puis le résultat de chaque variable
+pour laquelle un résultat existe en insérant, entre chaque paire de résultats existant, le
+résultat de SEP et, finalement, le résultat de SUF.<br>
+Si aucune variable ne produit un résultat, il exécute la sous-règle spécifiée par NULL et
+retourne le résultat de NULL.<br><br>
+<u>Exemple</u><br>
+<blockquote><tt><font size="+1">col_min_max GROUP (col_len, col_dec)<br>
+PREF = "("<br>
+SEP = " AND "<br>
+SUF = ")"<br>
+NULL = "Length and number of decimals are undetermined.";<br><br>
+
+col_len ATTR ColumnLength<br>
+PREF = "$name;'s length is : ";<br><br>
+
+col_dec ATTR ColumnDecimal<br>
+PREF = "$name;'s nb of decimals is : ";</font></tt><br><br>
+
+Les fonctions du référentiel ColumnLength et ColumnDecimal retournent la longueur du
+nombre de décimales d'une colonne. Si la colonne est price, la longueur est 10 et le
+nombre de décimales est 5, le résultat sera price’s length is: 10 et price’s nb of
+decimals is: 5. Si la longueur est indéterminée, le résultat sera : price’s nb of decimals
+is: 5. S’ils sont tous deux indéterminés, le résultat sera : length and nb of decimals
+are undetermined.</blockquote>
+<br><br>
+
+</font>
+</body>
+</html>
+

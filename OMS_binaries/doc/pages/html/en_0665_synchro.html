@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Synchronization</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Synchronization</b></font><br><br><br>
+
+
+<b>Open ModelSphere's synchronization function allows you to compare
+models' information representing the DBMS schema and the DBMS
+schema itself (physical model). The results of the comparison are presented
+in a comprehensive interface; the function synchronizes the two
+models to generate a comparison report.</b>
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Process</b></font><br><br>
+The synchronization is based on data model information (the feature is available on
+a data model selection).<br><br>
+The synchronization process compares objects from:<ul>
+<li><img src="../images/dboradatamodel.gif"> <b>Data model</b>: The data model linked to the database.<br><br></li>
+<li><img src="../images/dbordatabase.gif"> <b>Database</b>: The database associated with the model.<br><br></li>
+<li><img src="../images/dboraprogramunitlibrary.gif"> <b>Operation library</b>: The operation library linked to the database. <br><br></li>
+<li><img src="../images/dbordomainmodel.gif"> <b>Domain and user type</b>: Domain and user type referred to in the data model
+and the operation library.</li>
+
+</ul>
+To use the synchronization feature:<ol>
+<li>In the <b>explorer</b> window, select the <b>database</b> (it will become highlighted)</li>
+<li>Select <b>Tools > Database > Synchronization</b>.</li>
+</ol>
+
+<b>NOTE: Before synchronizing two
+models, do not forget to
+validate your models.</b>
+
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Model selection</b></font><br><br>
+The function will prompt you to select the database model. It can be an existing data
+model or a model created from a DBMS connection during the synchronization process.
+<br><br>
+<img src="../images/SYNC_1_en.jpg">
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Options</b></font><br><br>
+You can select the concepts and descriptors that will be used for the comparison of
+the two models.
+<br><br>
+<img src="../images/SYNC_2_en.jpg">
+<br><br>
+
+<b>Concepts to synchronize (Scope)</b>: Provide integration parameters (the same parameters can be used
+for the integration and the synchronization) to control the concepts
+and descriptors on which synchronization's actions will be applied.
+Load and save existing synchronization scope to a file. The synchronization
+parameters are specific to the target system.<br><br>
+
+<b>SQL script output (Generate object with user)</b>: It is possible to define users in ModelSphere. They can be used as
+database objects' owners. If you have done so, and the synchronization
+needs to generate DDL for a database object, the physical name
+will be prefixed by the corresponding user's physical name (ex: create
+table jeff.employee)<br><br>
+
+<b>Database options (Synchronize using user)</b>: The reverse will extract object's owner information from the database
+and will use it in the matching process.<br><br>
+
+
+<b>DBMS options</b>: This part is for the specific DBMS reverse engineering options. Available only with a connection. (See <a href="en_0660_reverse.html"><b>Reverse Engineering</b></a>).<br><br>
+<br><br>
+<br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Synchronization interface</b></font><br><br>
+The upper portion of the interface displays SMS and physical model information,
+side by side, in a tree structure similar to the application explorer. It uses a color
+code to ease the identification of model similarities and differences.
+<br><br>
+<img src="../images/SYNC_3_en.jpg">
+<br><br>
+
+
+<b><font color="0000ff">BLUE</font></b> The object only exists in ModelSphere's model<br>
+<b><font color="00aa00">GREEN</font></b> The object only exists in the physical model<br>
+<b><font color="ff0000">RED</font></b> Objects are different<br>
+<b>BLACK</b> Objects are identical<br>
+<br><br>
+The lower portion displays object property differences if there are any.
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Object and property actions</b></font><br><br>
+After comparing and displaying model differences, the user can modify these models
+in a selective manner, and in any direction. However, it is important to specify
+that all object actions are applied hierarchically on the object selection. For example,
+if the action is changed on the table 'employee' it will affect all of the refering column’s
+actions. Therefore, it is important to start assigning actions from the highest to the
+lowest level of composition. Here are the actions available:<ul>
+
+
+
+
+<li><b>Merge</b>: Source model objects are added to the target model to form a super-set of
+all model components. (Add/modify)<br><br></li>
+<li><b>Replace</b> : The target model information is replaced by the source model information.
+Any additional information in the target is deleted.<br><br></li>
+<li><b>None</b> : No action will be applied on the object and its descendants.<br><br></li>
+
+<li><b>Associate</b> : Link two objects so they are considered equivalents and will be compared.<br><br></li>
+<li><b>Break Association</b> : Unlink two objects so they are not considered equivalents and will not be
+compared.</li>
+
+</ul>
+
+
+
+It is possible to decide upon the objects which do not have equivalence in the other models :<ul>
+<li><b>Add</b> : Add the object in the model where it's missing.<br><br></li>
+<li><b>Delete</b> : Delete the object in the model where it is.<br><br></li>
+
+
+</ul>
+There are also actions available on object property differences:<ul>
+<li><b>Modify in ModelSphere</b> : Modify the application model.<br><br></li>
+<li><b>Modify in Physical</b> : Modify the physical by generating a DDL script with the SQL clauses.<br><br></li>
+<li><b>Display Values</b> : Offers a larger size display of source and target values.</li>
+
+
+
+
+
+
+
+
+
+
+
+</ul><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Report</b></font><br><br>
+A report is always produced at the end of the synchronization process. It identifies
+the two models, the date, the list of differences and the modifications applied to the
+model or physical model.<br><br>
+<b>For impact analysis purposes, this report can also be produced before
+the synchronization is completed.</b>
+<br><br>
+<img src="../images/SYNC_REP_en.jpg">
+<br><br>
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

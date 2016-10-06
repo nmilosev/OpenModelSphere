@@ -1,0 +1,10 @@
+DIC=
+
+// Here is an example of a dictionary file used in the generation of physical names. 
+// Enter the word that needs to be replaced, followed by "=" and the abbreviation. 
+// The word to be replaced is not case sensitive 
+// It's important to leave no space on each side of "=". 
+// It's better to order the contents in alphabetical order, to facilitate the update. 
+
+table=tbl
+United States=US

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>GROUP Class</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>GROUP Class</b></font><br><br><br>
+
+
+
+<u>Parameter</u>: a list of sub-rules enclosed in parenthesis, comma can be used as separator
+in the list.<br><br>
+<u>Optional modifiers</u>: <b>PREF, SUF, SEP, NULL.</b><br><br>
+<u>Algorithm</u>:<br>
+Processes each sub-rule of the list; if at least one variable gives a result, processes
+the sub-rule specified by PREF and SUF; if at least two variables give a result, processes
+the sub-rule specified by SEP; then builds the result string by concatenating
+the PREF result, then the result of each variable for which a result exists, inserting
+between each pair of existing results the SEP result, and finally the SUF result.
+If there is no variable giving a result, processes the sub-rule specified by NULL, and
+returns the NULL result.<br><br>
+<u>Example</u><br>
+<blockquote><tt><font size="+1">col_min_max GROUP (col_len, col_dec)<br>
+PREF = "("<br>
+SEP = " AND "<br>
+SUF = ")"<br>
+NULL = "Length and number of decimals are undetermined.";<br><br>
+
+col_len ATTR ColumnLength<br>
+PREF = "$name;'s length is : ";<br><br>
+
+col_dec ATTR ColumnDecimal<br>
+PREF = "$name;'s nb of decimals is : ";</font></tt><br><br>
+
+The <b>ColumnLength</b> and <b>ColumnDecimal</b> repository functions return the length of the number
+of decimals of a column. If the column is price, the length is 10 and the number of
+decimals is 5, the result will be price's length is: 10 and price's nb of decimals
+is: 5. If the length is undetermined, the result will be: price's nb of decimals is: 5;
+if both are undetermined, the result will be: length and number of decimals are
+undetermined.</blockquote>
+<br><br>
+
+
+</font>
+</body>
+</html>
+

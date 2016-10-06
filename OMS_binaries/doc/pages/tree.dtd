@@ -1,0 +1,7 @@
+   <!ELEMENT tree (branch+)>
+   <!ELEMENT branch (branchText,(branch|leaf)*)>
+   <!ATTLIST branch id CDATA #REQUIRED>
+   <!ELEMENT branchText (#PCDATA)>
+   <!ELEMENT leaf (leafText,link)>
+   <!ELEMENT leafText (#PCDATA)>
+   <!ELEMENT link (#PCDATA)>

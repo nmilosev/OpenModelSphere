@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Validating a class model</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Validating a class model</b></font><br><img src="../images/validatejava.gif"><br><br>
+
+
+
+<b>Open ModelSphere</b> has more flexibility in class modeling than what the Java language permits.
+To ensure that the generated code is Java conform, the application has a validation function. 
+Use this powerful feature to monitor potential errors in your
+Java code as you build your models. You can choose to validate a class, a group of
+classes (package-level), or all the classes in a model (project-level). 
+<br><br>
+Follow these
+easy steps:<ol>
+<li>Highlight the class model<br><br></li>
+<li>In the menu choose <b>Tools > Validate for Java</b><br><br></li>
+<li>A report will appear indicating if and where the model is not valid. It is also
+possible to save or print the report using the File menu.</li>
+</ol><br>
+
+
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Class/Exception/Interface (Abstract Data Type - adt)
+Validations</b></font><br><ul>
+
+<li>unicity of the nested/inner adt name inside the containment hierarchy</li>
+<li>unicity of the nested/inner adt name inside nested/inner adts at the same level</li>
+<li>unicity of the adt name inside the same package</li>
+<li>unicity of the compilation unit name inside the same package</li>
+<li>an interface member adt cannot be declared private, protected or package</li>
+<li>package adt cannot be declared static nested adt</li>
+<li>a class cannot be final and abstract adt inheritance</li>
+<li>accessibility to superclass/superinterface</li>
+<li>a superclass cannot be a final class</li>
+<li>an interface cannot inherit from a superclass</li>
+<li>a class cannot inherit from one of its nested/inner class adt superinterface</li>
+<li>an interface cannot inherit from one of its nested interface end enumeration of adt ancestors</li>
+<li>a class can only inherit from one direct superclass at a time</li>
+<li>a class/an interface cannot implement/extend the same direct superinterface more than one time</li>
+<li>abstract supermethods implement adt components declaration validations</li>
+<li>an adt cannot contain two fields with the same name</li>
+<li>an adt cannot contain two inner/nested adts at the same level with the same name</li>
+<li>an nested adt cannot contain a sister (at the same level ) inner/nested adt with the same name</li>
+<li>an adt cannot contain two operations (two methods or two constructors) with the same signature fields validations</li>
+
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Field Type Validations</b></font><br><ul>
+<li>accessibility to type of field</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Class Field Validations</b></font><br><ul>
+<li>a field of a class cannot be declared final and volatile</li>
+<li>a field of an inner class cannot be declared static</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Interface Field Validations</b></font><br><ul>
+<li>a field of an interface cannot be declared private, protected or package.</li>
+<li>a field of an interface cannot be declared transient.</li>
+<li>a (final) field of an interface cannot be declared volatile.</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Operations Method Parameters Validations</b></font><br><ul>
+<li>parameters must be typed.</li>
+<li>accessibility to type of parameter.</li>
+<li>two parameters of an adt method cannot have the same class or exception name.</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Class Method Validations</b></font><br><ul>
+<li>a field of an inner class cannot be declared static</li>
+<li>an abstract method must appear within an abstract class</li>
+<li>a class method cannot be declared abstract and private</li>
+<li>a class method cannot be declared abstract and final</li>
+<li>a class method cannot be declared abstract and static</li>
+<li>a class method cannot be declared abstract and synchronized</li>
+<li>a class method cannot be declared abstract and native</li>
+<li>an abstract method cannot have body.</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Interface Method Validations</b></font><br><ul>
+<li>a method of an interface cannot be declared private, protected or package</li>
+<li>a (abstract) method of an interface cannot be declared final</li>
+<li>a (abstract) method of an interface cannot be declared static</li>
+<li>a (abstract) method of an interface cannot be declared synchronized</li>
+<li>a (abstract) method of an interface cannot be declared native</li>
+<li>a (abstract) method of an interface cannot have body</li>
+<li>an overriding or hiding method must have the same return type than overridden method</li>
+<li>a method cannot override or hide a method with weaker access privilege</li>
+<li>a final method of a class cannot be hidden or overridden</li>
+<li>a static method of a class cannot hide an instance method</li>
+<li>a instance method cannot override a static method of a class</li>
+<li>an overriding or hiding method may not be declared to throw more checked exceptions than overridden or hidden method.</li>
+</ul>
+
+</font>
+</body>
+</html>
+

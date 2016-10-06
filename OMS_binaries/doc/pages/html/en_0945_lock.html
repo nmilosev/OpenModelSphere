@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+  <title>Locking Models</title>
+</head>
+<body bgcolor="#ffffff">
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="+2">Locking
+Models</font></font></font></b>
+<br>
+&nbsp;
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">When
+large model projects are developed, especially when several people are
+involved, it is useful to prevent changes in a critical model area but
+to allow modification of other model parts.&nbsp; By using the <b>Locking
+Models</b> feature, it is possible to lock one or several models,
+submodels
+or packages, in order to prevent any change in a particular part of the
+project file.</font></font></font>
+</p>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">Every
+relational, process or class model, relational submodel and Java
+package
+can be locked. To do so, select the appropriate model or package in the<b>
+Explorer</b>, and enable the <b>Locked property</b> in the <b>Design
+Panel</b>.
+Once a model or a package is locked, it is not possible to make any
+semantic
+or graphical modification to its contents, or to any
+submodel/subpackage
+under it.</font></font></font>
+</p>
+<p><img src="../images/lockedModel_en.jpg" nosave="" height="342"
+ width="557"></p>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">Here
+are some cases where <b>Locking Models</b> can be useful:</font></font></font>
+</p>
+<ul>
+  <li> <font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">You are reverse engineering a relational database; the
+reverse engineered model
+represents the physical structure of the database at a given time. If
+you want
+to improve the model, but also want to keep the original model
+unmodified, create a copy of the reverse engineered model, lock it, and
+work only on the copy. The compare/integrate feature can be
+used to visualize improvements made since the model was originally
+reverse engineered.</font></font></font></li>
+  <li> <font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">You are merging a business context under an external process
+in another project
+file. You want to continue to work under the original business context,
+but you also want to prevent any change under the main business process
+to facilitate
+any subsequent integration. You can then select the former external
+process, and lock it to prevent changes under it.</font></font></font></li>
+  <li> <font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">You are modeling Java application source code coming from </font></font></font><font
+ face="sans serif,arial,helvetica"><font color="#000000"><font size="-1">both
+    </font></font></font><font face="sans serif,arial,helvetica"><font
+ color="#000000"><font size="-1">in-house development efforts and
+third-party sources. In this case, you do not want to modify the
+third-party source code, so preventing changes in the corresponding
+model is important. To prevent changes, select the
+third-party main package and lock it.</font></font></font></li>
+</ul>
+</body>
+</html>

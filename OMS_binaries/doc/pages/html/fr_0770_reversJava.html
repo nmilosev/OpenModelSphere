@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>La rétro-ingénierie Java / XMI</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>La rétro-ingénierie Java / XMI</b></font><br><br><br>
+
+
+
+
+
+Il y a plusieurs types de fichiers possibles dans le processus de rétro-ingénierie :<ul>
+<li>Fichiers de source Java (.java).</li>
+<li>Fichiers de classe Java (.class).</li>
+<li>Archives Java (.jar).</li>
+<li>Fichiers Java comprimés (.zip).</li>
+<li>Archives d'application Web (.war).</li>
+<li>Fichiers XMI (<i>XML Metadata Interchange</i>) (.xmi .xml).</li>
+
+</ul><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le fonctionnement</b></font><br><br>
+Pour faire la rétro-ingénierie:<ol>
+<li>Dans l'explorateur, sélectionnez d'abord le projet dans lequel vous désirez que le modèle soit ramené.<br><br></li>
+<li>Choisissez <b>Outils > Java/XMI > Rétro-ingénierie Java/XMI</b>. L'interface de rétro-
+ingénierie Java apparaît.
+<br><br>
+<img src="../images/REV_JAVA_fr.jpg">
+
+<br><br></li>
+<li>
+Cette fenêtre vous permet, lorsque vous planifiez de faire la rétro-ingénierie, d'ajouter des fichiers et aussi des répertoires complets contenant un lot de fichiers.
+<br><br></li>
+
+<li>Cliquer sur le bouton <b>Rétro-ingénierie</b> pour exécuter l'opération. Un message apparaîtra
+lorsque la rétro-ingénierie sera achevée, vous offrant un rapport détaillé de l'opération. 
+Le modèle ramené apparaîtra dans la fenêtre Explorateur de Open ModelSphere.<br><br></li>
+
+</ol>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Diagrammes et représentations graphiques</b></font><br><br>
+Le modèle fraîchement extrait ne comporte pas encore de diagrammes. Vous devez donc les ajouter sous le modèle de classe et sous les paquetages qui vous intéresse. 
+<b>Cliquez-droit</b> sur l'icone du modèle de classe ou d'un paquetage et dans le <b>menu contextuel</b>, choisissez: <b>Add > Diagramme</b>.<br><br>
+Un diagramme sera alors ajouté. Pour visualiser ce diagramme, <b>double-cliquez </b>sur son <b>icone</b> dans <b>l'explorateur</b>.
+<br><br>
+La fenêtre du diagramme apparaitra, mais elle sera complètement vide. 
+C'est que les représentations graphiques des objets n'existent pas encore. 
+(<i>Dans ModelSphere, les objets et leur représentations graphiques sont indépendants.</i>) Pour générer les représentations graphiques des objets, <b>cliquez-droit</b> dans le <b>fond du diagramme</b> et choisissez dans le <b>menu contextuel</b> : <b>Ajouter les objets du diagramme</b>.
+<br><br>
+Maintenant, afin de rendre le modèle un peu mieux disposé, cliquez-droit dans le fond du diagramme et choisissez dans le menu contextuel : 
+<b>Disposer le diagramme en entier</b>. <br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les résultats</b></font><br><br>
+Après le processus de rétro-ingénierie, vous obtiendrez ceci :<ul>
+<li><b>{Non résolu}</b> : l'importation est effectuée sur un paquetage (*) et aucun préfixe
+n’est ajouté au nom de classe.<br><br></li>
+<li><b>Classes d'application</b> : ce sont les paquetages, les classes et les unités de
+compilation des fichiers Java choisis ou ceux dans les répertoires.<br><br></li>
+<li><b>Références externes</b> : ce sont tous les paquetages et classes mentionnés
+dans les classes choisies pour la rétro-ingénierie.<br><br></li>
+</ul>
+
+
+
+</font>
+</body>
+</html>
+

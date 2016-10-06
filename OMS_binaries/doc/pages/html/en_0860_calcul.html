@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Assigning process time along with resource rate and cost</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Assigning process time along with resource rate and cost</b></font><br><br><br>
+
+
+In order to help you capture the length of time of business processes, processes can
+be assigned an amount of time. To do so, you must add a set of attributes to the
+process and perform calculations that will allow you to display a partial time and a
+total time. Moreover, you must include resources in your calculations, since resource
+assignment to a process is also an element for which you can specify a period of
+measurement. Here is an example on how to work with this feature. (Based on the sample model distributed with this product.)<ol>
+<li>In the <b>explorer</b> window, <b>right-click</b> the 'Order Processing' process and choose <b>Properties</b>.<br><br></li>
+<li>Click in the <b>Fixed Cost</b> box, type in the process fixed cost (type in 15) and
+press <b>Enter</b>.<br><br></li>
+<li>Click in the <b>Fixed Time box</b>, type in the process fixed time (type in 30) and
+press <b>Enter</b>.<br><br></li>
+<li>Select <b>Minutes</b> as the time unit in the <b>Fixed time unit box</b>.<br><br></li>
+<li>Click <b>Apply</b>.
+<br><br>
+<img src="../images/CALCUL_1_en.jpg">
+<br><br>
+<b>Once you have established the fixed cost and the fixed time for the 'Order Processing' process, 
+you can set up how much of a resource is used for a particular process (usage rates).</b>
+
+<br><br></li>
+
+<li>From the same <b>properties</b> window, look for the <b>Process / Resource tab</b>.<br><br></li>
+<li>The <b>Resource</b> tab appears. Select 'Credit Manager'.<br><br></li>
+<li>Click in the box under the <b>Usage Rate</b> column and type in 10 and select
+<b>Hour</b> in the combo box under the <b>Usage Rate Time Unit</b> column.<br><br></li>
+<li>For the 'Data Entry Clerk' type in 11 in the box under the <b>Usage Rate</b>
+column and select<b> Hour</b> in the combo box under the <b>Usage Rate Time Unit</b>
+column.<br><br></li>
+</ol>
+<img src="../images/CALCUL_2_en.jpg">
+<br><br>
+Now let’s look at a resource and see what the work load is. The work load is calculated
+as the sum of all process usage rates for that resource.<ol>
+<li>From the <b>Explorer</b> window, <b>right-click</b> 'Credit Manager' resource and choose <b>Properties</b>.<br><br>
+The work load indicated for the 'Credit Manager' is the sum of the all usage done for this resource in the model.<br><br></li>
+<li>Click in the box corresponding to the <b>Cost</b>, type in 20 for the resource cost
+and select <b>Hour</b> as <b>Cost Time Unit</b>.<br><br></li>
+<li>Click <b>Apply</b> and <b>Close</b>.<br><br></li>
+<li>Repeat this step for 'Data Entry Clerk' but type in 15 for the resource cost
+and select <b>Hour</b> as <b>Cost Time Unit</b>.<br><br>
+Now let’s take a look at a process and see what the resource cost is.<br><br></li>
+<li><b>Right-click</b> the Order Execution process and choose <b>Properties</b>.<br><br>
+Note that the resource cost for the process is 365. This total is automatically calculated by
+taking the cost of the 'Credit Manager' (20 x 10 hrs. = 200) and the cost of
+the 'Data Entry Clerk' (15 x 11 hrs. = 165).
+<br><br>
+<img src="../images/CALCUL_3_en.jpg">
+<br><br></li>
+<li>Also note that you can assign a fixed cost which will be added to the calculated
+resource cost to give you a partial cost. Total cost reflects all costs
+from this diagram level and all costs from subprocesses for this process.
+This gives a valuable overview of the business cost structure.<br><br></li>
+
+</ol>
+
+<b>It is strongly advised that you learn the new attributes and time units
+implemented as well as calculation rules and results described in the
+rest of this section, in order to preserve your model integrity when you
+modify the following time units: fixed time unit (process), usage rate time
+unit (process-resource link) and cost time unit (resource). In most cases,
+you can verify the accuracy of your calculations by accessing the Process
+Description window. You can also produce and print a report including
+all attributes involved in these calculations to detect inconsistencies
+and to correct erroneous elements.</b>
+<br><br><br>
+
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Time attributes</b></font><br><ul>
+<li><b>Fixed Time</b>: This attribute, like the Fixed Cost attribute, can be directly typed
+in by the user. The fixed time represents a period of measurement value that
+does not take into account the assignment time for resources nor the time
+for processes included in the exploded process.<br><br></li>
+<li><b>Partial Time</b>: The partial time represents the sum of the fixed time and the
+resource time.<br><br></li>
+<li><b>Resource Time</b>: This attribute represents the sum of time periods of all
+process/resource links of a process. These time periods are defined in the
+Usage Rate attribute.<br><br></li>
+<li><b>Total Time</b>: The total time represents the sum of a process partial time and
+its child total time periods.<br><br></li>
+</ul><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Time units</b></font><br><br>
+<i>Fixed Time, Partial Time, Resource Time and Total Time Units </i>:<ul>
+<li><b>Second, Minute, Hour</b>: Values associated to this unit family are converted when the user modifies the current
+unit.<br><br></li>
+<li><b>N/A</b>: This “NULL” value is applied by default to earlier models to preserve data integrity.
+The resources fixed costs are accumulated.<br><br></li>
+
+<li><b>Usage Rate Time Unit (Resource-Process Link)</b>:
+This time unit applies to the existing Usage Rate (the time periods of a resource
+linked to a process) attribute.<br><br></li>
+
+<li><b>Cost Time Unit (Resource)</b>:
+This time unit applies to the existing attribute Cost.<br><br></li>
+
+<li><b>Work Load Time Unit (Resource)</b>:
+This time unit applies to the Work Load attribute (the accumulated time of a resource
+in the model).<br><br></li>
+
+</ul><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Calculation and validation rules</b></font><br><br>
+Generally speaking, the validation is performed on time units when the corresponding
+time value is different from 0.<br><br>
+<b>Process</b><ul>
+<li><u>Partial Time</u>: Partial time is calculated if fixed time and resource time are
+not null and if their time units belong to the same time unit family. Otherwise:<br>
+- Partial time = 0<br>
+- Partial time unit = n/a (null)<br><br></li>
+<li><u>Resource Time</u>: Resource time is calculated only if all resources linked to
+a process have the same time unit family associated to usage rates. Otherwise:<br>
+- Resource time = 0<br>
+- Resource time unit = n/a (null)<br><br></li>
+<li><u>Total Time</u>: Total time is calculated only if all child processes and the current
+partial time have the same time unit family. Otherwise:<br>
+- Current total time = 0<br>
+- Current total time unit = n/a (null)<br><br></li>
+<li><u>Resource Cost</u>: Resource cost is calculated in two manners.<br><br>
+1. Variable cost - The result of usage rate and the resource cost if time units are the same.<br><br>
+2. Fixed cost - The addition of cost if the time unit of resource cost is NULL.<br><br>
+N.B. The cost of one resource is invalid and not calculated if time unit of usage rate is NULL and time unit of resource cost is not NULL.
+The resource cost integrity can be verified if you produce a report relating to linked
+resources and processes.<br><br></li>
+</ul>
+<b>Resource</b><ul>
+<li><u>Work Load</u> : Work load is calculated only if all processes linked to a resource
+have the same time unit family associated to usage rates. Otherwise:<br>
+- Work load = 0<br>
+- Work load time unit = n/a (null)<br><br></li>
+</ul>
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Finding objects</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Finding objects</b></font><br><img src="../images/find.gif"><br><br>
+
+
+
+<b>The Find feature allows you to find objects in the explorer window based
+on various criteria and options.</b><br><br>
+The search mechanism is based on regular expressions (grep see below for explanation).
+Also, objects to find and selected options and scope that you previously
+looked for will be kept in memory during the current session.<br><br>
+To use this feature, select <b>Edit > Find</b> from the <b>main menu</b>.
+Or click the <b>Find tool</b> <img src="../images/find.gif"> located in the <b>Edit toolbar</b>. The following window will
+appear.
+
+<br><br>
+<img src="../images/FIND_en.jpg">
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Options</b></font><ul>
+<li><b>Case sensitive</b>: matches the exact case of the object string. (ex: MiX oF BoTh CaSeS)<br><br></li>
+<li><b>Whole words only</b>: matches the exact string only.<br><br></li>
+<li><b>Regular expressions (grep)</b>: includes grep replacement characters.<br><br></li>
+<li><b>Recursive</b>: searches in every model below, including data submodel, the selection in a recursive way.<br><br></li>
+</ul>
+<b>Note: A regular expression consists of a character string where some characters
+are given special meaning with regards to pattern matching. grep
+allows the string argument to be specified as a regular expression, which
+is a way of specifying a string that allows certain metacharacters (special
+keyboard characters such as the period) to stand for other characters
+or to further define the way the pattern matching should work.</b>
+
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Scope</b></font><ul>
+<li><b>Name</b>: compares the object to find with the object’s name.<br><br></li>
+<li><b>Physical name</b>: compares the object to find with the object’s physical name.<br><br></li>
+<li><b>Alias</b>: compares the object to find with the object’s alias.<br><br></li>
+<li><b>Description</b>: compares the object to find with the object’s description.<br><br></li>
+<li><b>All other text fields</b>: compares the object to find with all other objects’ string
+attributes including multi-line properties (i.e. procedure’s body).<br><br></li>
+</ul>
+<b>If you wish to narrow your search down, perform it at the model level instead
+of the project level.</b>
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

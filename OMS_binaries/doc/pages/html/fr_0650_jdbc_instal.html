@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Installation d'un pilote JDBC</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Installation d'un pilote JDBC</b></font><br><br><br>
+
+Pour rendre <b>Open ModelSphere</b> capable de se connecter à une base de données, un pilote JDBC est requis.
+Il y a deux sortes de pilote JDBC :  Les <b>pilotes JDBC natifs</b>, spécifique à un SGBD et le <b>pilote générique JDBC-ODBC</b>.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les pilotes JDBC natifs</b></font><br><br>
+Les pilotes natifs peuvent être obtenus sur le site web du fournisseur de SGBD, ou disponible lors de l'achat de ceux-ci. Contactez votre fournisseur pour plus de détails.
+Vous en trouverez ici quelques exemples.<br><br>
+
+
+
+<table BORDER = "1" cellspacing = "0" cellpadding = "5" >
+<tr >
+<td><b>Système cible</b></td>
+
+<td><b>Fichiers de pilote</b></td>
+
+<td><b>Classe du pilote</b></td>
+
+<td><b>Où se les procurer</b></td>
+</tr>
+
+
+
+<tr>
+<td><b>DB2</b></td>
+
+<td>db2java72.zip</td>
+
+<td>COM.ibm.db2.jdbc.net.DB2Driver</td>
+
+<td>Vient avec le SGBD</td>
+</tr>
+
+<tr>
+<td><b>Informix</b></td>
+
+<td>ifxjdbc.jar</td>
+
+<td>com.informix.jdbc.IfxDriver</td>
+
+<td>Vient avec le SGBD</td>
+</tr>
+
+<tr>
+<td><b>MySQL</b></td>
+
+<td>mysql-connector-java-3.0.8-stable-bin.jar</td>
+
+<td>com.mysql.jdbc.Driver</td>
+
+<td>http://www.mysql.com/products/connector-j</td>
+</tr>
+<tr>
+<td><b>SQL Server</b></td>
+
+<td>mssqlserver.jar | msbase.jar | msutil.jar</td>
+
+<td>com.microsoft.jdbc.sqlserver.SQLServerDriver</td>
+
+<td>Vient avec le SGBD</td>
+</tr>
+<tr>
+<td><b>Oracle</b></td>
+
+<td>jdbc901-thin-classes12.zip</td>
+
+<td>oracle.jdbc.driver.OracleDriver</td>
+
+<td>http://www.oracle.com/technology/tech/java</td>
+</tr>
+</table>
+<br><br>
+Quand vous avez obtenu le fichier pilote (habituellement un fichier .jar ou .zip), copiez-le dans le sous-répertoire: <b>/ jre / lib / ext</b> de votre installation Java. Redémarrez ModelSphere.
+
+<br><br>
+Chaque pilote JDBC a son propre nom de classe. Consultez la documentation relative à votre SGBD pour le connaître. Ceci sera essentiel pour utiliser le pilote JDBC. Voir <a href="fr_0645_jdbc_connect.html">Connexion à une base de données avec JDBC</a>.
+
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le pilote générique JDBC-ODBC</b></font><br><br>
+Le pilote JDBC-ODBC s'installe avec l'application ModelSphere. Ce pilote peut être utilisé avec une source de donnée ODBC déjà définie.
+
+Le type de connexion offert par ce pilote est uniquement compatible avec le système cible générique.
+
+<br><br><br><br>
+
+
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

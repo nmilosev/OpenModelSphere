@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Grouper</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Grouper</b></font><br><br><br>
+
+
+La commande <b>Grouper</b> facilite le travail d’équipe. Elle offre la possibilité de créer différents
+modèles en parallèle pour les regrouper par la suite.<br><br>
+Pour exécuter un regroupement, le modèle cible et le modèle source doivent être ouverts. On doit d'abord sélectionner le processus dans le modèle source, celui que l'on veut greffer au modèle cible. 
+Ce processus et tout ce qui se trouve en dessous sera groupé à la place d'un processus externe dans le modèle cible.<br><br>
+On lance l'opération en choisissant dans le <b>menu principl</b>:<b> Outils > Grouper</b>.
+Cette commande fait apparaître la fenêtre Options de groupement.<br><br> 
+
+Cette fenêtre offre les options suivantes :<ol>
+<li><b>Sous </b>: cette boîte de saisi permet de choisir le processus qui recevra la branche à greffer.<br><br></li>
+<li><b>Mettre à jour à partir de la source</b> : quand cette option
+est cochée, les concepts du modèle cible qui ont le même identifiant (identifiant
+sémantique) que ceux des concepts du modèle source héritent de toute
+l’information des concepts du modèle source.<br><br></li>
+<li><b>Grouper les qualificatifs</b> : la liste des qualificatifs pour les concepts ayant les
+mêmes identifiants sera la somme des qualificatifs dans chaque concept avant
+le regroupement.<br><br></li>
+<li><b>Grouper les ressources</b> : la liste des ressources pour les concepts ayant les
+mêmes identifiants sera la somme des ressources dans chaque concept avant
+le regroupement.<br><br></li>
+<li><b>Concaténer les descriptions différentes</b> : identique à l’option Grouper les qualificatifs,
+mais agit sur les descriptions. Si le champ de la description diffère de quelque
+façon, la description du modèle source sera ajoutée à la fin de celle du modèle
+cible.<br><br></li>
+
+</ol>
+Cliquez sur le bouton <b>OK</b> pour déclencher le processus de regroupement. Quand l’opération
+est complétée, vous devriez obtenir le message suivant :
+L’opération s’est terminée avec succès.
+Si tel n’est pas le cas, lisez le fichier d’erreurs, apportez les corrections nécessaires au
+modèle et recommencez l’opération.
+Après l’opération, le processus regroupé devient un sous-processus du modèle récepteur.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Reconnaissance des concepts communs</b></font><br><br>
+Quand le processus à greffer comporte des liens avec d'autres processus de même niveau dans le modèle de destination, 
+il est important de s'assurer des points suivants afin qu'il fasse un lien et d'éviter qu'il duplique le même processus.
+<ul>
+<li>Les chaînes hiérarchiques des identifiants numériques ou alphanumériques doivent être complètes.<br><br></li>
+
+<li>On peut utiliser soit les identifiants numériques ou alphanumériques, dans la mesure que ce soit la même chose tant pour la source que pour la cible.<br><br></li>
+
+<li>Les identifants pour le niveau de greffe doivent être les mêmes des deux côtés pour pouvoir être reconnus.<br>
+(ex. Si on greffe un processus 2 qui est relié à un processus 3, sur un processus 4.1.2, un lien sera effectué si un processus 4.1.3 existe dans le modèle cible. Autrement il sera créer.)<br><br></li>
+</ul>
+Il en va de même pour les entités externes, les dépots et les flux.
+<br><br>
+<b>Voir aussi : <a href = "fr_0850_split.html">Scinder</a></b>
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+  <title>Defining page numbers and titles</title>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="+2">Defining
+page numbers and titles</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">It
+is possible to display the page number on each page of the diagram (see
+the <a href="en_0411_page_number.html">Displaying the page number and
+title</a>
+section). The number can appear at the top or at the bottom of each
+page.</font></font></font>
+</p>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">Instead
+of displaying page numbers, you can define a title that will be printed
+on each page.&nbsp; This title can contain fixed text, such as the name
+of your organization, but also variable text, such as time, date, or
+number
+of pages.&nbsp; Depending on the settings defined at <a
+ href="en_0411_page_number.html">Displaying
+the page number and title</a>, the title will appear as a page header
+(at
+the top of each page) or a page footer</font></font></font>
+<br>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">(at
+the bottom).</font></font></font>
+<br>
+&nbsp;
+</p>
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">Figure
+1 : Displaying "Page 1 of 4" page title instead of the default "1, 1".</font></font></font></b>
+<br>
+<img src="../images/pageNumberAndTitle2_en.jpg" nosave=""
+ style="height: 648px; width: 900px;" title="" alt=""><br>
+&nbsp;
+</p>
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">Figure
+2 : Defining and displaying a complex page title.</font></font></font></b>
+<br>
+<img src="../images/pageNumberAndTitle3_en.jpg"
+ style="height: 648px; width: 900px;" title="" alt=""><br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">Variable
+text includes :</font></font></font>
+<br>
+&nbsp;
+<br>
+<table border="0" cellspacing="0" cellpadding="0" cols="2" width="60%">
+  <caption><br>
+  </caption><tbody>
+  </tbody> <tbody>
+    <tr>
+      <td>
+      <ul>
+        <li>Current page</li>
+      </ul>
+      </td>
+      <td>
+      <ul>
+        <li>Total pages</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <ul>
+        <li>Current row</li>
+      </ul>
+      </td>
+      <td>
+      <ul>
+        <li>Total rows</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <ul>
+        <li>Current column</li>
+      </ul>
+      </td>
+      <td>
+      <ul>
+        <li>Total columns</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <ul>
+        <li>Current time</li>
+      </ul>
+      </td>
+      <td>
+      <ul>
+        <li>Diagram name</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <ul>
+        <li>Current date</li>
+      </ul>
+      </td>
+      <td>
+      <ul>
+        <li>Project name</li>
+      </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">To
+define the page number and title:</font></font></font>
+<br>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font
+ size="-1">&nbsp;&nbsp;&nbsp;
+1. Open the Options dialog by accessing the <b>Tools-&gt;Options</b>
+menu,
+this will display the dialog:</font></font></font>
+</p>
+<center>
+<p><img src="../images/pageNumberAndTitle_en.jpg" nosave="" height="370"
+ width="594"></p>
+</center>
+<p style="font-family: arial;"><font color="#000000"><font size="-1">&nbsp;&nbsp;&nbsp;
+2. Define the <b>Format</b> string and press <b>Apply </b>and then <b>Close</b>.
+In the format string, {1} will be replaced by the current row and {2}
+by
+the current column. If your diagram uses five pages horizontally and
+three
+pages vertically, your pages will be numbered :</font></font>
+</p>
+<ul style="font-family: arial;">
+  <li> <font color="#000000"><font size="-1">1,1&nbsp;&nbsp;&nbsp;
+1,2&nbsp;&nbsp;&nbsp; 1,3&nbsp;&nbsp;&nbsp; 1,4&nbsp;&nbsp;&nbsp;
+1,5&nbsp;&nbsp;
+for the first row</font></font></li>
+  <li> <font color="#000000"><font size="-1">2,1&nbsp;&nbsp;&nbsp;
+2,2&nbsp;&nbsp;&nbsp; 2,3&nbsp;&nbsp;&nbsp; 2,4&nbsp;&nbsp;&nbsp;
+2,5&nbsp;&nbsp;
+for the second row</font></font></li>
+  <li> <font color="#000000"><font size="-1">3,1&nbsp;&nbsp;&nbsp;
+3,2&nbsp;&nbsp;&nbsp; 3,3&nbsp;&nbsp;&nbsp; 3,4&nbsp;&nbsp;&nbsp;
+3,5&nbsp;&nbsp;
+for the third row</font></font></li>
+</ul>
+<blockquote style="font-family: arial;"><font color="#000000"><font
+ size="-1">If
+the format string is defined as "Page {0} of {5}", pages will be
+numbered
+Page 1 of 15, Page 2 of 15, and so forth.</font></font>
+  <p><font color="#000000"><font size="-1">If
+the format string is defined as "Page {0} of {5} - {8} - Modified on
+{4}
+at {3}", pages will be entitled "Page 1 of 15 - Main Diagram - Modified
+on Jul 21, 2004 at 10:35:17 AM" when "Main Diagram" is the name of the
+diagram, {4} represents the current date and {3} the current time.</font></font></p>
+</blockquote>
+<h2 style="font-family: arial;">
+Setting position and font of the page titles</h2>
+<small><span style="font-family: arial;">In the following figure, page
+title and displayed at the top-left
+corner.&nbsp;
+Right-click in the diagram area to get the pop-up menu, and select the
+</span><b style="font-family: arial;">Set
+Page Number and Title...</b><span style="font-family: arial;"> command
+to change the position of the page
+titles.</span></small>
+<p><img src="../images/pageNumberAndTitle4_en.jpg" nosave=""
+ height="648" width="900"><br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+<p style="font-family: arial;"><small>The resulting diagram after
+setting the page title at the right-top
+corner.&nbsp; S</small><font color="#000000"><font size="-1">ee
+the <a href="en_0411_page_number.html">Displaying the page number and
+title</a>
+section for more details.</font></font>
+</p>
+<p><img src="../images/pageNumberAndTitle5_en.jpg"
+ style="height: 648px; width: 900px;" title="" alt=""><br>
+&nbsp;
+</p>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Install JDBC driver </title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="3">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Install JDBC driver </b></font><br><br><br>
+
+
+
+To enable <b>Open ModelSphere</b> to communicate with a given database, it is required to install a JDBC Driver.  
+There are two kinds of JDBC driver:  <b>JDBC-native drivers</b>, specific to a target database; and generic <b>JDBC-ODBC driver</b>. 
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>JDBC-native drivers</b></font><br><br>
+The native drivers can be obtained from the DBMS' Web site, or are available by purchasing the DBMS. 
+You will find some example here.<br><br>
+
+<table BORDER = "1" cellspacing = "0" cellpadding = "5" >
+<tr >
+<td><b>Target System</b></td>
+
+<td><b>Driver file</b></td>
+
+<td><b>Driver class</b></td>
+
+<td><b>Where to get it</b></td>
+</tr>
+
+
+
+<tr>
+<td><b>DB2</b></td>
+
+<td>db2java72.zip</td>
+
+<td>COM.ibm.db2.jdbc.net.DB2Driver</td>
+
+<td>Comes with the DB2 DBMS</td>
+</tr>
+
+<tr>
+<td><b>Informix</b></td>
+
+<td>ifxjdbc.jar</td>
+
+<td>com.informix.jdbc.IfxDriver</td>
+
+<td>Comes with the Informix DBMS</td>
+</tr>
+
+<tr>
+<td><b>MySQL</b></td>
+
+<td>mysql-connector-java-3.0.8-stable-bin.jar</td>
+
+<td>com.mysql.jdbc.Driver</td>
+
+<td>http://www.mysql.com/products/connector-j</td>
+</tr>
+<tr>
+<td><b>SQL Server</b></td>
+
+<td>mssqlserver.jar | msbase.jar | msutil.jar</td>
+
+<td>com.microsoft.jdbc.sqlserver.SQLServerDriver</td>
+
+<td>Comes with the Microsoft SQL Server DBMS</td>
+</tr>
+<tr>
+<td><b>Oracle</b></td>
+
+<td>jdbc901-thin-classes12.zip</td>
+
+<td>oracle.jdbc.driver.OracleDriver</td>
+
+<td>http://www.oracle.com/technology/tech/java</td>
+</tr>
+</table>
+<br><br>
+When the driver file is obtained, copy the driver file (usually a .jar or .zip file) to the subdirectory <b>/ jre / lib / ext</b> of your Java installation. Restart ModelSphere. 
+<br><br>
+Each driver has its own <b>JDBC Driver class name</b> (See in the corresponding DBMS documentation). This name is needed for a connection using the JDBC Driver. See <a href="en_0645_jdbc_connect.html">Connection to a Database with JDBC</a>.
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>JDBC-ODBC driver</b></font><br><br>
+
+The JDBC-ODBC driver is installed with ModelSphere at the installation time. This driver can be used with any defined ODBC Data source. 
+
+This connection is only generic target system compliant.
+
+
+<br><br><br><br>
+
+</font>
+</body>
+</html>
+

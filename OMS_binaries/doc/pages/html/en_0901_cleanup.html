@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Cleaning-up a model</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=windows-1252">
+  <meta content="MSHTML 6.00.2800.1400" name="GENERATOR">
+</head>
+<body bgcolor="#ffffff">
+<hr style="width: 100%; height: 2px;"><span
+ style="font-family: sans serif,arial,helvetica;"></span><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="5"><b>Cleaning-up
+a model</b></font><br>
+</font><font face="sans serif,arial,helvetica" color="#000000" size="2"><img
+ src="../images/cleanup.gif" title="" alt=""
+ style="width: 16px; height: 16px;"><br>
+</font><br>
+<font face="sans serif,arial,helvetica" color="#000000" size="2">During
+the creative and iterative process of modeling, model
+elements might be created which are not needed anymore once a model has
+been completed. ModelSphere offers a clean-up function to find and
+erase those “orphan” elements.<br>
+<br>
+Clean-up is provided for <span style="font-weight: bold;">process</span>,
+<span style="font-weight: bold;">data</span>, <span
+ style="font-weight: bold;">domain</span>, <span
+ style="font-weight: bold;">common item models</span> as
+well as for <span style="font-weight: bold;">operation libraries</span>.
+The section <span style="font-style: italic;">Rules for cleaning-up</span>
+below details the applicable rules.<br>
+<br>
+</font><font face="sans serif,arial,helvetica" color="#000000" size="2"><br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>To
+clean-up a model:</b></font><br>
+</font>
+<ol>
+  <font face="sans serif,arial,helvetica" color="#000000" size="2"> <li>Select
+the model or one of its diagrams in the Explorer. Note
+that the clean-up action operates at the model level. </li>
+  <li>In the <span style="font-weight: bold;">Tools menu</span>,
+select Cleanup Model <img src="../images/cleanup.gif" title="" alt=""
+ style="width: 16px; height: 16px;">.
+The following dialog will be displayed : </li>
+  </font>
+</ol>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"><img
+ src="../images/Cleanup_Model_en.jpg" title="Clean-up model dialog"
+ alt="" style="width: 448px; height: 552px;"> <br>
+<br>
+The clean-up can be performed based on&nbsp; :
+</font>
+<ul>
+  <font face="sans serif,arial,helvetica" color="#000000" size="2"> <li>A
+specific occurrence, by using the icon <img
+ src="../images/delete_one.gif" title="" alt=""
+ style="width: 30px; height: 16px;">. </li>
+  <li>All occurrences linked to a rule. </li>
+  <li>All enumerated <font><font face="sans serif,arial,helvetica"
+ color="#000000" size="2">occurrences </font></font>in the report.</li>
+  </font>
+</ul>
+<font face="sans serif,arial,helvetica" color="#000000" size="2">You
+can also make the required modifications using the properties of
+each object, by using the icon link <img src="../images/properties.gif"
+ title="" alt="" style="width: 16px; height: 16px;"><br>
+<br>
+<br>
+<font size="+2" style="font-weight: bold;">Rules for cleaning-up<br>
+</font>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><b><font size="+1"><br>
+<br>
+Conceptual data model </font></b><font size="+1"></font><br>
+<br>
+</font></font>
+<div style="margin-left: 40px;"><span style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font size="-1">1. An entity should have
+at least one attribute (warning).
+<br>
+<br>
+2. An entity should have at least one relationship (warning).
+<br>
+<br>
+3. A primary/unique key must be linked to an attribute or to a
+dependency.
+<br>
+<br>
+4. A relationship must have at least two arcs.
+<br>
+</font></font></font></span></div>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><b><font size="+1"><br>
+<br>
+Relational data model </font></b><font size="+1"></font><br>
+<br>
+</font></font></font>
+<div style="margin-left: 40px;"><span style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font size="-1">1.
+A table should have at least one column (warning).
+<br>
+<br>
+2. A table should have connectors (warning).
+<br>
+<br>
+3. A primary/unique key must be linked to a column or dependency.
+<br>
+<br>
+4. A foreign key must be linked to a column.
+<br>
+<br>
+5. An index must have at least one indexed element.
+<br>
+<br>
+6. A trigger must have a body defined as well as a column linked
+(warning).
+<br>
+<br>
+7. A constraint should be linked to a column (warning).
+<br>
+</font></font></font></font></span></div>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><b><font size="+1"><br>
+<br>
+Domain model </font></b><font size="+1"></font><br>
+<br>
+</font></font></font></font>
+<div style="margin-left: 40px;"><span style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font size="-1">1. A domain must be linked
+to a data type.
+<br>
+<br>
+2. A domain should be used by at least one object (warning).
+<br>
+</font></font></font></font></font></span></div>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><b><font size="+1"><br>
+<br>
+Operation library</font></b><font size="+1"></font><br>
+<br>
+</font></font></font></font></font>
+<div style="margin-left: 40px;"><span style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font size="-1">1.
+A procedure should contain instructions (warning).
+<br>
+<br>
+2. A parameter must have a type.
+<br>
+</font></font></font></font></font></font></span></div>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><b><font size="+1"><br>
+<br>
+Process model</font></b><font size="+1"></font><br>
+<br>
+</font></font></font></font></font></font>
+<div style="margin-left: 40px;"><span style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font size="-1">1. A process should have a
+graphical representation (warning).
+<br>
+<br>
+2. An external entity should have a graphical representation (warning).
+<br>
+<br>
+3. A store should have a graphical representation (warning).
+<br>
+<br>
+4. A resource should be used (warning).
+<br>
+</font></font></font></font></font></font></font></span></div>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><b><font size="+1"><br>
+<br>
+Common items model</font></b><font size="+1"></font><br>
+<br>
+</font></font></font></font></font></font></font>
+<div style="margin-left: 40px;"><span style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font size="-1">1.
+A common item must have a type.
+<br>
+<br>
+2. A common item should be linked to at least one attribute / column /
+field (warning).</font><font size="-1"><br>
+<br>
+</font></font></font></font></font></font></font></font></span></div>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2" style="font-family: arial;"><br>
+</font></font></font></font></font></font></font>
+<ul>
+</ul>
+</body>
+</html>

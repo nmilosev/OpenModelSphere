@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Fusionner les colonnes</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Fusionner les colonnes</b></font><br><br><br>
+
+
+
+Pour fusionner des colonnes, elles doivent être compatibles. Ainsi, la fusion de colonnes
+est possible quand vous avez ces combinaisons :<ul>
+<li><b>Base-base</b> : si elles ont le même type de données.</li>
+<li><b>Base-étrangère</b> : si elles ont le même type de données.</li>
+<li><b>Étrangère-étrangère</b> : si elles ont le même type de données et que les deux
+colonnes étrangères réfèrent à la même colonne de clés.</li>
+</ul><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le mécanisme</b></font><br><br>
+Les colonnes sont fusionnées, mais les propriétés de colonnes, elles, ne sont pas fusionnées.
+Donc, les propriétés de la colonne cible sont conservées. Également, tout
+lien sur l'objet source sera transféré à l'objet cible. Par exemple, si la colonne fait partie
+d'un index, la colonne cible deviendra la nouvelle colonne d'index. Et pour cette raison,
+il est seulement possible de séparer les fusions de type étrangères-étrangères.<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>L'utilisation</b></font><br><br>
+La Fusion est employée principalement pour reproduire la clé étrangère et recréer une
+structure de clé avec l'information existante.
+
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

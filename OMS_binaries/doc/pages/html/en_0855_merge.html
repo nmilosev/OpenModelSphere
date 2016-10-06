@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Merging</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Merging</b></font><br><br><br>
+
+The <b>Merge</b> command has been implanted to facilitate team work. It offers
+the possibility to create different models in a parallel way and to merge
+them afterwards.<br><br>
+To merge a process in a model, both models must be open. 
+You must select the process in the source model, this one that you want to merge to the target one.
+This process and all its subprocesses will be merged under the targeted process.
+<br><br>
+To start the merge operation, choose <b>Tools > Merge</b> in the <b>main menu</b>.
+The merge options window will appear.
+<br><br> 
+
+<b>The options:</b><ol>
+<li><b>Under </b>: to select the target process which will receive the source.<br><br></li>
+<li><b>Update matching concepts from source</b> : When concept have the same identifier, the target concept will inherit the information from the source concept.<br><br></li>
+<li><b>Merge qualifiers</b> : The qualifiers of the matched concepts will be merged.
+<br><br></li>
+<li><b>Merge resources</b> : The resources of the matched concepts will be merged.<br><br></li>
+<li><b>Merge unequal comments</b> : If the comments of the matched concepts are different, boths comments will be merged in the target.<br><br></li>
+
+</ol>
+Click on the <b>OK</b> button to begin the merge process. 
+
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Mapping rules</b></font><br><br>
+When the process to be merged has some link to other processes at the same level in the target environment, it's important to know the mapping rules to restore those links. Otherwise, some concepts could be duplicated.
+
+<ul>
+<li>The hierarchy chain must be complete regarding the numeric and alphanumeric identifiers.<br><br></li>
+
+
+<li>It's possible to use numeric or alphanumeric identifiers, but the same must be used in both processes to be mapped.<br><br></li>
+
+<li>
+An identifier for the merge level must be the same in the target to be mapped.<br>
+(ex. If you plan to merge a process 2 linked to a process 3, on a target process 4.1.2, a link will be made to a process 4.1.3 if it exists. Otherwise, it will be created.)<br><br></li>
+</ul>
+
+The same rules apply for external entities, stores and flows.
+
+<br><br>
+<b>See also: <a href = "en_0850_split.html">Splitting</a></b>
+
+
+</font>
+</body>
+</html>
+

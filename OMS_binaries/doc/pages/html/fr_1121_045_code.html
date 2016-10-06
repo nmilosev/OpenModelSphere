@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Les codes d’édition</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Les codes d’édition</b></font><br><br><br>
+
+
+
+Les codes d'édition sont utilisés pour formater la sortie de la règle exécutée. Ils permettent
+aux utilisateurs de spécifier les valeurs de la marge gauche, les retours de chariot et les
+différents mouvements de positionnement dans le fichier du gabarit.
+<br><br><br>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$d</b></font><br><br>
+
+<u>Format</u> : $d;<br><br>
+<u>Action</u> : Génère un signe de dollar.<br><br>
+<u>Exemple</u> :<br>
+<blockquote><tt><font size="+1">"Price: $d;$price;" </font></tt><br>
+If $price; gives 50, generates "Price: $50"<br><br>
+Note : le signe de dollar est déjà utilisé pour définir des sous-règles,
+ainsi la seule façon d'imprimer un signe de dollar est d'utiliser
+le code d'édition $d;.</blockquote>
+<br><br><br>
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$m</b></font><br><br>
+
+<u>Format</u> : $m(+ ou -) nombre <br><br>
+<u>Action</u> : Incrémente/décrémente la marge gauche selon le symbole. Ne fait pas de retour de chariot.
+Le nouveau réglage s’applique au retour de chariot suivant $n;.<br><br>
+<u>Exemple</u> :<br><blockquote>
+<tt><font size="+1">$m+2; </font></tt><br>
+Incrémente la marge de gauche de deux espaces.</blockquote>
+
+<br><br><br>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$n</b></font><br><br>
+
+<u>Format</u> : $n<br><br>
+<u>Action</u> : Cela produit un retour de chariot et aligne le curseur à la marge gauche. Ne change pas la marge gauche.<br><br>
+<u>Exemple</u> :<br><blockquote>
+<tt><font size="+1">$n; </font></tt><br>
+Produit un retour de chariot et aligne le curseur à la marge de gauche.<br><br></blockquote>
+
+<b>Soyez prudent, la
+marge doit avoir une
+valeur positive en tout
+temps. Si la marge est
+décrémentée à une
+valeur négative, cela
+produira des erreurs.</b>
+
+<br><br><br>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$q</b></font><br><br>
+
+<u>Format</u> : $q;<br><br>
+<u>Action</u> : Génère un guillemet (").<br><br>
+<u>Exemple</u> :<br><blockquote>
+<tt><font size="+1">"$q;TEMPL$q; is a keyword."</font></tt><br><br>
+Lorsqu’on traite cette chaîne de gabarit, elle génère :<br><br>
+<tt><font size="+1">"TEMPL" is a keyword.</font></tt><br><br></blockquote>
+
+<b>Note : le guillemet (") est déjà utilisé pour indiquer le début et la
+fin d'une chaîne de gabarit, donc la seule façon d'imprimer un
+guillemet est d'utiliser le code d'édition $q;.</b>
+
+<br><br><br>
+<hr><font face="sans serif,arial,helvetica" color="000000" size="4"><b>$t</b></font><br><br>
+
+<u>Format</u> : $t;<br><br>
+<u>Action</u> : Génère une tabulation.<br><br>
+<u>Exemple</u> :<br><blockquote>
+<tt><font size="+1">"$word1;$t;$word2;"</font></tt> <br>
+Prints the two words separated with a TAB
+character.</blockquote>
+
+<br><br><br>
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>L'interface JDBC</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>L'interface JDBC</b></font><br><br><br>
+
+
+<center>
+
+<table border = "2" cellspacing="0" cellpadding="3">
+
+
+<tr><td align = 'left'><b>INTERFACE JDBC</b></td><td align = 'left'><b>MODELSPHERE</b></td><td align = 'center'><b>GÉNÉRATION SQL</b></td><td align = 
+
+'center'><b>RÉTRO-INGÉNIERIE</b></td><td align = 'center'><b>SYNCHRONISATION</b></td></tr>
+<tr><td align = 'left'>&nbsp;</td><td align = 'left'>&nbsp;</td><td align = 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'><b>USER</b></td><td align = 'left'><img src="../images/dboruser.gif"> <b>Utilisateur</b></td><td align = 'center'>&nbsp;</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Name</td><td align = 'left'>Nom</td><td align = 'center'>&nbsp;</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>&nbsp;</td><td align = 'left'>&nbsp;</td><td align = 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'><b>TABLE / VIEW</b></td><td align = 'left'><b><img src="../images/dbortable.gif"> Table / <img src="../images/dborview.gif"> Vue</b></td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Owner</td><td align = 'left'>Utilisateur</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Name</td><td align = 'left'>Nom (Nom Physique)</td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Comments</td><td align = 'left'>Description</td><td align = 'center'>&nbsp;</td><td align = 
+
+'center'>&nbsp;</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>&nbsp;</td><td align = 'left'>&nbsp;</td><td align = 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'><b>COLUMN (table, view)</b></td><td align = 'left'><b><img src="../images/dborcolumn.gif"> Colonne (table, vue)</b></td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Name</td><td align = 'left'>Nom (Nom Physique)</td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Type</td><td align = 'left'>Type</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Length</td><td align = 'left'>Longueur</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Nbr. Decimal</td><td align = 'left'>Nombre de décimales</td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Null Possible</td><td align = 'left'>Valeur nulle possible</td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Initial Value</td><td align = 'left'>Valeur initiale</td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Comment</td><td align = 'left'>Description</td><td align = 'center'>&nbsp;</td><td align = 
+
+'center'>&nbsp;</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>&nbsp;</td><td align = 'left'>&nbsp;</td><td align = 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'><b>PRIMARY CONSTRAINT</b></td><td align = 'left'><b><img src="../images/dborprimary.gif"> Clé primaire</b></td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Name</td><td align = 'left'>Nom (Nom Physique)</td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Columns</td><td align = 'left'>Colonnes</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>&nbsp;</td><td align = 'left'>&nbsp;</td><td align = 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'><b>REFERENTIAL CONSTRAINT</b></td><td align = 'left'><b><img src="../images/dborforeign.gif"> Clé étrangère</b></td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Name</td><td align = 'left'>Nom (Nom Physique)</td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Columns</td><td align = 'left'>Colonnes</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Update rule</td><td align = 'left'>Mettre la règle à jour</td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Delete rule</td><td align = 'left'>Supprimer la règle</td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>&nbsp;</td><td align = 'left'>&nbsp;</td><td align = 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'><b>INDEX</b></td><td align = 'left'><b><img src="../images/dborindex.gif"> Index</b></td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Name</td><td align = 'left'>Nom (Nom Physique)</td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Unique</td><td align = 'left'>Unique</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Columns</td><td align = 'left'>Colonnes</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Columns Sort (asc./ desc.)</td><td align = 'left'>Triage</td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>&nbsp;</td><td align = 'left'>&nbsp;</td><td align = 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'><b>PROCEDURE / FUNCTION</b></td><td align = 'left'><b><img src="../images/dborprocedure.gif"> Procédure / <img src="../images/dborfunction.gif"> Fonction</b></td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Owner</td><td align = 'left'>Utilisateur</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Name</td><td align = 'left'>Nom (Nom Physique)</td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Function</td><td align = 'left'>Fonction</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Return Type</td><td align = 'left'>Type retour</td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Ref Return Type</td><td align = 'left'>type de retour par référence</td><td align = 'center'>G</td><td align = 
+
+'center'>&nbsp;</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>&nbsp;</td><td align = 'left'>&nbsp;</td><td align = 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'><b>PARAMETERS</b></td><td align = 'left'><b><img src="../images/dborparameterin.gif"> Paramètres</b></td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Name</td><td align = 'left'>Nom (Nom Physique)</td><td align = 'center'>G</td><td align = 'center'>R</td><td 
+
+align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Passing \convention</td><td align = 'left'>Convention de passage</td><td align = 'center'>&nbsp;</td><td align 
+
+= 'center'>&nbsp;</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Type</td><td align = 'left'>Type</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Reference Type</td><td align = 'left'>Type référence</td><td align = 'center'>&nbsp;</td><td align = 
+
+'center'>&nbsp;</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Length</td><td align = 'left'>Longueur</td><td align = 'center'>G</td><td align = 'center'>R</td><td align = 
+
+'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Nbr. Decimals</td><td align = 'left'>Nombre de décimales</td><td align = 'center'>G</td><td align = 
+
+'center'>R</td><td align = 'center'>&nbsp;</td></tr>
+<tr><td align = 'left'>Comments</td><td align = 'left'>Description</td><td align = 'center'>&nbsp;</td><td align = 
+
+'center'>&nbsp;</td><td align = 'center'>&nbsp;</td></tr>
+
+
+
+
+
+</table>
+
+</center>
+
+
+
+</font>
+</body>
+</html>
+

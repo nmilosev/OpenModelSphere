@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Plug-ins</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Plug-ins</b></font><br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Built-in plug-ins</b></font><br><br>
+  <b>ModelSphere</b> comes with about more than thirty built-in plug-ins. 
+  They are usually related to forward and reverse engineering of specific target systems.  
+  Because they are loaded independently of the application, they can evolve independently of the application.  
+  For instance, it's possible to provide and install an updated version of a given plug-in 
+  (for a new release of a target system, for instance) without having to re-install ModelSphere completely. <br><br>
+  
+  To see the list of all plug-ins, click the <b>Plug-ins...</b> item under the <b>Help</b> menu. <br><br>
+  For each plug-in, the plug-in name, its revision date, its author and its entry point class are displayed. 
+  <br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>The Plug-in Manager</b></font><br><br>
+  The plug-in manager allows <b>ModelSphere</b> to load or not to load any plug-in. <br><br>
+   
+  Therefore, it is possible to disable plug-ins not used by the user.  
+   <br><br>
+  To open the plug-in manager, click the <b>Plug-in Manager...</b> item under the <b>Help</b> menu. 
+  <br><br>
+<img src="../images/PLUG_MAN_en.jpg">
+  <br>  <br>  <br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Adding a new Plug-in</b></font><br><br>
+  The plug-in manager also allows to add a user-defined plug-in into <b>ModelSphere</b>.  
+  Press the <b>Browse to Add...</b> button and choose the plug-in entry point (a <i>.class</i> file). 
+  Try the examples provided with the application (choose the Example1.class file under the example\plugins\classes directory). 
+   <br>  <br>
+ <b> Note that the new selected plug-in does not appear immediately in the list, 
+  but it will the next time the plug-in manager is invoked. </b>
+  <br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>The modelsphere.plugins file</b></font><br><br>
+   The list displayed by the plug-in manager comes from the modelsphere.plugins file. 
+   It's possible to edit this text file in order to manually enable/disable a given plug-in, 
+   or to add another one (although it is recommended to use the plug-in manager to do so).  
+   It's also possible to permanently delete a plug-in entry in the list of plug-ins by editing. 
+  <br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>User-defined plug-ins</b></font><br><br>
+  Users can develop their own plug-in in Java (See the examples provided with the application discussed earlier). 
+  </font>
+</body>
+</html>
+

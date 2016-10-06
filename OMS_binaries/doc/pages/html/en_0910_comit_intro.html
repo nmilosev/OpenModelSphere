@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Introducing the common item</title>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<font face="arial"> <font face="sans serif,arial,helvetica"
+ color="#000000" size="2">
+<hr><font face="sans serif,arial,helvetica" color="#000000" size="5"><b>Introducing
+the common item</b></font><br>
+<img src="../images/dborcommonitemmodel.gif"><br>
+<br>
+By definition, an item is the smallest element of an organized group
+and the adjective
+"common" is used with respect to the fact that it applies to several
+objects. People creating data models / class models in the same project
+are free to use different
+names and even different definitions of data elements (attributes /
+columns /
+fields) to suit their specific
+needs. However, when data elements describe the same reality, a common
+item
+model can be used.<br>
+<br>
+<i>For instance, if several columns are named 'salary', a user can
+consider useful to create a common item 'salary' and associate the type
+'money' to it. Once the columns are linked to the common item, it is
+possible to propagate the money type to all the 'salary' columns (in a
+time / in a flash / in a batch). <br>
+<br>
+If the DBA (database administrator) decides to change all the 'money'
+types to 'float' by example, then </i></font><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><i>individually
+</i></font><font face="sans serif,arial,helvetica" color="#000000"
+ size="2"><i>modifying the type of all 'salary' columns in the model
+becomes a long, tedious and error-prone task. If the salary columns are
+linked to common items, then it is easy to change the common item's
+type and to propagate the new type to all the linked columns. </i><br>
+<br>
+</font><font face="sans serif,arial,helvetica" color="#000000" size="2">Common
+items can be grouped in a common item model. And since you may include
+several common item models in a project, you should give each model a
+semantic
+meaning.<br>
+<br>
+</font><font face="sans serif,arial,helvetica" color="#000000" size="2">
+To create a <b>common item model</b>, <b>right-click project</b>,
+then choose<b> Add &gt; Common item
+model</b> from the <b>pop-up menu</b>.<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Creating
+a common item and setting its values</b></font><br>
+<img src="../images/dborcommonitem.gif"><br>
+<br>
+To create a common item, <b>right-click</b> a <b>common item model</b>,
+then <b>Add &gt; Common Item</b> from the <b>pop-up menu</b>. You can
+also add a diagram, and create the common items in a graphical way. <br>
+<br>
+A common item usually has a type, a length and other values that an
+attribute, a column or a field has. To set values of a common item, <b>right-click</b>
+on a <b>common
+item</b> (either in the explorer or in a diagram) and choose <b>Properties</b>
+from the pop-up menu.
+<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Linking
+a(n) attribute / column / field to a common item model</b></font><br>
+<br>
+To link a(n) attribute / column / field to a common item model:
+</font></font>
+<ol>
+  <font face="arial"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2"> <li>Select an object (i.e. column) and
+click the <b>Properties tool</b> <img
+ src="../images/TOOL_properties.jpg">.<br>
+    <br>
+  </li>
+  <li>Click the <b>Common item</b> line of the Value column (white
+empty box).<br>
+    <br>
+  </li>
+  <li>Choose the common item from the <b>Select a new value</b> window
+and click <b>Select</b>.<br>
+    <br>
+    <br>
+  </li>
+  </font></font>
+</ol>
+<font face="arial"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2"><font face="arial" size="2"></font><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"
+ style="font-family: arial;"><font color="#000000" size="4"><b>Creating
+a(n) </b></font></font><font face="sans serif,arial,helvetica"
+ color="#000000" size="4" style="font-family: arial;"><b>attribute /
+column / field from a common
+item <br>
+<font color="#000000" size="2"><br>
+</font></b><font color="#000000" size="2">Creating
+a(n) attribute
+/ column / field from a common item:
+</font></font></font></font>
+<ol start="1">
+  <font face="arial"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2"><font face="sans serif,arial,helvetica"
+ color="#000000" size="4" style="font-family: arial;"><font
+ color="#000000" size="2"> <li>From
+the <b>explorer</b>, select a <b>common item</b>.</li>
+  <br>
+  <br>
+  <li>Hold
+down the left mouse button and <b>drag</b> the <b>common item</b>
+onto a table, a
+view or a class.</li>
+  <br>
+  <br>
+  <li><b>Drop</b> the <b>common item</b>
+by releasing the mouse button when
+the
+target object becomes highlighted and the icon underneath the cursor
+becomes '+'.</li>
+  </font> <font face="sans serif,arial,helvetica" color="#000000"
+ size="2"> </font></font></font></font>
+</ol>
+<font face="arial"><font face="sans serif,arial,helvetica"
+ color="#000000" size="2"><font face="sans serif,arial,helvetica"
+ color="#000000" size="4" style="font-family: arial;"><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Propagating
+common item values</b></font><br>
+<br>
+Once a common item is linked to one or several attributes / columns /
+fields, it is<font face="arial"><font face=""></font>
+possible to propagate the common items' values to the linked attributes
+/ columns /
+fields in a batch. To do so, right-click a common item (or on a common
+item model to apply propagation to all the common items within the
+common item model) and choose Propagate Common Item Values. A dialog
+box then appears; it allows to specify which properties will be
+propagated to </font><font face="sans serif,arial,helvetica"
+ color="#000000" size="2">the linked attributes / columns /
+fields.</font><font face="sans serif,arial,helvetica" color="#000000"
+ size="2"> The type
+profile (type, length, number of decimals and null option) is always
+propagated. <br>
+<br>
+<img src="../images/COMIT_PROP_en.jpg" title="" alt=""
+ style="width: 402px; height: 258px;">
+<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Generating
+common items</b></font><br>
+<br>
+It is possible to generate common items from existing attributes /
+columns / fields
+in a batch. To do so, right-click a(n) attribute / column / field, a(n)
+entity / table / class or
+a data model&nbsp; / class model in the explorer (or in a diagram), and
+choose Generate Common Items. A dialog box then appears; it is possible
+to create a common item per each attribute / column / field, per each
+attribute / column /
+field having the same name (for instance, if two columns are named
+'salary', then only one common item is created), or per type profile
+(only one common item per all the columns types DATE, CHAR(10), etc.). <br>
+<br>
+<img src="../images/COMIT_GEN_en.jpg" title="" alt=""
+ style="width: 485px; height: 433px;">
+<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Deleting
+orphan common items</b></font><br>
+<br>
+When attributes / columns /
+fields </font><font face="sans serif,arial,helvetica" color="#000000"
+ size="2">/ fields </font><font face="sans serif,arial,helvetica"
+ color="#000000" size="2">are deleted
+in the modeling process, their common items might remain without being
+linked to any attribute / column / field. These common items then
+become orphans
+and might be useless in the model. It is possible to delete all orphan
+common items at a time. To do so, right-click a common item (in the
+explorer or in a diagram) or a common item model and choose the Delete
+Orphan Common Item(s) option. </font>
+</font></font></font></font>
+</body>
+</html>

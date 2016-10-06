@@ -1,0 +1,176 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <meta name="Author" content="Marco Savard">
+   <title>D&eacute;finition de la num&eacute;rotation et des titres de page</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica" size="2"><font color="#000000"><font size="5">D&eacute;finition
+de la num&eacute;rotation et des titres de page</font></font></b>
+<p>Il est possible d'afficher un num&eacute;ro de page sur chaque page
+d'un diagramme (voir la section <a href="fr_0411_page_number.html">Affichage
+de la num&eacute;rotation et des titres de page</a>).&nbsp; La num&eacute;rotation
+des pages peut appara&icirc;tre en haut ou en bas de chaque page.
+<p>Au lieu d'afficher la num&eacute;rotation des pages, il est possible
+de d&eacute;finir un titre qui va appara&icirc;tre sur chaque page.&nbsp;
+Ce titre peut contenir du texte fixe, comme le nom de votre organisation,
+mais aussi du texte variable, tel que l'heure, la date ou les num&eacute;ros
+des pages.&nbsp; Selon les param&egrave;tres d&eacute;finis dans <a href="fr_0411_page_number.html">Affichage
+de la num&eacute;rotation et des titres de page</a> le titre appara&icirc;tra
+comme une ent&ecirc;te (en haut de chaque page) ou un bas-de-page.
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Figure
+1 : Affichage du titre de page "Page 1 de 4" au lieu du titre par d&eacute;faut
+"1, 1".</font></font></font></b>
+<br><img SRC="../images/pageNumberAndTitle2_fr.jpg" NOSAVE height=521 width=778>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Figure
+2 : D&eacute;finition et affichage d'un titre de page complexe.</font></font></font></b>
+<br><img SRC="../images/pageNumberAndTitle3_fr.jpg" NOSAVE height=517 width=773>
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p>Le texte variable comprend :
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=2 WIDTH="60%">
+<tr>
+<td>
+<ul>
+<li>
+Page courante</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>
+Nombre total de pages</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>
+Rang&eacute;e courante</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>
+Nombre total de rang&eacute;es</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>
+Colonne courante</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>
+Nombre total de colonnes</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>
+Temps pr&eacute;sent</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>
+Nom du diagramme</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>
+Date d'aujourd'hui</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li>
+Nom du projet</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<p>Pour d&eacute;finir la num&eacute;rotation et le titre des pages :
+<p>&nbsp;&nbsp;&nbsp; 1. Ouvrir la fen&ecirc;tre d'options par le menu
+<b>Outils->Options</b>
+:
+<center>
+<p><img SRC="../images/pageNumberAndTitle_fr.jpg" NOSAVE height=384 width=605></center>
+
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>&nbsp;&nbsp;&nbsp;
+2. D&eacute;finir la cha&icirc;ne de <b>Format</b> et appuyer <b>Appliquer</b>
+puis <b>Fermer</b>. Dans la cha&icirc;ne de format, {1} sera remplac&eacute;
+par la rang&eacute;e courante et {2} par la colonne courante. Si votre
+diagramme utilise cinq pages horizontalement et trois verticalement, vos
+pages seront num&eacute;rot&eacute;es :</font></font></font>
+<ul>
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>1,1&nbsp;&nbsp;&nbsp;
+1,2&nbsp;&nbsp;&nbsp; 1,3&nbsp;&nbsp;&nbsp; 1,4&nbsp;&nbsp;&nbsp; 1,5&nbsp;&nbsp;
+pour la premi&egrave;re rang&eacute;e</font></font></font></li>
+
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>2,1&nbsp;&nbsp;&nbsp;
+2,2&nbsp;&nbsp;&nbsp; 2,3&nbsp;&nbsp;&nbsp; 2,4&nbsp;&nbsp;&nbsp; 2,5&nbsp;&nbsp;
+pour la seconde rang&eacute;e</font></font></font></li>
+
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>3,1&nbsp;&nbsp;&nbsp;
+3,2&nbsp;&nbsp;&nbsp; 3,3&nbsp;&nbsp;&nbsp; 3,4&nbsp;&nbsp;&nbsp; 3,5&nbsp;&nbsp;
+pour la troisi&egrave;me rang&eacute;e</font></font></font></li>
+</ul>
+
+<blockquote><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Si
+la cha&icirc;ne de format est d&eacute;finie comme&nbsp; "Page {0} de {5}",
+les pages seront num&eacute;rot&eacute;es comme suit :&nbsp; Page 1 de
+15, Page 2 de 15, et ainsi de suite.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Si
+la cha&icirc;ne de format est d&eacute;finie comme&nbsp; "Page {0} de {5}
+- {8} - Modifi&eacute; le {4} &agrave; {3}", les pages auront comme titres
+"Page 1 de 15 - Diagramme principal - Modifi&eacute; le 2 mars 2004 &agrave;
+09:39:12"&nbsp; si "Diagramme Principal" est le nom du diagramme, {4} represente
+la date courante et {3} le temps pr&eacute;sent.</font></font></font></blockquote>
+
+<br>&nbsp;
+<h2>
+D&eacute;finir la position et la police des titres de page</h2>
+Dans la figure suivante, le titre de page est affich&eacute; dans le coin
+sup&eacute;rieur gauche. Cliquer &agrave; droite sur la zone de diagramme
+pour obtenir le menu d&eacute;roulant, et choisir l'op&eacute;ration <b>Num&eacute;rotation
+et titre des pages...</b> pour changer la position des titres de page.
+<p><img SRC="../images/pageNumberAndTitle4_fr.jpg" NOSAVE height=508 width=759>
+<br>&nbsp;
+<br>&nbsp;
+<p>Le diagramme r&eacute;sultant apr&egrave;s avoir fix&eacute; la position
+des titres dans le coin sup&eacute;rieur droit.&nbsp; Voir la section <a href="fr_0411_page_number.html">Affichage
+de la num&eacute;rotation et des titres de page</a><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>
+pour plus de d&eacute;tails.</font></font></font>
+<p><img SRC="../images/pageNumberAndTitle5_fr.jpg" NOSAVE height=506 width=761>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Le fonctionnement des gabarits</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Le fonctionnement des gabarits</b></font><br><br><br>
+
+
+
+Un fichier gabarit contient la définition de toutes les règles requises par l’application. À la
+base, une règle produit une chaîne de caractères à partir de ses paramètres; la plupart des
+paramètres sont des règles se référant à d'autres règles de gabarit.<br><br>
+La définition d'une règle est faite du nom de la règle, de sa classe, d'un paramètre obligatoire
+qui définit la règle et de modificateurs (ces derniers étant facultatifs), sans aucun ordre
+spécifique. La définition se termine par un point-virgule.<br><br>
+Les règles de gabarit (appartenant à la classe TEMPL) sont les règles les plus employées.
+Chaque règle de gabarit est associée à une chaîne de gabarit. Une chaîne de gabarit
+contient des codes d'édition et des sous-règles. Le traitement d'une chaîne de gabarit consiste
+à remplacer les sous-règles et les codes d'édition par les chaînes qu'ils représentent.
+Dans une chaîne de gabarit, les sous-règles et les codes d'édition sont précédés du symbole
+du dollar et suivis par un point-virgule, afin de les distinguer du texte environnant.<br><br>
+Les caractères valides pour le nom d’une règle sont : les lettres d'ASCII (A-Z et a-z), les
+chiffres (0-9) et le trait de soulignement. Le premier caractère d'un nom ne peut pas être un
+chiffre. Le nom doit inclure au moins deux caractères et au plus 63. La casse est significative;
+par exemple objname et ObjName réfèrent à deux variables différentes.<br><br>
+Les différents champs de la définition sont séparés par un ou plusieurs caractères d'espacement.
+Les caractères d'espacement sont : l’espace, la tabulation et la touche RETOUR.
+Ces caractères ne réagissent qu’en tant que séparateurs symboliques. La virgule peut être
+utilisée en tant que séparateur dans la liste de paramètre d'une définition.<br><br>
+Les commentaires peuvent apparaître n'importe où entre des signes de définition ou entre
+des définitions; ils débutent par /* et se terminent par */, ou ils commencent par // et se
+terminent par un retour de chariot (à la fin de la ligne).<br><br>
+Les chaînes sont incluses entre guillemets doubles; une longue chaîne peut être divisée en
+chaînes plus courtes, séparées par des caractères d'espacement. Lorsqu’un guillemet fermant
+est suivi de caractères d'espacement et d’un guillemet ouvrant, les deux chaînes
+adjacentes sont considérées comme faisant parties d’une seule chaîne.<br><br>
+Il existe deux types de modificateurs : les valeurs et les drapeaux. Un modificateur de valeur
+est suivi par un symbole d’égalité et la valeur. Le modificateur d’un drapeau est isolé. La
+plupart des modificateurs de valeur prennent pour valeur une règle, exprimé au moyen
+d’une chaîne insérée entre guillemets.<br><br>
+Exemple :<br>
+<blockquote><tt><font size="+1">drop_table TEMPL "DROP TABLE $TableName;;";</font></tt><br><br>
+Cet énoncé définit une sous-règle de drop_table de classe TEMPL. Le paramètre est une
+chaîne de gabarit faisant référence à la sous-règle de TableName qui doit être définie
+ailleurs dans le fichier gabarit. Par exemple, si la règle TableName donne "département"
+comme résultat, alors le résultat de la variable drop_table sera "DROP TABLE département;".</blockquote>
+<br><br>
+<b>Les règles de classes et
+les modificateurs doivent
+être écrit en lettre
+majuscule.</b>
+
+</font>
+</body>
+</html>
+

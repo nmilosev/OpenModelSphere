@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Génération d'un modèle de données à partir d'un paquetage</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Génération d'un modèle de données à partir d'un paquetage</b></font><br><br><br>
+
+
+
+Afin d'accomplir cette opération, vous devez avoir un paquetage ou un modèle de classe. Si vous souhaitez
+créer des liens, vous devrez également créer un modèle de liens.
+<ol>
+<li>Avec le bouton droit, choisissez le modèle de classes ou le paquetage et choisissez <b>Générer
+un modèle de données</b>.<br><br>
+<img src="../images/GEN_DM_fr.jpg" >
+<br><br>
+</li>
+<li>Choisissez le <b>système cible</b> qui sera appliqué au modèle de données. Vous devez préalablement avoir assigné un système cible à votre projet.<br><br></li>
+<li>Vous devez également choisir l'emplacement du modèle de données : dans
+le projet ou dans le paquetage utilisateur. En cliquant la boîte, un choix apparaîtra.<br><br></li>
+<li>Vous pouvez créer des liens.<br>
+<b>Rappelez-vous, un modèle de liens est exigé si l’option est choisie.</b><ul>
+<li>Classe (source) à table (cible).</li>
+<li>Classe (source) au domaine (cible).</li>
+<li>Champ (source) à colonne (cible).</li></ul><br><br></li>
+<li>Cliquez sur le bouton <b>Générer</b>.<br><br></li>
+</ol>
+
+<br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les objets générés</b></font><br><br>
+<b>Modèle de données contenant :</b><ul>
+<li>une table pour chaque classe (les interfaces ne sont pas transférées);</li>
+<li>un champ d'association et un champ statique ne sont pas transférés en tant que colonne;</li>
+<li>une association est transférée sur une base continue (une à une);</li>
+<li>l'héritage est transférée comme les associations; les sous-tables auront une clé de dépendance sur les super-tables.</li>
+</ul><br>
+<b>Modèle de domaines contenant :</b><ul>
+<li>un domaine pour chaque classe utilisée comme type de champ.</li>
+</ul><br>
+<b>Objets liés :</b><ul>
+<li>Si l'option de relation est choisie, les objets liens sont générés dans le modèle de liens déterminé.</li>
+
+</ul>
+
+<img src="../images/GEN_DM_deploy.jpg">
+
+</font>
+</body>
+</html>
+

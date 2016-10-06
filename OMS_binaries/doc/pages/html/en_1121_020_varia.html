@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Variables</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Variables</b></font><br><br><br>
+
+
+
+A variable is an identifier which can have several values, but only one at a time. A variable
+must be declared before it is used. You can declare as many variables as you need.
+All variable declarations must occur before rule definitions in a template file.
+A variable declaration follows this syntax:<br><br>
+<tt><font size = "+1">
+NEW [EXTERN] &lt;variable_type&gt; &lt;variable_name&gt; = &lt;initial_value&gt;;
+<br><br></font></tt>
+
+Where &lt;variable_name&gt; is a valid identifier and &lt;variable_type&gt; represents the
+type of values that the variable can have. The only variable types allowed are STRING,
+BOOLEAN and INTEGER. The EXTERN keyword is optional, but it can only be specified on
+BOOLEAN variables.<br><br>
+An initial value must be defined for each variable. For Boolean variables, the initial value
+is TRUE or FALSE; for string variables, the initial value is a character string enclosed in
+double quotes; for integer variables, the initial value must be a valid integer expression.
+Here are valid variable declarations:<br><br>
+
+<tt><font size = "+1">NEW BOOLEAN generateHeaders = TRUE;<br>
+NEW EXTERN BOOLEAN generateHtml = FALSE;<br>
+NEW STRING defaultName = "default";<br>
+NEW INTEGER indentation = 2;<br></font></tt>
+<br><br>
+
+Once declared, a value can be associated to a variable. The value assignation of a
+variable is performed by the SET rule class. This rule class follows this syntax:
+<br><br>
+
+<tt><font size = "+1">&lt;setrule_name&gt; SET(&lt;variable_name&gt;, &lt;variable_value&gt;);
+<br><br></font></tt>
+
+Where &lt;setrule_name&gt; represents the name identifying the set rule; &lt;variable_name&gt;
+represents the name of a variable that was declared previously, and &lt;variable_value&gt;
+represents the value that will be registered in the variable (overwriting the previous value);
+&lt;variable_value&gt; depends on the type of variable.<br><br>
+
+If the variable's type is STRING (meaning that &lt;variable_name&gt; has been declared with
+the STRING keyword), then &lt;variable_value&gt; is either a rule that will be processed or
+a string expression.<br><br>
+If &lt;variable_value&gt; is a rule, its output will be put in the variable. Rules of every class
+can assign string-typed variables. If &lt;variable_value&gt; is a string expression, the expression
+is evaluated and its result is put in the variable.<br><br>
+
+Here is an example of a SET rule, where &lt;variable_value&gt; is a rule:<br><br>
+
+<tt><font size = "+1">setLanguage SET (language, english);//english is a subrule<br><br>
+english TEMPL "English";</font></tt><br><br>
+
+Here is an example of a SET rule, where &lt;variable_value&gt; is a string expression:<br><br>
+
+<tt><font size = "+1">NEW STRING english = "English"; //english is a string variable<br><br>
+setLanguage SET(language, STRING(english)); //STRING(english) is a string expression</font></tt><br><br>
+
+
+These two examples produce the same output. Refer to the <a href = "en_1121_030_string.html"><b>String expressions</b></a> section
+for more details on string expressions.<br><br>
+It would be better to give &lt;setrule_name&gt; a name like setX, if the variable involved is
+named x. So, when you refer to this set rule in a parent rule, you will know which variable
+is involved. For instance, if we have:<br><br>
+
+<tt><font size = "+1">templ TEMPL "$setLanguage;A new value has been assigned to the language variable.";<br><br>
+</font></tt>
+We know that the value of the variable named 'language' will change when processing
+TEMPL. The output of templ is :<br><br>
+
+<tt><font size = "+1">A new value has been assigned to the language variable.</font></tt>
+<br><br>
+
+Because the output of a SET rule is always an empty string. The text 'English' is not
+displayed at this step, it is only stored in the 'language' variable. To obtain the value
+stored in a variable, you use a GET rule which syntax is:
+<br><br>
+
+<tt><font size = "+1">&lt;getrule_name&gt; GET(&lt;variable_name&gt;);</font></tt><br><br>
+
+As previously mentioned, it is a good idea to give to &lt;getrule_name&gt; the name
+'getLanguage' if the variable involved is named 'language'. To obtain the value of language
+and use in a template string, we can define these rules:
+<br><br>
+
+<tt><font size = "+1">displayValue TEMPL "The current language is : $getLanguage;.";<br><br>
+getLanguage GET(language);</font></tt><br><br>
+
+If the value stored in the 'language' variable was 'English', then the output of displayValue
+will be:<br><br>
+<tt><font size = "+1">The current language is : English.</font></tt>
+<br><br>
+
+</font>
+</body>
+</html>
+

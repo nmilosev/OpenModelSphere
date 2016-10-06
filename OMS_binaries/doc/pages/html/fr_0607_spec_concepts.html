@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Concepts sp&eacute;cifiques et attributs</title>
+</head>
+<body bgcolor="#ffffff">
+<font face="sans serif,arial,helvetica" color="#000000" size="2">
+<hr><font face="sans serif,arial,helvetica" color="#000000" size="5"><b>Concepts
+sp&eacute;cifiques et attributs</b></font><br>
+<br>
+<br>
+Tous syst&egrave;mes cibles peuvent avoir des concepts et attributs
+sp&eacute;cifiques. Par exemple, si
+vous copiez une table d'un mod&egrave;le de donn&eacute;es logique et
+la collez dans un mod&egrave;le de
+donn&eacute;es d'Oracle, les propri&eacute;t&eacute;s changeront. On ne
+le montrera pas dans l'Explorateur,
+cependant, si vous regardez les propri&eacute;t&eacute;s de la table
+(dans la fen&ecirc;tre de propri&eacute;t&eacute;s),
+vous remarquerez qu'elles ont &eacute;t&eacute; converties. Observez le
+tableau de la page suivante.
+<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Concepts
+sp&eacute;cifiques</b></font><br>
+<br>
+<table border="1" cellpadding="3" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(255, 255, 204);"><b>CONCEPTS</b></td>
+      <td colspan="4" style="background-color: rgb(255, 255, 204);"><b>SYST&Egrave;MES
+CIBLES</b></td>
+    </tr>
+    <tr>
+      <td><b>&nbsp;</b></td>
+      <td><b>ORACLE</b></td>
+      <td><b>INFORMIX</b></td>
+      <td><b>DB2</b></td>
+      <td><b>AUTRES</b></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Mod&egrave;le de domaines <img
+ src="../images/dbordomainmodel.gif"></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Domaine</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Champ</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Mod&egrave;le de donn&eacute;es <img
+ src="../images/dboradatamodel.gif"></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Table</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Colonne</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Cl&eacute; primaire / Cl&eacute; unique</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Cl&eacute; &eacute;trang&egrave;re</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Index</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Check</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>D&eacute;clencheur</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Stockage LOB</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Table imbriqu&eacute;e</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Partition</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Sous-partition</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>S&eacute;quence</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Vue</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Association</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>R&ocirc;le</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Biblioth&egrave;que d'op&eacute;ration <img
+ src="../images/dboraprogramunitlibrary.gif"></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Paquetage</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Proc&eacute;dure / Fonction</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Param&egrave;tre</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Base de donn&eacute;es <img src="../images/dbordatabase.gif"></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+    </tr>
+    <tr>
+      <td>Tablespace</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Datafile</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Redo log group</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Redo log file</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Rollback Segment</td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Dbspace</td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+    <tr>
+      <td>Sbspace</td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>X</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+      <td style="text-align: center; font-weight: bold;"><small>&nbsp;</small></td>
+    </tr>
+  </tbody>
+</table>
+</font>
+</body>
+</html>

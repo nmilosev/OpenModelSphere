@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>L'interpréteur Python</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>L'interpréteur Python</b></font><br><br><br>
+
+
+
+Il est possible d'écrire des <b>scriptes Python</b> et de les exécuter dans ModelSphere.
+Parce que Python n'est pas un langage propriétaire, n'importe qui peut l'utiliser 
+et sa documentation est disponible sur le Web à <b>http://www.python.org</b><br><br>
+Des scripts Python peuvent être écrits pour implanter des fonctionnalités qui ne sont pas présente dans ModelSphere.
+Par exemple, des scripts Python peuvent produire des rapports HTML, générer du code SQL d'un SGBD non-supporté, 
+exporter des éléments de modèle vers d'autres outils, compiler des statistiques à propos des modèles de ModelSphere, etc.
+
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>L'interpréteur Python comme calculateur intégré</b></font><br><br>
+Choisissez <b>Interpréteur Python </b>dans le menu <b>Outils</b>.
+Après que la console Python se soit affichée, tapez les lignes de commande suivantes:
+
+<ul>
+<li>
+<b><tt>print 4+6</tt></b></li>
+
+<li>
+<b><tt>print 1+3*2</tt></b></li>
+
+<li>
+<b><tt>print 5/6.0</tt></b></li>
+</ul>
+Vous devriez obtenir 10, 7 et 0.8333 dans la fenêtre de sortie. <br><br>
+Vous pouvez aussi invoquer des instructions Python.
+ 
+Tapez les lignes de commande suivantes:
+<ul>
+<li>
+<b><tt>#Write a file</tt></b></li>
+
+<li>
+<b><tt>out_file = open("test.txt","w")</tt></b></li>
+
+<li>
+<b><tt>out_file.write("This Text is going to out file\n")</tt></b></li>
+
+<li>
+<b><tt>out_file.write("Look at it and see\n")</tt></b></li>
+
+<li>
+<b><tt>out_file.close()</tt></b></li>
+</ul>
+
+<p><br>
+Un fichier <b>test.txt</b> devrait avoir été créé dans le répertoire de l'application.<br><br>
+ Maintenant, créez un nouveau fichier nommé <b>demo.py</b>
+ dans un éditeur texte (comme NotePad) et tapez les cinq lignes de codes que vous venez d'entrer dans l'interpréteur Python. 
+Sauvegardez le fichier. Dans l'interpréteur Python de ModelSphere,
+appuyez sur le bouton <b>Exécuter un fichier...</b> et choisissez le fichier demo.py <br>
+le fichier <b>test.txt</b> est à nouveau généré.
+
+<p>
+Un fichier contenant des instructions Python est appelé un <b>script Python</b>.
+Pour en savoir plus à propos des instructions Python, consultez la documentation en ligne sur le site <b>http://www.python.org</b>
+<br>
+<h3>
+Les scripts Python scripts comme langage de requêtes sur les modèles</h3>
+
+Naturellement, tout l'intérêt des scripts Python réside dans leur habilité à interroger les données
+des modèles de ModelSphere. Ouvrez le script Python apellé <b>demo1.py</b> (il est fourni dans le répertoire d'exemple avec l'application), vous devriez avoir :
+
+<p><tt>#</tt>
+<br><tt># import clauses</tt>
+<br><tt>#</tt>
+<br><tt>from org.modelsphere.jack.srtool import ApplicationContext</tt>
+<br><tt>#</tt>
+<br><tt># script's entry point</tt>
+<br><tt>#</tt>
+<br><tt>name = ApplicationContext.APPLICATION_NAME</tt>
+<br><tt>vers = ApplicationContext.APPLICATION_BUILD_ID</tt>
+<br><tt>out_file = open("test.txt","w")</tt>
+<br><tt>out_file.write("You are working on " + name + " build", vers)</tt>
+<br><tt>out_file.close()</tt>
+<p>
+Le script écrit le nom et le numéro de révision de l'application dans un fichier <b>test.txt</b>. 
+L'exemple suivant (demo2.py) écrit le nom du projet dans le fichier <b>test.txt</b>.
+
+<p><tt>#</tt>
+<br><tt># import classes</tt>
+<br><tt>#</tt>
+<br><tt>from org.modelsphere.jack.srtool import ApplicationContext</tt>
+<br><tt>from org.modelsphere.jack.baseDb.db import Db</tt>
+<br><tt>from org.modelsphere.sms.templates import GenericMapping</tt>
+<p><tt>#</tt>
+<br><tt># script's entry point</tt>
+<br><tt>#</tt>
+<br><tt>def main() :</tt>
+<br><tt>&nbsp;try:</tt>
+<br><tt>&nbsp; project = ApplicationContext.getFocusManager().getCurrentProject()</tt>
+<br><tt>&nbsp; db&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = project.getDb()</tt>
+<br><tt>&nbsp; db.beginTrans(Db.READ_TRANS)</tt>
+<br><tt>&nbsp; metafield = GenericMapping.getMetaField("ProjectName")</tt>
+<br><tt>&nbsp; name = project.get(metafield)</tt>
+<br><tt>&nbsp; out_file = open("test.txt","w")</tt>
+<br><tt>&nbsp; out_file.write("Project name:")</tt>
+<br><tt>&nbsp; out_file.write(name)</tt>
+<br><tt>&nbsp; out_file.close()</tt>
+<br><tt>&nbsp;finally:</tt>
+<br><tt>&nbsp; db.commitTrans()</tt>
+<p><tt>main()</tt>
+<p>
+La documentation (javadoc) sur l'API de <tt>GenericMapping </tt> 
+est fourni avec l'application. (Voir <b>index.html</b> dans le répertoire <b>doc\template-api\</b> )
+
+
+
+
+
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

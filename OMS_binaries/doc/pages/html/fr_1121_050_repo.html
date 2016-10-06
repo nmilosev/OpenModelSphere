@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>La bibliothèque des fonctions du référentiel</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>La bibliothèque des fonctions du référentiel</b></font><br><br><br>
+
+
+Dans les exemples précédents, quelques fonctions du référentiel ont été employées, tel
+que ColumnDefault dans un exemple de classe ATTR et PrimaryuniquekeyColumns dans
+un exemple de classe CONN. Ces fonctions du référentiel sont utilisées pour recueillir de
+l’information d'un projet dans Open ModelSphere. La liste complète de fonctions du
+référentiel (repository functions API) se trouve dans le répertoire <b>doc / template-API</b>.<br>
+Donc, pourquoi Fonctions du référentiel API est un document HTML, tandis que le reste de
+la documentation est en PDF ? Parce que le document API est généré par l'outil Javadoc.
+Javadoc est largement utilisé dans le monde Java. Chaque fois qu’une nouvelle version est
+sortie, la documentation est automatiquement regénérée. Cela permet de garder une documentation
+à jour.<br><br>
+Comment trouver une fonction du référentiel spécifique dans le document HTML ? Toute
+fonction du référentiel apparaît en tant que champ d’une classe spéciale nommée
+GenericMapping. Pour trouver une fonction du référentiel particulière, tel que ColumnDefault,
+vous pouvez examiner le résumé des champs (Field summary) où toutes les fonctions du
+référentiel sont répertoriées en ordre alphabétique. Chaque entrée dans le résumé des
+champs fournit une courte description de la fonction du référentiel ainsi qu’un hyperlien vers
+une description plus détaillée.<br><br>
+Vous pouvez aussi aller au détail des champs (Field detail): les fonctions du référentiel y
+sont répertoriées selon les systèmes cibles impliqués. Il y a six sections :
+<ul>
+<li>Section 1 : Concepts Génériques (pour tous les systèmes cibles)</li>
+<li>Section 2 : Concepts Java (pour le système cible Java)</li>
+<li>Section 3 : Concepts Relationnels (pour tous les systèmes cibles sauf Java)</li>
+<li>Section 4 : Concepts Oracle (pour le système cible Oracle)</li>
+<li>Section 5 : Concepts DB2 (pour le système cible DB2)</li>
+<li>Section 6 : Concepts Informix (pour le système cible Informix)</li>
+</ul>
+Vous pouvez vous dirigez vers une section spécifique en cliquant sur Section_X dans le
+résumé des champs. Dans chaque section, les fonctions du référentiel sont triées selon le
+concept (toutes les fonctions concernant les tables ensemble, toutes les fonctions concernant
+les colonnes ensemble, etc.).<br><br>
+Les sections résumé et détail du constructeur ainsi que résumé et détail de la méthode sont
+d’aucun intérêt pour un utilisateur de fichiers gabarits. Vous pouvez ignorer ces sections.
+Il y a deux sortes de fonctions du référentiel : des fonctions du référentiel de type attribut (ils
+apparaissent toujours après le mot-clé ATTR dans un fichier gabarit) et des fonctions du
+référentiel de type connecteur (ils apparaissent toujours après le mot-clé CONN dans un
+fichier gabarit). Voici un exemple d'une fonction attribut du référentiel :<br><br>
+
+
+<tt><font size="+1">ColumnDefault
+<blockquote>public static<br>
+org.modelsphere.sms.plugins.generic.GenericMapping.GenericMapping<br>
+Entry ColumnDefault<br>
+Returns the column's initial value.<br>
+Target System : All Except Java<br>
+Type : Attribute<br>
+Returns : String.</font></tt></blockquote>
+<br><br>
+Le champ Système Cible indique sur quel système cible une fonction du référentiel donnée
+fonctionnera. ColumnDefault fonctionne sur tous les systèmes cibles (Oracle, Informix,
+etc) sauf Java. Le champ Système Cible indique de quel type de fonction du référentiel il est
+question (dans notre exemple, ColumnDefault est une fonction du référentiel de type attribut),
+donc il ne peut qu’être employé dans une règle de classe ATTR dans un fichier gabarit.
+<br><br>
+Le champ Retour (seulement sur la fonction du référentiel de type attribut) indique quel
+genre de valeurs sont retournées par la fonction du référentiel de type attribut. String
+signifie qu'une chaîne arbitraire peut être retournée. Vous remarquerez régulièrement 'une
+chaîne représentant un nombre entier'. Ceci signifie que la valeur retournée est, en réalité,
+une chaîne et non un nombre entier, mais cette chaîne représente toujours un nombre
+entier. Les valeurs possibles sont "1", "33","400". Les valeurs telles que "le nom", "1.5" et "2/
+3" sont impossible. Finalement si le champ Retour a "vrai" ou "faux", cela signifie que seules
+ces deux valeurs peuvent être retournées par la fonction.
+<br><br>
+Voici un exemple d'une fonction du référentiel de type connecteur :<br><br>
+<tt><font size="+1">PrimaryuniquekeyColumns
+<blockquote>public static<br>
+org.modelsphere.sms.plugins.generic.GenericMapping.GenericMapping<br>
+Entry PrimaryuniquekeyColumns<br>
+For a primary or a unique key, lists all its columns.<br>
+Target System : All Except Java<br>
+Type : Connector</blockquote></font></tt>
+<br><br>
+Les champs sont les mêmes que ceux dans les fonctions du référentiel de type attribut, par
+contre il n'y a aucun champ Retour : un connecteur ne retourne pas de valeur, il inscrit plutôt
+un ou plusieurs objets.<br><br>
+Quelques fonctions du référentiel sont étiquetées à éviter (deprecated); ceci signifie qu'on
+permet toujours leur utilisation pour la version actuelle, mais il est projeté d’enlever la fonction
+dans les versions suivantes. Il est donc fortement recommandé d'éviter d'employer ces
+fonctions.<br><br><br>
+
+</font>
+</body>
+</html>
+

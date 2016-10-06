@@ -1,0 +1,101 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <title>La classe CONN</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>La
+classe CONN</font></font></font></b>
+<br>&nbsp;
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><u>Param&egrave;tre</u>
+:</font></font></font>
+<ul>
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>fonction
+du r&eacute;f&eacute;rentiel de type <b>CONN</b> qui retourne une liste
+d’occurrences d’enfants, ou</font></font></font></li>
+
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>un
+m&eacute;ta-connecteur d'API</font></font></font></li>
+</ul>
+
+<p><br><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><u>Modificateur
+obligatoire</u> : <b>CHILD</b> <i>(Il doit &eacute;galement &ecirc;tre
+le premier modificateur.)</i></font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><u>Modificateurs
+facultatifs</u> : <b>PREF, SUF, SEP, NULL</b>.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><u>Algorithme</u>
+:</font></font></font>
+<br><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>CONN
+ex&eacute;cute la r&egrave;gle indiqu&eacute;e par CHILD pour chaque occurrence
+enfant. Si au moins une occurrence enfant produit un r&eacute;sultat, CONN
+ex&eacute;cute les r&egrave;gles sp&eacute;cifi&eacute;es par PREF et SUF.
+Si au moins deux occurrences enfant produisent un r&eacute;sultat, il ex&eacute;cute
+la r&egrave;gle indiqu&eacute;e par SEP. Ensuite, il construit la cha&icirc;ne
+r&eacute;sultante en concat&eacute;nant le r&eacute;sultat de PREF, puis
+le r&eacute;sultat de CHILD pour chaque occurrence enfant dont il a un
+r&eacute;sultat, en ins&eacute;rant le r&eacute;sultat de SEP entre chaque
+paire de r&eacute;sultats existants, et finalement le r&eacute;sultat de
+SUF. Si la cha&icirc;ne r&eacute;sultante est vide, CONN ex&eacute;cute
+la r&egrave;gle indiqu&eacute;e par NULL et retourne le r&eacute;sultat
+de NULL.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Note
+: pour les modificateurs PREF, SUF, SEP et NULL , l’occurrence courante
+est l’occurrence parent. Pour le modificateurs CHILD , l’occurrence courante
+est l’occurrence enfant.</font></font></font>
+<p><u><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Exemple
+1</font></font></font></u>
+<blockquote><tt><font color="#000000"><font size=+1>pukeyColumns&nbsp;&nbsp;&nbsp;
+CONN PrimaryuniquekeyColumns,</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CHILD = name</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SEP = ", "</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PREF = "PRIMARY KEY ("</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SUF = ") CONSTRAINT $name;"</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NULL = "()";</font></font></tt>
+<p><tt><font color="#000000"><font size=+1>name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ATTR ObjectPhysicalname;</font></font></tt>
+<br>&nbsp;
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Note
+: le modificateur <b>CHILD</b> est obligatoire et doit survenir avant tout
+autre modificateur. La fonction du r&eacute;f&eacute;rentiel <b>PrimaryuniquekeyColumns</b>
+retourne les colonnes associ&eacute;es &agrave; une cl&eacute; primaire
+ou une cl&eacute; unique; la fonction du r&eacute;f&eacute;rentiel <b>ObjectPhysicalname</b>
+retourne le nom physique de n'importe quel objet (ici le nom d'une colonne).
+Si la cl&eacute; primaire ou unique est nomm&eacute;e "empl_prim_key" et
+est compos&eacute;e des colonnes "dept_no" et "empl_no", le r&eacute;sultat
+sera :</font></font></font>
+<p><tt><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>PRIMARY
+KEY (dept_no, empl_no) CONSTRAINT empl_prim_key</font></font></font></tt>
+<br>&nbsp;</blockquote>
+<u><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Exemple
+2</font></font></font></u>
+<blockquote><tt><font color="#000000"><font size=+1>pukeyColumns&nbsp;&nbsp;&nbsp;
+CONN "org.modelsphere.sms.or.db.DbORPrimaryUnique.fColumns",</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CHILD = name</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SEP = ", "</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PREF = "PRIMARY KEY ("</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SUF = ") CONSTRAINT $name;"</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NULL = "()";</font></font></tt>
+<p><tt><font color="#000000"><font size=+1>name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ATTR "org.modelsphere.sms.db.DbSMSSemanticalObject.fPhysicalName";</font></font></tt>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Le
+m&ecirc;me exemple que le pr&eacute;c&eacute;dent, mais en utilisant des
+m&eacute;ta-champs et m&eacute;ta-connecteurs de l'API au lieu des fonctions
+du r&eacute;f&eacute;rentiel.</font></font></font></blockquote>
+
+</body>
+</html>

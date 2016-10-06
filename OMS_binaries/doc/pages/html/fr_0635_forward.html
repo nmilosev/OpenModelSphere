@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>La g&eacute;n&eacute;ration (forward engineering)</title>
+</head>
+<body bgcolor="#ffffff">
+<font color="#000000" face="sans serif,arial,helvetica" size="2">
+<hr><font color="#000000" face="sans serif,arial,helvetica" size="5"><b>La
+g&eacute;n&eacute;ration (forward engineering)</b></font><br>
+<br>
+<br>
+La g&eacute;n&eacute;ration est le processus de g&eacute;n&eacute;rer
+le DDL pour cr&eacute;er des objets de sch&eacute;ma de
+base de donn&eacute;es. <b>Open ModelSphere</b> offre deux
+fa&ccedil;ons de produire le DDL :
+<ol>
+  <li>Par l&#8217;objet : pr&eacute;visualisation SQL et
+g&eacute;n&eacute;ration du DDL.</li>
+  <li>Globalement : la g&eacute;n&eacute;ration.</li>
+</ol>
+<hr><font color="#000000" face="sans serif,arial,helvetica" size="4"><b>Par
+l&#8217;objet</b></font><br>
+<br>
+Les objets du mod&egrave;le qui peuvent avoir un &eacute;quivalent SQL
+afficheront le code correspondant dans leur fen&ecirc;tre
+de propri&eacute;t&eacute;s sous l'onglet SQL. Cet onglet contient une
+pr&eacute;visualisation de la clause DDL. Il est
+aussi possible de cr&eacute;er, du m&ecirc;me objet, le fichier de
+script DDL. Ceci est disponible
+dans le <b>menu contextuel de l'objet</b>, choisissez <b>G&eacute;n&eacute;rer
+&gt; &Eacute;nonc&eacute;s DDL</b>.
+<br>
+<br>
+<img src="../images/FWD_ONGLET_fr.jpg">
+<br>
+<br>
+<b>Un seul fichier est g&eacute;n&eacute;r&eacute; par objet choisi. Le
+nom du fichier r&eacute;sultant
+sera <i>[nom de l'objet]</i>.sql.</b><br>
+<br>
+<b>Avant que vous n'ex&eacute;cutiez une g&eacute;n&eacute;ration,
+n'oubliez pas de valider votre mod&egrave;le. Voir <a
+ href="fr_0633_valid.html">La validation</a>.</b><br>
+<br>
+<b>Il est pr&eacute;f&eacute;rable de r&eacute;gler l&#8217;option des
+r&eacute;pertoires de g&eacute;n&eacute;ration du DDL. Voir <a
+ href="fr_0290_options.html#rep">Modification des options</a>.</b>
+<br>
+<br>
+<hr><font color="#000000" face="sans serif,arial,helvetica" size="4"><b>La
+fonction globale</b></font><br>
+<br>
+Une fonction de g&eacute;n&eacute;ration globale est &eacute;galement
+disponible. Elle produira le DDL pour l'ensemble des objets contenus
+dans les diff&eacute;rents mod&egrave;les li&eacute;s &agrave; une
+m&ecirc;me base de donn&eacute;e. S&eacute;lectionnez un mod&egrave;le
+et choisissez <b>Outils &gt; Base de donn&eacute;es &gt;
+G&eacute;n&eacute;ration</b>.<br>
+<br>
+Les objets suivants sont utilis&eacute;s lors de la
+g&eacute;n&eacute;ration :
+<ul>
+  <li><img src="../images/dbordatabase.gif"><b>Base de donn&eacute;es</b>:
+La base de donn&eacute;es elle-m&ecirc;me et ses concepts physiques.<br>
+    <br>
+  </li>
+  <li><img src="../images/dboradatamodel.gif"> <b>Le mod&egrave;le de
+donn&eacute;es</b> : le mod&egrave;le de donn&eacute;es
+d&eacute;ploy&eacute;.<br>
+    <br>
+  </li>
+  <li><img src="../images/dboraprogramunitlibrary.gif"> <b>La
+biblioth&egrave;que d&#8217;op&eacute;rations</b> : la biblioth&egrave;que
+d&#8217;op&eacute;rations d&eacute;ploy&eacute;e.<br>
+    <br>
+  </li>
+  <li><img src="../images/dbordomainmodel.gif"> <b>Le mod&egrave;le de
+domaines</b> : les objets du mod&egrave;le de domaines
+d&eacute;ploy&eacute; ne sont
+pas g&eacute;n&eacute;r&eacute;s explicitement. Cependant, tout objet
+du mod&egrave;le de donn&eacute;es et de
+la biblioth&egrave;que d'op&eacute;rations d&eacute;ploy&eacute;, qui
+font r&eacute;f&eacute;rence &agrave; un domaine, sera utilis&eacute;
+dans le processus, et ce peu importe l'emplacement du domaine (i.e.
+chaque
+colonne de table a un type qui est g&eacute;n&eacute;r&eacute; dans le
+DDL).</li>
+</ul>
+<font color="#000000" face="sans serif,arial,helvetica" size="4"><b>Les
+&eacute;nonc&eacute;s &agrave; g&eacute;n&eacute;rer</b></font>
+<br>
+<br>
+<img src="../images/FWD_1_fr.jpg">
+<br>
+<br>
+Vous trouverez, du c&ocirc;t&eacute; gauche de cette fen&ecirc;tre, la
+liste des concepts qui peuvent &ecirc;tre
+g&eacute;n&eacute;r&eacute;s. Chaque interface a une liste
+diff&eacute;rente.
+<ul>
+  <li><b>Create</b> : g&eacute;n&egrave;re des &eacute;nonc&eacute;s
+SQL pour cr&eacute;er les concepts choisis. (ex. : cr&eacute;er la
+table Employ&eacute;s).<br>
+    <br>
+  </li>
+  <li><b>Drop</b> : g&eacute;n&egrave;re des &eacute;nonc&eacute;s SQL
+pour supprimer les concepts choisis. (ex. :
+supprimer la table Employ&eacute;s).<br>
+    <br>
+  </li>
+  <li><b>Drop/Create</b> : g&eacute;n&egrave;re les
+&eacute;nonc&eacute;s de suppression et les &eacute;nonc&eacute;s de
+cr&eacute;ation
+(ex. : Supprimer la table Employ&eacute;s... cr&eacute;er la table
+Employ&eacute;s).<br>
+    <br>
+  </li>
+</ul>
+<b>Vous devriez configurer les options du r&eacute;pertoire de
+g&eacute;n&eacute;ration DDL.</b>
+<br>
+<br>
+<br>
+<font color="#000000" face="sans serif,arial,helvetica" size="4"><b>La
+port&eacute;e g&eacute;n&eacute;rale</b></font><br>
+<br>
+Pour chacun des concepts disponibles pour un utilisateur choisi, il est
+possible de choisir les objets que vous voulez g&eacute;n&eacute;rer. <br>
+<br>
+<img src="../images/FWD_2_fr.jpg">
+<br>
+<br>
+<br>
+<font color="#000000" face="sans serif,arial,helvetica" size="4"><b>Les
+variables de g&eacute;n&eacute;ration</b></font><br>
+<br>
+Les variables de g&eacute;n&eacute;ration vous permettront d'ajuster
+des options qui sont pour la plupart sp&eacute;cifique &agrave;
+l'interface SGBD.
+</font><font color="#000000" face="sans serif,arial,helvetica" size="2">Pour
+qu&#8217;un &eacute;l&eacute;ment soit g&eacute;n&eacute;r&eacute;, il faut
+&agrave; la fois qu&#8217;il soit s&eacute;lectionn&eacute;
+dans les fen&ecirc;tres appropri&eacute;es de la
+g&eacute;n&eacute;ration.</font><br>
+<font color="#000000" face="sans serif,arial,helvetica" size="2"><br>
+</font><font color="#000000" face="sans serif,arial,helvetica" size="2"><span
+ style="font-weight: bold;">MySQL utilise une syntaxe sp&eacute;ciale
+pour les cl&eacute;s &eacute;trang&egrave;res. Il est possible
+d'activer cette systaxe en s&eacute;lectionnant l'option <span
+ style="font-style: italic;">Activer les contraintes de cl&eacute;s
+&eacute;trang&egrave;res MySQL</span>.</span></font><br>
+<font color="#000000" face="sans serif,arial,helvetica" size="2"><br>
+<br>
+Les &eacute;nonc&eacute;s DDL sont produits par un fichier gabarit
+(.tpl). C'est un fichier texte qui
+peut &ecirc;tre modifi&eacute; par tout utilisateur qui est familier
+avec le langage de gabarit. Voir <b><a href="fr_1120_template.html">Les
+gabarits</a>.</b>
+<br>
+<br>
+<br>
+<b>Voir aussi: <a href="fr_0655_sql_shell.html">Ex&eacute;cution du
+code SQL</a>.</b>
+</font>
+</body>
+</html>

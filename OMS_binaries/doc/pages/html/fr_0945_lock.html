@@ -1,0 +1,69 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <title>Generating a data model from a package or a class model</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>Verrouillage
+des mod&egrave;les</font></font></font></b>
+<br>&nbsp;
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Lorsque
+de gros projets sont &eacute;labor&eacute;s et particuli&egrave;rement
+lorsque plusieurs personnes y sont impliqu&eacute;es, il devient utile
+de pouvoir emp&ecirc;cher des changements &agrave; certaines parties du
+projet, mais de permettre la modification d'autres parties du mod&egrave;les.
+En utilisant la fonction de <b>Verrouillage de mod&egrave;les</b>, il est
+possible de verrouiller un ou plusieurs mod&egrave;les, sous-mod&egrave;les
+ou paquetages, dans le but de pr&eacute;venir un changement dans une partie
+particuli&egrave;re du projet.</font></font></font><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1></font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Tous
+les mod&egrave;les relationnelles, de processus ou de classes, tous les
+sous-mod&egrave;les relationnelles et tous les paquetages Java peuvent
+&ecirc;tre verrouill&eacute;s.&nbsp; Pour ce faire, s&eacute;lectionner
+le mod&egrave;le ou le paquetage appropri&eacute; dans l'<b>Explorateur</b>,
+et activer la propri&eacute;t&eacute; <b>Verouill&eacute;</b> dans le <b>Panneau
+de conception</b>.&nbsp; Une fois le mod&egrave;le ou paquetage verrouill&eacute;,
+il n'est plus possible de faire de modification s&eacute;mantique ou graphique
+&agrave; son contenu, ou &agrave; tous les sous-mod&egrave;les ou sous-paquetages
+sous le mod&egrave;le/paquetage verouill&eacute;.&nbsp;</font></font></font><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1></font></font></font>
+<p><img SRC="../images/lockedModel_fr.jpg" NOSAVE height=341 width=581>
+<br><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1></font></font></font>&nbsp;<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1></font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Voici
+quelques cas o&ugrave; le <b>Verrouillage de mod&egrave;les</b> peut &ecirc;tre
+utile :</font></font></font>
+<ul>
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Nous
+proc&eacute;dons &agrave; la r&eacute;tro-ing&eacute;nierie de bases de
+donn&eacute;es relationnelles; le mod&egrave;le r&eacute;sultant repr&eacute;sente
+la structure physique de la base de donn&eacute;es &agrave; un moment donn&eacute;;
+Nous d&eacute;sirons am&eacute;liorer le mod&egrave;le, mais nous voulons
+conserver la version original intact. Pour faire cela, nous copions le
+mod&egrave;le resultant de la r&eacute;tro-ing&eacute;nierie, nous verrouillons
+l'original et nous ne travaillons que sur la copie. On peut utiliser la
+fonction Comparer/Int&eacute;grer pour visualiser les am&eacute;liorations
+apport&eacute;es depuis que le moment de la r&eacute;tro-ing&eacute;nierie.&nbsp;</font></font></font></li>
+
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Nous
+groupons un contexte d'affaires sous un processus externe dans un autre
+fichier de projet.&nbsp; Nous voulons continuer &agrave; travailler dans
+le contexte d'affaire original, mais nous voulons pr&eacute;venir tout
+changement sous le mod&egrave;le d'affaire principale afin de faciliter
+toute int&eacute;gration subs&eacute;quente. Nous s&eacute;lectionons l'ancien
+processus externe et nous le verrouillons afin d'emp&ecirc;cher trout changement.&nbsp;</font></font></font></li>
+
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Nous
+mod&eacute;lisons du code Java provenant &agrave; la fois de d&eacute;veloppement
+interne et de tiers partie.&nbsp; Comme nous n'avons pas le droit de modifier
+le code provenant du tiers partie, nous voulons emp&ecirc;cher tout changement
+dans le mod&egrave;le de classe correspondant.&nbsp; Nous s&eacute;lectionnons
+le paquetage principal du tiers partie, et nous le v&eacute;rrouillons.</font></font></font></li>
+</ul>
+
+</body>
+</html>

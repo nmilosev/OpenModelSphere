@@ -1,0 +1,309 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <title>V&eacute;rifier l'int&eacute;grit&eacute; des mod&egrave;les</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>V&eacute;rifier
+l'int&eacute;grit&eacute; d'un mod&egrave;le</font></font></font></b>
+<br><img SRC="../images/verify_integrity.gif" NOSAVE height=16 width=16>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Le
+concepteur du mod&egrave;le devrait se concentrer sur les sujets de conception
+de mod&egrave;les les plus importants, et non passer du temps sur des d&eacute;tails
+de coh&eacute;rence. <b>Open ModelSphere</b> fournit une technologie
+assist&eacute;e pour assurer l'int&eacute;grit&eacute; du mod&egrave;le.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>La
+v&eacute;rification d'int&eacute;grit&eacute; est disponible pour les <b>mod&egrave;les
+de processus, de donn&eacute;es, de domaines, d'items communs</b> ainsi
+que pour les <b>biblioth&egrave;ques d'op&eacute;rations</b>.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>En
+utilisant l'option de v&eacute;rification, une nouvelle fen&ecirc;tre appara&icirc;tra
+pour vous informer des erreurs de coh&eacute;rence possibles et &agrave;
+quel endroit ces erreurs peuvent &ecirc;tre corrig&eacute;es. Cette fonctionnalit&eacute;
+vous indiquera aussi les liens vers les diff&eacute;rents objets dans la
+fen&ecirc;tre Explorateur et les diverses fen&ecirc;tres de propri&eacute;t&eacute;s.
+Finalement, gr&acirc;ce &agrave; une liste de solutions possibles inscrites
+dans la fen&ecirc;tre V&eacute;rification, vous pourrez appliquer les modifications
+directement.</font></font></font>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Pour
+utiliser la fonction V&eacute;rifier l'Int&eacute;grit&eacute; :</font></font></font></b>
+<ol>
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><b>Cliquez
+&agrave; droite</b> sur le <b>mod&egrave;le</b> dans la fen&ecirc;tre d’<b>explorateur</b>.</font></font></font></li>
+
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Du
+<b>menu
+contextuel</b>, s&eacute;lectionnez <b>V&eacute;rifier l'int&eacute;grit&eacute;</b>&nbsp;<img SRC="../images/verify_integrity.gif" NOSAVE height=16 width=16>.
+La fen&ecirc;tre suivante appara&icirc;tra :</font></font></font></li>
+</ol>
+<img SRC="../images/Verify_INTEGRITY_fr.jpg" NOSAVE height=472 width=597>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Vous
+pouvez faire les changements directement de la fen&ecirc;tre; utilisez
+les liens fournis (Cliquer pour changer la valeur &agrave; non nul). Vous
+pouvez faire &eacute;galement effectuer les changements &agrave; partir
+de la fen&ecirc;tre de propri&eacute;t&eacute;s de chaque objet; utiliser
+le lien&nbsp;<img SRC="../images/properties.gif" NOSAVE height=16 width=16>.</font></font></font>
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Pour
+les besoins du pr&eacute;sent exemple, des erreurs ont &eacute;t&eacute;
+ajout&eacute;es au mod&egrave;le. Si vous avez suivi les &eacute;tapes
+de Cr&eacute;er un mod&egrave;le de donn&eacute;es, votre mod&egrave;le
+ne devrait pas avoir d'erreur.</font></font></font></b>
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>Voici
+la liste des r&egrave;gles v&eacute;rifi&eacute;es selon les types de mod&egrave;les
+et leurs concepts :</font></font></font></b>
+<br>&nbsp;
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><b><font size="+1"><br>
+
+Modèle Entité-Association</b>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;">
+<div style="margin-left: 20px; font-family: arial"><b>
+Règles utilisant la technologie assistée
+</b></div>
+</font>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+1. Attribut nul possible faisant partie d’une clé primaire ou unique (Erreur)<br>
+Les attributs suivants ne devraient pas être nuls. Ils font partie d'une clé primaire/unique:
+<br>&nbsp;&nbsp;&nbsp; - Changer l'attribut pour NON NUL.
+<br>
+<br>
+</font></div>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;">
+<div style="margin-left: 20px; font-family: arial"><b>
+Autres règles
+</b></div>
+</font>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+2. Clé primaire ou unique sans  attribut ni dépendance (Erreur)<br>
+Les clés primaires ou uniques suivantes n'ont pas de colonnes ni de dépendances.
+<br>
+<br>
+3. Entité sans attribut (Avertissement)<br>
+Les entités suivantes n'ont pas d'attributs.<br>
+<br>
+4. Entité ou association sans arc (Avertissement)<br>
+Les entités ou associations suivantes n'ont pas d'arc.<br>
+<br>
+5. Entité sans clé primaire ou unique (Avertissement)<br>
+Les entitées suivantes ne possèdent ni clé primaire ni clé unique.
+<br>
+<br>
+6. Rôle avec multiplicité non définie (Erreur)<br>
+La multiplicité des rôles suivants n'est pas définie.<br>
+<br>
+7. Association ternaire avec dépendance (Erreur)<br>
+Les associations suivantes ne peuvent contenir un arc avec une dépendance puisque leur dimension est plus grande que deux.<br>
+<br>
+8. Association avec dépendances sur plus d’un arc (Erreur)<br>
+Les associations suivantes ont plus d'un arc avec une dépendance.<br>
+<br>
+9. Association avec moins de 2 arcs (Erreur)<br>
+Les associations suivantes relient moins de deux entités.<br>
+<br>
+10. Association récursive avec dépendance (Erreur)<br>
+Les associations suivantes sont récursives et contiennent un arc avec une dépendance.<br>
+<br>
+11. Association possedant un attribut et  un rôle 1,1 (Avertissement)<br>
+Les associations suivantes ont au moins un attribut et un rôle avec une multiplicité "Exactement 1".
+<br>
+<br>
+12. Arc avec dépendance dont la multiplicité n’est pas 1,1 (Erreur)<br>
+Les arcs suivants ont une dépendance et la multiplicité n'est pas "Exactement 1".<br>
+<br>
+13. Association binaire avec erreur sur la propriété “ navigable  ” des röles (Avertissement)<br>
+Les relations binaires suivantes ont des erreurs (avertissements) de navigabilité.<br>
+- Aucun rôle n'est navigable.<br>
+- Les deux rôles sont navigables.<br>
+- Le rôle navigable a une multiplicité maximale plus grande que l'autre rôle.
+<br>
+<br>
+14.a. Arc dont le rôle est le seul membre d’une clé et dont l’arc opposé a une multiplicité maximale différente de 1 (Erreur)<br>
+Les arcs suivants ont une dépendance sur le rôle qui est le seul membre de la clé et le rôle opposé a une multiplicité maximale différente de 1.<br>
+<br>
+14.b. Arc dont le rôle n’est pas le seul membre d’une clé et dont l’arc opposé a une multiplicité maximale égale à 1 (Erreur)<br>
+Les arcs suivants ont une dépendance sur le rôle qui n'est pas le seul membre de la clé et le rôle opposé a une multiplicité maximale égale à 1.
+<br> 
+</div>
+</font></font></font>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><b><font size="+1"><br>
+Mod&egrave;le de donn&eacute;es et de domaines </b>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;">
+<div style="margin-left: 20px; font-family: arial"><b>
+R&egrave;gles utilisant la technologie assist&eacute;e
+</b></div>
+</font>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+1. Une
+colonne faisant partie d’une cl&eacute; primaire ou unique doit &ecirc;tre
+NON NUL :
+<br>&nbsp;&nbsp;&nbsp; - Changer la colonne pour NON NUL
+<br>
+<br>
+</font></div>
+<div style="margin-left: 40px"><font size="-1">
+2. Lors
+d’une connectivit&eacute; minimale 1, les colonnes de cl&eacute;s &eacute;trang&egrave;res
+correspondantes doivent &ecirc;tre NON NUL :
+<br>&nbsp;&nbsp;&nbsp; - Changer la colonne pour NON NUL
+<br>&nbsp;&nbsp;&nbsp; - Changer la multiplicit&eacute; du r&ocirc;le de ‘exactement un’ &agrave;
+‘optionnel’ ou ‘un ou plus’ &agrave; ‘plusieurs’
+<br>
+<br>
+</font></div>
+<div style="margin-left: 40px"><font size="-1">
+3. Lors
+d’une connectivit&eacute; minimale 0, les colonnes de cl&eacute;s &eacute;trang&egrave;res
+correspondantes doivent &ecirc;tre NUL :
+<br>&nbsp;&nbsp;&nbsp; - Changer la colonne pour NUL
+<br>&nbsp;&nbsp;&nbsp; - Changer la multiplicit&eacute; du r&ocirc;le de ‘optionnel’ &agrave; ‘exactement
+un’ ou ‘plusieurs’ &agrave; ‘un ou plus’
+<br>
+<br>
+</font></div>
+<div style="margin-left: 40px"><font size="-1">
+4. Lors
+d’une connectivit&eacute; parent maximale 1, les colonnes de cl&eacute;s
+&eacute;trang&egrave;res correspondantes dans la table enfant doivent faire
+partie d’une contrainte unique ou un index unique :
+<br>&nbsp;&nbsp;&nbsp; - Changer la multiplicit&eacute; du r&ocirc;le parent de ‘exactement un’
+&agrave; ‘un ou plus’ ou ‘optionnel’ &agrave; ‘plusieurs’
+<br>&nbsp;&nbsp;&nbsp; - Ajouter l’index unique ou modifier l’index de la cl&eacute; &eacute;trang&egrave;re
+existante &agrave; une valeur unique
+<br>
+<br>
+</font></div>
+<div style="margin-left: 40px"><font size="-1">
+5. Lors
+d’une connectivit&eacute; parent maximale N, les colonnes de cl&eacute;s
+&eacute;trang&egrave;res correspondantes dans la table enfant ne doivent
+pas faire partie d’une contrainte unique ou un index unique :
+<br>&nbsp;&nbsp;&nbsp; - Changer la multiplicit&eacute; du r&ocirc;le parent de ‘un ou plus’ &agrave;
+‘exactement un’ ou ‘plusieurs’ &agrave; ‘optionnel’
+<br>&nbsp;&nbsp;&nbsp; - Modifier l’index de la cl&eacute; &eacute;trang&egrave;re existante &agrave;
+une valeur non unique
+<br>
+<br>
+</font></div>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;">
+<div style="margin-left: 20px; font-family: arial"><b>
+Autres
+r&egrave;gles
+</b></div>
+</font>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+6. Cl&eacute; Primaire/Unique - Doit &ecirc;tre sur une direction ou sur une
+colonne.<br>
+<br>
+7. Cl&eacute; &eacute;trang&egrave;re - Doit avoir une colonne.<br>
+<br>
+8. Cl&eacute; &eacute;trang&egrave;re - Les attributs <i>Longueur, Nbr. d&eacute;cimales
+et Domaine</i> devraient correspondre &agrave; ceux de la cl&eacute; primaire
+(avertissement).<br>
+<br>
+9. Index - Doit avoir un &eacute;l&eacute;ment index&eacute;.<br>
+<br>
+10. D&eacute;clencheurs - Devrait contenir des instructions(corps) et &ecirc;tre
+li&eacute; &agrave; une colonne (avertissement).<br>
+<br>
+11. Association - Ne devrait avoir qu'une seule multiplicit&eacute; maximale
+sup&eacute;rieur &agrave; 1 (avertissement).<br>
+<br>
+12. R&ocirc;le - Une r&egrave;gle de mise &agrave; jour devrait &ecirc;tre
+sp&eacute;cifi&eacute;e (avertissement).<br>
+<br>
+13. R&ocirc;le - La multiplicit&eacute; doit &ecirc;tre d&eacute;finie.<br>
+<br>
+14. Les domaines doivent &ecirc;tre li&eacute;s &agrave; un type de donn&eacute;es.<br>
+
+</div>
+</font></font></font>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><font size="+1"><br>
+<b>Biblioth&egrave;que d'op&eacute;rations</b>
+</div>
+</font>
+<br>
+<div style="margin-left: 40px">
+1. Le corps d'une proc&eacute;dure devrait contenir des instructions (avertissement).<br><br>
+2. Les param&egrave;tres doivent &ecirc;tre li&eacute;s &agrave; un type de donn&eacute;es.<br><br>
+</div>
+</font></font></font>
+
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><font size="+1">
+<b>Mod&egrave;le de processus</b>
+</div>
+</font>
+<br>
+<div style="margin-left: 40px">
+1. Un processus devrait avoir une r&egrave;gle de synchronization (avertissement).<br><br>
+2. Un processus devrait avoir une repr&eacute;sentation graphique (avertissement).<br><br>
+3. Un processus ne devrait pas &ecirc;tre directement li&eacute; par un flux
+&agrave; un autre processus (avertissement).<br><br>
+4. Un processus ne devrait pas &ecirc;tre orphelin, sans flux entrant ou sortant
+(avertissement).<br><br>
+5. Un processus devrait avoir au moins un flux entrant (avertissement).<br><br>
+6. Un processus devrait avoir au moins un flux sortant (avertissement).<br><br>
+7. Un processus devrait avoir un nom autre que le nom par d&eacute;faut (avertissement).<br><br>
+8. Une entit&eacute; externe devrait avoir une repr&eacute;sentation graphique
+(avertissement).<br><br>
+9. Une entit&eacute; externe ne devrait pas &ecirc;tre directement li&eacute;
+par un flux &agrave; une autre entit&eacute; externe (avertissement).<br><br>
+10. Une entit&eacute; externe ne devrait pas &ecirc;tre orphelin, sans flux
+entrant ou sortant (avertissement).<br><br>
+11. Une entit&eacute; externe devrait avoir au moins un flux entrant (avertissement).<br><br>
+12. Une entit&eacute; externe devrait avoir au moins un flux sortant (avertissement).<br><br>
+13. Une entit&eacute; externe devrait avoir un nom autre que le nom par d&eacute;faut
+(avertissement).<br><br>
+14. Un d&eacute;p&ocirc;t devrait avoir une repr&eacute;sentation graphique
+(avertissement).<br><br>
+15. Un d&eacute;p&ocirc;t ne devrait pas &ecirc;tre directement li&eacute;
+par un flux &agrave; un autre d&eacute;p&ocirc;t (avertissement).<br><br>
+16. Un d&eacute;p&ocirc;t ne devrait pas &ecirc;tre directement li&eacute;
+par un flux &agrave; une entit&eacute; externe (avertissement).<br><br>
+17. Un d&eacute;p&ocirc;t ne devrait pas &ecirc;tre orphelin, sans flux entrant
+ou sortant (avertissement).<br><br>
+18. Un d&eacute;p&ocirc;t devrait avoir au moins un flux entrant (avertissement).<br><br>
+19. Un d&eacute;p&ocirc;t devrait avoir au moins un flux sortant (avertissement).<br><br>
+20. Un d&eacute;p&ocirc;t devrait avoir un nom autre que le nom par d&eacute;faut
+(avertissement).<br><br>
+21. Un flux devrait avoir une condition d'&eacute;mission (avertissement).<br><br>
+22. Un flux devrait &ecirc;tre li&eacute; &agrave; des objets &agrave; ses
+deux extr&eacute;mit&eacute;s (avertissement).<br><br>
+23. Un flux devrait avoir un nom autre que le nom par d&eacute;faut (avertissement).<br><br>
+</div>
+</font></font></font>
+
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><font size="+1">
+<b>Mod&egrave;le d'items communs</b>
+</div>
+</font>
+<br>
+<div style="margin-left: 40px">
+1. Les items communs doivent &ecirc;tre li&eacute;s &agrave; un type de donn&eacute;es.<br><br>
+</div>
+</font></font></font>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+How to get started
+==================
+
+1) Make sure that you have a Java Runtime Environment version 1.6 update 30 or later installed. 
+
+
+2) Edit the file 'modelsphere.bat' to refer to your Java Virtual Machine:
+   e.g. "C:\Program Files\Java\jre1.6.0_31/bin/javaw.exe"
+
+3) To launch Open ModelSphere, double-click the file 'modelsphere.bat'.
+
+
+Alternatively, you can use the command line from 'modelsphere.bat' to create 
+a shortcut for launching the application. You can assign the icon 
+'OpenModelSphere.ico' to the shortcut.
+

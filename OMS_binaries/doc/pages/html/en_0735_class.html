@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Class concept</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Class concept</b></font><br><img src="../images/dbjvclass.gif"> <img src="../images/dbjvinterface.gif"> <img src="../images/dbjvexception.gif"><br><br>
+
+
+A class is the description of a set of objects that share the same attributes, operations,
+methods, relationships and semantics. A class may use a set of interfaces to
+specify collections of operations it provides to its environment.
+An interface is the declaration of a collection of operations that may be used for
+defining a service offered by an instance.<br><br>
+An exception is an event that occurs during the execution of a program and disrupts
+the normal flow of instructions.<br><br>
+In <b>Open ModelSphere</b>, the class' classifier type will determine if it represents a
+Java class, an interface or an exception. Stereotypes can be modified by accessing
+the class properties window. However, from now on, the term Class will be used
+only to refer to the class concept which represents classes, interfaces and
+exceptions.
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Classes properties</b></font> <img src="../images/dbjvclass.gif"> <img src="../images/dbjvinterface.gif"> <img src="../images/dbjvexception.gif"><br><br>
+(under the Design tab of the properties window)<br><ul>
+<li><b>Name</b>: write the Java class name.<br><br></li>
+<li><b>Alias</b>: identify the concept other than by its name (optional).<br><br></li>
+<li><b>UML Stereotype</b>: implementationClass, invariant, metacondition, postcondition,
+powertype, precondition, process, thread, type, utility, boundary, entity, control
+or none.<br><br></li>
+<li><b>Classifier type</b>: specify whether it is a <b>class</b>, an <b>interface</b> or an <b>exception</b>.<br><br></li>
+<li><b>Visibility</b>: class visibility.<br><br></li>
+<li><b>Static</b>: class is static.<br><br></li>
+<li><b>Final</b>: class is final.<br><br></li>
+<li><b>Collection</b>: the class is a collection type. If flagged as a collection, the class
+can be specified as the project's default collection type (on the project properties).
+If so, it will then be used when creating one to many associations.<br><br></li>
+<li><b>Compilation unit</b>: the associated java file.<br><br></li>
+<li><b>Abstract</b>: class is abstract.<br><br></li>
+<li><b>Base type</b>: the class is base type. This property is used for documentation
+purposes only.<br><br></li>
+<li><b>Description</b>: enter a textual description for the class.<br><br></li>
+
+</ul>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Fields properties</b></font> <img src="../images/dboodatamember.gif"><br><br><ul>
+<li><b>Name</b>: write the field’s name.<br><br></li>
+<li><b>Alias</b>: identify the concept other than by its name (optional).<br><br></li>
+<li><b>UML Stereotype</b>: invariant, postcondition, precondition, boundary, entity,
+control or none.<br><br></li>
+<li><b>Visibility</b>: specify the field’s visibility.<br><br></li>
+<li><b>Type</b>: specify the type of the field’s instance.<br><br></li>
+<li><b>Element type</b>: specify the type of the collection element’s instances. The
+element type is provided for documentation purposes only.<br><br></li>
+<li><b>Type use</b>: specify an array and its dimensions.<br><br></li>
+<li><b>Type use style</b>: specify how the array will be forwarded, after the type or
+after the field.<br><br></li>
+<li><b>Static</b>: specify the field as static.<br><br></li>
+<li><b>Final</b>: specify the field as final.<br><br></li>
+<li><b>Transient</b>: specify the field as transient.<br><br></li>
+<li><b>Volatile</b>: specify the field as volatile.<br><br></li>
+<li><b>Initial value</b>: specify the field’s initial value.<br><br></li>
+<li><b>Description</b>: enter a textual description for the field.<br><br></li>
+
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Method properties</b></font> <img src="../images/dboomethod.gif"><br><br><ul>
+<li><b>Name</b>: write the method’s name.<br><br></li>
+<li><b>Alias</b>: identify the concept other than by its name (optional).<br><br></li>
+<li><b>UML Stereotype</b>: create, destroy, invariant, postcondition, precondition,
+boundary, entity, control implementor, manager, helper or none.<br><br></li>
+<li><b>Body</b>: specify the Java code of this method.<br><br></li>
+<li><b>Visibility</b>: specify the method’s visibility.<br><br></li>
+<li><b>Return type</b>: specify the method’s return type.<br><br></li>
+<li><b>Return element type</b>: specify the type of the collection element’s instances. The element type is provided for documentation purposes only.<br><br></li>
+<li><b>Type use</b>: specify an array and its dimensions.<br><br></li>
+<li><b>Abstract</b>: specify the method as abstract.<br><br></li>
+<li><b>Type use style</b>: specify how the array will be forwarded, after the type or
+after the field.<br><br></li>
+<li><b>Static</b>: specify the method as static.<br><br></li>
+<li><b>Final</b>: specify the method as final.<br><br></li>
+<li><b>Native</b>: specify the method as native.<br><br></li>
+<li><b>Synchronized</b>: specify the method as synchronized.<br><br></li>
+<li><b>Strictfp</b>: specify the method as strictfp.<br><br></li>
+<li><b>Description</b>: enter a textual description for the method.<br><br></li>
+
+</ul>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Constructors properties</b></font> <img src="../images/dbooconstructor.gif"><br><br><ul>
+<li><b>Name</b>: write the constructor’s name.<br><br></li>
+<li><b>Alias</b>: identify the concept other than by its name (optional).<br><br></li>
+<li><b>UML Stereotype</b>: invariant, postcondition, precondition, boundary, entity,
+control or none.<br><br></li>
+<li><b>Body</b>: specify the Java code of this constructor.<br><br></li>
+<li><b>Visibility</b>: specify the constructor’s visibility.<br><br></li>
+<li><b>Description</b>: enter a textual description for the constructor.<br><br></li>
+
+</ul>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Initialization blocks properties</b></font> <img src="../images/dbooinitblock.gif"><br><br><ul>
+<li><b>Name</b>: write the initialization block’s name.<br><br></li>
+<li><b>Alias</b>: identify the concept other than by its name (optional).<br><br></li>
+<li><b>UML Stereotype</b>: invariant, postcondition, precondition, boundary, entity,
+control or none.<br><br></li>
+<li><b>Body</b>: specify the Java code of this initialization block.<br><br></li>
+<li><b>Static</b>: specify the initialization block as static.<br><br></li>
+<li><b>Description</b>: enter a textual description for the initialization block.<br><br></li>
+</ul>
+
+</font>
+</body>
+</html>
+

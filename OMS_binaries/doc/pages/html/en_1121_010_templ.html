@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>TEMPL Class</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>TEMPL Class</b></font><br><br><br>
+
+
+
+<u>Parameter</u>: character string representing a template.<br><br>
+<u>Optional modifiers</u>: <b>PREF, SUF, NULL, DOM, EXTERN, FILE, LOWER, UPPER.</b><br><br>
+<u>Algorithm</u>:<br>
+<b>TEMPL</b> processes the template string.<br>
+If DOM is specified, translates the result string as specified within the domain.
+If the result string is empty, processes the template string specified by NULL, and
+returns the NULL result; otherwise processes the template specified by PREF and
+inscribes the PREF result as a prefix for the result string; then processes the rule
+specified by SUF and inscribes the SUF result as a suffix for the result string.
+If FILE modifier is specified, writes the result of the variable in the specified file.<br><br>
+<u>Example</u><br>
+<blockquote><tt><font size="+1">drop_table TEMPL "DROP TABLE $objectPhysicalname;;";</font></tt></blockquote>
+<br><br>
+
+
+
+</font>
+</body>
+</html>
+

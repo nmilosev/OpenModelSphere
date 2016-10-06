@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>La rétro-ingénierie (reverse engineering)</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>La rétro-ingénierie (reverse engineering)</b></font><br><br><br>
+
+
+
+
+La fonction de rétro-ingénierie générera des modèles à partir des spécifications d’un
+modèle de base de données. L'interface SGBD obtient les spécifications de base de
+données en interrogeant directement les tables du catalogue de système, en utilisant
+soit les énoncés SQL, soit les fonctions API des méta-données JDBC.
+<br><br>
+<b>NB: Avant de pouvoir effectuer une rétro-ingénierie, vous devez évidemment vous connecter à une base de données. (Voir <a href="fr_0640_odbc_conn.html">Connexion ODBC</a> ou <a href="fr_0645_jdbc_connect.html">Connexion JDBC</a>)</b>
+<br><br>
+Pour lancer la rétro-ingénierie, choisissez dans le menu principal: <b>Outils > Base de données > Rétro-ingénierie</b>.
+
+<br><br><br>
+
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les options du modèle</b></font><br><br>
+<img src="../images/REV_1_fr.jpg">
+<br><br>
+Sélectionnez l'emplacement où vous désirez que le modèle soit généré.
+<br><br>
+<b>Utiliser la racine</b><ul>
+<li><b>Nouveau projet </b>: Utiliser la racine Nouveau projet. Toute l'information du modèle sera créée dans un nouveau projet.</li>
+<li><b>Projet ou paquetage utilisateur existant</b> : Toute l'information du modèle sera créée dans un projet ou un paquetage utilisateur existant.</li>
+</ul>
+
+<b>Utiliser un modèle de domaines</b><ul>
+<li><b>Nouveau modèle de domaines</b> : La rétro-ingénierie créera tous les domaines nécessaires dans un nouveau modèle de domaines.</li>
+<li><b>Modèle de domaines existants</b> : La rétro-ingénierie cherchera un modèle de domaines existant dans ce domaine, s’il n'en trouve pas, il en créera un.</li>
+</ul>
+
+
+
+<br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les options et concepts du SGBD</b></font><br><br>
+Choisissez le concept que vous désirez extraire de la base de données. 
+Chaque interface du système de gestion de bases de données a ses propres concepts.<br><br>
+<img src="../images/REV_2_fr.jpg" >
+<br><i>Interface SGBD générique</i>
+<br><br>
+Choisissez les options de rétro-ingénierie. Ces options sont différentes selon le système
+cible. Il est donc important de préciser le système cible utilisé.
+
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le choix des objets</b></font><br><br>
+Vous pouvez limiter la portée du processus de rétro-ingénierie en écartant quelques occurrences.
+<br><br>
+<img src="../images/REV_3_fr.jpg">
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le rapport</b></font><br><br>
+Après la rétro-ingénierie, un rapport est généré. Il contient l’information sur la base de
+données et les objets créés. Un fichier journal est également généré (reverse.log), dans
+le répertoire local de l'utilisateur. Ce dernier contient l'information affichée dans la section
+Détails de la fenêtre de rétro-ingénierie.
+<br><br>
+<img src="../images/REV_REP_fr.jpg">
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Modèles créés</b></font><br><br>
+
+<img src="../images/REV_MOD_fr.jpg">
+<br><br>
+Un ensemble déployé autour d'une base de données est créé dans un paquetage utilisateur. Il ne vous reste plus qu'à y <a href = "fr_0385_diagram.html"><b>créer les différents diagrammes</b></a>, <a href = "fr_0388_semgraphinfo.html"><b>ajouter les représentations graphiques</b></a> et à les <a href="fr_0414_layout.html"><b>disposés</b></a>.
+<br><br><br>
+</font>
+</body>
+</html>
+

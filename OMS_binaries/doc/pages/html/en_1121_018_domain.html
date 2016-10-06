@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Domains</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Domains</b></font><br><br><br>
+
+
+
+A domain associates an attribute value or the result string of a processed sub-rule to an
+output sub-rule, which is processed and returned as a result. A domain is referred to by
+the modifier DOM within sub-rules of any class except GROUP and PLUGIN FUNCTION.<br><br>
+Definition of a domain is made up of the domain name, the CDOM class and an association
+list allowing to specify a different rule for each input value. Each element of the
+association list is a pair (list of values, sub-rule) enclosed in parenthesis; within each
+pair, the list of values is itself enclosed in parenthesis, unless there is only one value.
+A domain name complies to the same rules as a variable name; a domain can have the
+same name as a variable.<br><br>
+In a character domain (CDOM), a comma must be used as a separator between the values
+in the list of values; if a single value is specified without parenthesis, a comma must
+separate the value from its associated template string. Commas are necessary to prevent
+merging of adjacent strings into a single string.<br><br>
+The DEFAULT modifier can be used as a value; it represents all the values that are not
+explicitly specified in the domain. If DEFAULT is not specified, a value unspecified in the
+domain returns itself as a result string.<br><br>
+For sub-rules of class ATTR, the input value to the domain is the value returned by the
+repository interface function, and is made of characters. For sub-rules of other classes,
+the input value to the domain is the result string of a processed rule, and is always
+character; so the domain must be of class CDOM; besides, the input string must not contain
+edition codes.<br><br>
+<u>Examples 1</u><br>
+<blockquote><tt><font size="+1">tableTriggerTimeAttr ATTR TriggerTime<br>
+DOM = tableTriggerTimeDomain;<br><br>
+tableTriggerTimeDomain CDOM ("1", "BEFORE ")
+("2", "AFTER ")<br>
+(DEFAULT, "");</font><br><br></tt>
+The <b>TriggerTime</b> repository function returns "1" for a before trigger, "2" for a after trigger
+and "3" for an instead of trigger. The result will be BEFORE or AFTER if the repository
+function returns "1" or "2". If it returns "3' (or any other value), the result will be empty.</blockquote>
+
+<u>Example 2</u><br><blockquote>
+<tt><font size="+1">CombinationCategory ATTR CombinationCategory<br>
+DOM = comb_cat;<br><br>
+comb_cat CDOM (0, pk_uk)<br>
+(1, "FOREIGN KEY")<br>
+I (DEFAULT, "");<br><br>
+pk_uk ATTR CombinationNumber<br>
+DOM = pk_uk;<br><br>
+pk_uk CDOM (0, "PRIMARY KEY")<br>
+(DEFAULT, "ALTERNATIVE KEY$=;");</font></tt><br><br>
+The <b>comb_cat</b> and <b>CombinationNumber</b> repository functions return the combination category
+and number. If the category is 0, the result will be PRIMARY KEY for number 0,
+ALTERNATIVE KEY 1 for number 1, etc... If category is 1, the result will be FOREIGN KEY;
+for any other category, the result will be empty.</blockquote>
+
+</font>
+</body>
+</html>
+

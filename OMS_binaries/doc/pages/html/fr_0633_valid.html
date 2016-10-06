@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>La validation</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>La validation</b></font><br><img src="../images/validate.gif"><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Utiliser la validation pour prévenir les erreurs</b></font><br><br>
+<b>Open ModelSphere</b> offre des validations SGBD spécifiques pour empêcher les
+erreurs les plus communes dans la génération de Langage de Définition de Données
+(DDL). Il est recommandé de valider l'information de la base de données
+avant toute opération de génération.<br><br>
+Vous pouvez valider votre base de données en suivant ces deux étapes :<ol>
+<li>Sélectionnez la <b>base de données</b> et cliquez-la avec le <b>bouton droit</b>.</li>
+<li>Dans le <b>menu contextuel</b>, choisissez<b> Valider</b> <img src="../images/validate.gif">.</li>
+</ol>
+Un rapport est généré, vous indiquant les erreurs ainsi que des hyperliens vers les objets concernés.
+<br><br>
+<img src="../images/VALID_fr.jpg">
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Liste des validations communes (génériques)</b></font><br><br>
+Les validations suivantes sont disponibles sur chaque base de données.<ol>
+<li>Chaque objet a un nom physique.<br>
+a. La longueur du nom physique de chaque objet n'excède pas la longueur
+maximale.<br>
+b. Le nom physique de chaque objet contient seulement des caractères valides.<br>
+c. Le nom physique de chaque objet n’est pas un mot réservé par la transmission
+SGBD.<br>
+d. Le nom physique de chaque objet est unique à l'intérieur de l’espace de
+nommage.<br><br></li>
+<li>Chaque domaine est lié à un type.<br><br></li>
+<li>Chaque colonne est lié à un type.<br><br></li>
+<li>Chaque table contient au moins une colonne.<br><br></li>
+<li>Toutes les clés primaires, uniques ou étrangères n'excèdent pas le nombre
+maximal de colonnes.<br><br></li>
+<li>Pour chaque colonne rattachée à un type, on valide l’obligation ou l’interdiction
+d’avoir une valeur dans le champ “Longueur ”.<br><br></li>
+<li>Pour chaque colonne rattachée à un type, on valide l’obligation ou l’interdiction
+d’avoir une valeur dans le champ “Nombre de décimales ”.<br><br></li>
+<li>Chaque index et clé primaire / unique / étrangère n'a aucune colonne avec
+un type interdit.<br><br></li>
+<li>Chaque déclencheur contient des instructions.<br><br></li>
+<li>Chaque procédure contient des instructions.<br><br></li>
+<li>Chaque contrainte check contient des instructions.<br><br></li>
+<li>Chaque vue a une règle de sélection.<br><br></li>
+</ol><br>
+
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

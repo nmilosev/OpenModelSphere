@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Le concept d'association, d'agrégation et de composition</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Le concept d'association, d'agrégation et de composition</b></font><br><br><br>
+
+
+
+
+<img src="../images/angularline.gif"> Une <b>association</b> est le rapport sémantique entre deux classifieurs ou plus qui
+comporte des liens parmi leurs instances.<br><br>
+<img src="../images/angulardiamondlineend.gif"> Une <b>agrégation</b> est une forme spéciale d'association qui indique un lien entier-partie
+entre l’agrégé (entier) et un élément.<br><br>
+<img src="../images/angulardiamondfilllineend.gif" width="16" height="16" alt="" border="0"> Une <b>composition</b> est une forme d'agrégation dotée d’une forte appartenance et
+d’une durée de vie simultanée en tant qu'élément du tout. Les parties dont la multiplicité
+n’est pas fixée peuvent être créées autour du composite même, quoiqu’une fois créées,
+elles vivent et meurent avec lui (c.-à-d. elles partagent les mêmes durées de vie). De
+telles parties peuvent également être enlevées avant la mort du composite. Finalement,
+la composition peut être récursive.
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les propriétés communes</b></font><br><br><ul>
+<li><b>Nom</b>: Nom logique.<br><br></li>
+<li><b>Alias</b>: identifie un concept de façon différente (autre que par son nom).<br><br></li>
+<li><b>Stéréotype UML</b>: il est possible d'assigner un stéréotype UML.<br><br></li>
+<li><b>Description</b>: permet d'entrer une description en format texte.<br><br></li>
+</ul>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les propriétés des extrémités de l’association</b></font><br><br>
+En cliquant avec le bouton droit sur une association, vous trouverez les propriétés suivantes
+sous l'onglet Extrémités de l’association de la fenêtre de propriétés.<ul>
+<li><b>Champ</b> : le champ d'association correspondant.<br><br></li>
+<li><b>Multiplicité</b> : assigne la multiplicité d'une extrémité de l'association.<br><br></li>
+<li><b>Navigable</b> : règle l'extrémité de l'association à navigable. L'application enlèvera, sans toutefois supprimer, le champ d'association correspondant.<br><br></li>
+<li><b>Agrégation</b> : règle la catégorie à association, agrégation ou composition.<br><br></li>
+<li><b>Ordonné</b> : établi l'extrémité de l'association d'une multiplicité "plusieurs, un ou plusieurs" comme étant une collection ordonnée.<br><br></li>
+</ul>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les concepts reliés à l'association</b></font><br><br>
+Quand une association est créée, l’application crée automatiquement deux extrémités
+d'association et les champs correspondants dans chacune des classes.
+<br><br>
+<img src="../images/ASSOCIATION_fr.jpg">
+<br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les actions possibles</b></font><br><br><ul>
+<li><b>Supprimer</b> : suppression de l'association, incluant les extrémités d'association dépendantes et les champs d'association.<br><br></li>
+<li><b>Supprimer (conserver les champs)</b> : suppression de l'association, incluant  les extrémités d'association dépendantes seulement. Les champs d'associations seront conservés.<br><br></li>
+<li><b>Supprimer la représentation graphique</b> : suppression de la représentation graphique de l'association seulement. Utiliser la fonction Créer l'association sur les champs d'association restants pour recréer les représentations graphiques des associations.<br><br></li>
+<li><b>Type de données de collection</b> : assigne le type des nombreux champs d'associations à ce type de collection et le type d'élément à la classe correspon-dante.<br><br></li>
+<li><b>Créer l'association</b> : pour une association, création de l'association dans le diagramme.<br><br></li>
+
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

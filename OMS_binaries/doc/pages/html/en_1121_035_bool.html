@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Boolean expressions</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Boolean expressions</b></font><br><br><br>
+
+
+
+
+A Boolean expression is an expression which results in TRUE or FALSE. It includes
+Boolean literals (TRUE or FALSE), Boolean variables (Boolean type variable accessed
+with the BOOLEAN keyword) or Boolean operations. There are three Boolean operations
+supported by the application. NOT requires only one operand, however, BOTH and EITHER
+require two operands:<br><br>
+
+<blockquote><tt><font size="+1">NOT (booleanExpression)<br>
+BOTH (booleanExpression1 AND booleanExpression2)<br>
+EITHER (booleanExpression1 OR booleanExpression2)</font></tt><br><br></blockquote>
+
+If NOT's operand is TRUE, the result is FALSE. If NOT's operand is FALSE, the result is TRUE.
+If BOTH’s two operands are TRUE, the result is TRUE; otherwise the result is FALSE. If one
+of EITHER’s two operands is TRUE, then the result is TRUE; if both are FALSE, the result is
+FALSE.<br><br>
+Boolean expressions can be nested. For instance, the first operand of a BOTH operation
+can be a Boolean operation in itself.
+Here are valid Boolean expressions:<br><br>
+
+<blockquote><tt><font size="+1">TRUE<br>
+FALSE<br>
+BOOLEAN(boolVar) //where boolVar is a previously-declared BOOLEAN variable.<br>
+NOT(TRUE)<br>
+BOTH(TRUE AND FALSE)<br>
+EITHER(TRUE OR FALSE)<br>
+EITHER(BOOLEAN(boolVar1) OR BOOLEAN(boolVar2))</font></tt><br><br></blockquote>
+
+Only Boolean expressions can be assigned to variables with a Boolean type.
+<br><br><br>
+
+</font>
+</body>
+</html>
+

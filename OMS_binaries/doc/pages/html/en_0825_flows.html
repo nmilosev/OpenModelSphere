@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Adding flows</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Adding flows</b></font><br><img src="../images/dbbeflow.gif"><br><br>
+
+
+
+
+
+
+
+<b>Open ModelSphere</b> offers two types of flows: the right-angle and the free
+angle flows. Both play exactly the same role; only their appearance is different.<ol>
+
+<li>Select the <b>flow creation tool</b> located in the <b>Process modeling toolbar</b> ( <img src="../images/angulararrowfill.gif"> or <img src="../images/rightanglearrowfill.gif"> ).<br><br></li>
+<li>Choose one of the flows displayed in the toolbar (you can regularly use
+any of the associations, however, for the purpose of this example, choose
+the right angle flow <img src="../images/rightanglearrowfill.gif">).<br><br></li>
+<li>With the flow tool selected, click somewhere in the middle of the source
+process, then, in the middle of the target process.<br><br></li>
+</ol>The Properties window of the flow contains a menu that gives information regarding
+the flows and linked objects.
+<br><br><img src="../images/ADD_FLOW_en.jpg" >
+<br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Properties</b></font><br><br>
+
+The Design tab of the Properties window provides the following information:<ul>
+
+<li>the <b>flow identifier</b>: which is automatically given when you create a new flow,
+but can be modified directly in this window or by renumbering.<br><br></li>
+<li>its <b>name</b><br><br></li>
+
+<li>its <b>alias</b>, that you can use to display another name<br><br></li>
+<li>its <b>physical name</b><br><br></li>
+
+<li>the information or product <b>frequency</b> as it is carried by the flow<br><br></li>
+<li>the <b>discrete</b> or <b>continuous</b> (represented by a double-arrow and could be
+used, for example, to represent an electrical flow) property of the flow<br><br></li>
+<li>an <b>emission condition</b>, (the condition for the flow of information or product)<br><br></li>
+
+
+
+</ul>
+<b>You can specify if it is a control flow (displayed with a dotted line on the graphic
+window), for example a flow that represents a triggering event.</b>
+<br><br>
+<br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Changing discrete-continuous property</b></font><br><br>
+
+The <b>Discrete</b> or <b>Continuous</b> option from the Flow Properties window lets you transform
+the nature of one or more diagram flows. <b>Open ModelSphere</b> lets you
+represent discrete flows as well as continuous flows. A discrete flow only has one
+arrowhead at its extremity(ies) while a continuous flow features two arrowheads at
+its extremity(ies).
+
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Changing Control Property</b></font><br><br>
+
+The control flows do not transmit information between two objects. They specify that
+an event occurred or they give a command. These flows are called event flows.<br><br>
+When a process accepts and produces only event flows, it is called a control process.
+An input event flow has an effect on the control process which produces, afterwards,
+an output event flow. The input event flow indicates that the condition is satisfied
+for the transaction to occur. This transaction provokes an action represented
+by an output event flow.
+
+<br><br>
+As for the control store, it is used to keep the occurrences of a control flow.
+In the diagram window, a control object has a dotted frame. To change the control
+property of flows:
+<ol>
+<li><b>Right-click</b> on the object and choose <b>Properties</b>. It will open its properties
+window.<br><br></li>
+<li>Check the <b>Control</b> box.<br><br></li>
+<li>Click <b>Apply</b> and <b>Close</b>.<br><br></li>
+
+</ol>
+
+
+
+For <b>processes</b>, <b>stores</b> and <b>external entities</b>, you can also change the control option
+in their corresponding properties window.<br><br>
+In <b>ModelSphere</b>, the control notion also applies to external entities and
+to any notation.
+
+
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

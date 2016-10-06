@@ -1,0 +1,148 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <title>Le mod&egrave;le d'items communs</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>Le
+mod&egrave;le d'items communs</font></font></font></b>
+<br><img SRC="../images/dborcommonitemmodel.gif" NOSAVE height=16 width=16>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Par
+d&eacute;finition, un item est le plus petit &eacute;l&eacute;ment d'un
+groupe organis&eacute; et l'adjectif "commun" est employ&eacute; car l’&eacute;l&eacute;ment
+s'applique &agrave; plusieurs personnes ou choses. Les gens qui cr&eacute;ent
+des mod&egrave;les de donn&eacute;es (ou de classes) dans un m&ecirc;me
+projet sont libres d'utiliser des noms diff&eacute;rents et m&ecirc;me
+diff&eacute;rentes d&eacute;finitions d'&eacute;l&eacute;ments de donn&eacute;es
+(attributs, colonnes ou champs) pour r&eacute;pondre &agrave; leurs besoins sp&eacute;cifiques.
+Cependant, quand les &eacute;l&eacute;ments de donn&eacute;es d&eacute;crivent
+la m&ecirc;me r&eacute;alit&eacute;, un mod&egrave;le d'items communs peut
+&ecirc;tre employ&eacute;.</font></font></font>
+<p><i><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Par
+exemple, s'il y a plusieurs colonnes nomm&eacute;es 'salaire', un utilisateur
+peut consid&eacute;rer utile de cr&eacute;er un item commun 'salaire' et
+de lui associer un type de donn&eacute;e 'money'. Une fois les colonnes
+li&eacute;es &agrave; cet item commun, il est alors possible de propager
+le type 'money' &agrave; toutes les colonnes 'salaire' en une seule op&eacute;ration.</font></font></font></i>
+<p><i><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Si
+l'administrateur de bases de donn&eacute;es d&eacute;cide de changer tout
+les types 'money' pour des types 'float' par exemple, alors il sera plus
+facile de changer simplement le type de l'item commun 'salaire' et d'en
+propager les nouvelles valeurs que de modifier toutes les colonnes une
+par une au risque d'en oublier ou de commettre des erreurs de manipulation.</font></font></font></i>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Des
+items communs peuvent &ecirc;tre group&eacute;s dans un mod&egrave;le d'items
+communs. Et comme vous pouvez inclure plusieurs mod&egrave;les d'items
+communs dans un projet, vous devriez donner une signification s&eacute;mantique
+&agrave; chaque mod&egrave;le.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Pour
+cr&eacute;er un mod&egrave;le d'item commun, <b>cliquez avec le bouton
+droit</b> sur projet, et dans le <b>menu contextuel</b>, choisissez <b>Ajouter
+> Mod&egrave;le d'items communs</b>.</font></font></font>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Cr&eacute;ation
+et configuration d'un item commun</font></font></font></b>
+<br><img SRC="../images/dborcommonitem.gif" NOSAVE height=16 width=16>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Pour
+cr&eacute;er un item commun, <b>cliquez-droit</b> sur un <b>mod&egrave;le
+d'items communs</b>, et choisissez <b>Ajouter > Item commun</b> dans le
+<b>menu
+contextuel</b>. Vous pouvez aussi cr&eacute;er un diagramme d'items communs,
+afin de les cr&eacute;er graphiquement.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Un
+item commun comporte un type de donn&eacute;e, une longueur et les autres
+valeurs qu'une colonne a normalement. Pour configurer un item commun, <b>cliquez-droit</b>
+sur ce dernier (dans l'explorateur ou dans le diagramme d'item commun)
+et choisissez <b>propri&eacute;t&eacute;s</b> dans le <b>menu contextuel</b>.</font></font></font>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Lier
+un attribut / une colonne / un champ &agrave; un item commun</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Pour
+lier un atribut / une colonne / un champ &agrave; un mod&egrave;le d'items communs :</font></font></font>
+<ol>
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>S&eacute;lectionnez
+un objet (la colonne) et cliquez l’outil <b>propri&eacute;t&eacute;s</b>&nbsp;<img SRC="../images/TOOL_properties.jpg" NOSAVE height=26 width=28>.</font></font></font></li>
+<br>&nbsp;
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Cliquez
+sur la ligne de l'attribut <b>item commun</b> sous la colonne Valeur (ce
+sera une bo&icirc;te vide).</font></font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Choisissez
+l'item commun de la fen&ecirc;tre <b>s&eacute;lectionner une nouvelle valeur</b>
+et validez votre choix.</font></font></font></li>
+
+</ol>
+
+&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Créer
+un attribut / une colonne / un champ &agrave; partir d'un item commun</font></font></font></b>
+<ol>
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>De l'explorateur, choisir un <b>item commun</b> avec la  souris &nbsp;.</font></font></font></li>
+<br>&nbsp;
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Tenir le bouton de la souris et <b>glisser</b> l'<b>item commun</b> sur un objet se trouvant dans le <b>diagramme</b>.</font></font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><b>Déposez</b> l'<b>item commun</b> en relâchant le bouton de la souris quand l'objet devient sélectionné et que l'icone sous le curseur de la souris devient '+'.</font></font></font></li>
+
+<br>&nbsp;</ol>
+
+
+<p><br><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Propagation
+des valeurs des items communs</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Une
+fois l'item commun li&eacute; &agrave; une ou plusieurs attributs / colonnes / champs,
+il est possible d'en propager les valeurs &agrave; toutes les attributs / colonnes / champs
+qui lui sont li&eacute; en une seule op&eacute;ration. Pour ce faire, <b>cliquez-droit</b>
+sur l'item commun (ou un mod&egrave;le d'item commum pour appliquer la
+propagation &agrave; tous les items communs &agrave; l'int&eacute;rieur
+de mod&egrave;le d'item commun) et choisissez <b>Propager les valeurs des
+items communs</b> dans le <b>menu contextuel</b>. Une fen&ecirc;tre de
+dialogue va appara&icirc;tre vous demandant les propri&eacute;t&eacute;s
+que vous voulez propager aux attributs / colonnes / champs li&eacute;(e)s par cet item
+commun. Les propri&eacute;t&eacute;s <b>type</b>, <b>longueur</b>, <b>nombre
+de d&eacute;cimales</b> et <b>valeur nulle</b> sont toujours propag&eacute;es.</font></font></font>
+<p><img SRC="../images/COMIT_PROP_fr.jpg" NOSAVE height=278 width=402>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>G&eacute;n&eacute;rer
+des items communs</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Il
+est possible de g&eacute;n&eacute;rer des items communs &agrave; partir
+des attributs / colonnes / champs existant(e)s en une seule op&eacute;ration. Pour ce
+faire, <b>cliquez-droit</b> sur une <b>attribut (ou colonne ou champ)</b>, une <b>entité (ou table 
+ou classe)</b> ou un <b>mod&egrave;le de donn&eacute;es</b> <b>(ou de
+classes)</b> dans l'<b>explorateur</b> ou dans un diagramme, et choisissez
+<b>G&eacute;n&eacute;rer
+les items communs</b> dans le <b>menu contextuel</b>. Une fen&ecirc;tre
+de dialogue va appara&icirc;tre, vous laissant la possibilit&eacute; de
+cr&eacute;er un item commun pour chaque attribut / colonne / champ, pour chaque attribut / colonne / champ
+ayant le m&ecirc;me nom (par exemple toutes les colonnes 'salaire' seront
+li&eacute;es au m&ecirc;me item commun 'salaire'), ou par profil de type
+de donn&eacute;e (un seul item commun pour toutes les types de attributs / colonnes / champs
+comme DATE, CHAR(10)).</font></font></font>
+<p><img SRC="../images/COMIT_GEN_fr.jpg" NOSAVE height=401 width=541>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>D&eacute;truire
+les items communs orphelins</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Lorsque
+des attributs, colonnes ou champs sont effac&eacute;(e)s dans le mod&egrave;le, des
+items communs peuvent ne plus avoir de attributs / colonnes / champs li&eacute;(e)s.
+Ces items communs deviennent alors des items communs orphelins et peuvent
+devenir inutiles dans le mod&egrave;le. Il est possible de d&eacute;truire
+tous ces items communs orphelins en une seule op&eacute;ration. Pour ce
+faire, <b>cliquez-droit</b> sur un <b>item commun</b> ou sur un <b>mod&egrave;le
+d'items communs</b>, et choisissez <b>D&eacute;truire les items communs
+orphelins</b> dans le <b>menu contextuel</b>.</font></font></font>
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

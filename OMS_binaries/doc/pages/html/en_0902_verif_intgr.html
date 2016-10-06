@@ -1,0 +1,293 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <title>Verifying the integrity of a model</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>Verifying
+the integrity of a model</font></font></font></b>
+<br><img SRC="../images/verify_integrity.gif" NOSAVE height=16 width=16>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Designers
+should focus on the creative aspect of modeling and not spend time on consistency
+issues.&nbsp;<span style="font-weight: bold;">Open ModelSphere&nbsp;</span>provides
+an assisted technology to ensure the consistency of a model.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>The
+Verify Integrity feature checks your model and produces a report. This
+report informs you of consistency errors that may have occurred. Furthermore,
+it provides you with links towards the different objects in the explorer
+window and the various properties windows. Finally, it lets you apply modifications
+directly, providing you with a list of possible solutions.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Verify
+integrity is provided for&nbsp;<span style="font-weight: bold;">process</span>,<span style="font-weight: bold;">data</span>,&nbsp;<span 
+ style="font-weight: bold;">domain</span>,&nbsp;<span 
+ style="font-weight: bold;">common
+item models</span> as well as for&nbsp;<span 
+ style="font-weight: bold;">operation
+libraries</span>.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>The
+section&nbsp;<span style="font-style: italic;">Rules for verifying integrity</span>
+below details the applicable rules and possible solutions.</font></font></font>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>To
+use the Verify Integrity feature:</font></font></font></b>
+<ol>
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><b>Right-click</b>
+the <b>model</b> in the <b>explorer</b> window.</font></font></font></li>
+
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Select
+<b>Verify
+integrity</b>&nbsp;<img SRC="../images/verify_integrity.gif" NOSAVE height=16 width=16>.
+A window like the following will appear:</font></font></font></li>
+</ol>
+<img SRC="../images/Verify_INTEGRITY_en.jpg" NOSAVE height=470 width=584>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>You
+can make the changes from the Verify integrity window; use the provided
+links (Click to change value to NOT NULL). You can also make the changes
+from the Properties window; use the link&nbsp;<img SRC="../images/properties.gif" NOSAVE height=16 width=16>.</font></font></font>
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>For
+the purpose of the present example, errors were added to the model. If
+you followed the steps in the Building a data model section, your model
+should not have errors.</font></font></font></b>
+<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="+2" style="font-weight: bold;">Rules
+for verifying integrity<br>
+</font>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><b><font size="+1"><br>
+Conceptual data model </b>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;">
+<div style="margin-left: 20px; font-family: arial"><b>
+Rules with automated correction option (assisted technology)
+</b></div>
+</font>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+1. An attribute that is part of a primary or unique key should be NOT NULL:
+<br>&nbsp;&nbsp;&nbsp; - Change the attribute to NOT NULL
+<br>
+<br>
+</font></div>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;">
+<div style="margin-left: 20px; font-family: arial"><b>
+Other rules
+</b></div>
+</font>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+2. A primary/unique key must be linked to an attribute or dependency.<br>
+<br>
+3. An entity should have an attribute (warning).<br>
+<br>
+4. An attribute should have a relationship (warning).<br>
+<br>
+5. An entity must have a primary key or a unique key.<br>
+<br>
+6. The multiplicity of a role must be defined.<br>
+<br>
+7. A relationship must not have an arc with a dependency if its dimension is greater than two.<br>
+<br>
+8. A relationship must not have more than one arc with a dependency.<br>
+<br>
+9. A relationship must have at least two arcs.<br>
+<br>
+10. A relationship must not have an arc with a dependency if it is recursive.<br>
+<br>
+11. A relationship should not have an attribute if it has at least one role with a multiplicity "exactly 1" 
+(warning).<br>
+<br>
+12. An arc with a dependency must have a role with multiplicity "exactly 1".<br>
+<br>
+13. A binary relationship must have exactly one navigable role, and this role's multiplicity is not greater than the 
+other role's multiplicity (warning).<br>
+<br>
+14. In a binary relationship, if an arc has a dependency which is not the only part of the key, the other arc 
+must have a role with a multiplicity greater than 1.<br>
+<br>
+</font></div>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><b><font size="+1"><br>
+Relational data model </b>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;">
+<div style="margin-left: 20px; font-family: arial"><b>
+Rules with automated correction option (assisted technology)
+</b></div>
+</font>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+1. A column part of a primary or unique key should be NOT NULL:
+<br>&nbsp;&nbsp;&nbsp; - Change the column to NOT NULL
+<br>
+<br>
+2. For a minimal connectivity of 1, corresponding foreign key columns should be NOT NULL:
+<br>&nbsp;&nbsp;&nbsp; - Change the column to NOT NULL
+<br>&nbsp;&nbsp;&nbsp; - Change the role multiplicity from ‘exactly one’ 
+to ‘optional or from ‘one or more’ to’ many’
+<br>
+<br>
+3. For a minimal connectivity of 0, corresponding foreign key columns should be NULL:
+<br>&nbsp;&nbsp;&nbsp; - Change the column to NULL
+<br>&nbsp;&nbsp;&nbsp; - Change the role’s multiplicity from ‘optional’ to 
+‘exactly one’ or from ‘many’ to ‘one or more’
+<br>
+<br>
+4. For a parent maximal connectivity of 1, corresponding foreign key columns in the 
+child table should be part of a unique constraint or a unique index:
+<br>&nbsp;&nbsp;&nbsp; - Change the parent role’s multiplicity from ‘exactly one’ 
+to ‘one or more’ or from ‘optional’ to ‘many’
+<br>&nbsp;&nbsp;&nbsp; - Add the unique index or modify existing FK’s index to a unique value
+<br>
+<br>
+5. For a parent maximal connectivity of N, corresponding foreign key columns in the 
+child table should not be part of a unique constraint or a unique index:
+<br>&nbsp;&nbsp;&nbsp; - Change the parent role’s multiplicity from ‘one or more’ 
+to ‘exactly one’ or from ‘many’ to ‘optional’
+<br>&nbsp;&nbsp;&nbsp; - Modify existing FK’s index to a non unique value
+</font></div>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;">
+<div style="margin-left: 20px; font-family: arial"><b>
+Other rules
+</b></div>
+</font>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+6. A primary/unique key must apply to a column or dependency.<br>
+<br>
+7. A foreign key must apply to a column.<br>
+<br>
+8. The foreign key's domain, length and decimal digits
+must match that of the source column (warning).<br>
+<br>
+9. An index must have at least one indexed element.<br>
+<br>
+10. A trigger must have a body defined as well as a column
+linked (warning)<br>
+<br>
+11. At most one role for a given association can have
+a multiplicity greater than 1 (warning).<br>
+<br>
+12. An update rule for a given role must be defined (warning).<br>
+<br>
+13. The multiplicity for a given role must be defined.<br>
+</font></div>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><b><font size="+1"><br>Domain model
+</b>
+<br>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+1. A domain must be linked to a data type.
+</font></div>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><b><font size="+1"><br>Operation
+library</b>
+<br>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+1. A procedure should contain instructions (warning).
+<br>
+<br>
+2. A parameter must have a type.
+<br>
+<br>
+</font></div>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><b><font size="+1">Process
+model</b>
+<br>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+1. A process should have a synchronization rule (warning).
+<br>
+<br>
+2. A process should have a graphical representation(warning).
+<br>
+<br>
+3. A process should not be linked directly by a flow to another process (warning).
+<br>
+<br>
+4. A process should not be an orphan without input or output flows (warning).
+<br>
+<br>
+5. A process should have at least one input flow (warning).
+<br>
+<br>
+6. A process should have at least one output flow (warning).
+<br>
+<br>
+7. A process should have a name other than the default name (warning).
+<br>
+<br>
+8. An external entity should have a graphical representation (warning).
+<br>
+<br>
+9. An external entity should not be an orphan without input or output flows (warning).
+<br>
+<br>
+10. An external entity should not be linked directly by a flow to another external entity (warning).
+<br>
+<br>
+11. An external entity should have a name other than the default name (warning).
+<br>
+<br>
+12. An external entity should have at least one input flow (warning).
+<br>
+<br>
+13. An external entity should have at least one output flow (warning).
+<br>
+<br>
+14. A store should have a name other than the default name (warning).
+<br>
+<br>
+15. A store should have a graphical representation (warning).
+<br>
+<br>
+16. A store should not be linked directly by a flow to another store (warning).
+<br>
+<br>
+17. A store should not be linked directly by a flow to an external entity (warning).
+<br>
+<br>
+18. A store should not be an orphan without input or output flows (warning).
+<br>
+<br>
+19. A store entity should have at least one input flow (warning).
+<br>
+<br>
+20. A store entity should have at least one output flow (warning).
+<br>
+<br>
+21. A flow should have an emission condition (warning).
+<br>
+<br>
+22. A flow should have a name other than the default name (warning).
+<br>
+<br>
+23. A flow should be linked at both extremities (warning).
+</font></div>
+<font face="sans serif,arial,helvetica" color="#000000"
+ size="2" style="font-family: arial;"><b><font size="+1"><br>Common
+items model</b>
+<br>
+<br>
+<div style="margin-left: 40px"><font size="-1">
+1. A common item must have a type.
+</font></div>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Reusing information: copying and moving objects</title>
+</head>
+<body bgcolor="#ffffff">
+<font face="sans serif,arial,helvetica" color="#000000" size="2">
+<hr><font face="sans serif,arial,helvetica" color="#000000" size="5"><b>Reusing
+information: copying and moving objects</b></font><br>
+<br>
+<br>
+One of the key features of model management is benefiting from existing
+information.
+<b>Open ModelSphere</b> has an intelligent and useful <b>copy</b>
+and <b>paste</b> feature
+as well as a <b>move</b> feature to support information reuse.<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Move
+operations</b></font><br>
+<br>
+In model management, it is important to organize metadata information.
+The <b>Move</b>
+feature provides a flexible and powerful way for structuring models.
+This feature
+works on a selection of one or more objects.<br>
+<br>
+This feature allows you to restructure models such as data model,
+domain model,
+common item model, link model, user-defined package, process model,
+process, class model, package, class,
+operation library and database. Furthermore, it lets you change the
+general architecture
+of models such as package and class.<br>
+<br>
+The <b>Move</b> feature is an easy one to use. Choose in the <b>main
+menu</b> click <b>Edit &gt; Move</b>, or select <b>Move</b> from the <b>pop-up
+menu</b>, and choose the final
+destination.<br>
+<br>
+<b>However, your choice for the target object must follow certain rules:</b>
+<ul>
+  <li>It must be in the same project.</li>
+  <li>The composition link must be valid.</li>
+  <li>It can not be a descendant of the source object.</li>
+</ul>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Copy
+and paste operations</b></font><br>
+<br>
+Before using the <b>copy/paste</b> feature you need to take into
+account two concepts: the
+source object and the target object. The source object can be any
+selection of one or
+multiple objects; however, they must all be from the same project. The
+target object
+can also be a selection of one or multiple objects, either in the same
+project or in a
+different one. Although, if it consists of many components, they must
+be compatible.<br>
+<br>
+<b>Internal references</b><br>
+This refers to all the objects inside the selection scope. Thus,
+internal references
+are always copied.<br>
+<br>
+<b>External references</b><br>
+This refers to the objects outside the selection scope. The selection
+will determine
+the frontier of the selection and the way in which external references
+will be handled.
+The target system (whether it is the same or it is a different one is
+not relevant to the
+operation) and the objects (in the same or different projects) will
+have an impact on
+the copy of external references. You will get a better understanding
+from the following
+three scenarios.
+<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Scenario
+1</b></font><br>
+<br>
+The target object is in the same project as the source object;
+regardless whether they
+have the same target system or not:
+the External References are copied.
+<br>
+<br>
+<img src="../images/SCEN_1_en.jpg" title="" alt=""
+ style="width: 241px; height: 162px;">
+<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Scenario
+2</b></font><br>
+<br>
+When the target object is in the same project as the source object, but
+they have a
+different target system:
+the External References can not be copied, they have to be recreated.
+The application
+will do the name search, in the project, for an object of the same type
+and the
+same target system. If it can find one, it will recreate a reference to
+it, if not, the
+external link will be lost.
+<br>
+<br>
+<img src="../images/SCEN_2_en.jpg" title="" alt=""
+ style="width: 237px; height: 148px;">
+<br>
+<br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="4"><b>Scenario
+3</b></font><br>
+<br>
+When the target and source object are in different projects, and the
+target system is
+not an influencing factor:
+the External References always have to be recreated. The application
+will do an
+exact name search (using the object's complete hierarchical name) in
+the target
+project for an object of the same type and the same target system. If
+it can find one,
+it will recreate a reference to it, if not, the external link is lost.
+<br>
+<br>
+<img src="../images/SCEN_3_en.jpg" title="" alt=""
+ style="width: 220px; height: 137px;">
+<br>
+<br>
+</font>
+</body>
+</html>

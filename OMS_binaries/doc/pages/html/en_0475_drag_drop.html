@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Drag and drop</title>
+</head>
+<body bgcolor = "ffffff">
+<font face="sans serif,arial,helvetica" color="000000" size="2">
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Drag and drop</b></font><br>
+<br>
+<br>
+To streamline the process of creating
+a diagram, ModelSphere enables the
+user to drag and drop objects onto a diagram. The section below
+describes how to use this functionality.<br>
+<br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Drag and drop to move an object</b></font><br>
+<br>
+In most cases, the drag and
+drop feature will <b>move</b> an object (source object) from
+one container to a new container (target container). The only exceptions
+where the drag and drop will not result to a move are for <b>assigning a value to an object</b> or 
+<b>creating a graphical representation</b>. When
+using the drag and drop functionality, the source object always comes
+from the explorer. However, the target container can be the explorer or
+the diagram window. 
+<ol>
+<li>
+From the <b>explorer</b>,
+choose a <b>source object</b> by
+clicking on it.</li>
+<br><br>
+<li>Hold the mouse button and <b>drag</b> the <b>source object</b> over a <b>target
+container</b> either in the <b>diagram window</b>
+or the <b>explorer</b>.</li>
+<br><br>
+<li><b>Drop</b> the <b>source object</b> by releasing the
+mouse button when the <b>target container</b> becomes highlighted and the icon underneath the cursor
+becomes '+'.</li>
+</ol>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Drag
+and drop to assign a value to an object</b></font><br>
+<br>
+It is possible to <b>assign</b >ressources, qualifiers
+and common items to different objects by using the drag and drop. For
+these cases, the drag and drop will <b>assign</b> the <b>source object</b> 
+(ressource, qualifier or common item) to the <b>target container</b>
+instead of moving the source object.<br>
+<br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Drag
+and drop to create a graphical representation</b>
+</font><br><br>
+The drag and drop from the <b>explorer</b> to the diagram will <b>create</b> a 
+<b>graphical representation</b> of the object in the diagram. This will only happen if the 
+<b>target container</b> is the <b>diagram</b> and also if the <b>source object</b> can be represented
+graphically.<br>
+<br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Drag and drop
+rules</b></font><br>
+<br>
+In order to keep the integrity of the model, some rules apply.<br>
+<ol>
+  <li>If the icon underneath the mouse cursor does not become '+', it
+means that the choosen <b>target container</b> is not a
+valid container for this <b>source object</b>.
+  </li>
+  <br>
+  <br>
+  <li>The drag and drop feature cannot be used across two projects.</li>
+  <br>
+  <br>
+  <li>A <b>source object</b> might be converted to fit into the <b>target container</b>.
+For instance, an Oracle table will loose its storage parameters if
+moved into an SQL Server data model.</li>
+  <br>
+  <br>
+  <li>For the <b>target container</b> to be valid, it has to be the same type as the
+    <b>source container</b>. For instance, it is possible to drag and drop a
+column to a table. However, it is not allowed to drag and drop a column to a class
+model.</li>
+</ol>
+</body>
+</html>

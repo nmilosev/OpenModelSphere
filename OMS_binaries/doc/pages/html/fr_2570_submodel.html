@@ -1,0 +1,89 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <title>Les sous-mod&egrave;les</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>Les
+sous-mod&egrave;les</font></font></font></b>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>La
+sous-mod&eacute;lisation est une fa&ccedil;on hi&eacute;rarchique d'organiser
+l'information support&eacute;e par des r&eacute;f&eacute;rences d'objet
+appel&eacute;es liens hi&eacute;rarchiques.</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Comme
+vous le savez, la mod&eacute;lisation hi&eacute;rarchique peut servir dans
+plusieurs situations (logique/physique, transformation, conception d'interface,
+gestion de version, etc). La sous-mod&eacute;lisation est employ&eacute;e
+avec des mod&egrave;les conceptuels de donn&eacute;es et des mod&egrave;les relationnels 
+de donn&eacute;es seulement.</font></font></font>
+<br><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>On
+recommande d'utiliser la sous-mod&eacute;lisation seulement quand le contenu
+du sous-mod&egrave;le d'information s&eacute;mantique diff&egrave;re du
+super-mod&egrave;le. Quand l'information s&eacute;mantique est la m&ecirc;me
+et qu’une "visualisation" diff&eacute;rente de l'information est exig&eacute;e,
+un diagramme devrait &ecirc;tre employ&eacute;.</font></font></font>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>La
+cr&eacute;ation d'un sous-mod&egrave;le de donn&eacute;es</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>La
+fonction de sous-mod&eacute;lisation est int&eacute;gr&eacute;e avec les
+op&eacute;rations copier et coller afin qu'il soit tr&egrave;s facile d'ajouter
+un nouveau sous-mod&egrave;le. Ajoutez simplement un nouveau mod&egrave;le
+de donn&eacute;es dans un mod&egrave;le existant, choisissez les objets
+que vous voulez dans le super-mod&egrave;le et collez-les dans le sous-mod&egrave;le.
+Les liens hi&eacute;rarchiques des objets sont automatiquement cr&eacute;&eacute;s.</font></font></font>
+<br>&nbsp;
+<p><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Objets
+li&eacute;s hi&eacute;rarchiquement</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Il
+y a trois fa&ccedil;ons de cr&eacute;er des liens hi&eacute;rarchiques
+:</font></font></font>
+<ol>&nbsp;
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>En
+collant un objet du super-mod&egrave;le au sous-mod&egrave;le, des liens
+hi&eacute;rarchiques sont automatiquement cr&eacute;&eacute;s.</font></font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>En
+int&eacute;grant un super-mod&egrave;le et un sous-mod&egrave;le, l'association
+d'objets entre ces mod&egrave;les cr&eacute;era des liens hi&eacute;rarchiques.</font></font></font></li>
+
+<br>&nbsp;
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>En
+&eacute;ditant les propri&eacute;t&eacute;s d'un objet, vous avez acc&egrave;s
+&agrave; son super-objet. Vous pouvez &eacute;diter cet objet et choisir
+un autre super-objet disponible, s'il a le m&ecirc;me type et n'a pas d&eacute;j&agrave;
+de sous-objet dans le m&ecirc;me mod&egrave;le de donn&eacute;es.</font></font></font></li>
+
+<br>&nbsp;</ol>
+
+<p><br><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Options
+graphiques du diagramme</font></font></font></b>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Les
+pr&eacute;fixes sur les concepts de table, de vue et de colonne peuvent
+afficher les liens hi&eacute;rarchiques des super ou sous-mod&egrave;les.</font></font></font>
+<p><img SRC="../images/SUBMODELING_fr.jpg" NOSAVE height=200 width=367>
+<br><span style="font-weight: bold;">
+<br><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+1>Repr&eacute;sentation
+graphique des sous-mod&egrave;les</font></font></font>
+<p></span><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>La
+repr&eacute;sentation graphique des sous-mod&egrave;les vous permet de
+visualiser l'organisation hi&eacute;rarchique de la mod&eacute;lisation&nbsp;&nbsp;
+Dans l'exemple plus bas, le syst&egrave;me a &eacute;t&eacute; divis&eacute;
+en plusieurs sous-mod&egrave;les. Ces sous-mod&egrave;les peuvent alors
+&ecirc;tre li&eacute;s &agrave; des syst&egrave;mes-cibles diff&eacute;rents.
+Par exemple, le sous-mod&egrave;le <b>Customer Data Model </b>pourrait
+&ecirc;tre implant&eacute; sous forme d'une base de donn&eacute;es Oracle,
+alors que <b>InternalProcess Data Model</b> pourrait l'&ecirc;tre avec
+Microsoft SQL Server et &ecirc;tre d&eacute;ploy&eacute; avec Windows Cluster.</font></font></font>
+<p><span style="font-weight: bold;">
+<br><img SRC="../images/submodels.jpg" NOSAVE title="" style="border: 1px solid ; height: 659px; width: 712px;" height=659 width=712>
+</body>
+</html>

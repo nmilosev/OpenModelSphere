@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><?xml-stylesheet type="text/xsl" href="xmlTree.xsl"?><!DOCTYPE tree SYSTEM 'tree.dtd'>
+<tree>
+  <branch id="Bienvenue">
+    <branchText>Bienvenue</branchText>
+    <leaf>
+      <leafText>Introduction</leafText>
+      <link>html/fr_0010_intro.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Qu'est-ce que Open ModelSphere?</leafText>
+      <link>html/fr_0020_whatis.html</link>
+    </leaf>
+  </branch>
+  <branch id="CommentinstallerModelSphere">
+    <branchText>Comment installer ModelSphere</branchText>
+    <leaf>
+      <leafText>Installation et exigences minimales</leafText>
+      <link>html/fr_0110_requirement.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Assistant de création de modèles</leafText>
+      <link>html/fr_0125_model_creation_wizard.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Redémarrage en mode sûr</leafText>
+      <link>html/fr_0130_safemode.html</link>
+    </leaf>
+  </branch>
+  <branch id="Lenvironnementdetravail">
+    <branchText>L'environnement de travail</branchText>
+    <leaf>
+      <leafText>La sélection</leafText>
+      <link>html/fr_0210_selectmanager.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Les menus</leafText>
+      <link>html/fr_0220_menu.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Les barres d'outils</leafText>
+      <link>html/fr_0230_toolbars.html</link>
+    </leaf>
+    <leaf>
+      <leafText>L'explorateur</leafText>
+      <link>html/fr_0240_explorer.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La fenêtre du diagramme</leafText>
+      <link>html/fr_0245_diagram_win.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La barre d'état</leafText>
+      <link>html/fr_0250_statusbar.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le panneau de conception</leafText>
+      <link>html/fr_0260_designpanel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La fenêtre de proriétés</leafText>
+      <link>html/fr_0270_propertieswin.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La fenêtre de listes</leafText>
+      <link>html/fr_0280_lists.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Modification des options</leafText>
+      <link>html/fr_0290_options.html</link>
+    </leaf>
+  </branch>
+  <branch id="Informationdeconceptionetdemodélisation">
+    <branchText>Information de conception et de modélisation</branchText>
+    <leaf>
+      <leafText>Objets sémantiques et espace de nommage</leafText>
+      <link>html/fr_0305_namespace.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le concept de projet</leafText>
+      <link>html/fr_0310_project.html</link>
+    </leaf>
+  </branch>
+  <branch id="Lescomposantesprédéfinies">
+    <branchText>Les composantes prédéfinies</branchText>
+    <leaf>
+      <leafText>Le noeud prédéfini</leafText>
+      <link>html/fr_0315_buitin_node.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le système cible</leafText>
+      <link>html/fr_0320_targetsystem.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le noeud d'utilisateurs</leafText>
+      <link>html/fr_0325_usernode.html</link>
+    </leaf>
+    <branch id="ExtensionUML">
+      <branchText>Extension UML</branchText>
+      <leaf>
+        <leafText>Extension UML</leafText>
+        <link>html/fr_0330_umlext.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Les stéréotypes</leafText>
+        <link>html/fr_0331_uml_stereo.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Les contraintes</leafText>
+        <link>html/fr_0332_uml_constr.html</link>
+      </leaf>
+    </branch>
+    <leaf>
+      <leafText>Les formalismes</leafText>
+      <link>html/fr_0335_notations.html</link>
+    </leaf>
+  </branch>
+  <branch id="Lescomposantesutilisateur">
+    <branchText>Les composantes utilisateur</branchText>
+    <leaf>
+      <leafText>Les composantes utilisateur</leafText>
+      <link>html/fr_0340_user_def_comp.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le modèle de données</leafText>
+      <link>html/fr_0345_datamodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le modèle de domaines</leafText>
+      <link>html/fr_0350_domainmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le modèle d'items communs</leafText>
+      <link>html/fr_0355_comitmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La bibliothèque d'opérations</leafText>
+      <link>html/fr_0360_oplib.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La base de données</leafText>
+      <link>html/fr_0365_database.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le système cible utilisateur</leafText>
+      <link>html/fr_0367_usertargetsys.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le modèle de classes</leafText>
+      <link>html/fr_0370_clasmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le modèle de processus</leafText>
+      <link>html/fr_0375_processmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le modèle de liens</leafText>
+      <link>html/fr_0380_linkmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le paquetage utilisateur</leafText>
+      <link>html/fr_0383_userpack.html</link>
+    </leaf>
+  </branch>
+  <branch id="Travailleraveclesdiagrammes">
+    <branchText>Travailler avec les diagrammes</branchText>
+    <leaf>
+      <leafText>Les diagrammes</leafText>
+      <link>html/fr_0385_diagram.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Information sémantique et graphique</leafText>
+      <link>html/fr_0388_semgraphinfo.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Les duplicatas</leafText>
+      <link>html/fr_0390_duplic.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Supprimer des objets</leafText>
+      <link>html/fr_0393_delete.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Trouver l'information</leafText>
+      <link>html/fr_0396_find_info.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Utilisation des styles</leafText>
+      <link>html/fr_0405_styles.html</link>
+    </leaf>
+    <branch id="Lespropriétésdudiagramme">
+      <branchText>Les propriétés du diagramme</branchText>
+      <leaf>
+        <leafText>Établir la surface de travail</leafText>
+        <link>html/fr_0410_diagram.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Afficher la numérotation et le titre des pages</leafText>
+        <link>html/fr_0411_page_number.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Montrer ou cacher le saut de page</leafText>
+        <link>html/fr_0412_saut.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Définition de la numérotation et du titre des pages</leafText>
+        <link>html/fr_0413_diagr_header.html</link>
+      </leaf>
+    </branch>
+    <leaf>
+      <leafText>Disposer les objets graphiques</leafText>
+      <link>html/fr_0414_layout.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le zoom, la vue d'ensemble et la loupe</leafText>
+      <link>html/fr_0415_view_zoom.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajuster automatiquement</leafText>
+      <link>html/fr_0420_autofit.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Dupliquer dans le diagramme</leafText>
+      <link>html/fr_0390_duplic.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Repositionner</leafText>
+      <link>html/fr_0430_reposit.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Changer les relations d'angle droit à angle libre</leafText>
+      <link>html/fr_0435_r_angle.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Couleur et styles de lignes</leafText>
+      <link>html/fr_0440_color.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Outils de dessins</leafText>
+      <link>html/fr_0445_drawing.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le cartouche</leafText>
+      <link>html/fr_0450_stamp.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Insérer une image</leafText>
+      <link>html/fr_0455_insertimage.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Créer des liens sémantiques et graphiques</leafText>
+      <link>html/fr_0460_semanticlinks.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Utiliser les notes graphiques</leafText>
+      <link>html/fr_0465_notes.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Utiliser la grille</leafText>
+      <link>html/fr_0470_grid.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Glisser-déposer</leafText>
+      <link>html/fr_0475_drag_drop.html</link>
+    </leaf>
+  </branch>
+  <branch id="Modélisationconceptuellededonnées">
+    <branchText>Modélisation conceptuelle de données</branchText>
+    <leaf>
+      <leafText>Les concepts de base</leafText>
+      <link>html/fr_2505_basic_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des entitées et des attributs</leafText>
+      <link>html/fr_2510_entities_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des clés primaires</leafText>
+      <link>html/fr_2515_pk_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des clés uniques</leafText>
+      <link>html/fr_2520_uk_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Créer les associations</leafText>
+      <link>html/fr_2525_relationships_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Modifier la multiplicité</leafText>
+      <link>html/fr_2530_multi_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Manipulations d'associations</leafText>
+      <link>html/fr_2533_relationship_manip_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Convertir un modèle conceptuel de données en modèle relationnel de données</leafText>
+      <link>html/fr_2590_conversion_cdm.html</link>
+    </leaf>
+  </branch>
+  <branch id="Modélisationrelationnellededonnées">
+    <branchText>Modélisation relationnelle de données</branchText>
+    <leaf>
+      <leafText>Les concepts de base</leafText>
+      <link>html/fr_0505_basic_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des tables et des colonnes</leafText>
+      <link>html/fr_0510_tables_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des clés primaires</leafText>
+      <link>html/fr_0515_pk_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des clés uniques</leafText>
+      <link>html/fr_0520_uk_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Créer les associations</leafText>
+      <link>html/fr_0525_associations_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Modifier la multiplicité</leafText>
+      <link>html/fr_0530_multi_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Manipulations d'associations</leafText>
+      <link>html/fr_0533_association_manip.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des vues</leafText>
+      <link>html/fr_0535_view_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Gérer les clés étrangères</leafText>
+      <link>html/fr_0545_fk_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Fusionner les colonnes</leafText>
+      <link>html/fr_0550_merge_col.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Changement de système cible</leafText>
+      <link>html/fr_0565_ch_target.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Convertir un modèle relationnel de données en modèle conceptuel de données</leafText>
+      <link>html/fr_0590_conversion_dm.html</link>
+    </leaf>
+  </branch>
+  <branch id="Conceptiondebasesdedonnéesphysiques">
+    <branchText>Conception de bases de données physiques</branchText>
+    <leaf>
+      <leafText>Le système cible</leafText>
+      <link>html/fr_0605_target.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Concepts spécifiques et attributs</leafText>
+      <link>html/fr_0607_spec_concepts.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Les noms physiques</leafText>
+      <link>html/fr_0610_physiname.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter un index</leafText>
+      <link>html/fr_0615_index.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La bibliothèque d'opérations</leafText>
+      <link>html/fr_0620_oplib.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La base de données</leafText>
+      <link>html/fr_0625_db.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Les interfaces SGBD</leafText>
+      <link>html/fr_0630_dbms.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La validation</leafText>
+      <link>html/fr_0633_valid.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La génération (forward engineering)</leafText>
+      <link>html/fr_0635_forward.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Connexion à une Base de données avec ODBC</leafText>
+      <link>html/fr_0640_odbc_conn.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Connexion à une Base de données avec JDBC</leafText>
+      <link>html/fr_0645_jdbc_connect.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Installation d'un pilote JDBC</leafText>
+      <link>html/fr_0650_jdbc_instal.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Exécution du code SQL</leafText>
+      <link>html/fr_0655_sql_shell.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La rétro-ingénierie (reverse engineering)</leafText>
+      <link>html/fr_0660_reverse.html</link>
+    </leaf>
+    <leaf>
+      <leafText>L'interface JDBC</leafText>
+      <link>html/fr_0670_jdbc_bdg.html</link>
+    </leaf>
+  </branch>
+  <branch id="Modélisationdeclasses">
+    <branchText>Modélisation de classes</branchText>
+    <leaf>
+      <leafText>Modélisation de classes</leafText>
+      <link>html/fr_0703_cm.html</link>
+    </leaf>
+    <branch id="Lesconcepts">
+      <branchText>Les concepts</branchText>
+      <leaf>
+        <leafText>Les concepts UML</leafText>
+        <link>html/fr_0705_uml_concept.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Les concepts Java</leafText>
+        <link>html/fr_0710_java_concept.html</link>
+      </leaf>
+    </branch>
+    <leaf>
+      <leafText>Créer un modèle de classes</leafText>
+      <link>html/fr_0715_built_cm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des classes, interfaces, exceptions et paquetages</leafText>
+      <link>html/fr_0725_add_class_pack.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le concept de paquetage</leafText>
+      <link>html/fr_0730_package.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le concept de classe</leafText>
+      <link>html/fr_0735_class.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le concept d'association, d'agrégation et de composition</leafText>
+      <link>html/fr_0740_asso_agg_compo.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La définition de l'héritage</leafText>
+      <link>html/fr_0745_inheritance.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le concept d'unité de compilation</leafText>
+      <link>html/fr_0750_compilunit.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Générer les méthodes d'accès manquantes</leafText>
+      <link>html/fr_0753_accessor.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Validation d'un modèle de classes</leafText>
+      <link>html/fr_0755_valid_cm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La génération de fichiers Java</leafText>
+      <link>html/fr_0760_forw_java.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La rétro-ingénierie Java</leafText>
+      <link>html/fr_0770_reversJava.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Modélisation de données et de classes Java</leafText>
+      <link>html/fr_0785_data_class_cm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Génération de paquetage à partir d'un modèle de données</leafText>
+      <link>html/fr_0790_gen_pack_from_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Génération d'un modèle de données à partir d'un paquetage</leafText>
+      <link>html/fr_0795_dm_to_cm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Utilisation de modèles de conception orienté objet</leafText>
+      <link>html/fr_0797_oo_design_patterns.html</link>
+    </leaf>
+  </branch>
+  <branch id="Modélisationdeprocessus">
+    <branchText>Modélisation de processus</branchText>
+    <leaf>
+      <leafText>Les concepts de base</leafText>
+      <link>html/fr_0805_basic_pm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Créer un modèle de processus</leafText>
+      <link>html/fr_0810_pmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter un contexte</leafText>
+      <link>html/fr_0815_context.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter un processus</leafText>
+      <link>html/fr_0820_processes.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter un flux</leafText>
+      <link>html/fr_0825_flows.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter une entité externe</leafText>
+      <link>html/fr_0830_entity.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter un dépot</leafText>
+      <link>html/fr_0835_stores.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter une ressource</leafText>
+      <link>html/fr_0840_res.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter un qualificatif</leafText>
+      <link>html/fr_0845_qual.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Décomposer un processus</leafText>
+      <link>html/fr_0848_decomp.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Mettre à jour l'environnement</leafText>
+      <link>html/fr_0849_upd_env.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Scinder</leafText>
+      <link>html/fr_0850_split.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Utiliser les cadres / cellules</leafText>
+      <link>html/fr_0853_cells_pm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Générer des diagrammes d'arbres de processus</leafText>
+      <link>html/fr_0854_trees_pm_dgm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Grouper</leafText>
+      <link>html/fr_0855_merge.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter des niveaux de processus</leafText>
+      <link>html/fr_0857_add_levels.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Calcul du temps et des coûts des processus</leafText>
+      <link>html/fr_0860_calcul.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Renuméroter</leafText>
+      <link>html/fr_0865_renum.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Formalismes</leafText>
+      <link>html/fr_0875_notations.html</link>
+    </leaf>
+  </branch>
+  <branch id="UtilisationdesdiagrammesUML">
+    <branchText>Utilisation des diagrammes UML</branchText>
+    <leaf>
+      <leafText>Créer un modèle UML</leafText>
+      <link>html/fr_0880_uml_add_model.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Ajouter un Système</leafText>
+      <link>html/fr_0883_uml_add_system.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagrammes UML</leafText>
+      <link>html/fr_0884_uml_diagrams.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagramme de cas d'Utilisation</leafText>
+      <link>html/fr_0885_uml_use_case.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagramme de paquetages</leafText>
+      <link>html/fr_0886_uml_package.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagramme de séquences</leafText>
+      <link>html/fr_0887_uml_sequence.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagramme de collaboration</leafText>
+      <link>html/fr_0888_uml_collaboration.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagramme d'états</leafText>
+      <link>html/fr_0889_uml_statechart.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagramme d'activité</leafText>
+      <link>html/fr_0890_uml_activity.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagramme de composants</leafText>
+      <link>html/fr_0891_uml_component.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Diagramme de déploiement</leafText>
+      <link>html/fr_0892_uml_deployment.html</link>
+    </leaf>
+  </branch>
+  <branch id="Gestiondemodèles">
+    <branchText>Gestion de modèles</branchText>
+    <leaf>
+      <leafText>Épurer un modèle</leafText>
+      <link>html/fr_0901_cleanup.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Vérifier l'intégrité d'un modèle</leafText>
+      <link>html/fr_0902_verif_intgr.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le paquetage utilisateur</leafText>
+      <link>html/fr_0905_user_def.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le modèle d'items communs</leafText>
+      <link>html/fr_0910_comit_intro.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Créer un modèle de domaines</leafText>
+      <link>html/fr_2540_domain_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Le modèle de liens</leafText>
+      <link>html/fr_0915_link_model.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La réutilisation de l'information : copier et déplacer des objets</leafText>
+      <link>html/fr_0920_reuse.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Les sous-modèles</leafText>
+      <link>html/fr_2570_submodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La comparaison et l'intégration de modèles</leafText>
+      <link>html/fr_0930_integrat.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Grouper les diagrammes</leafText>
+      <link>html/fr_0935_Group.html</link>
+    </leaf>
+    <leaf>
+      <leafText>La recherche d'objets</leafText>
+      <link>html/fr_0940_find.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Verouiller un modèle</leafText>
+      <link>html/fr_0945_lock.html</link>
+    </leaf>
+  </branch>
+  <branch id="Laproductionderapports">
+    <branchText>La production de rapports</branchText>
+    <leaf>
+      <leafText>Générer le fichier d'image d'un diagramme</leafText>
+      <link>html/fr_1005_sv_image.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Générer de la documentation HTML</leafText>
+      <link>html/fr_1010_html_rep.html</link>
+    </leaf>
+  </branch>
+  <branch id="Lesextensionsduproduit">
+    <branchText>Les extensions du produit</branchText>
+    <leaf>
+      <leafText>Créer des propriétés de l'utilisateur</leafText>
+      <link>html/fr_1105_user_prop.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Intégration des propriétés de l'utilisateur</leafText>
+      <link>html/fr_1110_integ_user_prop.html</link>
+    </leaf>
+    <branch id="Lesgabarits">
+      <branchText>Les gabarits</branchText>
+      <leaf>
+        <leafText>Les gabarits</leafText>
+        <link>html/fr_1120_template.html</link>
+      </leaf>
+      <branch id="Guidederéférencesurlelanguagedesgabarits">
+        <branchText>Guide de référence sur le language des gabarits</branchText>
+        <leaf>
+          <leafText>Le fonctionnement des gabarits</leafText>
+          <link>html/fr_1121_001_work.html</link>
+        </leaf>
+        <branch id="Lesclassesderèglesdegabarits">
+          <branchText>Les classes de règles de gabarits</branchText>
+          <leaf>
+            <leafText>La classe ATTR</leafText>
+            <link>html/fr_1121_005_attr.html</link>
+          </leaf>
+          <leaf>
+            <leafText>La classe CONN</leafText>
+            <link>html/fr_1121_008_conn.html</link>
+          </leaf>
+          <leaf>
+            <leafText>La classe TEMPL</leafText>
+            <link>html/fr_1121_010_templ.html</link>
+          </leaf>
+          <leaf>
+            <leafText>La classe COND</leafText>
+            <link>html/fr_1121_012_cond.html</link>
+          </leaf>
+          <leaf>
+            <leafText>La classe GROUP</leafText>
+            <link>html/fr_1121_013_group.html</link>
+          </leaf>
+          <leaf>
+            <leafText>La classe PLUGIN FUNCTION</leafText>
+            <link>html/fr_1121_015_plug.html</link>
+          </leaf>
+        </branch>
+        <leaf>
+          <leafText>Les domaines</leafText>
+          <link>html/fr_1121_018_domain.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Les variables</leafText>
+          <link>html/fr_1121_020_varia.html</link>
+        </leaf>
+        <branch id="Lesmodificateurs">
+          <branchText>Les modificateurs</branchText>
+          <leaf>
+            <leafText>CHILD</leafText>
+            <link>html/fr_1121_025_modif.html#child</link>
+          </leaf>
+          <leaf>
+            <leafText>DOM</leafText>
+            <link>html/fr_1121_025_modif.html#dom</link>
+          </leaf>
+          <leaf>
+            <leafText>EXTERN</leafText>
+            <link>html/fr_1121_025_modif.html#extern</link>
+          </leaf>
+          <leaf>
+            <leafText>FALSE</leafText>
+            <link>html/fr_1121_025_modif.html#false</link>
+          </leaf>
+          <leaf>
+            <leafText>FILE</leafText>
+            <link>html/fr_1121_025_modif.html#file</link>
+          </leaf>
+          <leaf>
+            <leafText>LOWER</leafText>
+            <link>html/fr_1121_025_modif.html#lower</link>
+          </leaf>
+          <leaf>
+            <leafText>NULL</leafText>
+            <link>html/fr_1121_025_modif.html#null</link>
+          </leaf>
+          <leaf>
+            <leafText>PREF</leafText>
+            <link>html/fr_1121_025_modif.html#pref</link>
+          </leaf>
+          <leaf>
+            <leafText>SEP</leafText>
+            <link>html/fr_1121_025_modif.html#sep</link>
+          </leaf>
+          <leaf>
+            <leafText>SUF</leafText>
+            <link>html/fr_1121_025_modif.html#suf</link>
+          </leaf>
+          <leaf>
+            <leafText>TRUE</leafText>
+            <link>html/fr_1121_025_modif.html#true</link>
+          </leaf>
+          <leaf>
+            <leafText>UPPER</leafText>
+            <link>html/fr_1121_025_modif.html#upper</link>
+          </leaf>
+        </branch>
+        <leaf>
+          <leafText>Expressions de chaînes de caractères</leafText>
+          <link>html/fr_1121_030_string.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Expressions booléennes</leafText>
+          <link>html/fr_1121_035_bool.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Expressions numériques entières</leafText>
+          <link>html/fr_1121_040_integer.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Les codes d'édition</leafText>
+          <link>html/fr_1121_045_code.html</link>
+        </leaf>
+        <leaf>
+          <leafText>La bibliothèque des fonctions du référentiel</leafText>
+          <link>html/fr_1121_050_repo.html</link>
+        </leaf>
+      </branch>
+    </branch>
+    <leaf>
+      <leafText>L'interpréteur Python</leafText>
+      <link>html/fr_1125_python.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Les modules d'extensions (Plug-ins)</leafText>
+      <link>html/fr_1130_plugins.html</link>
+    </leaf>
+  </branch>
+  <branch id="ImportExport">
+    <branchText>Import / Export</branchText>
+    <leaf>
+      <leafText>Export / Import XML</leafText>
+      <link>html/fr_1260_impexp_xml.html</link>
+    </leaf>
+  </branch>
+  <branch id="Encasdeproblème">
+    <branchText>En cas de problème</branchText>
+    <leaf>
+      <leafText>Sévérité des erreurs</leafText>
+      <link>html/fr_1305_severity.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Redémarrage en mode sûr</leafText>
+      <link>html/fr_0130_safemode.html</link>
+    </leaf>
+    <leaf>
+      <leafText>En cas d'erreur</leafText>
+      <link>html/fr_1310_error.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Fichiers d'aide</leafText>
+      <link>html/fr_1315_help.html</link>
+    </leaf>
+  </branch>
+  <branch id="Annexes">
+    <branchText>Annexes</branchText>
+    <leaf>
+      <leafText>Acronymes</leafText>
+      <link>html/fr_1510_acro.html</link>
+    </leaf>
+  </branch>
+</tree>

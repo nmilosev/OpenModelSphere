@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Modifiers</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Modifiers</b></font><br><br><br>
+
+
+<a name = "child"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>CHILD</b></font></a><br><br>
+
+
+<b>CONN</b> and <b>PLUGIN FUNCTION</b> classes only: modifier processed for each child occurrence.<br><br>
+<u>Example</u><br>
+<blockquote><tt><font size = "+1">columns CONN TableColumns,<br>
+CHILD = name;</font></tt><br><br>
+
+The <b>TableColumns</b> repository function returns every column of a table. For each occurrence
+(CHILD), the name rule is processed.</blockquote><br><br><br>
+
+<hr><a name = "dom"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>DOM</b></font></a><br><br>
+
+<b>ATTR</b> and <b>TEMPL</b> classes only: domain name.<br><br>
+<u>Example</u><br>
+<blockquote><tt><font size = "+1">tableTriggerTimeAttr ATTR TriggerTime<br>
+DOM = tableTriggerTimeDomain;<br><br>
+tableTriggerTimeDomain CDOM ("1", "BEFORE ")<br>
+("2", "AFTER ")<br>
+(DEFAULT, "");</font></tt><br><br>
+
+The <b>TriggerTime</b> repository function returns "1" for a before trigger, "2" for a after trigger
+and "3" for an instead of trigger. The result will be "BEFORE" or "AFTER" if the repository
+function returns "1" or "2"; if it returns "3' (or any other value), the result will be empty.</blockquote><br><br><br>
+
+<hr><a name = "extern"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>EXTERN</b></font></a><br><br>
+
+<b>TEMPL</b> and <b>GROUP</b> classes only; a flag indicates to include this rule in the list of rules
+displayed in the menu command Generate from template.<br><br>
+<u>Example</u><br><blockquote>
+<tt><font size = "+1">projectEntryPoint TEMPL "$project;"<br>
+EXTERN<br>
+FILE = "z.sql.txt";</font></tt><br><br>
+
+In this example, the <b>projectEntryPoint</b> rule will be visible in the interface so that the
+user can select it as a rule to be executed.</blockquote>
+<br><br><br>
+<hr><a name = "false"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>FALSE</b></font></a><br><br>
+
+<b>COND</b> class only: modifier is processed when the condition returns FALSE.<br><br>
+If the condition is true (if the HTML Boolean variable is true), then the htmlDisplay sub-rule
+will be processed and the result will be &lt;code&gt;name&lt;&lt;/code&gt;. However, if the condition
+is fausse, the plainDisplay will be processed instead.<br><br>
+<u>Example</u><br><blockquote>
+<tt><font size = "+1">display COND BOOLWAN (html)<br>
+TRUE=htmlDisplay<br>
+FALSE=plainDisplay;<br><br>
+htmlDisplay TEMPL "&lt;code&gt;$name;&lt;/code&gt;";<br><br>
+plainDisplay TEMPL "$name;";</font></tt><br><br><br></blockquote>
+
+<hr><a name = "file"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>FILE</b></font></a><br><br>
+
+
+<b>TEMPL</b> and <b>GROUP</b> classes only: modifier is processed then it is used to create a new
+file which contains the output of the sub-rule processing; the template string must not
+contain edition codes. The result must be a file name containing or not the directory
+which can be relative or absolute. The creation of a non existing directory is limited to
+one level (c:\sub1\sub2\output.txt is not a valid input string to the FILE modifier).
+The result string of the FILE modifier is added in the parent output file as a reference
+(same as an HTML hyperlink). In order to skip it, a domain can be used.<br><br><br>
+
+<hr><a name = "lower"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>LOWER</b></font></a><br><br>
+
+<b>TEMPL</b> and <b>ATTR</b> classes only: the TEMPL rule's output is converted in lowercase letters.
+Non-letter characters are not affected.<br><br>
+<u>Example</u><br><blockquote>
+<tt><font size = "+1">lowercase TEMPL "$hello;"<br>
+LOWER;<br><br>
+hello TEMPL "Hello World!";</font></tt><br><br>
+The 'lowercase' rule expands to "hello world!".</blockquote>
+<br><br><br>
+
+<hr><a name = "null"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>NULL</b></font></a><br><br>
+
+<b>ATTR</b>, <b>CONN</b>, <b>TEMPL</b>, <b>COND</b> and <b>GROUP</b> classes: modifier processed when the result
+is empty, or when there is no child, like for CONN. Example below.<br><br><br>
+
+<hr><a name = "pref"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>PREF</b></font></a><br><br>
+
+<b>ATTR</b>, <b>CONN</b>, <b>TEMPL</b>, <b>COND</b> and <b>GROUP</b> classes: modifier processed and added as
+prefix to the result when the result is not empty, or when there is at least one child like for
+CONN. Example below.<br><br><br>
+
+<hr><a name = "sep"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>SEP</b></font></a><br><br>
+
+<b>CONN</b>, <b>GROUP</b> classes: modifier processed once when there are at least 2 occurrences
+(CONN) or 2 variables giving a result (GROUP) and inserted between each pair of result
+strings. Example below.<br><br><br>
+
+<hr><a name = "suf"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>SUF</b></font></a><br><br>
+
+<b>ATTR</b>, <b>CONN</b>, <b>TEMPL</b>, <b>COND</b> and <b>GROUP</b> classes: modifier processed and added as a
+suffix to the result when the result is not empty, or when there is at least one child, like for
+CONN. Example for these last four modifiers:<br><br>
+<u>Example</u>:<br><blockquote>
+<tt><font size = "+1">col_min_max GROUP (col_len, col_dec)<br>
+PREF = "Note: "<br>
+SEP = " AND "<br>
+SUF = "."<br>
+NULL = "Note: length and number of decimals are undetermined.";<br><br>
+
+col_len ATTR ColumnLength<br>
+PREF = "$name;'s length is : ";<br><br>
+
+col_dec ATTR ColumnDecimal<br>
+PREF = "$name;'s nb of decimals is : ";</font></tt><br><br>
+
+The <b>ColumnLength</b> and <b>ColumnDecimal</b> repository functions return the length of the
+number of decimals of a column; if the column is price, the length is 10 and the number
+of decimals is 5, the result will be Note: price's length is : 10 AND price's nb of
+decimals is : 5. If length is undetermined, the result will be Note: price's nb of
+decimals is : 5. If both are undetermined, the result will be : Note: length and
+number of decimals are undetermined.</blockquote><br><br>
+
+<b>It is not allowed to use
+edition codes in a
+NULL, PREF, SEP or
+SUF string.</b><br><br><br>
+
+<hr><a name = "true"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>TRUE</b></font></a><br><br>
+
+<b>COND</b> class only: rule processed when the condition returns TRUE.<br><br>
+<u>Example</u><br><blockquote>
+<tt><font size = "+1">print_expression TEMPL "$french_english;",<br>
+EXTERN;<br><br>
+french_english COND print_in_english,<br>
+TRUE="The table name is ",<br>
+FALSE="Le nom de la table est ";</font></tt><br><br>
+
+If the print_in_english condition is TRUE, then the result will be The table name is.
+On the other hand, if the condition is FALSE, then the French expression Le nom de la
+table est will be used.</blockquote><br><br><br>
+
+<hr><a name = "upper"><font face="sans serif,arial,helvetica" color="000000" size="4"><b>UPPER</b></font></a><br><br>
+
+<b>TEMPL</b> et <b>ATTR</b> classes only: the TEMPL rule's output is converted in uppercase letters.
+Non-letter characters are not affected.<br><br>
+<u>Example</u><br><blockquote>
+<tt><font size = "+1">uppercase TEMPL "$hello;"<br>
+UPPER;<br><br>
+hello TEMPL "Hello World!";</font></tt><br><br>
+the 'uppercase' rule becomes "HELLO WORLD!".</blockquote>
+<br><br><br>
+
+
+</font>
+</body>
+</html>
+

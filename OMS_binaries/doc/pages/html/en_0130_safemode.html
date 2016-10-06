@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Restart in Safe Mode</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Restart in Safe Mode</b></font><br><br><br>
+
+Open ModelSphere has been designed to be a very stable application. 
+For the unlikely case of external impacts on ModelSphere's stability, 
+it offers the possibility to disable some features that can cause the application's malfunctioning, 
+and then restart the application in a safer mode. 
+<br><br>
+To invoke this feature, choose <b>Help > Advanced > Restart in Safe Mode</b> in the <b>main menu</b>.  
+You will have the opportunity to enable or disable five options that can cause instability:<ul> 
+
+<li><b>Disable DirectDraw</b>: DirectDraw, a Sun component used by Swing graphics, can crash the JVM. 
+It happens with some videos cards, such as ATI. DirectDraw can be disabled if you experience application problems. <br><br></li>
+
+<li><b>Erase Preferences:</b> Because ModelSphere preferences are stored in properties (text) files, 
+they could be accidently edited and preferences can be set to invalid values.
+(For instance, setting the size of the ModelSphere main frame to a value higher of the size of the screen can make ModelSphere malfunctional.)  
+Altered preferences can be erased and then reset to their default values. <br><br></li>
+
+<li><b>Use Metal as Look and Feel</b>: Swing supports several look-and-feels, including plugable look-and-feels.  
+If a particular look-and-feel causes ModelSphere malfunctioning, it is possible to restart ModelSphere by using the default look-and-feel, 
+which is Metal. <br><br></li>
+
+<li><b>Do not load any plug-in</b>: ModelSphere is an open product, and it is possible for everybody to add a user-defined plug-in. 
+If such a plug-in is malfunctional, it may cause ModelSphere to crash. It is possible to restart ModelSphere and to refuse to 
+load any plug-in. <br><br></li>
+
+<li><b>Set Locale to English</b>: ModelSphere works either in English and in French locales by default, but the door is open to run ModelSphere in other languages.  
+The English locale is the most used one; it is possible to force ModelSphere to restart using this default locale. <br><br></li>
+
+
+</ul>
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

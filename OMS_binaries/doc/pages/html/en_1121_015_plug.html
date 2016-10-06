@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>PLUGIN FUNCTION Class</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>PLUGIN FUNCTION Class</b></font><br><br><br>
+
+
+The PLUGIN FUNCTION class allows you to execute plug-in repository functions which
+are loaded when the application starts. The complete list of the plug-in repository functions
+is available in the <b>Help menu > Plug-ins</b>.<br>
+Remember that it is possible to add new functions without
+modifying the application.
+If the function used requires a sub-rule, it has to be specified with the CHILD modifier.<br><br>
+<u>Parameter</u>: name of the user function.<br><br>
+<u>Optional modifier</u>:<b> CHILD</b><br><br>
+<u>Example 1</u><br>
+<blockquote><font size="+1"><tt>//Execute DiagramIsempty, that returns "true" or "false"<br><br>
+classCoordinates PLUGIN FUNCTION ClassCoordinates;</tt></font></blockquote><br><br>
+<u>Example 2</u><br>
+<blockquote><tt><font size="+1">//UtilSGMLConverter requires a subrule, specified by CHILD. The
+subrule is expanded, and<br>
+//its result is then passed to UtilSGMLConverter, which performs a
+SGML-compliant conversion.<br><br>
+methodBodyHtml PLUGIN FUNCTION UtilSGMLConverter<br>
+CHILD = methodBodyAscii;<br><br>
+methodBodyAscii ATTR MethodBody;</font></tt></blockquote>
+<br><br><br>
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Redémarrage en mode sûr</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Redémarrage en mode sûr</b></font><br><br><br>
+
+
+Open ModelSphere a été conçu pour être une application très stable.
+Il est assez rare que l'application toute entière plante sans aucune possibilité de recouvrement.
+Si cela advient, c'est la plupart du temps pour des raisons externe à ModelSphere.
+Néanmoins, si une configuration particulière rends ModelSphere instable, il y a la possibilité de désactiver les fonctionalités 
+qui peuvent rendre l'application instable et de redémarrer en mode sûr. 
+<br><br>
+Pour invoquer cette fonctionnalité, choisissez <b>Aide > Avancé > Redémarrage en mode sûr</b> dans le <b>menu principal</b>.
+Vous aurez l'opportunité d'activer ou de désactiver cinq options qui peuvent causer de l'instabilité :<ul> 
+
+<li><b>Désactiver DirectDraw</b>: DirectDraw, une composante de Sun utilisé par les librairies graphique Swing, peut faire planter la machine virtuelle Java. 
+Cela peut advenir avec certaines cartes vidéo (ATI en particulier). DirectDraw peut être désactivé si l'application éprouve ce genre de problèmes.<br><br></li>
+
+<li><b>Effacer les préférences:</b> 
+Parce que ModelSphere conserve ses préférences dans un fichier texte (.properties), 
+elles peuvent être accidentellement éditées et des préférences se voir assigner des valeurs non-valide.
+Ceci peut rendre ModelSphere disfonctionnel.  
+Les préférences altérées, peuvent être effacées, ce qui entrainera la remise aux valeurs par défaut lors du prochain démarrage.<br><br></li>
+
+<li><b>Utiliser Metal comme Apparence (Look and Feel)</b>: 
+Swing supporte plusieurs apparences (Look and Feel). 
+Si une apparence fait planter ModelSphere, il est possible d'utiliser l'apparence Metal au prochain démarrage. 
+(Metal étant l'apparence la plus stable). <br><br></li>
+
+<li><b>Ne charger aucun module d'extension</b>: 
+ModelSphere est un produit ouvert, et il est possible à tous d'ajouter des modules d'extension personnalisés.
+Si un module d'extension est disfonctionnel, cela peut faire planter ModelSphere. 
+Il est toujours possible dans ce cas de forcer ModelSphere à redémarrer sans charger aucun module d'extension.
+<br><br></li>
+
+<li><b>Passer à la locale Anglaise</b>: 
+Cette option permet de redémarrer l'application en langue anglaise. L'anglais est en principe plus sûr car c'est dans cette langue que le développement de ModelSphere se fait préalablement.<br><br></li>
+
+
+</ul>
+
+
+
+</font>
+</body>
+</html>
+

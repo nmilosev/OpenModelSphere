@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Working with template files</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Working with template files</b></font><br><br><br>
+
+
+A template file contains the definition of all rules needed by an application. A rule essentially
+produces a character string from its parameters; most parameters are rules refer-ring
+to other template rules.<br><br>
+The definition of a rule is made of a rule name, rule class, of a mandatory parameter
+defining the rule, and of optional modifiers, without any specific order; the definition ends
+with a semi-colon.<br><br>
+The template rules (rules belonging to the TEMPL class) are the most used rules. Every
+template rule is associated to a template string. A template string contains sub-rules and
+edition codes. Processing a template string consists in replacing the sub-rules and edition
+codes by the strings they represent. Within a template string, sub-rules and edition
+codes are preceded by a dollar sign and followed by a semi-colon, in order to distinguish
+them from the surrounding text.<br><br>
+Valid characters for a rule name are: ASCII letters (A-Z and a-z), digits (0-9) and underscore;
+the first character of a name cannot be a digit; the name must be made up of at
+least two (2) characters and at most sixty-three (63). Case is significant; for example
+objname and ObjName refer to two (2) different variables.<br><br>
+The various fields of the definition are separated by one or more spacing characters.
+Spacing characters are: space, tab, return. These characters have no other purposes
+than to act as token separators. A comma can be used as separator in the parameter list
+of a definition.<br><br>
+Comments can appear anywhere between definition tokens or between definitions; they
+begin with /* and end with */ , or they begin with // and end with a carriage return (at
+the end of the current line).<br><br>
+Strings are enclosed in double quotes; a long string can be split into a number of strings
+separated by spacing characters; when a closing quote is followed by spacing characters
+and an opening quote, the two adjoining strings are considered part of a single
+string.<br><br>
+There are two types of modifiers: values and flags. A value modifier is followed by an
+equal sign and the value; the flag modifier is by itself. Most value modifiers take a rule as
+value. This is expressed as a string enclosed in quotes.<br><br>
+Example<br>
+<blockquote><font size="+1"><tt>drop_table TEMPL "DROP TABLE $TableName;;";</tt></font><br><br>
+This statement defines a drop_table sub-rule of TEMPL class. The parameter is a
+template string referring to the TableName sub-rule which must be defined elsewhere in
+the template file. For example, if the TableName rule returns "department" as a result;
+then the result of the drop_table variable will be "DROP TABLE department;".
+equal sign and the value; the flag modifier is by itself. Most value modifiers take a rule as
+value. This is expressed as a string enclosed in quotes.</blockquote>
+<br><br>
+<b>Rule classes and modifiers
+must be specified
+in uppercase.</b>
+
+
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

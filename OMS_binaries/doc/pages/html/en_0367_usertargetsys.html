@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>User Target System</title>
+</head>
+<body bgcolor="#ffffff">
+<font face="sans serif,arial,helvetica" color="#000000" size="2">
+</font>
+<hr><font face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="5"><b>User
+Target System</b></font><br>
+<br>
+<br>
+<b>Open ModelSphere</b> allows you to define
+your own target systems. This functionnality gives you the opportunity
+to handle any database management systems even the ones that are not
+explicitly supported by <b>Open ModelSphere</b>
+<br>
+<br>
+There are two different ways of creating a <b>user target system</b>.
+<br>
+<br>
+<br>
+<b><font color="#000000" size="3">Creating a user target system from a
+project</font></b> <br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="2">Click <span
+ style="font-weight: bold;">Tools &gt; Add/Remove Target System
+syst&egrave;me cible</span><b> ></b> <span style="font-weight: bold;">Add
+</span>and choose from the list
+the <b>user target system </b> item.<br>
+<br>
+<ul>
+<b>Creating a user target system </b>:<br>
+  <br>
+  <font face="sans serif,arial,helvetica" color="#000000" size="2"><img
+ style="width: 442px; height: 522px;"
+ alt="Ajout d'un syst&egrave;me cible utilisateur" title=""
+ src="../images/ADD_USER_TARGET_en.jpg"><br>
+  </font>
+</ul>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"> Note that if
+the <b>user target system</b>
+item is not available in the list, verify that the file <span
+ style="font-weight: bold;">UserTS.typ</span> is into the "targets"
+directory where the application has been installed. </font><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><span
+ style="text-decoration: underline; font-weight: bold;">This file must
+not be altered</span>.</font> <font face="sans serif,arial,helvetica"
+ color="#000000" size="2">A package <b>New User Target System</b> will
+appear</font><font face="sans serif,arial,helvetica" color="#000000"
+ size="2"> under the Built-in Types node.</font> <font
+ face="sans serif,arial,helvetica" color="#000000" size="2">This is from this 
+ package that the user can define new data types.<br><br>
+Use the <span style="font-weight: bold;">Add</span>&nbsp;<img
+ src="../images/add.gif" title="" alt=""
+ style="width: 16px; height: 16px;"> button from the creation tool bar or from the menu <span style="font-weight: bold;">Edit &gt;
+Add &gt;Type</span>. 
+</font> <font face="sans serif,arial,helvetica" color="#000000"
+ size="2">
+</font> <font face="sans serif,arial,helvetica" color="#000000"
+ size="2">
+
+
+<font face="sans serif,arial,helvetica" color="#000000" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<ul>
+<b>Add a data type</b> :<br>
+  <br>
+  <img src="../images/ADD_USER_TYPE_en.jpg" title=""
+ alt="ADD_USER_TYPE_fr.jpg" style="width: 365px; height: 256px;"><br>
+</ul>
+<br>
+<b><font color="#000000" size="3">Creating a user target system with the template
+"UserTypeFileTemplate.typ" </font></b><br>
+<br>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"> The templace file "UserTypeFileTemplate.typ" can be found into
+the directory \Targets\Template from the main directory of
+Open ModelSphere. Copy this file into the Target 
+directory of <b>Open ModelSphere</b> to edit a new .typ file. A .typ file contains
+a list of predifined data types for a given target system.
+<b>ModelSphere</b> will read this file after the application is launch.
+The new target system will then be available from the list in <b>Open ModelSphere</b>.
+Below is an example of type file.<br>
+<br>
+</font> <font face="sans serif,arial,helvetica" color="#000000"
+ size="2">Note that the 
+root-ID is 2000 and must not be modified.&nbsp; </font><br>
+<font face="sans serif,arial,helvetica" color="#000000" size="2"></font><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><br>
+</font><span lang="FR-CA"><o:p></o:p></span><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="3"><b></b></font></font><font
+ face="sans serif,arial,helvetica" color="#000000" size="2"><font
+ face="sans serif,arial,helvetica" color="#000000" size="3"><b>How 
+ to create a user target system file </b></font></font><br>
+<br>
+//&nbsp;&nbsp;&nbsp; THIS FILE IS A TEMPLATE FILE FOR CREATING
+USER TARGET SYSTEMS<br>
+//&nbsp;&nbsp;&nbsp; $Date:&nbsp; 06-03-28 11:15 $<br>
+//<br>
+//&nbsp;&nbsp;&nbsp; Predefined types<br>
+<br>
+<span style="color: rgb(0, 0, 153); font-weight: bold;" 2="">
+NOTE: The TARGET-ID must be 2000 and higher.</span><br style="color: rgb(0, 0, 153); font-weight: bold;">
+<span style="color: rgb(0, 0, 153); font-weight: bold;">
+The ROOT-ID 2000 must be kept.</span><br>
+<br>
+NAME= My target system<br>
+VERSION=2.0<br>
+TARGET-ID=2003 <br>
+ROOT-ID=2000 <br>
+<br>
+<span style="color: rgb(0, 0, 153); font-weight: bold;">
+NOTE : The user types must be formated as follow. </span><br
+ style="color: rgb(0, 0, 153); font-weight: bold;">
+<span style="color: rgb(0, 0, 153); font-weight: bold;">
+The first column represents the list of user data types. </span><br
+ style="color: rgb(0, 0, 153); font-weight: bold;">
+<span style="color: rgb(0, 0, 153); font-weight: bold;">
+The second column contains the logical data types (see logical.typ)
+equivalent to the corresponding user data type. </span><br
+ style="color: rgb(0, 0, 153); font-weight: bold;">
+<span style="color: rgb(0, 0, 153); font-weight: bold;">
+The correspondance with a logical type
+is optional.</span><br>
+<br>
+// type, logical type (optional)<br>
+TYPES<br>
+{
+<br>
+CHAR,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CHARACTER<br>
+CHARACTER,&nbsp; CHARACTER<br>
+DATE,<br>
+DEC,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; DECIMAL<br>
+DECIMAL,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DECIMAL<br>
+FLOAT,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; FLOAT<br>
+INT,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTEGER<br>
+INTEGER,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTEGER<br>
+NUMERIC,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NUMERIC<br>
+NUMBER,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NUMERIC<br>
+REAL,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; REAL<br>
+SPECIAL TYPE,<br>
+}<br>
+<br>
+<span style="color: rgb(0, 0, 102); font-weight: bold;">
+NOTE : aliases are optionals.</span><br>
+<br>
+ALIASES<br>
+{<br>
+CHAR, CHARACTER<br>
+NUMBER, NUMERIC, DECIMAL,
+DEC, REAL<br>
+INT, INTEGER<br>}
+</span></font>
+</span></font></font></font></font>
+</body>
+</html>

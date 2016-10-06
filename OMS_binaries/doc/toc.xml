@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?> 
+<help>
+	<category en = "Welcome" fr = "Bienvenue" >
+		<book en = "Introduction" fr = "Introduction" file = "0010_intro.html" />
+		<book en = "What is Open ModelSphere?" fr = "Qu'est-ce que Open ModelSphere?" file = "0020_whatis.html" />
+	</category>
+	<category en = "Getting started" fr = "Comment installer ModelSphere" >
+		<book en = "Installation and requirements" fr = "Installation et exigences minimales" file = "0110_requirement.html" />
+		<book en = "Model creation wizard" fr = "Assistant de création de modèles" file = "0125_model_creation_wizard.html" />
+		<book en = "Restart in Safe Mode" fr = "Redémarrage en mode sûr" file = "0130_safemode.html" />
+	</category>
+	<category en = "Looking at the work area" fr = "L'environnement de travail" >
+		<book en = "Selection manager" fr = "La sélection" file = "0210_selectmanager.html" />
+		<book en = "Menu" fr = "Les menus" file = "0220_menu.html" />
+		<book en = "Toolbars" fr = "Les barres d'outils" file = "0230_toolbars.html" />
+		<book en = "Using the explorer" fr = "L'explorateur" file = "0240_explorer.html" />
+		<book en = "Working in the diagram window" fr = "La fenêtre du diagramme" file = "0245_diagram_win.html" />
+		<book en = "The status bar" fr = "La barre d'état" file = "0250_statusbar.html" />
+		<book en = "Using the design panel" fr = "Le panneau de conception" file = "0260_designpanel.html" />
+		<book en = "Using the properties window" fr = "La fenêtre de proriétés" file = "0270_propertieswin.html" />
+		<book en = "Using the lists" fr = "La fenêtre de listes" file = "0280_lists.html" />
+		<book en = "Modifying the options" fr = "Modification des options" file = "0290_options.html" />
+	</category>
+	<category en = "Modeling and design information" fr = "Information de conception et de modélisation" >
+		<book en = "Semantic objects and namespace" fr = "Objets sémantiques et espace de nommage" file = "0305_namespace.html" />
+		<book en = "The project concept" fr = "Le concept de projet" file = "0310_project.html" />
+	</category>
+	<category en = "Predefined components" fr = "Les composantes prédéfinies" >
+		<book en = "Built-in node" fr = "Le noeud prédéfini" file = "0315_buitin_node.html" />
+		<book en = "Target system" fr = "Le système cible" file = "0320_targetsystem.html" />
+		<book en = "User node" fr = "Le noeud d'utilisateurs" file = "0325_usernode.html" />
+		<category en = "UML extensibility" fr = "Extension UML" >
+			<book en = "UML extensibility" fr = "Extension UML" file = "0330_umlext.html" />
+			<book en = "Stereotypes" fr = "Les stéréotypes" file = "0331_uml_stereo.html" />
+			<book en = "Constraints" fr = "Les contraintes" file = "0332_uml_constr.html" />
+		</category>
+		<book en = "Notations" fr = "Les formalismes" file = "0335_notations.html" />
+	</category>
+	<category en = "User-defined components" fr = "Les composantes utilisateur" >
+		<book en = "User-defined components" fr = "Les composantes utilisateur" file = "0340_user_def_comp.html" />
+		<book en = "Data model" fr = "Le modèle de données" file = "0345_datamodel.html" />
+		<book en = "Domain model" fr = "Le modèle de domaines" file = "0350_domainmodel.html" />
+		<book en = "Common item model" fr = "Le modèle d'items communs" file = "0355_comitmodel.html" />
+		<book en = "Operation library" fr = "La bibliothèque d'opérations" file = "0360_oplib.html" />
+		<book en = "Database" fr = "La base de données" file = "0365_database.html" />
+		<book en = "User Target System" fr = "Le système cible utilisateur" file = "0367_usertargetsys.html" />
+		<book en = "Class model" fr = "Le modèle de classes" file = "0370_clasmodel.html" />
+		<book en = "Process model" fr = "Le modèle de processus" file = "0375_processmodel.html" />
+		<book en = "Link model" fr = "Le modèle de liens" file = "0380_linkmodel.html" />
+		<book en = "User-defined package" fr = "Le paquetage utilisateur" file = "0383_userpack.html" />
+	</category>
+	<category en = "Working with diagrams" fr = "Travailler avec les diagrammes" >
+		<book en = "Diagrams" fr = "Les diagrammes" file = "0385_diagram.html" />
+		<book en = "Semantic and graphic information" fr = "Information sémantique et graphique" file = "0388_semgraphinfo.html" />
+		<book en = "Duplicate" fr = "Les duplicatas" file = "0390_duplic.html" />
+		<book en = "Deleting objects" fr = "Supprimer des objets" file = "0393_delete.html" />
+		<book en = "Finding information" fr = "Trouver l'information" file = "0396_find_info.html" />
+		<book en = "Using styles" fr = "Utilisation des styles" file = "0405_styles.html" />
+		<category en = "Diagrams properties" fr = "Les propriétés du diagramme" >
+			<book en = "Customizing the drawing area" fr = "Établir la surface de travail" file = "0410_diagram.html" />
+			<book en = "Displaying the page number and title" fr = "Afficher la numérotation et le titre des pages" file = "0411_page_number.html" />
+			<book en = "Showing or hiding page breaks" fr = "Montrer ou cacher le saut de page" file = "0412_saut.html" />
+			<book en = "Defining the page number and title" fr = "Définition de la numérotation et du titre des pages" file = "0413_diagr_header.html" />
+		</category>
+		<book en = "Laying out the diagram" fr = "Disposer les objets graphiques" file = "0414_layout.html" />
+		<book en = "Zoom, overview and magnifier" fr = "Le zoom, la vue d'ensemble et la loupe" file = "0415_view_zoom.html" />
+		<book en = "Automatic fitting" fr = "Ajuster automatiquement" file = "0420_autofit.html" />
+		<book en = "Duplicating in diagram" fr = "Dupliquer dans le diagramme" file = "0390_duplic.html" />
+		<book en = "Repositioning" fr = "Repositionner" file = "0430_reposit.html" />
+		<book en = "Changing right-angle to free-angle relationship" fr = "Changer les relations d'angle droit à angle libre" file = "0435_r_angle.html" />
+		<book en = "Color and line styles" fr = "Couleur et styles de lignes" file = "0440_color.html" />
+		<book en = "Drawing tools" fr = "Outils de dessins" file = "0445_drawing.html" />
+		<book en = "Stamp tool" fr = "Le cartouche" file = "0450_stamp.html" />
+		<book en = "Inserting an image" fr = "Insérer une image" file = "0455_insertimage.html" />
+		<book en = "Creating semantic and graphical links" fr = "Créer des liens sémantiques et graphiques" file = "0460_semanticlinks.html" />
+		<book en = "Using graphical notes" fr = "Utiliser les notes graphiques" file = "0465_notes.html" />
+		<book en = "Using the grid" fr = "Utiliser la grille" file = "0470_grid.html" />
+		<book en = "Drag and drop" fr = "Glisser-déposer" file = "0475_drag_drop.html" />
+
+
+
+	</category>
+	<category en = "Conceptual data modeling" fr = "Modélisation conceptuelle de données" >
+		<book en = "Acknowledging the basic concepts" fr = "Les concepts de base" file = "2505_basic_cdm.html" />
+		<book en = "Adding entities and attributes" fr = "Ajouter des entitées et des attributs" file = "2510_entities_cdm.html" />
+		<book en = "Adding primary keys" fr = "Ajouter des clés primaires" file = "2515_pk_cdm.html" />
+		<book en = "Adding unique keys" fr = "Ajouter des clés uniques" file = "2520_uk_cdm.html" />
+		<book en = "Creating relationships" fr = "Créer les associations" file = "2525_relationships_cdm.html" />
+		<book en = "Modifying multiplicity" fr = "Modifier la multiplicité" file = "2530_multi_cdm.html" />
+		<book en = "Manipulating relationships" fr = "Manipulations d'associations" file = "2533_relationship_manip_cdm.html" />
+		<book en = "Converting a conceptual data model to a relational data model" fr = "Convertir un modèle conceptuel de données en modèle relationnel de données" file = "2590_conversion_cdm.html" />
+	</category>
+	<category en = "Relational data modeling" fr = "Modélisation relationnelle de données" >
+		<book en = "Acknowledging the basic concepts" fr = "Les concepts de base" file = "0505_basic_dm.html" />
+		<book en = "Adding tables and columns" fr = "Ajouter des tables et des colonnes" file = "0510_tables_dm.html" />
+		<book en = "Adding primary keys" fr = "Ajouter des clés primaires" file = "0515_pk_dm.html" />
+		<book en = "Adding unique keys" fr = "Ajouter des clés uniques" file = "0520_uk_dm.html" />
+		<book en = "Creating associations" fr = "Créer les associations" file = "0525_associations_dm.html" />
+		<book en = "Modifying multiplicity" fr = "Modifier la multiplicité" file = "0530_multi_dm.html" />
+		<book en = "Manipulating associations" fr = "Manipulations d'associations" file = "0533_association_manip.html" />
+		<book en = "Adding views" fr = "Ajouter des vues" file = "0535_view_dm.html" />
+		<book en = "Managing foreign keys" fr = "Gérer les clés étrangères" file = "0545_fk_dm.html" />
+		<book en = "Merging columns" fr = "Fusionner les colonnes" file = "0550_merge_col.html" />
+		<book en = "Changing target system" fr = "Changement de système cible" file = "0565_ch_target.html" />
+		<book en = "Converting a relational data model to a conceptual data model" fr = "Convertir un modèle relationnel de données en modèle conceptuel de données" file = "0590_conversion_dm.html" />
+	</category>
+	<category en = "Physical database design" fr = "Conception de bases de données physiques" >
+		<book en = "Working with different target systems" fr = "Le système cible" file = "0605_target.html" />
+		<book en = "Specific concepts and attributes" fr = "Concepts spécifiques et attributs" file = "0607_spec_concepts.html" />
+		<book en = "Generating physical names" fr = "Les noms physiques" file = "0610_physiname.html" />
+		<book en = "Adding an index" fr = "Ajouter un index" file = "0615_index.html" />
+		<book en = "Defining the operation library" fr = "La bibliothèque d'opérations" file = "0620_oplib.html" />
+		<book en = "Defining the database" fr = "La base de données" file = "0625_db.html" />
+		<book en = "DBMS interface" fr = "Les interfaces SGBD" file = "0630_dbms.html" />
+		<book en = "Validation" fr = "La validation" file = "0633_valid.html" />
+		<book en = "Forward engineering" fr = "La génération (forward engineering)" file = "0635_forward.html" />
+		<book en = "Connection to a database with ODBC" fr = "Connexion à une Base de données avec ODBC" file = "0640_odbc_conn.html" />
+		<book en = "Connection to a database with JDBC" fr = "Connexion à une Base de données avec JDBC" file = "0645_jdbc_connect.html" />
+		<book en = "Install JDBC driver " fr = "Installation d'un pilote JDBC" file = "0650_jdbc_instal.html" />
+		<book en = "Running SQL statements" fr = "Exécution du code SQL" file = "0655_sql_shell.html" />
+		<book en = "Reverse engineering" fr = "La rétro-ingénierie (reverse engineering)" file = "0660_reverse.html" />
+		<book en = "JDBC interface" fr = "L'interface JDBC" file = "0670_jdbc_bdg.html" />
+	</category>
+	<category en = "Class modeling" fr = "Modélisation de classes" >
+		<book en = "Class modeling" fr = "Modélisation de classes" file = "0703_cm.html" />
+		<category en = "Concepts" fr = "Les concepts" >
+			<book en = "UML concepts" fr = "Les concepts UML" file = "0705_uml_concept.html" />
+			<book en = "Java concepts" fr = "Les concepts Java" file = "0710_java_concept.html" />
+		</category>
+		<book en = "Building a class model" fr = "Créer un modèle de classes" file = "0715_built_cm.html" />
+		<book en = "Adding classes, interfaces, exceptions and packages" fr = "Ajouter des classes, interfaces, exceptions et paquetages" file = "0725_add_class_pack.html" />
+		<book en = "Package concept" fr = "Le concept de paquetage" file = "0730_package.html" />
+		<book en = "Class concept" fr = "Le concept de classe" file = "0735_class.html" />
+		<book en = "Association, aggregation and composition concepts" fr = "Le concept d'association, d'agrégation et de composition" file = "0740_asso_agg_compo.html" />
+		<book en = "Specifying inheritance" fr = "La définition de l'héritage" file = "0745_inheritance.html" />
+		<book en = "Compilation unit concept" fr = "Le concept d'unité de compilation" file = "0750_compilunit.html" />
+		<book en = "Generate missing accessor methods" fr = "Générer les méthodes d'accès manquantes" file = "0753_accessor.html" />
+		<book en = "Validating a class model" fr = "Validation d'un modèle de classes" file = "0755_valid_cm.html" />
+		<book en = "Generating Java files" fr = "La génération de fichiers Java" file = "0760_forw_java.html" />
+		<book en = "Reverse engineering Java" fr = "La rétro-ingénierie Java" file = "0770_reversJava.html" />
+		<book en = "Data and class modeling" fr = "Modélisation de données et de classes Java" file = "0785_data_class_cm.html" />
+		<book en = "Generating a package from a data model" fr = "Génération de paquetage à partir d'un modèle de données" file = "0790_gen_pack_from_dm.html" />
+		<book en = "Generating a data model from a package" fr = "Génération d'un modèle de données à partir d'un paquetage" file = "0795_dm_to_cm.html" />
+		<book en = "Using object oriented design patterns" fr = "Utilisation de modèles de conception orienté objet" file = "0797_oo_design_patterns.html" />
+	</category>
+	<category en = "Process modeling" fr = "Modélisation de processus" >
+		<book en = "Acknowledging the basic concepts" fr = "Les concepts de base" file = "0805_basic_pm.html" />
+		<book en = "Building a process model" fr = "Créer un modèle de processus" file = "0810_pmodel.html" />
+		<book en = "Adding a context" fr = "Ajouter un contexte" file = "0815_context.html" />
+		<book en = "Adding processes" fr = "Ajouter un processus" file = "0820_processes.html" />
+		<book en = "Adding flows" fr = "Ajouter un flux" file = "0825_flows.html" />
+		<book en = "Adding external entities" fr = "Ajouter une entité externe" file = "0830_entity.html" />
+		<book en = "Adding stores" fr = "Ajouter un dépot" file = "0835_stores.html" />
+		<book en = "Adding resources" fr = "Ajouter une ressource" file = "0840_res.html" />
+		<book en = "Adding qualifiers" fr = "Ajouter un qualificatif" file = "0845_qual.html" />
+		<book en = "Decomposing processes" fr = "Décomposer un processus" file = "0848_decomp.html" />
+		<book en = "Updating the environment" fr = "Mettre à jour l'environnement" file = "0849_upd_env.html" />
+		<book en = "Splitting" fr = "Scinder" file = "0850_split.html" />
+		<book en = "Using frame / cells" fr = "Utiliser les cadres / cellules" file = "0853_cells_pm.html" />
+		<book en = "Generating process tree diagrams" fr = "Générer des diagrammes d'arbres de processus" file = "0854_trees_pm_dgm.html" />
+		<book en = "Merging" fr = "Grouper" file = "0855_merge.html" />
+		<book en = "Inserting additional process levels" fr = "Ajouter des niveaux de processus" file = "0857_add_levels.html" />
+		<book en = "Assigning process time along with resource rate and cost" fr = "Calcul du temps et des coûts des processus" file = "0860_calcul.html" />
+		<book en = "Renumbering" fr = "Renuméroter" file = "0865_renum.html" />
+		<book en = "Notations" fr = "Formalismes" file = "0875_notations.html" />
+	</category>
+	<category en = "Using UML diagrams" fr = "Utilisation des diagrammes UML" >
+		<book en = "Building a UML Model" fr = "Créer un modèle UML" file = "0880_uml_add_model.html" />
+		<book en = "Adding a system" fr = "Ajouter un Système" file = "0883_uml_add_system.html" />
+		<book en = "UML diagrams" fr = "Diagrammes UML" file = "0884_uml_diagrams.html" />
+		<book en = "Use Case diagram" fr = "Diagramme de cas d'Utilisation" file = "0885_uml_use_case.html" />
+		<book en = "Package diagram" fr = "Diagramme de paquetages" file = "0886_uml_package.html" />
+		<book en = "Sequence diagram" fr = "Diagramme de séquences" file = "0887_uml_sequence.html" />
+		<book en = "Collaboration diagram" fr = "Diagramme de collaboration" file = "0888_uml_collaboration.html" />
+		<book en = "Statechart diagram" fr = "Diagramme d'états" file = "0889_uml_statechart.html" />
+		<book en = "Activity diagram" fr = "Diagramme d'activité" file = "0890_uml_activity.html" />
+		<book en = "Component diagram" fr = "Diagramme de composants" file = "0891_uml_component.html" />
+		<book en = "Deployment diagram" fr = "Diagramme de déploiement" file = "0892_uml_deployment.html" />
+		
+	</category>
+	<category en = "Model management" fr = "Gestion de modèles" >
+		<book en = "Cleaning-up a model" fr = "Épurer un modèle" file = "0901_cleanup.html" />
+		<book en = "Verifying the integrity of a model" fr = "Vérifier l'intégrité d'un modèle" file = "0902_verif_intgr.html" />
+		<book en = "Introducing user-defined package" fr = "Le paquetage utilisateur" file = "0905_user_def.html" />
+		<book en = "Introducing the common items" fr = "Le modèle d'items communs" file = "0910_comit_intro.html" />
+		<book en = "Building a domain model" fr = "Créer un modèle de domaines" file = "2540_domain_dm.html" />
+		<book en = "Introducing the link model" fr = "Le modèle de liens" file = "0915_link_model.html" />
+		<book en = "Reusing information: copying and moving objects" fr = "La réutilisation de l'information : copier et déplacer des objets" file = "0920_reuse.html" />
+		<book en = "Building submodels" fr = "Les sous-modèles" file = "2570_submodel.html" />
+		<book en = "Comparing and integrating models" fr = "La comparaison et l'intégration de modèles" file = "0930_integrat.html" />
+		<book en = "Grouping Diagrams" fr = "Grouper les diagrammes" file = "0935_Group.html" />
+		<book en = "Finding objects" fr = "La recherche d'objets" file = "0940_find.html" />
+		<book en = "Locking models" fr = "Verouiller un modèle" file = "0945_lock.html" />
+	</category>
+	<category en = "Reports" fr = "La production de rapports" >
+		<book en = "Generating a diagram's image file" fr = "Générer le fichier d'image d'un diagramme" file = "1005_sv_image.html" />
+		<book en = "Generating HTML documentation" fr = "Générer de la documentation HTML" file = "1010_html_rep.html" />
+	</category>
+	<category en = "Product extensions" fr = "Les extensions du produit" >
+		<book en = "Creating user properties" fr = "Créer des propriétés de l'utilisateur" file = "1105_user_prop.html" />
+		<book en = "Integrating the user properties" fr = "Intégration des propriétés de l'utilisateur" file = "1110_integ_user_prop.html" />
+		<category en = "Templates" fr = "Les gabarits" >
+			<book en = "Templates" fr = "Les gabarits" file = "1120_template.html" />
+			<category en = "Template files language reference" fr = "Guide de référence sur le language des gabarits" >
+				<book en = "Working with template files" fr = "Le fonctionnement des gabarits" file = "1121_001_work.html" />
+				<category en = "Classes of the template rules" fr = "Les classes de règles de gabarits" >
+					<book en = "ATTR Class" fr = "La classe ATTR" file = "1121_005_attr.html" />
+					<book en = "CONN Class" fr = "La classe CONN" file = "1121_008_conn.html" />
+					<book en = "TEMPL Class" fr = "La classe TEMPL" file = "1121_010_templ.html" />
+					<book en = "COND Class" fr = "La classe COND" file = "1121_012_cond.html" />
+					<book en = "GROUP Class" fr = "La classe GROUP" file = "1121_013_group.html" />
+					<book en = "PLUGIN FUNCTION Class" fr = "La classe PLUGIN FUNCTION" file = "1121_015_plug.html" />
+				</category>
+				<book en = "Domains" fr = "Les domaines" file = "1121_018_domain.html" />
+				<book en = "Variables" fr = "Les variables" file = "1121_020_varia.html" />
+				<category en = "Modifiers" fr = "Les modificateurs" >
+					<book en = "CHILD" fr = "CHILD" file = "1121_025_modif.html#child" />
+					<book en = "DOM" fr = "DOM" file = "1121_025_modif.html#dom" />
+					<book en = "EXTERN" fr = "EXTERN" file = "1121_025_modif.html#extern" />
+					<book en = "FALSE" fr = "FALSE" file = "1121_025_modif.html#false" />
+					<book en = "FILE" fr = "FILE" file = "1121_025_modif.html#file" />
+					<book en = "LOWER" fr = "LOWER" file = "1121_025_modif.html#lower" />
+					<book en = "NULL" fr = "NULL" file = "1121_025_modif.html#null" />
+					<book en = "PREF" fr = "PREF" file = "1121_025_modif.html#pref" />
+					<book en = "SEP" fr = "SEP" file = "1121_025_modif.html#sep" />
+					<book en = "SUF" fr = "SUF" file = "1121_025_modif.html#suf" />
+					<book en = "TRUE" fr = "TRUE" file = "1121_025_modif.html#true" />
+					<book en = "UPPER" fr = "UPPER" file = "1121_025_modif.html#upper" />
+				</category>
+				<book en = "String expression" fr = "Expressions de chaînes de caractères" file = "1121_030_string.html" />
+				<book en = "Boolean expression" fr = "Expressions booléennes" file = "1121_035_bool.html" />
+				<book en = "Integer expression" fr = "Expressions numériques entières" file = "1121_040_integer.html" />
+				<book en = "Edition codes" fr = "Les codes d'édition" file = "1121_045_code.html" />
+				<book en = "Repository functions library" fr = "La bibliothèque des fonctions du référentiel" file = "1121_050_repo.html" />
+			</category>
+		</category>
+		<book en = "Python Shell" fr = "L'interpréteur Python" file = "1125_python.html" />
+		<book en = "Plug-ins" fr = "Les modules d'extensions (Plug-ins)" file = "1130_plugins.html" />
+	</category>
+	<category en = "Import / Export" fr = "Import / Export" >
+		<book en = "Export / Import XML" fr = "Export / Import XML" file = "1260_impexp_xml.html" />
+	</category>
+	<category en = "Troubleshooting" fr = "En cas de problème" >
+		<book en = "Severity of bugs" fr = "Sévérité des erreurs" file = "1305_severity.html" />
+		<book en = "Restart in Safe Mode" fr = "Redémarrage en mode sûr" file = "0130_safemode.html" />
+		<book en = "Error recovery" fr = "En cas d'erreur" file = "1310_error.html" />
+		<book en = "Getting help" fr = "Fichiers d'aide" file = "1315_help.html" />
+	</category>
+	<category en = "Appendices" fr = "Annexes" >
+		<book en = "Acronyms" fr = "Acronymes" file = "1510_acro.html" />
+	</category>
+</help>

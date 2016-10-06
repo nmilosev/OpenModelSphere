@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Les noms physiques</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Les noms physiques</b></font><br><br><br>
+
+
+
+Lorsque vous interfacez avec un SGBD, <b>Open ModelSphere</b> emploie le nom
+physique de l'objet. Il est possible d'entrer le nom physique de chaque objet manuellement.
+Autrement, vous pouvez utiliser la fonction de <b>Génération des noms physiques</b>.<br><br>
+<b>Open ModelSphere</b> fournit cette fonction qui génère automatiquement le nom
+physique des objets. Cette option est disponible dans le <b>menu principal</b> via <b>Outils >
+Générer > Noms physiques</b>, pour les <b>modèles de données</b>, <b>modèles de processus</b>,
+<b>modèles de domaines</b>, <b>bibliothèques de procédures</b>, <b>bases de données</b>, <b>modèles d'items
+communs</b> et <b>le noeud d'utilisateurs</b>. On permet également la sélection multiple.
+
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Options</b></font><br><br>
+
+
+Première ligne de concepts dans le menu de génération des noms physiques.<br><br>
+<img src="../images/GEN_PHYS_1_fr.jpg">
+
+<br><br>
+
+<b>Statut</b><br>
+<u>Désactivé</u> : Aucune génération pour ce concept.<br>
+<u>Partiel </u>: ne génère que pour les objets sans nom physique.<br>
+<u>Complet </u>: regénère les noms physiques de tous les objets.<br><br>
+
+<b>Chaîne de remplacement</b><br>
+Chaîne prenant la place du caractère du délimiteur de mot.<br><br>
+
+<b>Longueur</b><br>
+Longueur maximale des noms physiques générés.<br><br>
+
+<b>Unique</b><br>
+Rend les noms physiques générés uniques.<br><br>
+
+<b>Nombre de caractères par mot</b><br>
+Longueur maximale de chaque mot de nom physique.<br><br>
+
+<b>Casse</b><br>
+<u>Aucun changement</u>: pas de modification à la casse.<br>
+<u>MAJUSCULE </u>: change les caractères pour des lettres majuscules.<br>
+<u>minuscule</u> : change les caractères pour des lettres minuscules.<br><br>
+
+<br>
+Dans la section <b>Préférences</b>, vous pouvez indiquer les caractères qui seront utilisés en
+tant que <b>délimiteurs de mots</b>.
+
+<br><br>
+
+
+<img src="../images/GEN_PHYS_2_fr.jpg">
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le dictionnaire d'abréviation</b></font><br><br>
+Le dictionnaire d'abréviation contient les abréviations qui peuvent être employées dans
+le processus de génération (.srd).<br><br>
+C'est un fichier texte dont le contenu est formaté de cette façon :<br><br>
+<b>DIC=<br>
+client=clie<br>
+commande du client=commduclie<br></b>
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le fonctionnement</b></font><br><br>
+Voici comment les noms physiques sont générés :<ol>
+<li>L’application identifie les mots basés sur les délimiteurs de mot, en employant
+le nom de l'objet comme référence.<br><br></li>
+<li>Puis, en utilisant la chaîne de caractères au complet (un ou plusieurs mots),
+l’application recherche cette association de mots dans le dictionnaire d'abréviation
+et effectue les remplacements/changements. Si la chaîne n'est pas
+trouvée en entier, l’application recherche chaque mot, un à un.<br><br></li>
+<li>Ensuite, elle applique les contraintes (nombre de caractères par mot, caractères
+de remplacement, longueur et casse).<br><br></li>
+<li>Finalement, si l'option unique est sélectionnée, l’application vérifie l'unicité
+des concepts. Les conflits sont résolus en ajoutant un suffixe numérique au
+nom physique.<br></li>
+
+</ol>
+Un rapport est aussi généré.<br><br>
+<img src="../images/GEN_PHYS_REP_fr.jpg">
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Source prise en compte pour chaque concept.</b></font><br><br>
+<table cellspacing="0" cellpadding="5" border = "1">
+
+
+<tr><td><b>CONCEPTS</b>
+</td><td><b>SOURCE</b></td></tr>
+<tr><td>Association
+</td><td>Nom de l'association</td></tr>
+<tr><td>Contrainte de vérification
+</td><td>Nom de la contrainte de vérification</td></tr>
+<tr><td>Colonne
+</td><td>Nom de la colonne</td></tr>
+<tr><td>Item commun
+</td><td>Nom de l'item commun</td></tr>
+<tr><td>Modèle d'items communs
+</td><td>Nom du modèle d'items communs</td></tr>
+<tr><td>Modèle de données
+</td><td>Nom du modèle de données</td></tr>
+<tr><td>Base de données
+</td><td>Nom de la base de données</td></tr>
+<tr><td>Domaine
+</td><td>Nom du domaine</td></tr>
+<tr><td>Modèle de domaines
+</td><td>Nom du modèle de domaines</td></tr>
+<tr><td>Champ
+</td><td>Nom du champ</td></tr>
+<tr><td>Clé étrangère
+</td><td>CÉ + nom de la contrainte de clé étrangère</td></tr>
+<tr><td>Index
+</td><td>Nom de l'index</td></tr>
+<tr><td>Informix Dbspace
+</td><td>Nom du Dbspace</td></tr>
+<tr><td>Informix Sbspace
+</td><td>Nom du Sbspace</td></tr>
+<tr><td>Bibliothèque d'opérations
+</td><td>Nom de la bibliothèque d'opérations</td></tr>
+<tr><td>Oracle fichier de données
+</td><td>Nom du fichier de données</td></tr>
+<tr><td>Oracle stockage LOB
+</td><td>Nom du stockage LOB</td></tr>
+<tr><td>Oracle stockage de table imbriquée
+</td><td>Nom du stockage de table imbriquée</td></tr>
+<tr><td>Oracle paquetage
+</td><td>Nom du paquetage</td></tr>
+<tr><td>Oracle partition
+</td><td>Nom de la table + &lt;espace&gt; + nom de l'index + &lt;espace&gt; + nom du Tablespace + &lt;espace&gt; + nom de la partition</td></tr>
+<tr><td>Oracle ficher redo log
+</td><td>Nom du fichier redo log</td></tr>
+<tr><td>Oracle segment rollback
+</td><td>Nom du segment Rollback</td></tr>
+<tr><td>Oracle séquence
+</td><td>Nom de la séquence</td></tr>
+<tr><td>Oracle tablespace
+</td><td>Nom du Tablespace</td></tr>
+<tr><td>Paramètre
+</td><td>Nom du paramètre</td></tr>
+<tr><td>Clé primaire / unique
+</td><td>CP ou CU + &lt;espace&gt; + nom de la table + &lt;espace&gt; + nom de la clé</td></tr>
+<tr><td>Procédure
+</td><td>Nom de la procédure</td></tr>
+<tr><td>Projet
+</td><td>Nom du projet</td></tr>
+<tr><td>Rôle
+</td><td>Nom de l'association + &lt;espace&gt; + nom du rôle</td></tr>
+<tr><td>Table
+</td><td>Nom de la table</td></tr>
+<tr><td>Déclencheur
+</td><td>Nom du déclencheur</td></tr>
+<tr><td>Utilisateur
+</td><td>Nom de l'utilisateur</td></tr>
+<tr><td>Vue
+</td><td>Nom de la vue</td></tr>
+<tr><td>Modèle de processus
+</td><td>Nom du modèle de processus</td></tr>
+<tr><td>Processus
+</td><td>Nom du processus</td></tr>
+<tr><td>Dépôt
+</td><td>Nom du dépôt</td></tr>
+<tr><td>Entité externe
+</td><td>Nom de l'entité externe</td></tr>
+<tr><td>Flux
+</td><td>Nom du flux</td></tr>
+<tr><td>Qualificatif
+</td><td>Nom du qualificatif</td></tr>
+<tr><td>Ressource
+</td><td>Nom de la ressource</td></tr>
+
+</table>
+
+
+</font>
+</body>
+</html>
+

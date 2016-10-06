@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Le concept de classe</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Le concept de classe</b></font><br><img src="../images/dbjvclass.gif"> <img src="../images/dbjvinterface.gif"> <img src="../images/dbjvexception.gif"><br><br>
+
+
+Une classe est la description d'un ensemble d'objets qui partage les mêmes attributs,
+opérations, méthodes, relations et la même sémantique. La classe utilise un ensemble
+d'interfaces pour indiquer des collections d'opérations qu'elle fournit à son environnement.
+Une interface est la déclaration d'une collection d'opérations qui peut être utilisée pour
+définir un service offert par une instance.<br><br>
+Une exception est l’événement qui se produit pendant l'exécution d'un programme et
+perturbe le déroulement normal des instructions.<br><br>
+Dans <b>Open ModelSphere</b>, le type de classifiant de la classe déterminera s'il représente
+une classe Java, une interface ou une exception. Les stéréotypes peuvent être modifiés
+en accédant à la fenêtre de propriétés de la classe. Cependant, le terme Classe sera
+dorénavant utilisé pour représenter le concept de classe qui représente des classes,
+des interfaces et des exceptions.<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les propriétés des classes</b></font> <img src="../images/dbjvclass.gif"> <img src="../images/dbjvinterface.gif"> <img src="../images/dbjvexception.gif"><br><br>
+(sous l'onglet Conception de la fenêtre de propriétés)<br><ul>
+<li><b>Nom</b> : nom de la classe Java.<br><br></li>
+<li><b>Alias</b> : identifie un concept de façon différente (autre que par son nom).<br><br></li>
+<li><b>Stéréotype UML</b> : implementationClass, invariant, metacondition, postcondition,
+powertype, precondition, process, thread, type, utility, boundary, entity, control
+ou aucun.<br><br></li>
+<li><b>Type de classifiant</b> : utilisé pour préciser si c'est une <b>classe</b>, une <b>interface</b> ou une <b>exception</b>.<br><br></li>
+<li><b>Visibilité </b>: visibilité de la classe Java.<br><br></li>
+<li><b>Statique</b> : la classe Java est statique.<br><br></li>
+<li><b>Final</b> : la classe Java est finale.<br><br></li>
+<li><b>Collection</b> : la classe est un type de collection. Si elle est considérée comme
+une collection, la classe peut être spécifiée comme type de collection par défaut
+du projet (dans les propriétés du projet). Si tel est le cas, cela sera utilisé
+pour la création d'associations de type 'un à plusieurs'.<br><br></li>
+<li><b>Unité de compilation</b> : le fichier Java associé.<br><br></li>
+<li><b>Abstrait</b> : la classe Java est abstraite.<br><br></li>
+<li><b>Type de base</b> : la classe est un type de base. Cette propriété n'est utilisée que
+pour fin de documentation pour le moment.<br><br></li>
+<li><b>Description</b> : permet d'entrer une description en format texte.<br><br></li>
+
+</ul>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les propriétés des champs</b></font> <img src="../images/dboodatamember.gif"><br><br><ul>
+<li><b>Nom</b> : nom physique du champ.<br><br></li>
+<li><b>Alias</b> : identifie un concept de façon différente (autre que par son nom).<br><br></li>
+<li><b>Stéréotype UML</b> : invariant, postcondition, precondition, boundary, entity, control
+ou aucun.<br><br></li>
+<li><b>Visibilité</b> : précise la visibilité du champ.<br><br></li>
+<li><b>Type</b> : précise le type d'instances du champ.<br><br></li>
+<li><b>Type d'élément</b> : précise le type d'instances de la collection d'éléments. Le
+type d'élément n'est utilisé que pour fins de documentation.<br><br></li>
+<li><b>Utilisation de type</b> : précise un tableau et ses dimensions.<br><br></li>
+<li><b>Style d'utilisation de type</b> : précise la façon dont le tableau sera généré; c'est-à-dire, selon le type ou le nom.<br><br></li>
+<li><b>Statique</b> : précise le champ comme étant statique.<br><br></li>
+<li><b>Final</b> : précise le champ comme étant final.<br><br></li>
+<li><b>Provisoire</b> : précise le champ comme étant provisoire.<br><br></li>
+<li><b>Volatil</b> : précise le champ comme étant volatil.<br><br></li>
+<li><b>Valeur initiale</b> : précise la valeur initiale du champ.<br><br></li>
+<li><b>Description</b> : permet d'entrer une description en format texte.<br><br></li>
+
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les propriétés des méthodes</b></font> <img src="../images/dboomethod.gif"><br><br><ul>
+<li><b>Nom</b> : nom physique de la méthode.<br><br></li>
+<li><b>Alias</b> : identifie un concept de façon différente (autre que par son nom).<br><br></li>
+<li><b>Stéréotype UML</b> : create, destroy, invariant, postcondition, precondition,
+boundary, entity, control, implementor, manager, helper ou aucun.<br><br></li>
+<li><b>Corps</b> : précise le code Java de la méthode.<br><br></li>
+<li><b>Visibilité</b> : précise la visibilité de la méthode.<br><br></li>
+<li><b>Type de retour</b> : précise le type de retour de la méthode.<br><br></li>
+<li><b>Type d'élément de retour</b> : précise le type d'instances des éléments de la
+collection. Le type d'éléments n'est utilisé que pour fins de documentation.<br><br></li>
+<li><b>Utilisation de type</b> : précise un tableau et ses dimensions.<br><br></li>
+<li><b>Abstrait</b> : précise la méthode comme étant abstraite.<br><br></li>
+<li><b>Statique</b> : précise la méthode comme étant statique.<br><br></li>
+<li><b>Final</b> : précise la méthode comme étant finale.<br><br></li>
+<li><b>Natif</b> : précise la méthode comme étant native.<br><br></li>
+<li><b>Synchronisé</b> : précise la méthode comme étant synchronisée.<br><br></li>
+<li><b>Description</b> : permet d'entrer une description en format texte.<br><br></li>
+</ul>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les propriétés des constructeurs</b></font> <img src="../images/dbooconstructor.gif"><br><br><ul>
+<li><b>Nom</b> : nom physique du constructeur.<br><br></li>
+<li><b>Alias</b> : identifie un concept de façon différente (autre que par son nom).<br><br></li>
+<li><b>Stéréotype UML</b> : invariant, postcondition, precondition, boundary, entity, control
+ou aucun.<br><br></li>
+<li><b>Corps</b> : précise le code Java du constructeur.<br><br></li>
+<li><b>Visibilité</b> : précise la visibilité du constructeur.<br><br></li>
+<li><b>Description</b> : permet d'entrer une description en format texte.<br><br></li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les propriétés des blocs d’initialisation</b></font> <img src="../images/dbooinitblock.gif"><br><br><ul>
+<li><b>Nom</b> : permet d'identifier le bloc d'initialisation. Le nom n'est pas utilisé dans le
+processus de génération.<br><br></li>
+<li><b>Alias</b> : identifie un concept de façon différente (autre que par son nom).<br><br></li>
+<li><b>Stéréotype UML</b> : invariant, postcondition, precondition, boundary, entity, control
+ou aucun.<br><br></li>
+<li><b>Corps</b> : précise le code Java du bloc d’initialisation.<br><br></li>
+<li><b>Statique</b> : précise le bloc d’initialisation comme étant statique.<br><br></li>
+<li><b>Description</b> : permet d'entrer une description en format texte.<br><br></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (WinNT; I) [Netscape]">
+   <title>La classe ATTR</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<hr><b><font face="sans serif,arial,helvetica"><font color="#000000"><font size=+2>La
+classe ATTR</font></font></font></b>
+<br>&nbsp;
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><u>Param&egrave;tre</u>
+:</font></font></font>
+<ul>
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>fonction
+du r&eacute;f&eacute;rentiel de type <b>ATTR</b> qui retourne une valeur
+d’attribut, ou</font></font></font></li>
+
+<li>
+<font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>un
+m&eacute;ta-champ d'API</font></font></font></li>
+</ul>
+
+<p><br><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><u>Modificateurs
+facultatifs</u> :<b> DOM, NULL, PREF, SUF, LOWER, UPPER</b>.</font></font></font>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1><u>Algorithme</u>
+:</font></font></font>
+<br><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Si
+DOM est sp&eacute;cifi&eacute;, il trouve dans le domaine la r&egrave;gle
+correspondant &agrave; la valeur d’attribut et ex&eacute;cute la r&egrave;gle
+(les domaines sont d&eacute;crits dans une section plus loin). Dans le
+cas contraire, il convertit la valeur d’attribut en cha&icirc;ne de caract&egrave;res.</font></font></font>
+<br><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Si
+la cha&icirc;ne r&eacute;sultante est vide, il ex&eacute;cute la r&egrave;gle
+indiqu&eacute;e par NULL et retourne le r&eacute;sultat de NULL. Dans le
+cas contraire, il ex&eacute;cute la r&egrave;gle sp&eacute;cifi&eacute;e
+par PREF et pr&eacute;fixe la cha&icirc;ne r&eacute;sultante avec le r&eacute;sultat
+de PREF, puis il traite la r&egrave;gle indiqu&eacute;e par SUF et suffixe
+la cha&icirc;ne r&eacute;sultante avec le r&eacute;sultat de SUF.</font></font></font>
+<p><u><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Exemple
+1</font></font></font></u>
+<blockquote><tt><font color="#000000"><font size=+1>columnDefault&nbsp;&nbsp;
+ATTR ColumnDefault</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PREF = "DEFAULT ";</font></font></tt>
+<p><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Si
+la valeur retourn&eacute;e par la fonction du r&eacute;f&eacute;rentiel
+ColumnDefault est "USA", le r&eacute;sultat sera "DEFAULT USA" par contre,
+si la valeur est nulle, la cha&icirc;ne r&eacute;sultante sera vide.</font></font></font></blockquote>
+<u><font face="sans serif,arial,helvetica"><font color="#000000"><font size=-1>Exemple
+2</font></font></font></u>
+<br>&nbsp;
+<blockquote><tt><font color="#000000"><font size=+1>columnDefault&nbsp;&nbsp;&nbsp;&nbsp;
+ATTR "org.modelsphere.sms.or.db.DbORColumn.fInitialValue"</font></font></tt>
+<br><tt><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PREF = "DEFAULT ";</font></font></tt>
+<p><font color="#000000"><font face="sans serif,arial,helvetica"><font size=-1>Si
+la valeur retourn&eacute;e par le m&eacute;ta-champ </font></font><tt>fInitialValue</tt><font face="sans serif,arial,helvetica"><font size=-1>
+est "USA", le r&eacute;sultat sera "DEFAULT USA" par contre, si la valeur
+est nulle, la cha&icirc;ne r&eacute;sultante sera vide.</font></font></font></blockquote>
+
+<br>&nbsp;
+</body>
+</html>

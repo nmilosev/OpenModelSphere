@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Les variables</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Les variables</b></font><br><br><br>
+
+
+
+
+
+
+Une variable est un identifiant qui peut avoir plusieurs valeurs, quoique seulement une à la
+fois. La variable doit être déclarée avant d’être utilisée. Vous pouvez déclarer autant de
+variables que vous voulez. Toutes les déclarations de variables doivent être placées avant
+les définitions de règle dans un fichier gabarit. Une déclaration de variable respecte cette
+syntaxe :<br><br>
+<tt><font size = "+1">NEW [EXTERN] &lt;variable_type&gt; &lt;variable_name&gt; = &lt;initial_value&gt;;
+</font></tt><br><br>
+Où &lt;variable_name&gt; est un identifiant valide et &lt;variable_type&gt; représente le type de
+valeurs que la variable peut avoir. Les types de variable permis sont STRING, BOOLEAN et
+INTEGER. Le mot-clé EXTERN est facultatif, quoiqu’il ne peut qu’être spécifié sur des variables
+de type booléen. Une valeur initiale doit être définie pour chaque variable. Pour des
+variables de type booléen, la valeur initiale est TRUE ou FALSE. Pour des variables de chaîne,
+la valeur initiale est une chaîne de caractères placée entre guillemets ("). Pour des variables
+d'entier, la valeur initiale doit être une expression d'entier valide. Voici des déclarations de
+variables valides :<br><br>
+<tt><font size = "+1">NEW BOOLEAN generateHeaders = TRUE;<br>
+NEW EXTERN BOOLEAN generateHtml = FALSE;<br>
+NEW STRING defaultName = "default";<br>
+NEW INTEGER indentation = 2;</font></tt><br><br>
+Dès qu’elle est déclarée, une valeur peut être associée à une variable. L'attribution d’une
+valeur à une variable est exécutée par la classe de règle SET. Cette classe de règle respecte
+cette syntaxe :<br><br>
+<tt><font size = "+1">&lt;setrule_name&gt; SET(&lt;variable_name&gt;, &lt;variable_value&gt;);</font></tt>
+<br><br>
+Où &lt;setrule_name&gt; représente le nom qui identifie la règle SET; &lt;variable_name&gt; représente
+le nom d'une variable déclarée antérieurement et &lt;variable_value&gt; représente la
+valeur qui sera inscrite dans la variable (en écrasant la valeur précédente); &lt;variable_value&gt;
+dépend du type de variable.<br><br>
+Si la variable est de type STRING (qui signifie que &lt;variable_name&gt; a été déclaré avec le
+mot-clé STRING), donc &lt;variable_value&gt; est, soit une règle qui devra être traité, soit une
+expression de chaîne.<br><br>
+Si &lt;variable_value&gt; est une règle, son résultat sera inscrit dans la variable. Les règles de
+toutes les classes peuvent attribuer des variables de type chaîne. Si &lt;variable_value&gt;
+est une expression de chaîne, l'expression est évaluée et son résultat est inscrit dans la
+variable. Voici un exemple de règle SET, où &lt;variable_value&gt; est une règle :<br><br>
+
+<tt><font size = "+1">setLanguage SET(language, english); //english is a subrule<br><br>
+english TEMPL "English";</font></tt><br><br>
+
+Voici un exemple de règle SET, où &lt;variable_value&gt; est une expression de chaîne :<br><br>
+<tt><font size = "+1">NEW STRING english = "English"; //english is a string variable<br><br>
+setLanguage SET(language, STRING(english)); //STRING(english) is a string expression</font></tt><br><br>
+
+Les deux exemples produisent le même résultat. Consultez la section <a href = "fr_1121_030_string.html"><b>Expressions de
+chaînes</b></a> pour plus de détails sur ces expressions.<br><br>
+Il est préférable de donner à &lt;setrule_name&gt; un nom tel que setX, si la variable impliquée
+est nommée x. Ainsi, quand vous faites référence à cette règle SET dans une règle parent,
+vous saurez quelle variable est impliquée. Par exemple, si nous avons :<br><br>
+
+<tt><font size = "+1">templ TEMPL "$setLanguage;A new value has been assigned to
+the language variable.";</font></tt><br><br>
+
+nous savons que la valeur de la variable nommée ‘language’ changera au traitement de
+templ. Le résultat de templ sera :<br><br>
+A new value has been assigned to the language variable.<br><br>
+
+Car le résultat d'une règle SET est toujours une chaîne vide. Le texte English n'est pas
+montré à cette étape, il est seulement stocké dans la variable language. Pour obtenir la
+valeur stockée dans une variable, vous employez une règle GET dont la syntaxe est :<br><br>
+
+<tt><font size = "+1">&lt;getrule_name&gt; GET(&lt;variable_name&gt;);</font></tt><br><br>
+
+Rappelez-vous, il est préférable de donner à &lt;getrule_name&gt; le nom getLanguage si la
+variable impliquée est nommée language. Pour obtenir la valeur du langage et l'utilisation
+dans une chaîne de gabarit, nous pouvons définir ces règles :<br><br>
+
+<tt><font size = "+1">displayValue TEMPL "The current language is : $getLanguage;.";<br><br>
+getLanguage GET(language);</font></tt><br><br>
+
+Si la valeur stockée dans la variable language est English, le résultat de displayValue
+sera :<br><br>
+<tt><font size = "+1">The current language is : English.</font></tt>
+
+
+<br><br>
+
+
+
+</font>
+</body>
+</html>
+

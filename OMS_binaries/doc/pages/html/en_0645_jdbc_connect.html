@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Connection to a Database with JDBC</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Connection to a Database with JDBC</b></font><br><br><br>
+
+
+<b>Open ModelSphere</b> can establish a JDBC connection to a database. 
+Before trying to connect, be sure that the JDBC Driver is correctly installed. 
+See <a href = "en_0650_jdbc_instal.html">Install JDBC Driver</a>.
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Setting a driver</b></font><br><br>
+To establish the connection, go to the main menu and choose: <b>Tools > Database >Connect</b>.
+
+<br><br>
+<img src="../images/CONN_JDBC_en.jpg" >
+<br><br>
+1 - Create a new connection's setting by clicking on the <b>New</b> button and fill the name field for the next uses.
+<br><br>
+
+2 - Enter the <b>JDBC Driver class name</b>. (See <a href = "en_0650_jdbc_instal.html">Install JDBC Driver</a>) 
+Test if the JDBC Driver is detected by ModelSphere by pushing the <b>Test</b> button.
+<br><br>
+
+3 - Enter the <b>URL</b> to connect to the database (See the next section).
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>URL</b></font><br><br>
+
+The format of URL depends on the target database, but looks like :<br><br>
+jdbc:<b> {driver} </b>//<b> {host,</b>name or ip<b>} </b>:<b> {port} </b>/<b> {database name} </b><br><br>
+NB: host and port are optional.
+<br><br>
+
+Ex.<br>
+jdbc:postgresql://199.201.123.22:5400/database_1<br>
+jdbc:mysql://dbserver/mydb<br>
+jdbc:oracle:thin:@170.33.43.123:1521/oracl92 
+
+<br><br>
+Refer to the JDBC driver provider documentation to know the exact syntax of the URL.
+
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Default username and password</b></font><br><br>
+You can define a default username and a default password for the connection. But those fields can be left empty,
+ the username and the password will be asked during the process.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Connect</b></font><br><br>
+Once the setting is done, click on the <b>Select</b> button. 
+A window will appear for confirmation of the username and password, those fields contain the default username and password. 
+You can modify them if you need and confirm by clicking on the <b>OK</b> button.<br><br>
+<img src="../images/CONN_PSW_en.jpg" >
+<br><br>
+Another window will appear, to confirm the connection status and showing its informations.
+<br><br>
+To know if ModelSphere is connected, see if the database icon <img src="../images/dbordatabase.gif"> is active or not in the status bar.
+
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Disconnect</b></font><br><br>
+To disconnect from a database, go in the main menu and choose: <b>Tools > Database > Disconnect</b>.
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Connection Information</b></font><br><br>
+
+To see the connection information, go in the main menu and choose: <b>Tools > Database > Show Connection Info...</b>
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Troubleshoot</b></font><br><br>
+If ModelSphere is unable to establish a connection with the database, here are some items to verify : <ul>
+<li>Make sure the driver has been successfully installed and located. </li>
+<li>Make sure the IP address and the IP port are correct. </li>
+<li>Make sure a database is running and you are able to send SQL queries with the DBMS client tool. </li>
+<li>Make sure a firewall is not installed between your computer and the computer on which the database is running. </li>
+
+</ul>
+
+
+
+
+
+
+</font>
+</body>
+</html>
+

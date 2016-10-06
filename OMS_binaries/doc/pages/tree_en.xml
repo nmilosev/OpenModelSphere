@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><?xml-stylesheet type="text/xsl" href="xmlTree.xsl"?><!DOCTYPE tree SYSTEM 'tree.dtd'>
+<tree>
+  <branch id="Welcome">
+    <branchText>Welcome</branchText>
+    <leaf>
+      <leafText>Introduction</leafText>
+      <link>html/en_0010_intro.html</link>
+    </leaf>
+    <leaf>
+      <leafText>What is Open ModelSphere?</leafText>
+      <link>html/en_0020_whatis.html</link>
+    </leaf>
+  </branch>
+  <branch id="Gettingstarted">
+    <branchText>Getting started</branchText>
+    <leaf>
+      <leafText>Installation and requirements</leafText>
+      <link>html/en_0110_requirement.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Model creation wizard</leafText>
+      <link>html/en_0125_model_creation_wizard.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Restart in Safe Mode</leafText>
+      <link>html/en_0130_safemode.html</link>
+    </leaf>
+  </branch>
+  <branch id="Lookingattheworkarea">
+    <branchText>Looking at the work area</branchText>
+    <leaf>
+      <leafText>Selection manager</leafText>
+      <link>html/en_0210_selectmanager.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Menu</leafText>
+      <link>html/en_0220_menu.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Toolbars</leafText>
+      <link>html/en_0230_toolbars.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using the explorer</leafText>
+      <link>html/en_0240_explorer.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Working in the diagram window</leafText>
+      <link>html/en_0245_diagram_win.html</link>
+    </leaf>
+    <leaf>
+      <leafText>The status bar</leafText>
+      <link>html/en_0250_statusbar.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using the design panel</leafText>
+      <link>html/en_0260_designpanel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using the properties window</leafText>
+      <link>html/en_0270_propertieswin.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using the lists</leafText>
+      <link>html/en_0280_lists.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Modifying the options</leafText>
+      <link>html/en_0290_options.html</link>
+    </leaf>
+  </branch>
+  <branch id="Modelinganddesigninformation">
+    <branchText>Modeling and design information</branchText>
+    <leaf>
+      <leafText>Semantic objects and namespace</leafText>
+      <link>html/en_0305_namespace.html</link>
+    </leaf>
+    <leaf>
+      <leafText>The project concept</leafText>
+      <link>html/en_0310_project.html</link>
+    </leaf>
+  </branch>
+  <branch id="Predefinedcomponents">
+    <branchText>Predefined components</branchText>
+    <leaf>
+      <leafText>Built-in node</leafText>
+      <link>html/en_0315_buitin_node.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Target system</leafText>
+      <link>html/en_0320_targetsystem.html</link>
+    </leaf>
+    <leaf>
+      <leafText>User node</leafText>
+      <link>html/en_0325_usernode.html</link>
+    </leaf>
+    <branch id="UMLextensibility">
+      <branchText>UML extensibility</branchText>
+      <leaf>
+        <leafText>UML extensibility</leafText>
+        <link>html/en_0330_umlext.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Stereotypes</leafText>
+        <link>html/en_0331_uml_stereo.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Constraints</leafText>
+        <link>html/en_0332_uml_constr.html</link>
+      </leaf>
+    </branch>
+    <leaf>
+      <leafText>Notations</leafText>
+      <link>html/en_0335_notations.html</link>
+    </leaf>
+  </branch>
+  <branch id="Userdefinedcomponents">
+    <branchText>User-defined components</branchText>
+    <leaf>
+      <leafText>User-defined components</leafText>
+      <link>html/en_0340_user_def_comp.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Data model</leafText>
+      <link>html/en_0345_datamodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Domain model</leafText>
+      <link>html/en_0350_domainmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Common item model</leafText>
+      <link>html/en_0355_comitmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Operation library</leafText>
+      <link>html/en_0360_oplib.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Database</leafText>
+      <link>html/en_0365_database.html</link>
+    </leaf>
+    <leaf>
+      <leafText>User Target System</leafText>
+      <link>html/en_0367_usertargetsys.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Class model</leafText>
+      <link>html/en_0370_clasmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Process model</leafText>
+      <link>html/en_0375_processmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Link model</leafText>
+      <link>html/en_0380_linkmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>User-defined package</leafText>
+      <link>html/en_0383_userpack.html</link>
+    </leaf>
+  </branch>
+  <branch id="Workingwithdiagrams">
+    <branchText>Working with diagrams</branchText>
+    <leaf>
+      <leafText>Diagrams</leafText>
+      <link>html/en_0385_diagram.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Semantic and graphic information</leafText>
+      <link>html/en_0388_semgraphinfo.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Duplicate</leafText>
+      <link>html/en_0390_duplic.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Deleting objects</leafText>
+      <link>html/en_0393_delete.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Finding information</leafText>
+      <link>html/en_0396_find_info.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using styles</leafText>
+      <link>html/en_0405_styles.html</link>
+    </leaf>
+    <branch id="Diagramsproperties">
+      <branchText>Diagrams properties</branchText>
+      <leaf>
+        <leafText>Customizing the drawing area</leafText>
+        <link>html/en_0410_diagram.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Displaying the page number and title</leafText>
+        <link>html/en_0411_page_number.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Showing or hiding page breaks</leafText>
+        <link>html/en_0412_saut.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Defining the page number and title</leafText>
+        <link>html/en_0413_diagr_header.html</link>
+      </leaf>
+    </branch>
+    <leaf>
+      <leafText>Laying out the diagram</leafText>
+      <link>html/en_0414_layout.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Zoom, overview and magnifier</leafText>
+      <link>html/en_0415_view_zoom.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Automatic fitting</leafText>
+      <link>html/en_0420_autofit.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Duplicating in diagram</leafText>
+      <link>html/en_0390_duplic.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Repositioning</leafText>
+      <link>html/en_0430_reposit.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Changing right-angle to free-angle relationship</leafText>
+      <link>html/en_0435_r_angle.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Color and line styles</leafText>
+      <link>html/en_0440_color.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Drawing tools</leafText>
+      <link>html/en_0445_drawing.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Stamp tool</leafText>
+      <link>html/en_0450_stamp.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Inserting an image</leafText>
+      <link>html/en_0455_insertimage.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Creating semantic and graphical links</leafText>
+      <link>html/en_0460_semanticlinks.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using graphical notes</leafText>
+      <link>html/en_0465_notes.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using the grid</leafText>
+      <link>html/en_0470_grid.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Drag and drop</leafText>
+      <link>html/en_0475_drag_drop.html</link>
+    </leaf>
+  </branch>
+  <branch id="Conceptualdatamodeling">
+    <branchText>Conceptual data modeling</branchText>
+    <leaf>
+      <leafText>Acknowledging the basic concepts</leafText>
+      <link>html/en_2505_basic_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding entities and attributes</leafText>
+      <link>html/en_2510_entities_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding primary keys</leafText>
+      <link>html/en_2515_pk_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding unique keys</leafText>
+      <link>html/en_2520_uk_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Creating relationships</leafText>
+      <link>html/en_2525_relationships_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Modifying multiplicity</leafText>
+      <link>html/en_2530_multi_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Manipulating relationships</leafText>
+      <link>html/en_2533_relationship_manip_cdm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Converting a conceptual data model to a relational data model</leafText>
+      <link>html/en_2590_conversion_cdm.html</link>
+    </leaf>
+  </branch>
+  <branch id="Relationaldatamodeling">
+    <branchText>Relational data modeling</branchText>
+    <leaf>
+      <leafText>Acknowledging the basic concepts</leafText>
+      <link>html/en_0505_basic_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding tables and columns</leafText>
+      <link>html/en_0510_tables_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding primary keys</leafText>
+      <link>html/en_0515_pk_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding unique keys</leafText>
+      <link>html/en_0520_uk_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Creating associations</leafText>
+      <link>html/en_0525_associations_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Modifying multiplicity</leafText>
+      <link>html/en_0530_multi_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Manipulating associations</leafText>
+      <link>html/en_0533_association_manip.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding views</leafText>
+      <link>html/en_0535_view_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Managing foreign keys</leafText>
+      <link>html/en_0545_fk_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Merging columns</leafText>
+      <link>html/en_0550_merge_col.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Changing target system</leafText>
+      <link>html/en_0565_ch_target.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Converting a relational data model to a conceptual data model</leafText>
+      <link>html/en_0590_conversion_dm.html</link>
+    </leaf>
+  </branch>
+  <branch id="Physicaldatabasedesign">
+    <branchText>Physical database design</branchText>
+    <leaf>
+      <leafText>Working with different target systems</leafText>
+      <link>html/en_0605_target.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Specific concepts and attributes</leafText>
+      <link>html/en_0607_spec_concepts.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Generating physical names</leafText>
+      <link>html/en_0610_physiname.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding an index</leafText>
+      <link>html/en_0615_index.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Defining the operation library</leafText>
+      <link>html/en_0620_oplib.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Defining the database</leafText>
+      <link>html/en_0625_db.html</link>
+    </leaf>
+    <leaf>
+      <leafText>DBMS interface</leafText>
+      <link>html/en_0630_dbms.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Validation</leafText>
+      <link>html/en_0633_valid.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Forward engineering</leafText>
+      <link>html/en_0635_forward.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Connection to a database with ODBC</leafText>
+      <link>html/en_0640_odbc_conn.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Connection to a database with JDBC</leafText>
+      <link>html/en_0645_jdbc_connect.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Install JDBC driver </leafText>
+      <link>html/en_0650_jdbc_instal.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Running SQL statements</leafText>
+      <link>html/en_0655_sql_shell.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Reverse engineering</leafText>
+      <link>html/en_0660_reverse.html</link>
+    </leaf>
+    <leaf>
+      <leafText>JDBC interface</leafText>
+      <link>html/en_0670_jdbc_bdg.html</link>
+    </leaf>
+  </branch>
+  <branch id="Classmodeling">
+    <branchText>Class modeling</branchText>
+    <leaf>
+      <leafText>Class modeling</leafText>
+      <link>html/en_0703_cm.html</link>
+    </leaf>
+    <branch id="Concepts">
+      <branchText>Concepts</branchText>
+      <leaf>
+        <leafText>UML concepts</leafText>
+        <link>html/en_0705_uml_concept.html</link>
+      </leaf>
+      <leaf>
+        <leafText>Java concepts</leafText>
+        <link>html/en_0710_java_concept.html</link>
+      </leaf>
+    </branch>
+    <leaf>
+      <leafText>Building a class model</leafText>
+      <link>html/en_0715_built_cm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding classes, interfaces, exceptions and packages</leafText>
+      <link>html/en_0725_add_class_pack.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Package concept</leafText>
+      <link>html/en_0730_package.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Class concept</leafText>
+      <link>html/en_0735_class.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Association, aggregation and composition concepts</leafText>
+      <link>html/en_0740_asso_agg_compo.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Specifying inheritance</leafText>
+      <link>html/en_0745_inheritance.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Compilation unit concept</leafText>
+      <link>html/en_0750_compilunit.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Generate missing accessor methods</leafText>
+      <link>html/en_0753_accessor.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Validating a class model</leafText>
+      <link>html/en_0755_valid_cm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Generating Java files</leafText>
+      <link>html/en_0760_forw_java.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Reverse engineering Java</leafText>
+      <link>html/en_0770_reversJava.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Data and class modeling</leafText>
+      <link>html/en_0785_data_class_cm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Generating a package from a data model</leafText>
+      <link>html/en_0790_gen_pack_from_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Generating a data model from a package</leafText>
+      <link>html/en_0795_dm_to_cm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using object oriented design patterns</leafText>
+      <link>html/en_0797_oo_design_patterns.html</link>
+    </leaf>
+  </branch>
+  <branch id="Processmodeling">
+    <branchText>Process modeling</branchText>
+    <leaf>
+      <leafText>Acknowledging the basic concepts</leafText>
+      <link>html/en_0805_basic_pm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Building a process model</leafText>
+      <link>html/en_0810_pmodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding a context</leafText>
+      <link>html/en_0815_context.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding processes</leafText>
+      <link>html/en_0820_processes.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding flows</leafText>
+      <link>html/en_0825_flows.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding external entities</leafText>
+      <link>html/en_0830_entity.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding stores</leafText>
+      <link>html/en_0835_stores.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding resources</leafText>
+      <link>html/en_0840_res.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding qualifiers</leafText>
+      <link>html/en_0845_qual.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Decomposing processes</leafText>
+      <link>html/en_0848_decomp.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Updating the environment</leafText>
+      <link>html/en_0849_upd_env.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Splitting</leafText>
+      <link>html/en_0850_split.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Using frame / cells</leafText>
+      <link>html/en_0853_cells_pm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Generating process tree diagrams</leafText>
+      <link>html/en_0854_trees_pm_dgm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Merging</leafText>
+      <link>html/en_0855_merge.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Inserting additional process levels</leafText>
+      <link>html/en_0857_add_levels.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Assigning process time along with resource rate and cost</leafText>
+      <link>html/en_0860_calcul.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Renumbering</leafText>
+      <link>html/en_0865_renum.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Notations</leafText>
+      <link>html/en_0875_notations.html</link>
+    </leaf>
+  </branch>
+  <branch id="UsingUMLdiagrams">
+    <branchText>Using UML diagrams</branchText>
+    <leaf>
+      <leafText>Building a UML Model</leafText>
+      <link>html/en_0880_uml_add_model.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Adding a system</leafText>
+      <link>html/en_0883_uml_add_system.html</link>
+    </leaf>
+    <leaf>
+      <leafText>UML diagrams</leafText>
+      <link>html/en_0884_uml_diagrams.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Use Case diagram</leafText>
+      <link>html/en_0885_uml_use_case.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Package diagram</leafText>
+      <link>html/en_0886_uml_package.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Sequence diagram</leafText>
+      <link>html/en_0887_uml_sequence.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Collaboration diagram</leafText>
+      <link>html/en_0888_uml_collaboration.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Statechart diagram</leafText>
+      <link>html/en_0889_uml_statechart.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Activity diagram</leafText>
+      <link>html/en_0890_uml_activity.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Component diagram</leafText>
+      <link>html/en_0891_uml_component.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Deployment diagram</leafText>
+      <link>html/en_0892_uml_deployment.html</link>
+    </leaf>
+  </branch>
+  <branch id="Modelmanagement">
+    <branchText>Model management</branchText>
+    <leaf>
+      <leafText>Cleaning-up a model</leafText>
+      <link>html/en_0901_cleanup.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Verifying the integrity of a model</leafText>
+      <link>html/en_0902_verif_intgr.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Introducing user-defined package</leafText>
+      <link>html/en_0905_user_def.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Introducing the common items</leafText>
+      <link>html/en_0910_comit_intro.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Building a domain model</leafText>
+      <link>html/en_2540_domain_dm.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Introducing the link model</leafText>
+      <link>html/en_0915_link_model.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Reusing information: copying and moving objects</leafText>
+      <link>html/en_0920_reuse.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Building submodels</leafText>
+      <link>html/en_2570_submodel.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Comparing and integrating models</leafText>
+      <link>html/en_0930_integrat.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Grouping Diagrams</leafText>
+      <link>html/en_0935_Group.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Finding objects</leafText>
+      <link>html/en_0940_find.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Locking models</leafText>
+      <link>html/en_0945_lock.html</link>
+    </leaf>
+  </branch>
+  <branch id="Reports">
+    <branchText>Reports</branchText>
+    <leaf>
+      <leafText>Generating a diagram's image file</leafText>
+      <link>html/en_1005_sv_image.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Generating HTML documentation</leafText>
+      <link>html/en_1010_html_rep.html</link>
+    </leaf>
+  </branch>
+  <branch id="Productextensions">
+    <branchText>Product extensions</branchText>
+    <leaf>
+      <leafText>Creating user properties</leafText>
+      <link>html/en_1105_user_prop.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Integrating the user properties</leafText>
+      <link>html/en_1110_integ_user_prop.html</link>
+    </leaf>
+    <branch id="Templates">
+      <branchText>Templates</branchText>
+      <leaf>
+        <leafText>Templates</leafText>
+        <link>html/en_1120_template.html</link>
+      </leaf>
+      <branch id="Templatefileslanguagereference">
+        <branchText>Template files language reference</branchText>
+        <leaf>
+          <leafText>Working with template files</leafText>
+          <link>html/en_1121_001_work.html</link>
+        </leaf>
+        <branch id="Classesofthetemplaterules">
+          <branchText>Classes of the template rules</branchText>
+          <leaf>
+            <leafText>ATTR Class</leafText>
+            <link>html/en_1121_005_attr.html</link>
+          </leaf>
+          <leaf>
+            <leafText>CONN Class</leafText>
+            <link>html/en_1121_008_conn.html</link>
+          </leaf>
+          <leaf>
+            <leafText>TEMPL Class</leafText>
+            <link>html/en_1121_010_templ.html</link>
+          </leaf>
+          <leaf>
+            <leafText>COND Class</leafText>
+            <link>html/en_1121_012_cond.html</link>
+          </leaf>
+          <leaf>
+            <leafText>GROUP Class</leafText>
+            <link>html/en_1121_013_group.html</link>
+          </leaf>
+          <leaf>
+            <leafText>PLUGIN FUNCTION Class</leafText>
+            <link>html/en_1121_015_plug.html</link>
+          </leaf>
+        </branch>
+        <leaf>
+          <leafText>Domains</leafText>
+          <link>html/en_1121_018_domain.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Variables</leafText>
+          <link>html/en_1121_020_varia.html</link>
+        </leaf>
+        <branch id="Modifiers">
+          <branchText>Modifiers</branchText>
+          <leaf>
+            <leafText>CHILD</leafText>
+            <link>html/en_1121_025_modif.html#child</link>
+          </leaf>
+          <leaf>
+            <leafText>DOM</leafText>
+            <link>html/en_1121_025_modif.html#dom</link>
+          </leaf>
+          <leaf>
+            <leafText>EXTERN</leafText>
+            <link>html/en_1121_025_modif.html#extern</link>
+          </leaf>
+          <leaf>
+            <leafText>FALSE</leafText>
+            <link>html/en_1121_025_modif.html#false</link>
+          </leaf>
+          <leaf>
+            <leafText>FILE</leafText>
+            <link>html/en_1121_025_modif.html#file</link>
+          </leaf>
+          <leaf>
+            <leafText>LOWER</leafText>
+            <link>html/en_1121_025_modif.html#lower</link>
+          </leaf>
+          <leaf>
+            <leafText>NULL</leafText>
+            <link>html/en_1121_025_modif.html#null</link>
+          </leaf>
+          <leaf>
+            <leafText>PREF</leafText>
+            <link>html/en_1121_025_modif.html#pref</link>
+          </leaf>
+          <leaf>
+            <leafText>SEP</leafText>
+            <link>html/en_1121_025_modif.html#sep</link>
+          </leaf>
+          <leaf>
+            <leafText>SUF</leafText>
+            <link>html/en_1121_025_modif.html#suf</link>
+          </leaf>
+          <leaf>
+            <leafText>TRUE</leafText>
+            <link>html/en_1121_025_modif.html#true</link>
+          </leaf>
+          <leaf>
+            <leafText>UPPER</leafText>
+            <link>html/en_1121_025_modif.html#upper</link>
+          </leaf>
+        </branch>
+        <leaf>
+          <leafText>String expression</leafText>
+          <link>html/en_1121_030_string.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Boolean expression</leafText>
+          <link>html/en_1121_035_bool.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Integer expression</leafText>
+          <link>html/en_1121_040_integer.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Edition codes</leafText>
+          <link>html/en_1121_045_code.html</link>
+        </leaf>
+        <leaf>
+          <leafText>Repository functions library</leafText>
+          <link>html/en_1121_050_repo.html</link>
+        </leaf>
+      </branch>
+    </branch>
+    <leaf>
+      <leafText>Python Shell</leafText>
+      <link>html/en_1125_python.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Plug-ins</leafText>
+      <link>html/en_1130_plugins.html</link>
+    </leaf>
+  </branch>
+  <branch id="ImportExport">
+    <branchText>Import / Export</branchText>
+    <leaf>
+      <leafText>Export / Import XML</leafText>
+      <link>html/en_1260_impexp_xml.html</link>
+    </leaf>
+  </branch>
+  <branch id="Troubleshooting">
+    <branchText>Troubleshooting</branchText>
+    <leaf>
+      <leafText>Severity of bugs</leafText>
+      <link>html/en_1305_severity.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Restart in Safe Mode</leafText>
+      <link>html/en_0130_safemode.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Error recovery</leafText>
+      <link>html/en_1310_error.html</link>
+    </leaf>
+    <leaf>
+      <leafText>Getting help</leafText>
+      <link>html/en_1315_help.html</link>
+    </leaf>
+  </branch>
+  <branch id="Appendices">
+    <branchText>Appendices</branchText>
+    <leaf>
+      <leafText>Acronyms</leafText>
+      <link>html/en_1510_acro.html</link>
+    </leaf>
+  </branch>
+</tree>

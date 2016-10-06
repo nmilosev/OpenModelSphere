@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>La base de données</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>La base de données</b></font><br><img src="../images/dbordatabase.gif"><br><br>
+
+
+
+Le concept de base de données a une double utilisation. En soi, c’est un conteneur pour
+les concepts physiques (comme les tablespaces), mais il agit aussi comme un noeud
+de déploiement en reliant les modèles de données, les modèles de domaines et les
+bibliothèques d'opérations qui ont un système cible commun.<br><br>
+Pour ajouter une base de données, sélectionnez <b>projet > Ajouter > Ajouter une base
+de données > <i>système cible de votre choix</i></b>.<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les modèles déployés</b></font><br><br>
+
+
+<img src="../images/DB_DEPLOYED_fr.jpg">
+<br><br>
+<br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les options obligatoires</b></font><br><br>
+<b>Le modèle de données</b> <img src="../images/dboradatamodel.gif"><ul>
+<li>Vous pouvez associer un seul modèle de données à une base de
+données.</li>
+<li>Cette association est obligatoire lorsque vous utilisez une interface SGBD. Certains
+éléments du modèle de données peuvent être reliés aux objets physiques
+de la base de données (table, tablespace). L’application utilise l’association
+modèle de données - base de données afin de déterminer les objets physiques
+disponible pour le lien.</li>
+</ul>
+
+<b>Les modèles de domaines</b> <img src="../images/dbordomainmodel.gif"> <img src="../images/udtmodel.gif"><ul>
+<li>On peut lier deux modèles de domaines selon deux approches: le <img src="../images/udtmodel.gif"> <b>modèle type utilisateur</b> et le <b><img src="../images/dbordomainmodel.gif"> modèle de domaines par défaut</b></li>
+<li>Ces associations sont facultatives.</li>
+<li>Le <img src="../images/udtmodel.gif"> <b>modèle type utilisateur</b> est le contenant des types de données définis par l'utilisateur. Cette association est obligatoire si ces types sont générés par une interface SGBD.</li>
+<li>Le <img src="../images/dbordomainmodel.gif"> <b>modèle de domaines par défaut</b> est le modèle de domaines qu'utiliseront certaines fonctionnalités qui auront à générer des domaines.</li></ul>
+<b>La bibliothèque d’opérations</b> <img src="../images/dboraprogramunitlibrary.gif"><ul>
+
+<li>On peut lier une seule bilbiothèque d'opérations à une base de données.</li>
+<li>Cette association est obligatoire pour être utilisé par une interface SGBD.</li></ul>
+
+<b>Ces liens sont utilisés dans
+des fonctions (validation et
+génération) et dans l’association
+d'éléments de modèles
+avec les objets physiques
+de la base de données.</b>
+<br><br>
+Afin de définir les tablespaces, le modèle de données doit être relié à la
+base de données qui contient l’information quant à ces tablespaces.
+<br><br>
+
+
+
+
+</font>
+</body>
+</html>
+

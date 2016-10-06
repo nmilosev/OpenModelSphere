@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Reverse engineering Java/XMI</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Reverse engineering Java/XMI</b></font><br><br><br>
+
+
+
+
+There are many possible types of file in the reverse engineering process:<ul>
+
+<li>Java source files (.java)</li>
+<li>Java class files (.class)</li>
+<li>Java archives (.jar)</li>
+<li>Java compressed files (.zip)</li>
+<li>Web application archives files (.war).</li>
+<li>XMI files (<i>XML Metadata Interchange</i>) (.xmi .xml).</li>
+
+</ul><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Instructions</b></font><br><br>
+To perform a reverse engineering:<ol>
+<li>
+In the explorer, select the project where you want to generate the reversed model.<br><br></li>
+
+<li>
+Choose <b>Tools > Java/XMI > Java/XMI Reverse Engineering</b>. 
+The reverse engineering interface window will appear.
+<br><br>
+
+<img src="../images/REV_JAVA_en.jpg">
+<br><br></li>
+<li>
+This window lets you add the files that you plan to reverse. You can also select some directory containing a batch of files to reverse.
+Click on the corresponding buttons and choose all the files that you plan to reverse.
+<br><br></li>
+
+<li>
+Click on the Reverse Engineering button to start the reverse operation. 
+A message will appear at the end of the process letting you the opportunity to consult a report about the operation.
+The reversed model will appear in the explorer window.<br><br></li>
+
+</ol>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Diagrams et graphical representations</b></font><br><br>
+The new model doesn't have diagrams by default.
+You have to add them under the class model or under the desired packages.
+<b>Right-click</b> on the class model or a package icon and choose <b>Add > Diagram</b> in the <b>pop-up menu</b>.<br><br>
+A diagram will be added. To see this diagram, <b>double-click</b> on its icon in the <b>explorer</b> window.
+<br><br>
+An empty diagram window will appear.
+To generate the graphical representations of the objects, <b>right-click</b> in the <b>diagram background</b> and choose <b>Add Missing Diagram Objects</b> in the<b> pop-up menu</b>.
+<br><br>
+Now, for a better layout of the objects, 
+<b>right-click</b> in the <b>diagram background</b> and choose <b>Layout Entire Diagram</b> in the <b>pop-up menu</b>.
+<br><br><br>
+
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Result</b></font><br><br>
+After the reverse engineering process, you will obtain this:<ul>
+<li><b>{Unresolved}</b>: import is made on a package (*) and the class name is not
+prefixed.<br><br></li>
+<li><b>Application classes</b>: packages, classes and compilation units from the
+selected Java files or those in the directories.<br><br></li>
+<li><b>External references</b>: all the packages and classes referred to in the selected
+reversed classes.<br><br></li>
+</ul>
+
+
+
+
+
+</font>
+</body>
+</html>
+

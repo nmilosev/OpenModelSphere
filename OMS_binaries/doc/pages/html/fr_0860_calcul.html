@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Calcul du temps et des coûts des processus</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Calcul du temps et des coûts des processus</b></font><br><br><br>
+
+
+
+Il vous est possible d’attribuer un temps défini à un processus. Il suffit d’ajouter un
+ensemble d’attributs au processus et d’effectuer des calculs qui vous permettront d’afficher
+un temps partiel et un temps total. De plus, vous devez inclure des ressources
+dans vos calculs, puisque l’attribution de ressources à un processus est aussi un élément
+pour lequel vous pouvez préciser une période de mesure. Voici un exemple de
+l’utilisation de cette fonction.(Basé sur l'exemple fourni avec ModelSphere)<ol>
+<li>Dans l’<b>explorateur</b>, cliquez avec le bouton droit sur le processus 'Order Processing' et choisissez <b>Propriétés</b>.<br><br></li>
+<li>Entrez 15 dans le champ <b>Coût fixe</b> et appuyez sur <b>Retour</b>.<br><br></li>
+<li>Entrez 30 dans le champ <b>Temps fixe</b> et appuyez sur <b>Retour</b>.<br><br></li>
+<li>Sélectionnez Minutes comme <b>unité de mesure</b>.<br><br></li>
+<li>Cliquez sur <b>Appliquer</b>.<br><br>
+<img src="../images/CALCUL_1_fr.jpg">
+<br><br>
+<b>Une fois que vous avez établi le coût fixe et le temps fixe pour le processus 'Order Processing', 
+vous pouvez déterminer le montant
+de ressources utilisé par le système (taux d’occupation). Le taux
+d’occupation indique le montant d’une ressource utilisé pour un processus
+en particulier.</b><br><br>
+
+<i>Afin de conserver l’intégrité
+de votre modèle, vous devriez
+apprendre les nouveaux
+attributs et unités de
+temps implémentés ainsi
+que les règles de calcul et
+de validation décrites dans
+les sous-sections correspondantes.</i>
+<br><br></li>
+
+
+<li>De la même fenêtre de propriétés, choisissez l’<b>onglet Processus / Ressource</b>.<br><br></li>
+<li>L'onglet des Ressources apparaît. Choisissez 'Credit Manager'.<br><br></li>
+<li>Cliquez sous <b>Taux occupation</b> et entrez 10, puis sélectionnez <b>Heure</b> sous
+<b>Unité de temps</b>.<br><br></li>
+<li>Pour 'Data Entry Clerk', entrez 11 sous <b>Taux occupation</b> et sélectionnez
+<b>Heure</b> sous <b>Unité de temps</b>.<br><br></li>
+
+</ol>
+<img src="../images/CALCUL_2_fr.jpg">
+<br><br>
+
+Examinons une ressource pour voir la charge de travail concerné. La charge de travail
+est la somme de tous les taux d’occupation de processus pour cette ressource.<ol>
+<li>De l’<b>explorateur</b>, cliquez avec le bouton droit sur 'Credit Manager' et choisissez <b>Propriétés</b>.<br><br>
+<b>Remarquez que la charge de travail indiquée pour 'Credit Manager' est de 10 hr., soit la somme de tout les utilisations de cette ressource fait par les processus du modèle.</b><br><br></li>
+<li>Cliquez dans la boîte correspondant au <b>Coût</b>, entrez 20 pour le coût de la
+ressource et sélectionnez Heure comme <b>unité de temps</b>.<br><br></li>
+<li>Cliquez sur <b>Appliquer</b> et <b>Fermer</b>.<br><br></li>
+<li>Répétez l’opération pour 'Data Entry Clerk' avec 15 pour le <b>coût</b> et <b>Heure</b> comme <b>unité de temps.</b>
+Examinons maintenant le processus pour voir quel est le coût de la ressource.
+<br><br></li>
+<li>Cliquez avec le bouton droit sur le processus 'Order Processing' et choisissez <b>Propriétés</b>. 
+Il est à noter que le coût de ressource pour le processus est de
+365. Ce total est automatiquement calculé en prenant le coût de 'Credit Manager' (20 x 10 hr. = 200) et le coût de 'Data Entry Clerk' (15
+x 11 hr. = 165).<br><br>
+<img src="../images/CALCUL_3_fr.jpg" >
+<br><br></li>
+<li>Remarquez également que vous pouvez attribuer un coût fixe, lequel sera
+ajouté au coût de ressource calculé pour donner un coût partiel. Le coût total
+réflète tous les coûts de ce diagramme et tous les coûts des sous-processus
+de ce processus. Ceci donne une vue générale de la structure des coûts
+d’une entreprise.<br><br></li>
+
+
+</ol>
+
+<b>Nous vous suggérons d’apprendre les nouveaux attributs et les nouvelles
+unités de temps implémentés, ainsi que les règles de calcul et
+les résultats décrits dans la suite de cette section afin de conserver
+l’intégrité de votre modèle lorsque vous modifiez les unités de temps
+suivantes : unité de temps fixe (processus), unité de temps de taux
+d’occupation (lien processus-ressource) et unité de temps de coût (ressource).
+Dans la plupart des cas, vous pouvez vérifier l’exactitude de
+vos calculs en accédant à la fenêtre de propriétés d’un processus. Vous
+pouvez également produire et imprimer un rapport comprenant tous
+les attributs compris dans ces calculs pour détecter les contradictions
+et corriger les éléments erronés.</b>
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Attributs de temps</b></font><br><ul>
+<li><b>Temps fixe</b> : cet attribut, comme l’attribut Coût fixe, peut être entré manuellement
+par l’utilisateur. Le temps fixe représente une période qui ne tient pas
+compte du temps alloué pour les ressources ni du temps pour les processus
+inclus dans le processus éclaté.<br><br></li>
+<li><b>Temps partiel</b> : Le temps partiel représente la somme du temps fixe et du
+temps de ressource.<br><br></li>
+<li><b>Temps de ressource</b> : Cet attribut représente la somme des périodes de temps
+de tous les liens processus/ressource d’un processus. Ces périodes de temps
+sont définies dans l’attribut Taux d’occupation.<br><br></li>
+<li><b>Temps total</b> : Le temps total représente la somme du temps partiel d’un processus
+et de ses périodes de temps total enfant.<br><br></li>
+</ul><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Unités de temps</b></font><br><br>
+<i>Temps fixe, Temps partiel, Temps de ressource et Unités de temps total</i><ul>
+<li><b>Seconde, Minute, Heure</b> : Les valeurs associées à ces unités sont converties lorsque l’utilisateur modifie l’unité
+courante.<br><br></li>
+
+<li><b>Non-spécifié</b> : Cette valeur «nulle» est appliquée par défaut aux modèles antérieurs pour conserver
+l’intégrité des données. Les coûts fixes des ressources sont calculés. Cette valeur peut
+également être associée à un coût fixe de ressource.<br><br></li>
+
+<li><b>Unité de temps de taux d’occ. (Lien Ressource-Processus)</b> : Cette unité de temps s’applique à l’attribut Taux d’occ. existant (les périodes de temps
+d’une ressource liée à un processus).<br><br></li>
+
+<li><b>Unité de temps de coût (Ressource)</b> : Cette unité de temps s’applique à l’attribut Coût existant.<br><br></li>
+
+<li><b>Unité de temps de charge de travail (Ressource)</b> : Cette unité de temps s’applique à l’attribut Charge de travail (le temps accumulé d’une
+ressource dans le modèle).<br><br></li>
+</ul><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Règles de calcul et de validation</b></font><br><br>
+La validation des unités de temps est effectuée lorsque la valeur de temps correspondante
+est différente de 0.<br><br>
+<b>Processus</b><ul>
+<li><u>Temps partiel</u> : Le temps partiel est calculé si le temps fixe et le temps de
+ressource ne sont pas nuls et si leurs unités de temps appartiennent à la même
+famille d’unités de temps. Sinon :<br>
+- Temps partiel = 0<br>
+- Unité de temps partiel = n/a (nul)<br><br></li>
+<li><u>Temps de ressource</u> : Le temps de ressource est calculé seulement si toutes
+les ressources liées à un processus ont la même famille d’unités de temps
+associée aux taux d’occupation. Sinon :<br>
+- Temps de ressource = 0<br>
+- Unité de temps de ressource = n/a (nul)<br><br></li>
+<li><u>Temps total</u> : Le temps total est calculé seulement si tous les processus enfant
+et le temps partiel courant ont la même famille d’unités de temps. Sinon :<br>
+- Temps total courant = 0<br>
+- Unité de temps total courant = n/a (nul)<br><br></li>
+<li><u>Coût de ressource</u> : Le coût de ressource est calculé de deux façons :<br><br>
+1. Coût variable - Le produit du taux d’occupation et du coût de la ressource, si les unités de temps 
+  sont les mêmes.<BR><BR>2. Coût fixe - L’addition du coût si l'unité de temps du coût de la ressource est nulle. <BR><BR>N.B. Le coût d'une ressource est invalide et non calculé si l'unité de temps du taux d'occupation est nulle et que celle du coût de la ressource ne l'est pas. L’intégrité du coût des ressources peut être 
+  vérifiée en produisant un rapport sur les processus et les ressources 
+  liées.<br><br></li>
+</ul><br>
+<b>Ressource</b><ul>
+<li><u>Charge de travail</u> : La charge de travail est calculée seulement si tous les
+processus liés à une ressource ont la même famille d’unités de temps associée
+aux taux d’occ. Sinon :<br>
+- Charge de travail = 0<br>
+- Unité de temps de charge de travail = n/a (nul)<br><br></li>
+
+</ul><br>
+
+
+</font>
+</body>
+</html>
+

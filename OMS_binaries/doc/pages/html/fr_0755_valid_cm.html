@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Validation d'un modèle de classes</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Validation d'un modèle de classes</b></font><br><img src="../images/validatejava.gif"><br><br>
+
+
+<b>Open ModelSphere</b> a plus de flexibilité que ce que le langage Java permet.
+Ainsi, l'application possède une fonction de validation pour assurer que le code généré
+est de qualité. Utilisez cette puissante fonction pour surveiller les erreurs potentielles
+dans le code Java pendant que vous bâtissez vos modèles. Vous pouvez choisir de
+valider une classe, un groupe de classes (niveau du paquetage), ou toutes les classes
+d’un modèle (niveau du projet). 
+<br><br>
+Pour ce faire, suivez ces trois étapes faciles :<ol>
+<li>Mettre le modèle de classes en évidence.<br><br></li>
+<li>Dans le menu choisissez <b>Outils > Valider pour Java</b>.<br><br></li>
+<li>Un rapport apparaîtra indiquant si et où le modèle est inadmissible. Il est
+également possible de sauvegarder ou imprimer le rapport en utilisant le menu
+Fichier.</li>
+
+</ol><br>
+
+
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Validation de Classe / Exception / Interface (type de données
+abstrait - adt)</b></font><br><ul>
+<li>unicité du nom d'adt imbriqué à l'intérieur de la hiérarchie de confinement</li>
+<li>unicité du nom d'adt imbriqué à l'intérieur des adts imbriqués au même niveau</li>
+<li>unicité du nom d'adt à l'intérieur du même paquetage</li>
+<li>unicité du nom d'unité de compilation à l'intérieur du même paquetage</li>
+<li>un membre d'interface adt ne peut pas être déclaré privé, protégé ou paquetage</li>
+<li>un paquetage adt ne peut pas être déclaré de validation adt statique imbriqué</li>
+<li>une classe ne peut être une validation d’héritage adt finale et abstraite</li>
+<li>accessibilité à la super-classe et super-interface requise</li>
+<li>une super-classe ne peut pas être une classe finale</li>
+<li>une interface ne peut pas hériter d'une super-classe</li>
+<li>une classe ne peut pas hériter d'une de ses classes imbriquées adt super-interface</li>
+<li>une interface ne peut pas hériter d'une de ses interfaces ou énumérations imbriquées d'ancêtres d'adt</li>
+<li>une classe peut seulement hériter d'une super-classe directe à la fois</li>
+<li>une interface/classe ne peut pas implémenter/étendre la même super-interface directe plus d'une fois</li>
+<li>les super-méthodes abstraites implémentent les validations de déclaration des composantes adt</li>
+<li>un adt ne peut pas contenir deux champs avec le même nom</li>
+<li>un adt ne peut pas contenir deux adts imbriqués au même niveau et avec le même nom</li>
+<li>un adt imbriqué ne peut pas contenir une soeur adt imbriquée (au même niveau) avec le même nom</li>
+<li>un adt ne peut pas contenir deux opérations (deux méthodes ou deux constructeurs) avec les mêmes validations de champ de signature.</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Validation de type de champ</b></font><br><ul>
+<li>accessibilité au type de champ</li> 
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Validation du champ d’une classe</b></font><br><ul>
+<li>le champ d’une classe ne peut pas être déclaré final et volatil</li>
+<li>le champ d’une classe imbriquée ne peut pas être déclaré statique</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Validation du champ d’une interface</b></font><br><ul>
+<li>le champ d’une interface ne peut pas être déclaré privé, protégé ou paquetage</li>
+<li>le champ d’une interface ne peut pas être déclaré provisoire</li>
+<li>le champ (final) d’une interface ne peut être déclaré volatil</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Validation des paramètres d’opération d’une méthode</b></font><br><ul>
+<li>le paramètre doit être typé</li>
+<li>accessibilité au type de paramètre</li>
+<li>deux paramètres d’une méthode adt ne peuvent pas avoir le même nom de classe ou d’exception</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Validation des méthodes de classes</b></font><br><ul>
+<li>le champ d’une classe interne ne peut pas être déclaré statique</li>
+<li>une méthode abstraite doit apparaître dans une classe abstraite</li>
+<li>une méthode de classe ne peut pas être déclarée abstraite et privée</li>
+<li>une méthode de classe ne peut pas être déclarée abstraite et finale</li>
+<li>une méthode de classe ne peut pas être déclarée abstraite et statique</li>
+<li>une méthode de classe ne peut pas être déclarée abstraite et synchronisée</li>
+<li>une méthode de classe ne peut pas être déclarée abstraite et native</li>
+<li>une méthode abstraite ne peut pas avoir de corps</li>
+</ul>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Validation des méthodes d'interfaces</b></font><br><ul>
+<li>une méthode d'interface ne peut être déclarée ni privée, ni protégée, ni paquetage</li>
+<li>une méthode d’interface abstraite ne peut pas être déclarée finale</li>
+<li>une méthode d’interface abstraite ne peut pas être déclarée statique</li>
+<li>une méthode d’interface abstraite ne peut pas être déclarée synchronisée</li>
+<li>une méthode d’interface abstraite ne peut pas être déclarée native</li>
+<li>une méthode d’interface abstraite ne peut pas avoir de corps</li>
+<li>une méthode de redéfinissante ou cachée doit avoir le même type de retour que la méthode redéfinie</li>
+<li>une méthode ne peut pas redéfinir ou cacher une méthode avec un privilège d’accès inférieur</li>
+<li>une méthode finale de classe ne peut pas être cachée ou redéfinie</li>
+<li>une méthode statique de classe ne peut pas cacher une instance de méthode</li>
+<li>une instance de méthode ne peut pas redéfinir la méthode statique d’une classe</li>
+<li>une méthode redéfinissante ou cachée ne peut être déclarée pour déclencher plus d'exceptions vérifiées que la méthode redéfinie ou cachée</li>
+</ul>
+</font>
+</body>
+</html>
+

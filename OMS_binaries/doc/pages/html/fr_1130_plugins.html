@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Les modules d'extensions (Plug-ins)</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Les modules d'extensions (Plug-ins)</b></font><br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les modules d'extensions prédéfinis</b></font><br><br>
+  
+  <b>ModelSphere</b> vient avec plus d'une cinquantaine de modules.
+Ils sont pour la plupart reliés à des tâches comme la génération, la réto-ingénierie de système cibles spécifiques.
+Parce qu'ils sont chargés indépendamment de l'application, ils peuvent évolué indépendamment de l'application.
+Par exemple, il est possible de fournir et d'installer une version mise à niveau d'un module donné 
+sans réinstaller ModelSphere au complet. (Pour une mise à niveau d'un système cible par exemple.)
+  <br><br>
+  
+  Pour voir la liste de tous les modules d'extensions chargés, cliquez sur <b>Modules d'extensions...</b> dans le menu<b> Aide</b>.
+ <br><br>
+ Pour chaques module d'extension, le nom, la date de révision, l'auteur et le nom du point d'entrée y est affiché.
+  <br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le gestionnaire de modules d'extension</b></font><br><br>
+	  Le gestionnaire de modules d'extension vous permet de déterminer quels seront les modules d'extension qui seront chargés au lancement de l'application
+<br><br>
+  Il est alors possible de désactiver certains modules non utilisé par un utilisateur donné.
+  <br><br>
+  Pour ouvrir le gestionnaire de modules d'extension, cliquez sur l'item <b>Gestionnaire de module d'extension...</b> dans le menu <b>Aide</b>.
+ 
+  <br><br>
+  <img src="../images/PLUG_MAN_fr.jpg">
+  <br>  <br>  <br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Ajouter de nouveau modules d'extension</b></font><br><br>
+ Le gestionnaire de modules d'extension vous laisse aussi la chance d'ajouter de nouveaux modules d'extensions à <b>ModelSphere</b>.
+Appuyez sur le bouton <b>Ajouter...</b> et choisissez le point d'entrée du module (un fichier <i>.class</i>).
+Essayez les exemples fournis avec l'application. (Sélectionnez le fichier <b>Example1.class</b> dans le répertoire <b>example\plugins\classes</b>.)
+
+   <br>  <br>
+   
+ <b>Notez que les nouveaux modules d'extension n'apparaîtront pas immédiatement dans la liste, mais le seront uniquement la prochaine fois que le gestionnaire sera invoqué. 
+</b>
+  <br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Le fichier <i>modelsphere.plugins</i></b></font><br><br>
+   La liste affichée par le gestionnaire de modules d'extension provient d'un fichier <b>modelsphere.plugins</b> .
+   Il est possible d'éditer ce fichier texte dans le but d'activer/désactiver manuellement un module donné, 
+   ou d'en ajouter un. (Il est évidemment recommander d'utiliser le gestionnaire de modules 
+   d'extension pour faire ce genre d'opération.)
+   Il est aussi possible d'y effacer les entrées de certain module, d'une façon permanente. 
+   
+  <br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les modules d'extension personnalisés</b></font><br><br>
+  Il est possible pour les utilisateurs de développer leurs propres modules d'extension en Java.
+  Examinez les exemples fournis avec l'application tel que discuté plus tôt.
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Managing foreign keys</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Managing foreign keys</b></font><br><img src="../images/dborforeign.gif"><br><br>
+
+
+
+<b>Foreign keys are used to establish and maintain relational links in the
+database. They are automatically generated, based on the associations
+and their connectivity.</b><br><br>
+The foreign keys represent the relationship between tables. Each child table contains
+a copy of its parent table’s primary key. This copy is called foreign key.<br><br>
+Foreign keys are managed
+off-line, which means that
+the user has the responsibility
+of maintaining the referential
+integrity of the data model.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Generating foreign keys</b></font><br><br>
+
+
+
+First, the <b>data model</b> you have created has to be <b>highlighted</b> in the <b>explorer window</b>,
+then perform the following steps:<ol>
+<li>Select <b>Tools > Foreign keys > Generate foreign keys</b>. The generate foreign
+keys window will appear.<br><br></li>
+<li>Choose the needed options (for information on the options, see next page).<br><br>
+<img src="../images/GEN_FK_en.jpg">
+<br><br></li>
+
+<li>Confirm with the <b>Generate Foreign Keys</b> button to perform the operation.
+A report will appear at the end of the operation.<br><br></li>
+</ol>
+<b>Modifications to NULL/NOT NULL possible will be applied automatically
+if they were needed to validate the model according to multiplicity. However,
+it will not be reported.</b><br><br>
+
+Select the Report button if
+you want to see the report
+before the generation. Remember,
+it will not procede to
+the foreign key generation.<br><br><b>NOTE: For Informix data models ONLY, the foreign columns refering to primary or unique
+key columns of type SERIAL or SERIAL8 will be set as INTEGER or INT8.</b><br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Generate foreign keys: options</b></font><br><br>
+Several options are offered during the generation process to control the actions applied
+to the existing foreign key columns.<br><br>
+<b>Orphan columns:<br>
+A column is said to be an orphan when it is indicated as being foreign and the
+referenced primary or unique key column is not present in the model.</b><br><br>
+<b><u>Delete orphan columns</u></b><br>
+<li>Orphan foreign columns will be deleted when generating foreign keys.</li><br><br>
+<b><u>Keep orphan columns as they are</u></b><br>
+<li>Orphan foreign columns will be kept when generating foreign keys.</li><br><br>
+<b><u>Set orphan columns as basic columns</u></b><br>
+<li>Orphan foreign columns’ “foreign indicators” will be set to false when generating
+foreign keys.</li><br><br>
+<br>
+
+
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Updating descriptors</b></font><br><br>
+It is quite common to have foreign column properties differ from referenced primary
+or unique key columns. The list of options of descriptors update offers the possibility
+to propagate primary or unique key columns information to their corresponding foreign
+columns.<br><br> Here are the five different descriptors:<ul>
+<li>Name</li>
+<li>Physical name</li>
+<li>Alias</li>
+<li>Type, length, Nbr. decimals</li>
+<li>Common item</li>
+</ul>
+<br><br>
+After the foreign key generation, your model should look similar to the following:
+<br><br>
+<img src="../images/GEN_FK_2_en.jpg">
+<br><br>
+Example of a foreign key generation report:
+<br><br>
+<img src="../images/GEN_FK_REP_en.jpg">
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Delete foreign keys</b></font><br><br>
+This feature deletes foreign key constraints and columns for the whole data model.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Propagate to foreign key columns</b></font><br><br>
+Propagate primary or unique key columns' attributes to corresponding
+foreign key columns for the entire data model or a selection of columns (available on the column concept).
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Impact of association role properties</b></font><br><br>
+Some of the properties of the association role have an impact on the foreign key
+management.<br><br>
+<b>Navigability</b><br><br>
+It is applicable to the child end of the association. The association role has to be
+navigable for a foreign key to be generated. Apply on links between objects by selecting
+its value indicator (red square here).
+<br><br>
+<img src="../images/GEN_FK_NAV_en.jpg">
+<br><br><br>
+<b>Constraint types</b><ul>
+<li><b>Foreign key</b>: the referential integrity represented by the association role will
+be implemented by foreign key constraint and the corresponding columns
+will be generated according to the referenced constraint selection.<br><br></li>
+<li><b>Trigger</b>: the referential integrity represented by the association role will be
+implemented by a database trigger. No foreign key constraint or column will
+be generated for this role.<br><br></li>
+<li><b>Application</b>: the referential integrity represented by the association role will
+be implemented in application code. No foreign key constraint or column will
+be generated.<br><br></li>
+<li><b>Unspecified</b>: will have the same behavior as the foreign key option.</li>
+</ul><br>
+<b>Referenced constraint</b><br><br>
+It is applicable only on primary or unique keys. The referenced constraint identifies a
+specific primary or unique key. If however, it returns an unspecified result, by default,
+the application will assume a reference to the primary key.
+<br><br><br>
+</font>
+</body>
+</html>
+

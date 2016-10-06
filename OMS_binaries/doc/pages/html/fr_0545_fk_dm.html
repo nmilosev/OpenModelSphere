@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Gérer les clés étrangères</title>
+</head>
+
+<body bgcolor = "ffffff"><font face="sans serif,arial,helvetica" color="000000" size="2">
+
+<hr><font face="sans serif,arial,helvetica" color="000000" size="5"><b>Gérer les clés étrangères</b></font><br><img src="../images/dborforeign.gif"><br><br>
+
+
+<b>
+Une clé étrangère est employée pour établir et maintenir un lien relationnel
+dans la base de données. Les clés étrangères sont générées
+automatiquement par l’application, en se basant sur les associations
+et leurs connectivités.</b><br><br>
+Les clés étrangères représentent la relation entre les tables. Chaque table enfant contient
+une copie de la clé primaire de sa table parent. Cette copie s’appelle la clé étrangère.<br><br>
+
+
+Les clés étrangères sont
+gérées hors connexion, impliquant
+que l'utilisateur a la
+responsabilité de maintenir
+l'intégrité référentielle du
+modèle de données.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Générer les clés étrangères</b></font><br><br>
+
+
+
+Vous devez, tout d’abord, vous assurez qu’au moins deux tables soient reliées par une
+association, que la table parent ait une clé primaire et que l'association soit navigable à
+partir de la table enfant. <b>Il faut également que le <u>modèle de données</u> que vous avez créé
+soit mis en évidence dans la fenêtre <u>Explorateur</u></b>. Procédez ensuite avec les étapes
+suivantes :<ol>
+<li>Choisissez <b>Outils > Clés étrangères > Générer les clés étrangères</b>. La
+fenêtre de génération de clés étrangères apparaîtra.<br><br></li>
+<li>Choisissez les options nécessaires (pour l'information sur ces options, voir
+page suivante).<br><br>
+<img src="../images/GEN_FK_fr.jpg">
+<br><br></li>
+<li>Confirmez avec le bouton <b>Générer les clés étrangères</b> pour exécuter l'opération.
+Un rapport apparaîtra à la fin de l'opération.<br><br></li>
+</ol>
+
+<b>Les modifications au statut de la propriété valeur nulle possible seront
+appliquées automatiquement si elles étaient nécessaires pour valider
+le modèle selon la multiplicité. Cependant, cela ne sera pas annoncé
+dans le rapport.</b><br><br>
+
+Optez pour le bouton Rapport
+si vous voulez voir le
+compte-rendu avant la génération
+des clés. Cependant,
+cette action n'engendrera
+pas la génération des
+clés étrangères.
+<br>
+<br><b>NB : Pour les modèles de données Informix SEULEMENT, les colonnes étrangères qui se
+rapportent aux colonnes de clés primaires ou uniques de type PÉRIODIQUE ou SÉRIAL8
+seront mises à ENTIER ou INT8.</b>
+<br><br><br>
+
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Modifier les options de génération des clés étrangères</b></font><br><br>
+<b>Open ModelSphere</b> offre plusieurs options pendant le processus de génération
+afin de contrôler les actions appliquées aux colonnes de clés étrangères existantes.<br><br>
+<b>Les colonnes orphelines : <br>
+On dit qu'une colonne est orpheline quand elle est considérée comme étant étrangère
+et que la colonne de clé primaire ou unique n'est pas présente dans le modèle.</b><br><br>
+<b><u>Supprimer les colonnes orphelines</u></b><br>
+<li>Les colonnes étrangères orphelines seront supprimées lors de la génération
+des clés étrangères.</li><br><br>
+<b><u>Garder les colonnes orphelines intactes</u></b><br>
+<li>Les colonnes étrangères orphelines seront gardées lors de la génération des
+clés étrangères.</li><br><br>
+<b><u>Fixer les colonnes orphelines en tant que colonne de base</u></b><br>
+<li>Les “indicateurs étrangers" des colonnes étrangères orphelines seront mis à
+Faux lors de la génération des clés étrangères.</li><br><br>
+<br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Mettre les descripteurs à jour</b></font><br><br>
+Il est tout à fait commun que les propriétés des colonnes étrangères diffèrent des colonnes
+de clés primaires ou uniques référencées. La liste des options de mise à jour de
+descripteurs offre la possibilité de propager l'information des colonnes clés primaires ou
+uniques à leurs colonnes étrangères correspondantes.<br><br>Voici les cinq (5) descripteurs
+différents :<ul>
+<li>Nom</li>
+<li>Nom physique</li>
+<li>Alias</li>
+<li>Type, longueur, nombre de décimales</li>
+<li>Item commun</li>
+
+</ul>
+<br><br>
+Au terme de l’opération, votre écran devrait ressembler à celui-ci :
+<br><br>
+<img src="../images/GEN_FK_2_fr.jpg">
+<br><br>
+Voici un exemple de rapport de génération des clés étrangères :
+<br><br>
+<img src="../images/GEN_FK_REP_fr.jpg">
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Supprimer les clés étrangères</b></font><br><br>
+Cette fonction supprime les contraintes et colonnes de clés
+étrangères pour le modèle de données en entier.
+<br><br><br>
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Propager aux colonnes de clés étrangères</b></font><br><br>
+Cette fonction sert à propager les attributs de clés primaires
+ou uniques aux colonnes de clés étrangères correspondantes pour le
+modèle de données en entier ou pour une sélection de colonnes. (Disponible sur le concept colonne)
+<br><br><br>
+
+<font face="sans serif,arial,helvetica" color="000000" size="4"><b>Les propriétés du rôle d'association</b></font><br><br>
+Certaines propriétés du rôle d'association ont un impact sur la gestion des clés étrangères.<br><br>
+<b>Navigable</b><br><br>
+Cet attribut est applicable à l’extrémité enfant de l'association. Le rôle d'association doit
+être navigable pour qu’une clé étrangère soit générée. Appliquez sur des associations
+entre objets en choisissant l’indicateur de valeur (carré rouge).
+<br><br>
+<img src="../images/GEN_FK_NAV_fr.jpg">
+<br><br><br>
+<b>Les types de contraintes</b><ul>
+<li><b>Clé étrangère</b> : l'intégrité référentielle représentée par le rôle d'association sera
+implémentée par la contrainte de clé étrangère. Les colonnes correspondantes
+seront générées selon le choix de contrainte.<br><br></li>
+<li><b>Déclencheurs</b> : l'intégrité référentielle représentée par le rôle d'association sera
+implémentée par un déclencheur de base de données. Aucune contrainte de
+clé étrangère ou colonne ne seront générées pour ce rôle.<br><br></li>
+<li><b>Application</b> : l'intégrité référentielle représentée par le rôle d'association sera
+implémentée dans le code d'application. Aucune contrainte de clé étrangère ou
+colonne ne sera générée.<br><br></li>
+<li><b>Non spécifié </b>: aura le même comportement que l'option clé étrangère.</li>
+</ul><br>
+<b>La contrainte référencée</b><br><br>
+Applicable seulement sur les clés primaires ou uniques, la contrainte référencée identifie
+une clé précise. Cependant, si elle rend un résultat non spécifié, l’application présumera,
+par défaut, une référence à la clé primaire.
+<br><br><br>
+
+
+</font>
+</body>
+</html>
+
