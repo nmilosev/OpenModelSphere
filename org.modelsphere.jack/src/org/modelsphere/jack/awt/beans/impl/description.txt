@@ -1,0 +1,57 @@
+
+
+PACKAGE : properties
+
+Provide one viewer per property type.
+A viewer(accessor) is made of a renderer (to display the value) and an editor (to set the value).
+
+EXTERNAL DEPENDENCIES :
+(BeanDialogImpl)import org.modelsphere.jack.awt.beans.BeanDialog;
+
+PUBLIC CLASS :
+
+PropertyDialog
+  BeanDialogImpl(bean) : define a bean dialog for a bean object
+  BeanDialogImpl(bean, beaninfo) : define a bean dialog for a bean object
+  BeanDialog(arraylist) : an arraylist of objects,
+    where objects are in {Boolean, Integer, String}  //TODO
+  JPanel beanDialogImpl.createPanel() : create a JPanel to render/edit a bean
+
+
+PACKAGE CLASSES :
+
+BeanDialogImpl
+CellViewerMapping : associates a property type to a type viewer.
+
+Implemented types :                       Implementation :
+Boolean                                   CheckBox
+Color                                     ColorChooser
+File                                      FileViewer
+Integer                                   TextField, non-numerical characters filtered
+String                                    TextField
+
+
+SubTypes :                  Criteria :                   Implementation :
+Directory                   file.isDirectoty()           Directory Chooser
+ImageFile                   file.getName().endsWith()    Paint
+
+
+Type Viewer:
+AbstractViewer : abstraction of all viewers
+DirectoryViewer : a file chooser, but only folders can be selected.
+EnumerationViewer : view an enumeration as a pulldown list.
+ImageViewer : a file chooser, but only images can be selected. (to do: display a preview of the image)
+
+
+Other types to be supported eventually (all must be concrete and inherit from Serializable) :
+java.awt:  Cursor, Dimension, Font, Point, Rectangle
+java.lang: Double, Float
+java.net:  InetAddress, URL
+java.util: Date, Locale, SimpleTimeZone,
+
+==============
+
+
+
+Type Mapping:
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin format="2.0" className = "com.neosapiens.plugins.reverse.java.ReverseJavaBytecodePlugin2">
+	<author>neosapiens inc.</author>	
+	<authorEmail>${email}</authorEmail>	
+	<authorURL>${url}</authorURL>	
+	<date>09-11-2009</date>	
+	<description>${description}</description>	
+	<image>${image}</image>	
+	<jar>lib/plugin.jar</jar>	
+	<license>${license}</license>	
+	<name>${name}</name>	
+	<requiredBuild>905</requiredBuild>	
+	<resourceBundle>locale</resourceBundle>	
+	<type>org.modelsphere.jack.plugins.Plugin2</type>	
+	<version>1.0.0 (beta)</version>	
+
+    <extension className="org.modelsphere.jack.plugins.xml.extensions.MenuExtension">
+        <actionName>ReverseJavaBytecode</actionName>
+   		<actionLabel>${actionName}</actionLabel>
+   		<actionIcon>${actionIcon}</actionIcon>
+    	<menuPath>tools/java</menuPath>
+    	<menuInsert>under</menuInsert>
+    </extension>
+
+</plugin>

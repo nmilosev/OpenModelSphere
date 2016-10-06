@@ -1,0 +1,46 @@
+
+                  NOTES FOR THE EVOLUTION OF THE META-MODEL
+
+  name: notes_genmeta.txt
+  description: This document lists future improvements/bug fixes for the meta-model
+
+
+GENERAL
+=======
+
+  
+  1) Class DbSMSLinkModel, French plural name must be "modèles de lien", 
+     and not "modèle de lienss"
+
+  2) Extract code from Meta-Model's method body, and replace it in 
+     DbInitialization.java
+
+  3) DbStyle: prefix for error/warning (?)
+
+  4) DbStyle: show recent changes 
+
+
+RELATIONAL
+==========
+
+  1) Class DbORCommonItem, field m_null must be typed "SrBoolean", 
+     and not "boolean" (conflict)
+
+
+OBJECT
+======
+
+  1) Support generics for classes that have more than one element type 
+     (eg. Map<K, V> )
+  2) prefix field/method (to support Keys And Locks Style)
+  3) EMF fields: isUnique, isUnsettable, lower, upper, /isRequired, /isMany
+
+
+BPM
+===
+
+  1) BPM: Added Currency (US$, Euro, etc.) in cost
+  2) BPM: Currently supported: sec, min, hr.  
+        Add days, weeks, years.  
+        Specify: nb hours/day; nb hours/week; nb days/year.
+		

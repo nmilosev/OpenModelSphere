@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin format="2.0" className = "org.modelsphere.plugins.diagram.tree.ProcessTreePlugin">
+	<author>neosapiens inc.</author>
+	<authorEmail>${email}</authorEmail>
+	<authorURL>${url}</authorURL>
+	<date>10-02-2010</date>
+	<description>${description}</description>
+	<image>${image}</image>
+	<jar>lib/plugin.jar</jar>
+	<license>${license}</license>
+	<name>${name}</name>
+	<requiredBuild>950</requiredBuild>
+	<resourceBundle>locale</resourceBundle>
+	<type>org.modelsphere.jack.plugins.Plugin2</type>
+	<version>1.0.1</version>
+	
+	<extension className="org.modelsphere.jack.plugins.xml.extensions.PopupExtension">
+    	<actionLabel>${actionLabel}</actionLabel>
+    	<metaClasses>org.modelsphere.sms.be.db.DbBEDiagram,org.modelsphere.sms.oo.java.db.DbJVPackage,org.modelsphere.sms.oo.java.db.DbJVClass,org.modelsphere.sms.or.db.DbORModel</metaClasses>
+    	<popupSubmenu>${submenu}</popupSubmenu>
+	</extension>  
+    
+</plugin>

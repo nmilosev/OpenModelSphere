@@ -1,0 +1,24 @@
+/*
+ * The main purpose of this emfatic code is to provide a "pseudo-code" 
+ * more readable than the .ecore format.  It may require manual editing
+ * to be 100% compliant to the specification of the Emfatic programming 
+ * language. 
+ */
+package ${package.qualifiedName};
+
+#foreach ($class in $package.classes)
+#set($superClasses = $class.group(" extends ", $class.superClasses, ", ", "", ""))
+class ${class.name}${superClasses} {
+#foreach ($attribute in $class.attributes)
+  attr $attribute.type $attribute.name;
+#end
+#foreach ($reference in $class.references)
+#if ($reference.isContainment())
+  val ${reference.type}${reference.emfaticMultiplicity} $reference.name;
+#else
+  ref ${reference.type}${reference.emfaticMultiplicity} $reference.name;
+#end
+#end
+}
+
+#end 

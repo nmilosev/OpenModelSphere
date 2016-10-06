@@ -1,0 +1,25 @@
+#set($packageDeclaration = $class.group("package ", $class.package, ";", ""))
+$packageDeclaration
+
+/**
+ ** Interface $class.name
+ **/
+#set($classModifiers  = $class.group("", $class.javaModifiers, " ", " ", ""))
+#set($superInterfaces = $class.group(" extends ", $class.superInterfaces, ", ", "", ""))
+${classModifiers}interface ${class.name}$superInterfaces { 
+  //Fields
+#foreach ($field in $class.fields)
+#set($fieldModifiers = $field.group("", $field.javaModifiers, " ", " ", ""))
+#set($initialValue = $field.group(" = ", $field.initialValue, "", ""))
+  ${fieldModifiers}${field.type} ${field.name}${initialValue};
+#end
+
+  //Methods
+#foreach ($method in $class.methods)
+#set($methodModifiers  = $method.group("", $method.javaModifiers, " ", " ", ""))
+#set($methodParameters = $method.group("(", $method.parameters, ", ", ")", "()"))
+#set($methodExceptions = $method.group(" throws ", $method.exceptions, ", ", "", ""))
+  ${methodModifiers}${method.type} ${method.name}${methodParameters}${methodExceptions};
+#end
+
+} //end class $class.name 

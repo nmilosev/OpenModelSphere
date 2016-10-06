@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/org.modelsphere.jack"/>
+	<classpathentry kind="lib" path="lib/lablib-checkboxtree-3.0.2.jar"/>
+	<classpathentry kind="lib" path="/org.modelsphere.jack/lib/velocity-1.6.1/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="/org.modelsphere.jack/lib/velocity-1.6.1/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="/org.modelsphere.jack/lib/jgrapht-all.jar"/>
+	<classpathentry kind="lib" path="/home/nmilosev/Projects/OpenModelSphere/org.modelsphere.plugins/bin/repository_functions.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,14 @@
+#set($packageDeclaration = $class.group("package ", $class.package.qualifiedName, ";", ""))
+$packageDeclaration
+
+/**
+ ** Enum $class.name
+ **/
+#set($classModifiers = $class.group("", $class.javaModifiers, " ", " ", ""))
+${classModifiers}enum ${class.name} { 
+  //Fields
+#foreach ($field in $class.fields)
+  ${field.name},
+#end
+
+} //end enum $class.name 

@@ -1,0 +1,114 @@
+Current date : 12/06/2002
+
+The french WinEdt dictionary has been split into two dictionaries that 
+differ by the use of « oe » and « ae ».
+
+Some words like « coeur » should use the oe ligature ({\oe} as seen 
+by TeX) instead of the two characters « o » and « e ». 
+
+It is erroneous to write « coeur » instead of « c{\oe}ur ». This explains 
+why I decided to provide two versions of the dictionary. 
+
+Unfortunately, the use of the new version of the dictionary requires to 
+configure WinEdt. This is why I will continue to provide the erroneous 
+version. Despite this, I DO NOT RECOMMAND TO USE THE ERRONEOUS VERSION, 
+called fr_o_e.dic. 
+
+In order to help people to change the way they write c{\oe}ur, I have written
+a document explaining how to code these characters very easily when using WinEdt.
+This document is written in french. It is my intent to summarize it in english.
+
+I would like to thanks Nicolas le Novère and Erik Frambach for their work on the
+present version of the dictionary. I will try to maintain it in the same spirit as
+they did.
+
+Below is the file that was included with the previous version of fr.dic.
+
+Pascal Kockaert
+Service d'optique et d'acoustique
+Université libre de Bruxelles
+B-1050 Bruxelles
+Belgium
+Pascal.Kockaert@ulb.ac.be
+
+--------------------------
+
+Current date : 12 june 1999
+
+This dictionnary is a non-redundant fusion of the WinEdt 1.414 french
+dictionary and the following corrections.
+
+I-Auditioned words:
+
+I-1
+In general these words ARE NOT specialized ones. They were verified to be present in the
+                     ``Petit Larousse en Couleur''
+                          Edition of 1982
+                        ISBN 2-03-302381-8
+Or in the
+                          ``Petit Robert''
+                          Edition of 1978
+                        ISBN 2-85-036007-4
+and they are therefore assumed to be part of the ``plain'' french.
+
+The one-letter words were added, even if the default setting of WinEdt begins
+the spelling at two-letters words. Indeed if every non-accentuated letters
+are chemical or physical symbols (i.e. equivalent to word), some accentuated
+letters are not, and the correction has to be possible (e.g. é, è, ù etc.)
+
+I-2 The following words are not in the dictionnariesdictionaries quoted
+above but were added for sake of coherence.
+
+
+arginine, arginines, aspartate, aspartates, aspartique, aspartiques, glutamine,
+glutamines, proline, prolines : presence of the other amino-acids
+extracellulaire               : presence of "intracellulaire"
+
+II- All words containing a apostrophe were removed. The prefixes were
+added instead. There are two rationals. First the initial WinEdt french
+dictionary contained numerous wrong words, probably arisen from automatic
+fusion of characters (e.g. lorsqu' became lorsq\'u and so on). Second,
+although present in standard dictionaries, such words result from a
+modification of the correct which is already present in the dictionary.
+The final outcome is a redundance, sometimes very important. For instance
+the addition of entr' before a verb would need a new entry for all
+conjugated forms.
+
+III-
+The code for \ae is 145 in ibm850 encoding but 230 in isolatin-1. Due to
+the large utilization of the later and its inclusion inside unicode, the
+ibm950 codes (default of windows95) were not used. \ae is wrongly written
+as two separated letters a and e instead. The use of isolatin-1 encoding
+is planned in the future releases (in particular, windows98 seems happy
+with unicode).
+
+Due to the absence of \oe and \OE in ISO8859-1, the words containing these
+characters are wrongly described as two separated letters o and e. Their
+inclusion will probably be longer than \ae (because unicode is far less
+standard than isolatin-1).
+
+
+Thanks to Franck Ramus for his help.
+
+Nicolas le Novère
+Neurobiologie Moléculaire
+Institut pasteur
+25, rue du Dr Roux
+75724 PARIS, cedex, FRANCE
+tel : 33-(0)1-45-68-88-44
+fax : 33-(0)1-45-68-88-36
+lenov@pasteur.fr
+
+**********************************************************************************
+
+This dictionary was originally compiled from public domain sources for the
+amSpell spell-checker by
+
+  Erik Frambach (e-mail: e.h.m.frambach@eco.rug.nl).
+
+
+I have further modified this dictionary for use with WinEdt:
+  The dictionary is decompressed, translated from OEM to Windows
+  Character set, and sorted by WinEdt's Dictionary Manager.
+
+alex

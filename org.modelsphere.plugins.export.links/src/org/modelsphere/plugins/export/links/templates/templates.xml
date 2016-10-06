@@ -1,0 +1,4 @@
+<templates name="Link Reports">
+  <project file="MatriceRaccordement.vm" baseName="LinkingMatrix" output="{0}.csv" />
+  <project file="MatriceArrimage.vm" baseName="DockingMatrix" output="{0}.csv" />
+</templates>

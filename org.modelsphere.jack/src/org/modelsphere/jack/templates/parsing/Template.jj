@@ -1,0 +1,1342 @@
+/*************************************************************************
+
+Copyright (C) 2007 Grandite
+
+This file is part of Open ModelSphere.
+
+Open ModelSphere is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+or see http://www.gnu.org/licenses/.
+
+You can reach Grandite at: 
+
+120-1220 Lebourgneuf Blvd.
+Quebec, QC
+Canada  G2K 2G4
+
+or
+
+open-modelsphere@grandite.com
+
+**********************************************************************/
+
+options {
+    JAVA_UNICODE_ESCAPE = true;
+    LOOKAHEAD = 1;
+    FORCE_LA_CHECK = true;
+   // OUTPUT_DIRECTORY = "../output";
+}
+
+PARSER_BEGIN(TemplateParser)
+
+package org.modelsphere.jack.templates.parsing;
+
+import org.modelsphere.jack.srtool.forward.CharacterDomain;
+import org.modelsphere.jack.srtool.forward.BooleanModifier;
+import org.modelsphere.jack.srtool.forward.IntegerModifier;
+import org.modelsphere.jack.templates.TemplateActions;
+
+public class TemplateParser {
+
+  private static TemplateActions m_actions = null;
+
+  public static void main(String args[]) throws ParseException {
+    TemplateParser parser = new TemplateParser(System.in);
+    parser.Input();
+  }
+
+  public static void setActions(TemplateActions actions) {
+    m_actions = actions;
+  }
+}
+
+PARSER_END(TemplateParser)
+
+/* SKIP */
+
+SKIP :
+{
+  " "
+| "\t"
+| "\r"
+| "\n"
+| "\f"
+}
+
+/* COMMENTS */
+
+MORE :
+{
+  "//" : IN_SINGLE_LINE_COMMENT
+|
+  "/*" : IN_MULTI_LINE_COMMENT
+}
+
+<IN_SINGLE_LINE_COMMENT>
+SPECIAL_TOKEN :
+{
+  <SINGLE_LINE_COMMENT: "\n" | "\r" | "\r\n" > : DEFAULT
+}
+
+<IN_MULTI_LINE_COMMENT>
+SPECIAL_TOKEN :
+{
+  <MULTI_LINE_COMMENT: "*/" > : DEFAULT
+}
+
+<IN_SINGLE_LINE_COMMENT,IN_MULTI_LINE_COMMENT>
+MORE :
+{
+  < ~[] >
+}
+
+
+/* LITERALS */
+
+TOKEN :
+{
+  < INTEGER_LITERAL:
+        <DECIMAL_LITERAL> (["l","L"])?
+      | <HEX_LITERAL> (["l","L"])?
+      | <OCTAL_LITERAL> (["l","L"])?
+  >
+|
+  < #DECIMAL_LITERAL: ["1"-"9"] (["0"-"9"])* >
+|
+  < #HEX_LITERAL: "0" ["x","X"] (["0"-"9","a"-"f","A"-"F"])+ >
+|
+  < #OCTAL_LITERAL: "0" (["0"-"7"])* >
+|
+  < FLOATING_POINT_LITERAL:
+        (["0"-"9"])+ "." (["0"-"9"])* (<EXPONENT>)? (["f","F","d","D"])?
+      | "." (["0"-"9"])+ (<EXPONENT>)? (["f","F","d","D"])?
+      | (["0"-"9"])+ <EXPONENT> (["f","F","d","D"])?
+      | (["0"-"9"])+ (<EXPONENT>)? ["f","F","d","D"]
+  >
+|
+  < #EXPONENT: ["e","E"] (["+","-"])? (["0"-"9"])+ >
+|
+  < CHARACTER_LITERAL:
+      "'"
+      (   (~["'","\\","\n","\r"])
+        | ("\\"
+            ( ["n","t","b","r","f","\\","'","\""]
+            | ["0"-"7"] ( ["0"-"7"] )?
+            | ["0"-"3"] ["0"-"7"] ["0"-"7"]
+            )
+          )
+      )
+      "'"
+  >
+|
+  < STRING_LITERAL:
+      "\""
+      (   (~["\"","\\","\n","\r"])
+        | ("\\"
+            ( ["n","t","b","r","f","\\","'","\""]
+            | ["0"-"7"] ( ["0"-"7"] )?
+            | ["0"-"3"] ["0"-"7"] ["0"-"7"]
+            )
+          )
+      )*
+      "\""
+  >
+}
+
+/* RESERVED WORDS AND LITERALS */
+
+TOKEN :
+{
+  < ATTR:     "ATTR">
+| < BOOLEAN:  "BOOLEAN">
+| < CDOM:     "CDOM">
+| < COND:     "COND">
+| < CONN:     "CONN">
+| < FUNCTION: "FUNCTION">
+| < GET:      "GET">
+| < GROUP:    "GROUP">
+| < IDOM:     "IDOM">
+| < INTEGER:  "INTEGER">
+| < NEW:      "NEW">
+| < PLUGIN:   "PLUGIN">
+| < SET:      "SET">
+| < STRING:   "STRING">
+| < TEMPL:    "TEMPL" >
+| < USERCONN: "USERCONN" >
+}
+
+TOKEN :
+{ < ADD:       "ADD">
+| < AND:       "AND">
+| < BOTH:      "BOTH">
+| < BY:        "BY">
+| < CHILD:     "CHILD">
+| < CLEAR:     "CLEAR">
+| < COMPUTE:   "COMPUTE">
+| < CONTAINS:  "CONTAINS">
+| <_DEFAULT:   "DEFAULT">
+| < DIGIT_KW:  "DIGIT">
+| < DISPLAY:   "DISPLAY">
+| < DIVIDE:    "DIVIDE">
+| < DOM:       "DOM">
+| < DQUOTE:    "DQUOTE">
+| < DUPLICATED:"DUPLICATED">
+| < EITHER:    "EITHER">
+| < ELEMENT:   "ELEMENT">
+| < ELSE:      "ELSE">
+| < EN:        "EN">
+| < ENABLED:   "ENABLED">
+| < EXTERN:    "EXTERN">
+| < FALSE:     "FALSE">
+| < FILE:      "FILE">
+| < FOREACH:   "FOREACH">
+| < FR:        "FR">
+| < FROM:      "FROM">
+| < IF:	       "IF">
+| < IFONECHILD:"IFONECHILD">
+| < IMPORT:    "IMPORT">
+| < IN:        "IN">
+| < INSTANCEOF:"INSTANCEOF">
+| < LENGTH:    "LENGTH">
+| < LETTER_KW: "LETTER">
+| < LIST:      "LIST">
+| < LOWER:     "LOWER">
+| < MULTIPLY:  "MULTIPLY">
+| < NOT:       "NOT">
+| < NULL:      "NULL">
+| < NOCASE:    "NOCASE">
+| < ONLYCONTAINS:"ONLYCONTAINS">
+| < OR:        "OR">
+| < ORDER:     "ORDER">
+| < PARM:      "PARM">
+| < PER:       "PER">
+| < PREF:      "PREF">
+| < PREF1:     "PREF1">
+| < QUOTE:     "QUOTE">
+| < RULE:      "RULE">
+| < SEP:       "SEP">
+| < STARTSWITH:"STARTSWITH">
+| < SUBSTRACT: "SUBSTRACT">
+| < SUF:       "SUF">
+| < SUF1:      "SUF1">
+| < TO:        "TO">
+| < TOBOOLEAN: "TOBOOLEAN">
+| < TOFLOAT:   "TOFLOAT">
+| < TOINTEGER: "TOINTEGER">
+| < TOSTRING:  "TOSTRING">
+| < TRUE:      "TRUE">
+| < UNDERSCORE:"UNDERSCORE">
+| < UNIQUE:    "UNIQUE">
+| < UPPER:     "UPPER">
+| < VARIABLE:  "VARIABLE">
+| < WHEN:      "WHEN">
+}
+
+
+TOKEN :
+{
+  < VAR0:  "VAR0">
+| < VAR1:  "VAR1">
+| < VAR2:  "VAR2">
+| < VAR3:  "VAR3">
+| < VAR4:  "VAR4">
+| < VAR5:  "VAR5">
+| < VAR6:  "VAR6">
+| < VAR7:  "VAR7">
+| < VAR8:  "VAR8">
+| < VAR9:  "VAR9">
+}
+
+/* IDENTIFIERS */
+
+TOKEN :
+{
+  < IDENTIFIER: <LETTER> (<LETTER>|<DIGIT>)+ >
+|
+  < #LETTER:
+      [
+       "\u0024",
+       "\u0041"-"\u005a",
+       "\u005f",
+       "\u0061"-"\u007a",
+       "\u00c0"-"\u00d6",
+       "\u00d8"-"\u00f6",
+       "\u00f8"-"\u00ff",
+       "\u0100"-"\u1fff",
+       "\u3040"-"\u318f",
+       "\u3300"-"\u337f",
+       "\u3400"-"\u3d2d",
+       "\u4e00"-"\u9fff",
+       "\uf900"-"\ufaff"
+      ]
+  >
+|
+  < #DIGIT:
+      [
+       "\u0030"-"\u0039",
+       "\u0660"-"\u0669",
+       "\u06f0"-"\u06f9",
+       "\u0966"-"\u096f",
+       "\u09e6"-"\u09ef",
+       "\u0a66"-"\u0a6f",
+       "\u0ae6"-"\u0aef",
+       "\u0b66"-"\u0b6f",
+       "\u0be7"-"\u0bef",
+       "\u0c66"-"\u0c6f",
+       "\u0ce6"-"\u0cef",
+       "\u0d66"-"\u0d6f",
+       "\u0e50"-"\u0e59",
+       "\u0ed0"-"\u0ed9",
+       "\u1040"-"\u1049"
+      ]
+  >
+}
+
+/*
+ *  ENTRY POINT
+ */
+
+void Input() :
+{ int count=0; }
+{
+  { m_actions.beginningOfFile(); }
+  [ optional_import_clause() ]
+  [ variable_decl_list() ]
+  rule_decl_list()
+  <EOF>
+  { m_actions.endOfFile(); }
+}
+
+/*
+ * OPTIONAL IMPORT CLAUSE
+ *
+ */
+
+void optional_import_clause() :
+{ String classfile; }
+{
+  <IMPORT> classfile=string_literal()
+  {
+    m_actions.processImportClause(classfile);
+  }
+   end_of_decl()
+}
+
+/*
+ * VARIABLE DECLARATIONS
+ * Example: NEW STRING var0;
+ * Example: NEW BOOLEAN cond = TRUE;
+ */
+
+void variable_decl_list() :
+{}
+{
+  variable_decl() [ variable_decl_list() ]
+}
+
+void variable_decl() :
+{}
+{
+  <NEW> ( boolean_variable_decl() |
+    integer_variable_decl() |
+    string_variable_decl()  |
+    list_variable_decl()
+  )  end_of_decl()
+}
+
+void boolean_variable_decl() :
+{ Token token; String id; Object value; }
+{
+  [ extern_qual() ] token=<BOOLEAN> id=identifier() "=" value=boolean_expression()
+  {
+    m_actions.processVariableDeclaration(id, token.image, value);
+  }
+}
+
+void integer_variable_decl() :
+{ Token t; String id; Object value=null; }
+{
+  t=<INTEGER> id=identifier() "=" value=integer_expression()
+  { m_actions.processVariableDeclaration(id, t.image, value); }
+}
+
+void string_variable_decl() :
+{ Token t; String id, value=null; }
+{
+  t=<STRING> id=identifier() "=" value=string_literal_token()
+  { m_actions.processVariableDeclaration(id, t.image, value); }
+}
+
+void list_variable_decl() :
+{Token t; String id;}
+{
+ t=<LIST> id=identifier() "=" <NULL>
+ { m_actions.processVariableDeclaration(id, t.image, null); }
+}
+
+String boolean_value() :
+{ Token t; }
+{
+  ( t=<TRUE> | t=<FALSE> )
+  {
+    return t.image;
+  }
+}
+
+/*
+ * RULE DECLARATIONS
+ * Example: templ	TEMPL	"$subTemplate;";
+ */
+
+void rule_decl_list() :
+{}
+{
+  rule_decl() [ rule_decl_list() ]
+}
+
+void decl_name() :
+{ Token name; }
+{
+  name = <IDENTIFIER>
+
+  { m_actions.processDeclName(name.image); }
+}
+
+void rule_decl() :
+{ }
+{
+  decl_name() (
+      add_decl() | attr_decl() | cdom_decl() | clear_decl() | cond_decl() |
+      conn_decl() |  foreach_decl() | get_decl() |  group_decl() | idom_decl() |
+      set_decl() | templ_decl() | pluginfn_decl() | userconn_decl()
+  )
+}
+
+void end_of_decl() :
+{ m_actions.endOfDecl(); }
+{
+  ";"
+}
+
+/* String processing */
+
+String string_literal_token() :
+{ Token t; }
+{
+  t = <STRING_LITERAL>
+  { return t.image; }
+}
+
+String string_literal() :
+{ String s1, s2 = ""; }
+{
+  ( s1= string_literal_token() [ s2=string_literal() ] )
+  { return s1+s2; }
+}
+
+String identifier() :
+{Token t;}
+{
+  t = <IDENTIFIER>
+  { return t.image; }
+}
+
+String identifier_or_literal() :
+{String s;}
+{
+  ( s = identifier()  | s = string_literal() )
+  { return s; }
+}
+
+/* ADD TO A LIST */
+
+void add_decl() :
+{ String varname=null; Object value=null; }
+{
+  <ADD> "(" varname=identifier() ","
+  ( value = string_set_decl_value() |
+    value = boolean_set_decl_value() |
+    value = integer_set_decl_value()
+    )
+  ")"
+  { m_actions.processAddToList(varname, value); }
+  end_of_decl()
+}
+
+/* ATTRIBUTE */
+
+void attr_decl() :
+{String s;}
+{
+  <ATTR> s=identifier_or_literal()
+  { m_actions.processAttribute(s); }
+  [ [","] attr_qualifier_list()] end_of_decl()
+}
+
+void pluginfn_decl() :
+{Token t;}
+{
+  <PLUGIN> <FUNCTION> t=<IDENTIFIER>
+  { m_actions.processUserFn(t.image); }
+  [ child_qual() ]
+  end_of_decl()
+}
+
+void attr_qualifier_list() :
+{}
+{
+  attr_qualifier() [ attr_qualifier_list() ]
+}
+
+void attr_qualifier() :
+{}
+{
+  ( dom_qual() | null_qual() |
+    pref_qual() | suf_qual()  | upper_qual() | lower_qual() )
+}
+
+/* CHARACTER DOMAINS */
+
+void cdom_decl() :
+{ Token t = null; String s = null; }
+{
+  <CDOM>
+  { m_actions.processCharacterDomain(); }
+  character_domain_clause_list() [ t=<NOCASE> ]
+  { if (t != null) {
+      s = t.image;
+    }
+    m_actions.processNoCaseQual(s);
+  }
+  end_of_decl()
+}
+
+void character_domain_clause_list() :
+{}
+{
+  "(" character_domain_clause() ")" [ character_domain_clause_list() ]
+}
+
+void character_domain_clause() :
+{ Token t = null; String s; }
+{
+  s=character_domain_value_list() "," ( t=<IDENTIFIER> | t=<STRING_LITERAL> )
+  { m_actions.processCharacterDomainClause(s, t.image);  }
+}
+
+String character_domain_value_list() :
+{ String s = null; }
+{
+  ( s=character_domain_value() | "(" s=string_literal_list() ")" )
+  {return s;}
+}
+
+String default_kw() :
+{}
+{
+  <_DEFAULT>
+  {return "\"" + CharacterDomain.DEFAULT_STRING + "\"";}
+}
+
+String null_kw() :
+{}
+{
+  <NULL>
+  { return "\"" + CharacterDomain.NULL_STRING + "\"";}
+}
+
+/* Note: NULL no longer valid in a CDOM clause */
+
+String character_domain_value() :
+{ String s = null; }
+{
+  ( s=string_literal() | s=default_kw() )
+  { return s; }
+}
+
+String string_literal_list() :
+{ String s1, s2 = null; }
+{
+  s1=string_literal() [ "," s2=string_literal_list() ]
+  {
+    if (s2 != null) {
+      s1 += "," + s2;
+    }
+    return s1;
+  }
+}
+
+/* CLEAR A LIST */
+
+void clear_decl() :
+{ String id; }
+{
+  <CLEAR> "(" id=identifier() ")"
+  { m_actions.processClearList(id); }
+  end_of_decl()
+}
+
+/* CONDITIONS */
+
+void cond_decl() :
+{BooleanModifier bm;}
+{
+  <COND> bm=boolean_expression()
+  { m_actions.processCondition(bm); }
+  true_and_or_false()
+  [ cond_qualifier_list()] end_of_decl()
+}
+
+void true_and_or_false() :
+{}
+{
+  [ true_qual() ] [ false_qual() ]
+}
+
+void cond_qualifier_list() :
+{}
+{
+  cond_qualifier() [ cond_qualifier_list() ]
+}
+
+
+void cond_qualifier() :
+{}
+{
+   ( null_qual() | pref_qual()  | sep_qual() | suf_qual()  )
+}
+
+/* CONNECTORS */
+
+void conn_decl() :
+{String s;}
+{
+  <CONN> s=identifier_or_literal() { m_actions.processConnector(s); }
+    [ "," ]
+    [ when_clause() ]
+    ( onechild_clause() | child_qual() )
+    [ conn_qualifier_list() ]
+    end_of_decl()
+}
+
+void userconn_decl() :
+{Token t;}
+{
+  <USERCONN> t=<IDENTIFIER>      { m_actions.processUserConnector(t.image); }
+    ","
+    ( onechild_clause() | child_qual() )
+    end_of_decl()
+}
+
+void when_clause() :
+{BooleanModifier bm;}
+{
+  <WHEN> bm=boolean_expression()
+  { m_actions.processWhenCondition(bm); }
+}
+
+void onechild_clause() :
+{ String s;}
+{
+  <IFONECHILD> "=" ( s=identifier_or_literal() )
+  { m_actions.processOneChildQual(s); }
+  <ELSE> child_qual()
+}
+
+void conn_qualifier_list() :
+{}
+{
+  conn_qualifier() [ conn_qualifier_list() ]
+}
+
+void conn_qualifier() :
+{}
+{
+  ( null_qual()  |  pref_qual()  | sep_qual() | suf_qual() )
+}
+
+/* FOR EACH */
+
+void foreach_decl() :
+{String iter; Token t=null;}
+{
+  <FOREACH> [ t=<DUPLICATED> | t=<UNIQUE> ] iter=identifier() (foreach_iteration(iter) | foreach_enumeration(iter, t))
+}
+
+void foreach_iteration(String iter) :
+{IntegerModifier start, end; }
+{
+  <FROM> start=integer_expression() <TO> end=integer_expression()
+  child_qual()
+  { m_actions.processForEach(iter, start, end); }
+  end_of_decl()
+}
+
+void foreach_enumeration(String iter, Token t) :
+{String listname; }
+{
+  <IN> listname=identifier()
+  child_qual()
+  {
+    String s = (t == null) ? null : t.image;
+    m_actions.processForEach(iter, listname, s);
+  }
+  end_of_decl()
+}
+
+/* GROUPS */
+
+void group_decl() :
+{ String s; }
+{
+  <GROUP>
+  "(" s=templ_list() ")"
+  { m_actions.processGroup(s); }
+  [ group_qualifier_list()]
+  end_of_decl()
+}
+
+String templ_list() :
+{ String s1, s2 = null; }
+{
+  s1=identifier() [ "," s2=templ_list() ]
+  {
+    if (s2 != null) {
+      s1 += "," + s2;
+    }
+
+    return s1;
+  }
+}
+
+void group_qualifier_list() :
+{}
+{
+  group_qualifier() [ group_qualifier_list() ]
+}
+
+void group_qualifier() :
+{}
+{
+  ( extern_qual() | null_qual() | pref_qual()
+    | sep_qual() | suf_qual() )
+}
+
+
+/* INTEGER DOMAINS */
+
+void idom_decl() :
+{}
+{
+  <IDOM>
+   { m_actions.processIntegerDomain(); }
+  integer_domain_clause_list() end_of_decl()
+}
+
+void integer_domain_clause_list() :
+{}
+{
+  integer_domain_clause() [ integer_domain_clause_list() ]
+}
+
+void integer_domain_clause() :
+{Token t1 = null, t2 = null; }
+{
+  "(" ( t1=<INTEGER_LITERAL> | t1=<_DEFAULT> | t1=<NULL> ) ","
+  ( t2=<IDENTIFIER> | t2=<STRING_LITERAL> ) ")"
+  {
+    String s1 = (t1 == null) ? null : t1.image;
+    String s2 = (t2 == null) ? null : t2.image;
+    m_actions.processIntegerDomainClause(s1, s2);
+  }
+}
+
+/* SET */
+
+void set_decl() :
+{String variable;
+ Object value=null;}
+{
+  <SET> "(" variable=identifier() ","
+    ( value = string_set_decl_value() |
+      value = boolean_set_decl_value() |
+      value = integer_set_decl_value()
+    )
+  ")"
+  { m_actions.processSetStatement(variable, value); }
+  end_of_decl()
+}
+
+String string_set_decl_value() :
+{ String val = null; }
+{
+  ( val=set_decl_rule_value() |
+    val=string_set_decl_literal_value() |
+    val=string_set_decl_variable_value() |
+    val=set_decl_convert_value()  |
+    val=set_decl_compute_value()
+  )
+  { return val; }
+}
+
+BooleanModifier boolean_set_decl_value() :
+{ BooleanModifier bm = null; }
+{
+  bm = boolean_expression()
+  { return bm; }
+}
+
+IntegerModifier integer_set_decl_value() :
+{ IntegerModifier im = null; }
+{
+  im = integer_expression()
+  { return im; }
+}
+
+String set_decl_rule_value() :
+{ Token t; String value; }
+{
+  value=identifier()
+  { return "RULE=" + value; }
+}
+
+String string_set_decl_literal_value() :
+{ String value; }
+{
+  value=string_literal()
+  { return value; }
+}
+
+String string_set_decl_variable_value() :
+{ String value; }
+{
+  <STRING> "(" value=identifier() ")"
+  { return value; }
+}
+
+
+String set_decl_convert_value() :
+{ Token t; String value; }
+{
+  ( t=<TOSTRING> | t=<TOINTEGER> )
+  "("  value=identifier() ")"
+  { return t.image + "=" + value; }
+}
+
+
+String set_decl_compute_value() :
+{ Token t; String s; }
+{
+  t=<COMPUTE> "(" s=expr() ")"
+  { return t.image + "=" + s; }
+}
+
+
+String expr() :
+{Token t1=null, t2=null; String expr; }
+{
+  ( expr=operation() |
+    ( t1="(" expr=expr() t2=")" )
+  )
+  {
+    if (t1 == null) {
+      return expr;
+    } else {
+      return "("+expr+")";
+    }
+  }
+}
+
+String operation() :
+{ String t1, op=null, t2=null; }
+{
+  ( t1=term() ( op=operator() t2=term() )* )
+  {
+    if (op == null) {
+      return t1;
+    } else {
+      return t1+op+t2;
+    }
+  }
+}
+
+String term() :
+{ String s=null; Token t=null;}
+{
+  ( t=<INTEGER_LITERAL> | s=identifier() )
+  { return (s != null) ? s : t.image; }
+}
+
+String operator() :
+{Token t;}
+{
+  ( t="+" | t="-" | t="*" | t="/" )
+  { return t.image; }
+}
+
+/* GET */
+
+void get_decl() :
+{ String variable; }
+{
+  <GET> "(" variable=identifier() ")"
+  { m_actions.processGetStatement(variable); }
+  end_of_decl()
+}
+
+/* TEMPLATES */
+
+void templ_decl() :
+{String s; }
+{
+  <TEMPL> s=string_literal()
+    { m_actions.processTemplate(s); }
+  [ templ_qualifier_list()] end_of_decl()
+}
+
+void templ_qualifier_list() :
+{}
+{
+  templ_qualifier() [ templ_qualifier_list() ]
+}
+
+void templ_qualifier() :
+{}
+{
+  ( dom_qual()  | extern_qual() | file_qual() | null_qual() |
+    pref_qual() | suf_qual()  | upper_qual() | lower_qual() )
+}
+
+/* QUALIFIERS */
+
+void attr_qual() :
+{ Token t; }
+{
+  <ATTR> "=" t=<IDENTIFIER>
+  { m_actions.processAttrQual(t.image); }
+}
+
+String child_kw() :
+{ Token t; }
+{
+  ( t=<CHILD> )
+  {return t.image; }
+}
+
+void child_qual() :
+{ String child, s; }
+{
+  ( child = child_kw() ) "=" ( s=identifier_or_literal() )
+  { m_actions.processChildQual(child, s); }
+}
+
+void dom_qual() :
+{ Token t; }
+{
+  <DOM> "=" t=<IDENTIFIER>
+  { m_actions.processDomQual(t.image); }
+}
+
+void extern_qual() :
+{ String s=null;}
+{
+  <EXTERN> [ "(" s=extern_options() ")" ]
+  { m_actions.processExternQual(s); }
+}
+
+String extern_options() :
+{ String s1, s2=null; }
+{
+  s1=extern_option() ["," s2=extern_options() ]
+  { if (s2 == null) {
+      return s1;
+    } else {
+      return s1 + "," + s2;
+    }
+  }
+}
+
+String extern_option() :
+{ String s=null; }
+{
+  ( s=order_option() | s=display_option() | s=enabled_option() )
+  { return s; }
+}
+
+String order_option() :
+{Token t1, t2; }
+{
+  t1=<ORDER> "=" t2=<INTEGER_LITERAL>
+  { return t1.image + "=" + t2.image; }
+}
+
+String display_option() :
+{ Token t1=null; Token t2; String s;}
+{
+  [t1=<EN> | t1=<FR>] t2=<DISPLAY> "=" s=string_literal_token()
+  {
+    String display = t2.image;
+    if (t1 != null) {
+      display = t1.image + "_" + display;
+    }
+
+    return display + "=" + s;
+  }
+}
+
+String enabled_option() :
+{ Token t; }
+{
+  t=<ENABLED>
+  { return t.image; }
+}
+
+void false_qual() :
+{ String s; }
+{
+  <FALSE> "=" ( s=identifier() )
+   { m_actions.processFalseQual(s);  }
+}
+
+void file_qual() :
+{ String s; }
+{
+  <FILE> "=" ( s=identifier_or_literal() )
+  { m_actions.processFileQual(s);    }
+}
+
+void null_qual() :
+{ String s; }
+{
+  <NULL> "=" ( s=identifier_or_literal() )
+   { m_actions.processNullQual(s); }
+}
+
+void parm_qual() :
+{ String s; }
+{
+  <PARM> "=" s=string_literal()
+  { m_actions.processParmQual(s); }
+}
+
+String pref_kw() :
+{ Token t; }
+{
+  (t=<PREF> )
+  {return t.image; }
+}
+
+void pref_qual() :
+{ String pref, s; }
+{
+  (pref = pref_kw() ) "=" ( s=identifier_or_literal() )
+  { m_actions.processPrefQual(pref, s); }
+}
+
+void sep_qual() :
+{ String s; }
+{
+  <SEP> "=" ( s=identifier_or_literal() )
+  { m_actions.processSepQual(s); }
+}
+
+String suff_kw() :
+{ Token t; }
+{
+  (t=<SUF> )
+  {return t.image; }
+}
+
+void suf_qual() :
+{ String suf, s; }
+{
+  ( suf = suff_kw() ) "=" ( s=identifier_or_literal() )
+  { m_actions.processSufQual(suf, s); }
+}
+
+void true_qual() :
+{ String s; }
+{
+  <TRUE> "=" ( s=identifier() )
+  { m_actions.processTrueQual(s); }
+}
+
+void lower_qual() :
+{}
+{
+  <LOWER>
+  { m_actions.processLowerQual(); }
+}
+
+void upper_qual() :
+{}
+{
+  <UPPER>
+  { m_actions.processUpperQual(); }
+}
+
+
+/*
+ *  INTEGER EXPRESSION
+ */
+
+IntegerModifier integer_expression() :
+{IntegerModifier im=null;}
+{
+  ( LOOKAHEAD(3) im = atomic_integer_expression() |
+    LOOKAHEAD(3) im = negation_operation()        |
+    LOOKAHEAD(3) im = addition_operation()        |
+    LOOKAHEAD(3) im = substraction_operation()    |
+    LOOKAHEAD(3) im = multiplication_operation()  |
+    LOOKAHEAD(3) im = division_operation()        |
+    LOOKAHEAD(3) im = length_operation()
+  )
+  { return im;}
+}
+
+IntegerModifier atomic_integer_expression() :
+{IntegerModifier im=null;}
+{
+  ( LOOKAHEAD(3) im = integer_variable() |
+    LOOKAHEAD(3) im = integer_value()
+  )
+  {
+    return im;
+  }
+}
+
+IntegerModifier negation_operation() :
+{IntegerModifier im1=null;}
+{
+  "-" im1=integer_expression()
+  {
+    IntegerModifier im2 = new IntegerModifier(IntegerModifier.INTEGER_NEGATION, im1);
+    return im2;
+  }
+}
+
+IntegerModifier addition_operation() :
+{IntegerModifier im1=null, im2=null;}
+{
+  <ADD> "(" im1=integer_expression() <TO> im2=integer_expression() ")"
+  {
+    IntegerModifier im = new IntegerModifier(IntegerModifier.INTEGER_ADDITION, im1, im2);
+    return im;
+  }
+}
+
+IntegerModifier substraction_operation() :
+{IntegerModifier im1=null, im2=null;}
+{
+  <SUBSTRACT> "(" im1=integer_expression() <FROM> im2=integer_expression() ")"
+  {
+    IntegerModifier im = new IntegerModifier(IntegerModifier.INTEGER_SUBSTRACTION, im1, im2);
+    return im;
+  }
+}
+
+IntegerModifier multiplication_operation() :
+{IntegerModifier im1=null, im2=null;}
+{
+  <MULTIPLY> "(" im1=integer_expression() <BY> im2=integer_expression() ")"
+  {
+    IntegerModifier im = new IntegerModifier(IntegerModifier.INTEGER_MULTIPLICATION, im1, im2);
+    return im;
+  }
+}
+
+IntegerModifier division_operation() :
+{IntegerModifier im1=null, im2=null;}
+{
+  <DIVIDE> "(" im1=integer_expression() <PER> im2=integer_expression() ")"
+  {
+    IntegerModifier im = new IntegerModifier(IntegerModifier.INTEGER_DIVISION, im1, im2);
+    return im;
+  }
+}
+
+IntegerModifier length_operation() :
+{String s;}
+{
+  <LENGTH> "(" s=identifier() ")"
+  { //IntegerModifier im = new IntegerModifier(IntegerModifier.INTEGER_LENGTH, s);
+    IntegerModifier im = m_actions.processIntegerLength(s);
+    return im;
+  }
+}
+
+IntegerModifier integer_variable() :
+{String s;}
+{
+  <INTEGER> "(" s=identifier() ")"
+  {
+    IntegerModifier im = m_actions.processIntegerVariable(s);
+    return im;
+  }
+}
+
+IntegerModifier integer_value() :
+{Token t;}
+{
+  t=<INTEGER_LITERAL>
+  {
+    IntegerModifier im = new IntegerModifier(t.image);
+    return im;
+  }
+}
+
+/*
+ *  BOOLEAN EXPRESSION
+ */
+
+BooleanModifier boolean_expression() :
+{BooleanModifier bm=null;}
+{
+  ( bm=atomic_boolean_expression() |
+    bm=not_expression() |
+    bm=and_expression() |
+    bm=or_expression()  |
+    bm=boolean_comparison() |
+    bm=text_predicate()
+  )
+  { return bm; }
+}
+
+BooleanModifier not_expression() :
+{BooleanModifier bm1;}
+{
+  <NOT> "(" bm1=boolean_expression() ")"
+  {
+    BooleanModifier bm = m_actions.processNotExpression(bm1);
+    return bm;
+  }
+}
+
+BooleanModifier and_expression() :
+{BooleanModifier bm1,bm2;}
+{
+  <BOTH> "(" bm1=boolean_expression() <AND> bm2=boolean_expression() ")"
+  {
+    BooleanModifier bm = m_actions.processBooleanExpression(BooleanModifier.AND_OPERATION, bm1, bm2);
+    return bm;
+  }
+}
+
+BooleanModifier or_expression() :
+{BooleanModifier bm1, bm2;}
+{
+  <EITHER> "(" bm1=boolean_expression() <OR> bm2=boolean_expression() ")"
+  {
+    BooleanModifier bm = m_actions.processBooleanExpression(BooleanModifier.OR_OPERATION, bm1, bm2);
+    return bm;
+  }
+}
+
+BooleanModifier text_predicate() :
+{String pred, operand, var;}
+{
+  pred=predicate() "(" operand=predicate_operand() "," var=identifier() ")"
+  {
+    BooleanModifier bm = m_actions.processBooleanExpression(BooleanModifier.TEXT_PREDICATE, pred, operand, var);
+    return bm;
+  }
+}
+
+String predicate() :
+{Token t;}
+{
+  ( t=<CONTAINS> | t=<ONLYCONTAINS> | t=<STARTSWITH> )
+  { return t.image; }
+}
+
+String predicate_operand() :
+{Token t;}
+{
+  ( t=<LETTER_KW> | t=<DIGIT_KW> | t=<LOWER> | t=<UPPER> | t=<UNDERSCORE> )
+  { return t.image; }
+}
+
+BooleanModifier boolean_comparison() :
+{Token t=null; IntegerModifier im1, im2;}
+{
+  <IF> "(" im1=integer_expression() (t=">" | t="<" | t="==") im2=integer_expression() ")"
+  {
+    String s = t.image;
+    int operation = 0;
+    if (s.equals(">")) {
+      operation = BooleanModifier.GREATER_THAN;
+    } else if (s.equals("<")) {
+      operation = BooleanModifier.LESS_THAN;
+    } else if (s.equals("==")) {
+      operation = BooleanModifier.EQUALS;
+    } //end if
+
+    BooleanModifier bm = m_actions.processBooleanExpression(operation, im1, im2);
+    return bm;
+  }
+}
+
+BooleanModifier atomic_boolean_expression() :
+{BooleanModifier bm=null;}
+{
+  ( bm = boolean_variable() |
+    bm = boolean_true() |
+    bm = boolean_false() |
+    bm = instanceofClause()
+  )
+  {
+    return bm;
+  }
+}
+
+BooleanModifier instanceofClause() :
+{String s;}
+{
+  <INSTANCEOF> s=identifier_or_literal()
+  {
+    BooleanModifier bm = m_actions.processInstanceOf(s);
+    return bm;
+  }
+}
+
+
+BooleanModifier boolean_true() :
+{}
+{
+  <TRUE>
+  {
+    BooleanModifier bm = new BooleanModifier(true);
+    return bm;
+  }
+}
+
+BooleanModifier boolean_false() :
+{}
+{
+  <FALSE>
+  {
+    BooleanModifier bm = new BooleanModifier(false);
+    return bm;
+  }
+}
+
+BooleanModifier boolean_variable() :
+{String s;}
+{
+  <BOOLEAN> "(" s=identifier() ")"
+  {
+    BooleanModifier bm = m_actions.processBooleanVariable(s);
+    return bm;
+  }
+}

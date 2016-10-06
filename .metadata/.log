@@ -1,0 +1,95 @@
+!SESSION 2016-10-06 11:43:32.361 -----------------------------------------------
+eclipse.buildId=4.6.1.v20160915-0852
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.pde.core 4 0 2016-10-06 11:44:14.284
+!MESSAGE The current target platform contains errors, open Window > Preferences > Plug-in Development > Target Platform for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems occurred getting the plug-ins in this container
+	at org.eclipse.pde.internal.core.PluginModelManager.getExternalBundles(PluginModelManager.java:638)
+	at org.eclipse.pde.internal.core.PluginModelManager.initializeTable(PluginModelManager.java:544)
+	at org.eclipse.pde.internal.core.PluginModelManager.findModel(PluginModelManager.java:1005)
+	at org.eclipse.pde.core.plugin.PluginRegistry.findModel(PluginRegistry.java:110)
+	at org.eclipse.pde.internal.core.JavaElementChangeListener.updateTable(JavaElementChangeListener.java:115)
+	at org.eclipse.pde.internal.core.JavaElementChangeListener.handleChildDeltas(JavaElementChangeListener.java:68)
+	at org.eclipse.pde.internal.core.JavaElementChangeListener.handleDelta(JavaElementChangeListener.java:52)
+	at org.eclipse.pde.internal.core.JavaElementChangeListener.handleChildDeltas(JavaElementChangeListener.java:71)
+	at org.eclipse.pde.internal.core.JavaElementChangeListener.handleDelta(JavaElementChangeListener.java:48)
+	at org.eclipse.pde.internal.core.JavaElementChangeListener.elementChanged(JavaElementChangeListener.java:36)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1486)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1462)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2074)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Contains: File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/net.sf.cglib.core_3.1.0.jar
+Contains: File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.easymock_3.3.1.jar
+Contains: File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.hamcrest.integration_1.3.0.v20090501071000.jar
+Contains: File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.hamcrest.library_1.3.0.v20090501071000.jar
+Contains: File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.hamcrest.text_1.3.0.v20090501071000.jar
+Contains: File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.mockito.mockito-core_1.10.19.jar
+Contains: File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.objenesis_2.1.0.jar
+!SUBENTRY 1 org.eclipse.pde.core 4 0 2016-10-06 11:44:14.306
+!MESSAGE Problems occurred getting the plug-ins in this container
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2016-10-06 11:44:14.306
+!MESSAGE File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/net.sf.cglib.core_3.1.0.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2016-10-06 11:44:14.306
+!MESSAGE File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.easymock_3.3.1.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2016-10-06 11:44:14.306
+!MESSAGE File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.hamcrest.integration_1.3.0.v20090501071000.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2016-10-06 11:44:14.306
+!MESSAGE File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.hamcrest.library_1.3.0.v20090501071000.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2016-10-06 11:44:14.306
+!MESSAGE File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.hamcrest.text_1.3.0.v20090501071000.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2016-10-06 11:44:14.306
+!MESSAGE File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.mockito.mockito-core_1.10.19.jar
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2016-10-06 11:44:14.306
+!MESSAGE File does not exist: /usr/share/eclipse/droplets/epp-logging/eclipse/plugins/org.objenesis_2.1.0.jar
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2016-10-06 11:49:01.056
+!MESSAGE Updating the index from remote failed. ; version: 1.100.0.201603241525
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
+	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:973)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:930)
+	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:139)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:155)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:284)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:165)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:167)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:271)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.downloadDatabase(IO.java:171)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:279)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

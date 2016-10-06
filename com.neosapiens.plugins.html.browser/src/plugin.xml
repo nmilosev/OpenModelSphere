@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin format="2.0" className = "org.modelsphere.plugins.html.browser.HTMLReportPlugin">
+
+    <name>${name}</name>
+    <image>html.gif</image>
+    <description>${description}</description>
+	<license>${license}</license>
+	<resourceBundle>locale</resourceBundle>
+    <date>14-03-2010</date>
+	<version>1.0.0</version>
+	<author>${author}</author>
+	<authorURL>${url}</authorURL>
+	<type>org.modelsphere.jack.plugins.Plugin2</type>
+    <requiredBuild>950</requiredBuild>
+	
+	<extension className="org.modelsphere.jack.plugins.xml.extensions.PopupExtension">
+    	<actionLabel>${actionLabel}</actionLabel>
+    	<metaClasses>org.modelsphere.jack.baseDb.db.DbProject,org.modelsphere.sms.oo.db.DbOOClassModel,org.modelsphere.sms.oo.db.DbOODiagram,org.modelsphere.sms.or.db.DbORDataModel,org.modelsphere.sms.or.db.DbORDiagram,org.modelsphere.sms.be.db.DbBEModel,org.modelsphere.sms.be.db.DbBEDiagram</metaClasses>
+    	<popupSubmenu>${submenu}</popupSubmenu>
+    </extension>
+    	
+	<jar>lib/plugin.jar</jar>
+
+</plugin>

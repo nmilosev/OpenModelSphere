@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin format="2.0" className = "org.modelsphere.plugins.layout.BuiltinLayoutsBankPlugin">
+	<author>modelsphere.org</author>
+	<authorEmail>${email}</authorEmail>
+	<authorURL>${url}</authorURL>
+	<date>21-07-2010</date>
+	<description>${description}</description>
+	<image>${image}</image>
+	<jar>lib/plugin.jar</jar>
+	<license>${license}</license>
+	<name>${name}</name>
+	<requiredBuild>951</requiredBuild>
+	<resourceBundle>locale</resourceBundle>
+	<type>org.modelsphere.jack.srtool.features.layout.LayoutPlugin</type>
+	<version>3.2.0</version>
+	
+	<extension className="org.modelsphere.jack.plugins.xml.extensions.PopupExtension">
+		<actionLabel>${name}</actionLabel>
+		<metaClasses>org.modelsphere.sms.oo.db.DbOODiagram</metaClasses>
+		<popupSubmenu>${submenu}</popupSubmenu>
+	</extension>  
+  
+</plugin>

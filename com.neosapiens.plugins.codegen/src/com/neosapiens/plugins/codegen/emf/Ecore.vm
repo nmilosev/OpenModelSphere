@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+  xmlns:xmi="http://www.omg.org/XMI"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+  nsURI="$package.prefix"
+  nsPrefix="$package.prefix"
+  name="$package.baseName" >
+    <!--                        -->
+    <!-- TYPES AND ENUMERATIONS -->
+    <!--                        -->
+##
+## FOR EACH ENUMERATION
+##
+#foreach ($class in $package.classes)
+#if ( $class.isEnum() )
+#set ($literal = 0)
+    <!-- $class.name -->
+    <eClassifiers xsi:type="ecore:EEnum" name="$class.name">
+#foreach ($attribute in $class.attributes)
+      <eLiterals name="$attribute.name" value="$literal"/>
+#set( $literal = $literal + 1 ) 
+#end
+    </eClassifiers>
+#end
+#end
+##
+## FOR EACH DATA TYPE
+##
+#foreach ($class in $package.classes)
+#if ( $class.isDatatype() )
+    <!-- $class.name -->
+    <eClassifiers xsi:type="ecore:EDataType" name="$class.name" instanceClassName="$class.attributes.get(0).name">
+    </eClassifiers>
+#end
+#end
+    <!--         -->
+    <!-- CLASSES -->
+    <!--         -->
+##
+## FOR EACH CLASS
+##
+#foreach ($class in $package.classes)
+#if (! $class.isEnum() && ! $class.isDatatype() )
+#set($classSupertypes = $class.group('eSuperTypes="#//', $class.supertypes, ",", '"', ""))
+    <!-- $class.name -->
+    <eClassifiers xsi:type="ecore:EClass" name="$class.name" $classSupertypes $class.emfAbstract>
+#foreach ($attribute in $class.attributes)
+      <eAttributes name="$attribute.name" eType="$attribute.emfType" /> 
+#end
+#foreach ($reference in $class.references)
+#set($containment = $reference.group('containment="', $reference.containment, '" ', ""))
+#set($lowerBound  = $reference.group('lowerBound="',  $reference.lowerBound,  '" ', ""))
+#set($upperBound  = $reference.group('upperBound="',  $reference.upperBound,  '" ', ""))
+#set($opposite    = $reference.group('eOpposite="',   $reference.emfOpposite, '" ', ""))
+      <eReferences name="$reference.name" eType="$reference.emfType" ${containment}${lowerBound}${upperBound}${opposite}/>
+#end
+    </eClassifiers>
+#end
+#end  
+</ecore:EPackage>

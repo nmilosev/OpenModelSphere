@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin format="2.0" className = "org.modelsphere.sms.plugins.generic.validation.GenericValidationPlugin">
+	<author>Grandite</author>
+	<authorEmail>${email}</authorEmail>
+	<authorURL>${url}</authorURL>
+	<date>01-26-2011</date>
+	<description>${description}</description>
+	<image>${image}</image>
+	<jar>lib/plugin.jar</jar>
+	<license>${license}</license> 
+	<name>${name}</name>
+	<requiredBuild>950</requiredBuild>
+	<resourceBundle>locale</resourceBundle>
+	<type>org.modelsphere.jack.plugins.Plugin2</type>
+	<version>3.2.0</version>
+  	
+  	<extension className="org.modelsphere.jack.plugins.xml.extensions.PopupExtension">
+	    <actionIcon>${image}</actionIcon>
+    	<actionLabel>${actionLabel}</actionLabel>
+    	<metaClasses>org.modelsphere.sms.or.generic.db.DbGEDatabase</metaClasses>
+    </extension>  
+  	
+	<extension className="org.modelsphere.jack.plugins.xml.extensions.MenuExtension">
+    	<actionLabel>${actionLabel}</actionLabel>
+    	<actionIcon>${image}</actionIcon>
+    	<menuPath>tools/database/SynchroDBAction</menuPath>
+    	<menuInsert>before</menuInsert>
+    </extension>
+    
+</plugin>

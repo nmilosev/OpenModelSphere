@@ -1,0 +1,14 @@
+<templates name="Simple C# (beta)">
+  <description>
+    <en>
+  This generation target creates a C# file per each class in the model;
+  each field in the model will result in a physical field.
+    </en>
+    <fr>
+  Cette cible de génération créé un fichier C# par classe du modèle; 
+  chaque champ du modèle donnera un champ dans la classe générée. 
+    </fr>
+  </description>
+  <var />
+  <class file="SimpleCSharp.vm" output="csharp/{0}/{1}.cs" />
+</templates>

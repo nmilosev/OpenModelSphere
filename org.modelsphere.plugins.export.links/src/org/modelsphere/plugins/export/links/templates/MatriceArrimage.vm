@@ -1,0 +1,12 @@
+$text.dockingMatrix;;;;
+;;;;
+$project.dockingHeader
+$project.dockingUnderline
+#foreach ($row in $project.dockingRows)
+$row.namesAndDescriptions
+$row.formats
+$row.nullables
+#foreach ($udf in $project.udfs)
+$udf.getNamesAndValues($row)
+#end
+#end

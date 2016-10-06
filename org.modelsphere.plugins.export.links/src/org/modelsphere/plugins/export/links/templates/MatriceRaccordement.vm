@@ -1,0 +1,12 @@
+$text.linkingMatrix;;;
+;;;
+#foreach ($linkModel in $project.linkModels)
+$linkModel.source $text.to $linkModel.destination;;;
+($linkModel.name);;;
+;$linkModel.source (source);# lien;$linkModel.destination (destination)
+#foreach ($link in $linkModel.links)
+#foreach ($column in $link.sourceColumns)
+;$column.name;$link.alias;$link.destinationText
+#end
+#end
+#end

@@ -1,0 +1,24 @@
+JACK.AWT.DIRCHOOSER PACKAGE
+===========================
+
+This package implements a DirectoryChooser, a kind of FileChooser but for directory seelction.
+
+DEPENDENCIES: jack.international.LocaleMgr
+
+
+PUBLIC CLASSES :
+  DirectoryChooser : Choose a directory within a tree-structured interface
+  MultiDirectoryChooser : Choose several directories within a tree-structured interface
+  FileExplorer : Display the contents of each directory (similarly to Window Explorer)
+
+PACKAGE CLASSES :
+  AbstractTreeModel : The data contained in the tree
+  DirectoryModel : The data contained in the directory panel, in FileExplorer
+  DirectoryRenderer : Renderer for directory
+  FileSystemModel : The data contained in the file system tree panel
+  FileSystemTreePanel : Panel displaying the file system content, in the form of a tree
+  TreeModelSupport :  Interface
+  AbstractDirectoryChooser : superclass of DirectoryChooser & MultiDirectoryChooser
+
+DESCRIPTION: see DirectoryChooser
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin format="2.0" className = "com.neosapiens.plugins.reverse.javasource.ReverseJavaSourcecodePlugin2">
+    
+	<name>${name}</name>
+    <description>${description}</description>
+	<image>${image}</image>
+	<license>${license}</license>
+	<resourceBundle>locale</resourceBundle>
+    <date>07-01-2012</date>
+	<version>1.0.1</version>
+	<author>neosapiens inc.</author>
+	<authorURL>${url}</authorURL>
+	<authorEmail>${email}</authorEmail>	
+	<type>org.modelsphere.jack.plugins.Plugin2</type>
+	<requiredBuild>905</requiredBuild>
+    
+	<extension className="org.modelsphere.jack.plugins.xml.extensions.MenuExtension">
+    	<actionLabel>${actionName}</actionLabel>
+    	<actionIcon>${actionIcon}</actionIcon>
+    	<menuPath>tools/java</menuPath>
+    	<menuInsert>under</menuInsert>
+    </extension>  
+    
+	<jar>lib/plugin.jar</jar>	
+	
+</plugin>

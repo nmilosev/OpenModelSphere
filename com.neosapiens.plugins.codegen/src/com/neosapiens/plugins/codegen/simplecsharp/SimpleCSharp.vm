@@ -1,0 +1,36 @@
+namespace $class.package.qualifiedName {
+
+    using System; 
+
+#set($superClasses = $class.group(": ", $class.superClasses, ", ", "", ""))    
+    public partial class $class.name $superClasses
+    { 
+        //Fields
+#foreach ($field in $class.fields)
+        private ${field.type} _${field.name};
+#end
+
+        //Properties
+#foreach ($field in $class.fields)
+#set($fieldModifiers = $field.group("", $field.csharpModifiers, " ", "", ""))
+        $fieldModifiers ${field.type} ${field.name.capitalized}
+        {
+            get
+            {
+                return _${field.name};
+            }
+            
+#if (! $field.final)
+            set
+            {
+                _${field.name} = value;
+            }
+#end
+        }
+        
+#end
+     
+        //Methods
+
+    } //end class
+} //end namespace

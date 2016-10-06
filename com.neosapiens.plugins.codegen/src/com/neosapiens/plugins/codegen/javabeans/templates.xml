@@ -1,0 +1,19 @@
+<templates name="Java Beans (beta)">
+  <description>
+    <en>
+    This target generates a class and its interface for each class 
+    in the model; each field in the model will be rendered to 
+    a getter and setters, as specified by the Java Beans 
+    Conventions.
+  </en>
+  <fr>
+    Cette cible de génération créé un classe et son interface pour 
+    chaque classe du modèle; chaque champ du modèle donnera un getter 
+    et un setter, tel que spécifié par les conventions des Java Beans.
+  </fr>
+  </description>
+  <var />
+  <class file="BeanClass.vm"  output="src/{0}/{1}.java" condition="isClass" />
+  <class file="BeanInfo.vm"   output="src/{0}/beans/{1}BeanInfo.java" condition="isClass" />
+  <class file="SimpleEnum.vm" output="src/{0}/{1}.java" condition="isEnum" />
+</templates>

@@ -1,0 +1,77 @@
+#set($packageDeclaration = $class.group("", $class.package.declaration, "", ""))
+#set($classVisibility = $class.group("", $class.javaVisibility, " ", " ", ""))
+#set($classModifiers = $class.group("", $class.javaModifiers, " ", " ", ""))
+#set($superClasses = $class.group(" extends ", $class.superClasses, ", ", "", ""))
+#set($superInterfaces = $class.group(" implements ", $class.superInterfaces, ", ", "", ""))
+$packageDeclaration
+
+/**
+ ** Class $class.name
+ **/
+${classVisibility}${classModifiers}class ${class.name}${superClasses}${superInterfaces} { 
+  //Fields
+#foreach ($field in $class.fields)
+#set($fieldVisibility = $field.group("", $field.javaVisibility, " ", " ", ""))
+#set($fieldModifiers = $field.group("", $field.javaModifiers, " ", " ", ""))
+#set($fieldInitialValue = $field.group(" = ", $field.initialValue, "", ""))
+  ${fieldVisibility}${fieldModifiers}${field.type} ${field.name}$fieldInitialValue;
+#end
+
+  //Constructors
+#foreach ($constructor in $class.constructors)
+#set($constructorModifiers  = $constructor.group("", $constructor.javaModifiers, " ", " ", ""))
+#set($constructorParameters = $constructor.group("(", $constructor.parameters, ", ", ")", "()"))
+#set($constructorExceptions = $constructor.group(" throws ", $constructor.exceptions, ", ", "", ""))
+  ${constructorModifiers}${class.name}${constructorParameters}${constructorExceptions}${constructor.body}
+#end
+
+  //Methods
+#foreach ($method in $class.methods)
+#set($methodVisibility = $method.group("", $method.javaVisibility, " ", " ", ""))
+#set($methodModifiers  = $method.group("", $method.javaModifiers, " ", " ", ""))
+#set($methodParameters = $method.group("(", $method.parameters, ", ", ")", "()"))
+#set($methodExceptions = $method.group(" throws ", $method.exceptions, ", ", "", ""))
+  ${methodVisibility}${methodModifiers}${method.type} ${method.name}${methodParameters}${methodExceptions}${method.body}
+#end
+
+  //Inner classes
+#foreach ($inner in $class.innerClasses)
+
+  /**
+   ** Inner class $inner.name
+   **/
+#set($classVisibility = $inner.group("", $inner.javaVisibility, " ", " ", ""))
+#set($classModifiers = $inner.group("", $inner.javaModifiers, " ", " ", ""))
+#set($superClasses = $inner.group(" extends ", $inner.superClasses, ", ", "", ""))
+#set($superInterfaces = $inner.group(" implements ", $inner.superInterfaces, ", ", "", ""))
+    ${classVisibility}${classModifiers}class ${inner.name}${superClasses}${superInterfaces} { 
+
+      //Fields
+#foreach ($field in $inner.fields)
+#set($fieldVisibility = $field.group("", $field.javaVisibility, " ", " ", ""))
+#set($fieldModifiers = $field.group("", $field.javaModifiers, " ", " ", ""))
+#set($fieldInitialValue = $field.group(" = ", $field.initialValue, "", ""))
+      ${fieldVisibility}${fieldModifiers}${field.type} ${field.name}$fieldInitialValue;
+#end
+
+      //Constructors
+#foreach ($constructor in $inner.constructors)
+#set($constructorModifiers  = $constructor.group("", $constructor.javaModifiers, " ", " ", ""))
+#set($constructorParameters = $constructor.group("(", $constructor.parameters, ", ", ")", "()"))
+#set($constructorExceptions = $constructor.group(" throws ", $constructor.exceptions, ", ", "", ""))
+      ${constructorModifiers}${class.name}${constructorParameters}${constructorExceptions}${constructor.body}
+#end
+
+      //Methods
+#foreach ($method in $inner.methods)
+#set($methodVisibility = $method.group("", $method.javaVisibility, " ", " ", ""))
+#set($methodModifiers  = $method.group("", $method.javaModifiers, " ", " ", ""))
+#set($methodParameters = $method.group("(", $method.parameters, ", ", ")", "()"))
+#set($methodExceptions = $method.group(" throws ", $method.exceptions, ", ", "", ""))
+      ${methodVisibility}${methodModifiers}${method.type} ${method.name}${methodParameters}${methodExceptions}${method.body}
+#end
+    } //end class $inner.name 
+   
+#end
+
+} //end class $class.name 

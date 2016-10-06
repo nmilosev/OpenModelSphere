@@ -1,0 +1,89 @@
+#set($packageDeclaration = $class.group("package ", $class.package.qualifiedName, ".beans;", ""))
+$packageDeclaration
+
+import java.beans.*; 
+import java.util.List;
+import java.util.ArrayList;
+
+/**
+ ** Class ${class.name}BeanInfo
+ **/
+public class ${class.name}BeanInfo extends SimpleBeanInfo { 
+
+  private static BeanDescriptor bd = null;
+  public BeanDescriptor getBeanDescriptor() {
+    if (bd == null) {
+      bd = new BeanDescriptor(${class.name}BeanInfo.class);
+      bd.setDisplayName("${class.name}"); 
+    } 
+    
+    return bd;
+  } //end getBeanDescriptor()
+  
+  private static PropertyDescriptor[] properties = null;
+  public PropertyDescriptor[] getPropertyDescriptors() {
+    if (properties == null) {
+      List<PropertyDescriptor> propertyList = new ArrayList<PropertyDescriptor>();
+#foreach ($field in $class.fields)
+      //add $field.name 
+#end
+    }
+    
+    return properties;
+  } //end getPropertyDescriptors()
+  
+  private static java.awt.Image iconColor16 = null;
+  private static java.awt.Image iconColor32 = null;
+  private static java.awt.Image iconMono16 = null;
+  private static java.awt.Image iconMono32 = null;
+  private static String iconNameC16 = null;
+  private static String iconNameC32 = null;
+  private static String iconNameM16 = null;
+  private static String iconNameM32 = null;
+    
+  /**
+   * This method returns an image object that can be used to
+   * represent the bean in toolboxes, toolbars, etc.   Icon images
+   * will typically be GIFs, but may in future include other formats.
+   * <p>
+   * Beans aren't required to provide icons and may return null from
+   * this method.
+   */
+  public java.awt.Image getIcon(int iconKind) {
+     switch ( iconKind ) {
+	    case ICON_COLOR_16x16:
+	        if ( iconNameC16 == null )
+	            return null;
+	        else {
+	            if( iconColor16 == null )
+	                iconColor16 = loadImage( iconNameC16 );
+	            return iconColor16;
+	        }
+	    case ICON_COLOR_32x32:
+	        if ( iconNameC32 == null )
+	            return null;
+	        else {
+	            if( iconColor32 == null )
+	                iconColor32 = loadImage( iconNameC32 );
+	            return iconColor32;
+	        }
+	    case ICON_MONO_16x16:
+	        if ( iconNameM16 == null )
+	            return null;
+	        else {
+	            if( iconMono16 == null )
+	                iconMono16 = loadImage( iconNameM16 );
+	            return iconMono16;
+	        }
+	    case ICON_MONO_32x32:
+	        if ( iconNameM32 == null )
+	            return null;
+	        else {
+	            if( iconMono32 == null )
+	                iconMono32 = loadImage( iconNameM32 );
+	            return iconMono32;
+	        }
+	    default: return null;
+	    }
+    }
+} //end class $class.name 

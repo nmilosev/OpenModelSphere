@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin format="2.0" className = "org.modelsphere.plugins.integrity.IntegrityPlugin">
+	<type>org.modelsphere.jack.plugins.Plugin2</type>
+	
+	<jar>lib/plugin.jar</jar>
+	<requiredBuild>955</requiredBuild>
+	<name>${name}</name>
+	<resourceBundle>locale</resourceBundle>
+	<author>${author}</author>
+	<authorURL>${url}</authorURL>
+	<authorEmail>${email}</authorEmail>
+	<date>09-11-2009</date>
+	<version>1.0.0 (beta)</version>
+	<description>${description}</description>
+	<image>${image}</image>
+	<license>${license}</license>
+
+    <extension className="org.modelsphere.jack.plugins.xml.extensions.MenuExtension">
+	    <actionLabel>${verifyIntegrity}</actionLabel>
+	    <actionIcon>${verifyIntegrityIcon}</actionIcon>
+	    <menuPath>tools/dataModel</menuPath>
+	    <menuInsert>under</menuInsert>
+    </extension>
+    
+    <extension className="org.modelsphere.jack.plugins.xml.extensions.MenuExtension">
+	    <actionLabel>${cleanUpModel}</actionLabel>
+	    <actionIcon>${cleanUpModelIcon}</actionIcon>
+	    <menuPath>tools/dataModel</menuPath>
+	    <menuInsert>under</menuInsert>
+    </extension>
+    
+    <extension className="org.modelsphere.jack.plugins.xml.extensions.MenuExtension">
+	    <actionLabel>${verifyIntegrity}</actionLabel>
+	    <actionIcon>${verifyIntegrityIcon}</actionIcon>
+	    <menuPath>tools/bpm</menuPath>
+	    <menuInsert>under</menuInsert>
+    </extension>
+    
+    <extension className="org.modelsphere.jack.plugins.xml.extensions.MenuExtension">
+	    <actionLabel>${cleanUpModel}</actionLabel>
+	    <actionIcon>${cleanUpModelIcon}</actionIcon>
+	    <menuPath>tools/bpm</menuPath>
+	    <menuInsert>under</menuInsert>
+    </extension>
+
+</plugin>

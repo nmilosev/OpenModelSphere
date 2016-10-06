@@ -1,0 +1,16 @@
+<templates name="EMF (Eclipse Modeling Framework) (beta)">
+  <description>
+    <en>
+  This generation target creates .ecore and .genmodel files.  To read this file, you must install 
+the EMF plug-in in your Eclipse environment.     
+    </en>
+    <fr>
+  Cette cible de génération créé les fichiers .ecore et .genmodel.  Pour lire ce fichier, vous devez installer 
+le plugiciel EMF dans votre environnement Eclipse.     
+    </fr>
+  </description>
+  <var />
+  <package file="Ecore.vm" output="model/{1}.ecore" />
+  <package file="Genmodel.vm" output="model/{1}.genmodel" />
+  <package file="Emfatic.vm" output="model/{1}.emf" />
+</templates>
